@@ -1,0 +1,129 @@
+
+html *{
+    margin: 0;
+    padding: 0;
+    color: #ccc;
+    font-family: arial;
+}
+body {
+    background: #222;
+}
+
+#button {
+    width: 300px;
+    border-radius: 10px;
+}
+.center {
+    text-align: center;
+}
+button {
+    background: #444;
+    border: none;
+    padding: 10px;
+    font-size: 2rem;
+}
+button:hover {
+    background: #669;
+}
+button:active {
+    background: #667;
+}
+textarea {
+    background: #333;
+    border: none;
+    color: #aaa;
+    margin: 0;
+    margin-top: 100px;
+    padding: 10px;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 180px);
+    font-size: 2rem;
+}
+
+
+
+.parent {
+    width:100vw;
+    height:100vh;
+    outline:5px solid red;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    float:left;
+    overscroll-behavior: none;
+}
+.child {
+    padding-left: 2000px;
+    padding-top: 2000px;
+    width:12000px;
+    height:12000px;
+    float:left;
+    font-size:15px;
+    font-family:arial;
+    /* padding:10px; */
+    cursor: pointer;
+    display: flex;
+}
+
+.no_select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.hlight {
+    color: rgb(238, 116, 45);
+}
+
+
+.node {
+    background: #444;
+    /* outline: 2px solid #333; */
+    margin: 16px 8px 16px 8px;
+    padding: 8px 16px 8px 16px;
+    box-shadow: #00000040 4px 4px 6px;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.node_list {
+    margin: 8px 8px 8px 8px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-flow: dense;
+    gap: 30px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff08;
+    box-shadow: #00000020 2px 2px 8px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.tooltip {
+    color: #00000000;
+    margin-top: 8px;
+    transition: color 0.2s ease-in-out;
+}
+
+.node:hover > .tooltip {
+    color: #ffffff30;
+}
+
+.desc {
+    /* text-align: center; */
+    /* align-self: flex-start; */
+    width: 500px;
+}
