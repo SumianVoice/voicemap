@@ -53,17 +53,20 @@ html * {
     display: flex;
     gap: 1rem;
 
-    background: #222;
+    background: #222222;
     padding: 1rem;
-    border: solid #666 1px;
+    border: solid #666666 1px;
     border-radius: 16px;
+    opacity: 0.3;
 }
   #zoom_buttons button {
     aspect-ratio: 1 / 1;
-    height: 3rem;
+    height: 4rem;
     font-size: 1.5rem;
     padding: auto;
     display: block;
+    border-radius: 16px;
+    background-color: #777777;
 }
 
   textarea {
@@ -82,15 +85,15 @@ html * {
     top: 50%;
     left: 50%;
 
-    width: 601vw;
-    height: 601vh;
+    width: 2000vw;
+    height: 2000vh;
     padding: 150vh;
     outline: 5px solid red;
     float: left;
     overscroll-behavior: none;
 
     overflow: hidden;
-    transition: transform 0.1s;
+    transition: transform 0.2s;
     transform: translate(-50%, -50%) scale(var(--zoom));
     transform-origin: center center;
     position: relative;
@@ -105,11 +108,10 @@ html * {
 }
 
   .child {
-    padding-left: 6000px;
-    padding-top: 6000px;
-    width: 20000px;
-    height: 20000px;
-    float: left;
+    padding: 40000px 40000px 40000px 40000px;
+    width: 40000px;
+    height: 40000px;
+    /* float: left; */
     font-size: 15px;
     font-family: arial;
     /* padding:10px; */
@@ -134,7 +136,7 @@ html * {
     background: #444;
     /* outline: 2px solid #333; */
     margin: 16px 8px 16px 8px;
-    padding: 8px 16px 8px 16px;
+    padding: 1rem;
     box-shadow: #00000040 4px 4px 6px;
     border-radius: 8px;
     width: fit-content;

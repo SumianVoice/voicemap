@@ -3,7 +3,8 @@ Licensed under MIT License, Copyright 2023 Sumi, sumianvoice.com
 */
 
 const parent = document.getElementById("root");
-parent.list = parent
+parent._list = parent
+parent._tree_step = 1
 
 function html_fragment_from_string(html_string) {
     let frag = document.createDocumentFragment(),
@@ -23,6 +24,10 @@ const registered_nodes = {
     "root" : parent
 }
 
+const registered_node_definitions = {
+    "root" : {}
+}
+
 let instances_to_add = {}
 function register_instance(id, in_node_name) {
     if (instances_to_add[id] == null) {
@@ -32,15 +37,17 @@ function register_instance(id, in_node_name) {
     instances_to_add[id].push(in_node_name)
 }
 function do_all_registered_instances() {
-    for (var key of Object.keys(instances_to_add)) {
-        const v = instances_to_add[key]
+    for (var id of Object.keys(instances_to_add)) {
+        const v = instances_to_add[id]
         for (let i = 0; i < v.length; i++) {
-            const newelement = registered_nodes[key].cloneNode(true)
-            registered_nodes[v[i]].list.appendChild(newelement)
+            const def = registered_node_definitions[id]
+            in_node_name = v[i]
+            register_node(id + String(i), in_node_name, def)
         }
     }
 }
 
+const scale_factor_per_tree_step = 0.8
 function register_node(id, in_node_name, def) {
     if (registered_nodes[in_node_name] == null) {
         console.log("CANNOT add node");
@@ -59,13 +66,26 @@ function register_node(id, in_node_name, def) {
         def.title += "ERROR! THIS WILL OVERWRITE " + id
     }
 
+    registered_node_definitions[id] = def
+
+    const new_tree_step = registered_nodes[in_node_name]._tree_step + 1
+    const new_scale_factor = 1 / (new_tree_step**1.2) * 20
+
     let code = '<div class="node" id="' + id + '"';
-    code += ' style="background-color:' + def.color + '"'
+    code += ' style="background-color:' + def.color + ";" +
+    "padding:" + String(new_scale_factor * 10) + "px;" +
+    '\">'
     // title
-    code += '><h2 class="title">';
+    code += '<h2 class="title"';
+    code += ' style="font-size:' + String(new_scale_factor) + "rem;" + "\""
+    code += ">"
     code += (def.title || "") + '</h2>';
     // desc
-    code += '<p class="desc">';
+    code += '<p class="desc"';
+    code += ' style=\"font-size:' + String(new_scale_factor * 0.5) + "rem;" +
+    "width:" + String(new_scale_factor * 250) + "px;" +
+    "\""
+    code += ">"
     code += (def.desc || "");
     // tooltip
     // code += '<p class="tooltip">';
@@ -73,16 +93,17 @@ function register_node(id, in_node_name, def) {
 
     code = code + '<div class="node_list" id="' + id + "_list" + '"></div></p></div>';
 
-    // const count = registered_nodes[in_node_name].list.childElementCount
+    // const count = registered_nodes[in_node_name]._list.childElementCount
     // if (count % 2 == 0 && count >= 2) {
     //     code += "<br>"
     //     console.log("blah")
     // }
 
     const fragment = html_fragment_from_string(code);
-    registered_nodes[in_node_name].list.appendChild(fragment)
+    registered_nodes[in_node_name]._list.appendChild(fragment)
     registered_nodes[id] = document.getElementById(id)
-    registered_nodes[id].list = document.getElementById(id + "_list")
+    registered_nodes[id]._list = document.getElementById(id + "_list")
+    registered_nodes[id]._tree_step = new_tree_step
     // console.log()
     // console.log(registered_nodes[id])
 }

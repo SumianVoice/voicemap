@@ -12,7 +12,7 @@ const about = document.querySelector("#About");
 const drag = {
   mouseDown: false,
   start: { x: 0, y: 0 },
-  scroll: { x: 2000 + 000, y: 4000 - 100 },
+  scroll: { x: 40000 * 0.55, y: 40000 * 0.8 },
   zoomedPercentage: 0
 };
 
@@ -106,14 +106,14 @@ const zoom_out = document.querySelector("#zoom_out");
 /** @type {HTMLButtonElement} **/
 const zoom_equal = document.querySelector("#zoom_equal");
 
-const zoomMinimum = 0.1;
+const zoomMinimum = 0.05;
 const zoomDefault = 0.5;
 function zoom(x = null) {
   const rootStyle = getComputedStyle(document.documentElement);
 
   if (x != null) {
     const canZoom = x >= zoomMinimum;
-    // console.log(canZoom, x)
+    console.log(canZoom, x)
     if (canZoom) document.documentElement.style.setProperty("--zoom", x);
   }
 
@@ -132,7 +132,9 @@ disableButtons();
 
 function zoomRelative(x = 0) {
   // console.log(x, zoom())
-  zoom(zoom() + x);
+  if (x == 0) return;
+  const z = zoom()
+  zoom(z + (x * Math.abs(z)) * 2);
 }
 zoom_in.addEventListener("click", () => zoom(zoom() * 2));
 zoom_out.addEventListener("click", () => zoom(zoom() / 2));

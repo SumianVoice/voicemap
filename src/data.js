@@ -5,12 +5,14 @@ Licensed under MIT License, Copyright 2023 Sumi, sumianvoice.com
 
 
 register_node("About", "root", {
-    title:"About", desc:
+    title:"About", size: 4, desc:
 'Welcome! This is a project by Sumi (sumianvoice.com) to put in one place as much voice information as is available.\n\
 \n\
 <b>What I did do:</b>\n- understand and then describe all of the concepts here\n\
-<b>What I didn\'t do:</b>\n- personally invent and pioneer everything here\n\
-\n\n\n\
+<b>What I did not do:</b>\n- personally invent and pioneer everything here\n\
+\n\n\
+<i>Distributed under MIT license</i>\
+\n\n\
 <b class="hlight">Work In Progress</b>\
 ',
     color:"#333",
@@ -19,30 +21,51 @@ register_node("About", "root", {
 
 
 
-/// GLOTTAL
+
+
+
+//////////////////////
+// GLOTTAL
+//////////////////////
 register_node("glottal", "root", {
-    title:"Glottal", desc:
-"Anything to do with the vocal folds vibrating.",
+    title:"Glottal", size: 8, desc:
+"Anything to do with the vocal folds vibrating. The glottis is the area of the larynx in which the vocal folds and false folds are located. The behavior of the components in this area are covered under glottal behavior.",
     color:"#373737",
     tooltip:" ",
 })
 
 
-// VOCAL WEIGHT
+//////////////////////
+// VOCAL FOLD VIBRATORY MASS
+//////////////////////
 register_node("vfvm", "glottal", {
-    title:"Vocal Fold Geometry", desc:
-'Vocal Fold Vibratory Mass <b>(VFVM)</b> is the physical thing happening in the folds that causes several things; how much of the folds is vibrating is likely what causes the sound quality of vocal weight. Contact area between the folds, quotient, and surface area engaged in creating pressure waves all contribute to the resulting sound. This can be thought of similar to the thickness of a guitar string More mass in the string, deeper more bassy sound (and a predisposition to low pitch). High vibratory mass and therefore more surface area creating pressure waves, will result in a sort of "rumble" which is most notable at low pitches.\n\n\
+    title:"Vocal Fold Geometry", size: 4, desc:
+'Vocal Fold Vibratory Mass <b>(VFVM)</b> is the physical thing happening in the folds that causes several things; how much of the folds is vibrating is likely what causes the sound quality of vocal weight. Contact area between the folds, quotient, and surface area engaged in creating pressure waves all contribute to the resulting sound. This can be thought of similar to the thickness of a guitar string. More mass in the string, deeper more bassy sound (and a predisposition to low pitch). High vibratory mass and therefore more surface area creating pressure waves, will result in a sort of "rumble" which is most notable at low pitches.\n\n\
 --> more vocal fold moving --> more VFVM --> sounds heavier\n\
 --> less VFVM --> can achieve higher pitches easier',
     color:"#556",
     tooltip:" ",
 })
+
+//////////////////////
+// PITCH NATURALISATION
+//////////////////////
 register_node("naturalisation", "vfvm", {
-    title:"Pitch Naturalisation", desc:
+    title:"Pitch Naturalisation", size: 3, desc:
 'Each pitch has its desired level of vibratory mass / weight, so there is an equillibrium that can be found between pitch and weight. \n\
-Pitch Naturalisation is the process and concept of naturally adjusting a voice to this equillibrium.\n\n\
---> voice sounds like it\'s always been speeking at this pitch --> naturalised\n\
---> voice sounds forced or "pushed" or stressed --> not naturalised',
+Pitch Naturalisation is the process and concept of naturally adjusting a voice to this equillibrium.\n\
+\n\
+Usually we use this by raising pitch very slightly, then letting the voice naturally adjust without letting clarity and volume be sacrificed. We can also do this long term by raising the base pitch of the voice slightly and speaking here for a matter of several days or weeks. Given the right conditions, a voice will usually adjust rather than become strained or forced.\n\
+\n\
+Naturalised voices:\n\
+--> sound like they have always been speeking at this pitch\n\
+--> are sustainable and effortless to produce\n\
+Non-naturalised voices:\n\
+--> sound forced or "pushed" or stressed\n\
+--> are tiring or requires high level of concentration\n\
+\n\
+\
+',
     color:"#075",
     tooltip:"Sumianvoice",
 })
@@ -58,31 +81,74 @@ register_node("basepitch", "naturalisation", {
     color:"#547",
     tooltip:"Sumianvoice",
 })
+register_node("pushing", "naturalisation", {
+    title:"Pushing", desc:
+'Pushing is when a voice adds more pressure in order to force a voice to get higher in pitch or louder, and usually results in stress through adding more weight / fold mass.',
+    color:"#446",
+    tooltip:"Sumianvoice",
+})
 
+//////////////////////
+// VOCAL WEIGHT
+//////////////////////
 register_node("vocalweight", "vfvm", {
-    title:"Vocal Weight", desc:
+    title:"Vocal Weight", size: 3, desc:
 'Vocal Weight is a sound quality associated with low pitch, masculine voices. It can sound "rumbly" or just "heavy", and is linked with pitch. Higher pitches demand lighter vocal weight.',
     color:"#267",
     tooltip:"OVC",
 })
+register_node("fullness", "vocalweight", {
+    title:"Overfull and Underfull", desc:
+'Overfull relates to a voice that has too high vocal weight (and usually closure) for and too high resonance. As a result we get a buzzy or "nerdy" sound.\n\
+Underfull is when a voice has either too low weight or too low resonance, resulting in a dark or hooty voice.',
+    color:"#566",
+    tooltip:"OVC",
+})
 
 
-register_node("vfvmpressure", "vfvm", {
-    title:"Pressure to Vibratory Mass", desc:
-'When we speak, we supply some amount of pressure from the lungs. This can be "used up" either by the vocal folds coming together like a valve, or by the pressure needing to push more mass out of the way. This means more pressure, provided there is otherwise normal closure, will encourage more VFVM or vocal weight.\n\n\
---> more air pressure --> more vocal weight (if enough closure)\n\
---> more "pushing" --> more vocal weight',
-    color:"#444",
-    tooltip:"Sumianvoice",
+//////////////////////
+// QUOTIENT
+//////////////////////
+register_node("quotient", "vfvm", {
+    title:"Quotient", size: 3, desc:
+'Quotient is a fraction of how long the folds spend in the open state versus their closed state. Since it is possible to measure, unlike vocal weight or active fold mass / VFVM, it is used in research. It closely approximates these other concepts under typical conditions. Usually this measurement is done with EGG.',
+    color:"#754",
+    tooltip:" ",
+})
+register_node("openquotient", "quotient", {
+    title:"Open Quotient (OQ)", desc:
+'How long as a fraction of a cycle the vocal folds are open.',
+    color:"#544",
+    tooltip:" ",
+})
+register_node("closedquotient", "quotient", {
+    title:"Closed Quotient (CQ)", desc:
+'How long as a fraction of a cycle the vocal folds are closed and resisting air pressure.',
+    color:"#544",
+    tooltip:" ",
 })
 
 
 
+register_node("vfvmpressure", "vfvm", {
+    title:"Pressure --> Vibratory Mass", desc:
+'When we speak, we supply some amount of pressure from the lungs. This can be "used up" either by the vocal folds coming together like a valve, or by the pressure needing to push more mass out of the way. This means more pressure, provided there is otherwise normal closure, will encourage more VFVM or vocal weight.\n\n\
+--> more air pressure --> more vocal weight (if enough closure)\n\
+--> more "pushing" --> more vocal weight',
+    color:"#567",
+    tooltip:"Sumianvoice",
+})
+register_instance("pushing", "vfvmpressure")
 
 
-//// CLOSURE
+
+
+
+//////////////////////
+// CLOSURE
+//////////////////////
 register_node("closure", "glottal", {
-    title:"Closure", desc:
+    title:"Closure", size: 4, desc:
 'Closure covers the closing of the vocal folds, and this allows for the air pressure to push them open, \
 resulting in phonation. High closure means the folds come together more completely, low closure means they come together incompletely or with not enough contact, allowing air to get through without being "used" for vibrating the folds.\n\n <b class="hlight">You cannot feel closure.</b> If you think you can, there\'s something <u>wrong</u>. You also cannot control it directly, and if it is attempted, there will likely be muscle tension or strain involved.',
     color:"#546",
@@ -122,40 +188,11 @@ register_node("lowia", "ia", {
 })
 
 
-
-
-
-
-register_node("speech", "root", {
-    title:"Speech", desc:
-'Anything regarding speech, which is how voice is applied to speaking words in phrases. This includes speech patterns and other things that are not voice, but are how the voice is applied to communication.',
-    color:"#344",
-    tooltip:" ",
-})
-register_node("intonation", "speech", {
-    title:"Intonation", desc:
-'Intonation is how the voice goes up and down in pitch during speech, and the pattern with which it does so.\n\
---> monotone --> no intonation',
-    color:"#644",
-    tooltip:" ",
-})
-register_node("tempo", "speech", {
-    title:"Tempo", desc:
-'This is how fast words are spoken, and how that speed of speech changes in order to be more expressive.',
-    color:"#256",
-    tooltip:" ",
-})
-register_instance("basepitch", "speech")
-
-
-
-
-
-
-/////////////////
+//////////////////////
 // VOCAL FUNCTION
+//////////////////////
 register_node("vocalfunction", "glottal", {
-    title:"Vocal Health", desc:
+    title:"Vocal Health", size: 4, desc:
 'Things relating to vocal function and health.',
     color:"#505450",
     tooltip:" ",
@@ -181,10 +218,12 @@ register_node("sovteshj", "sovte", {
     tooltip:" ",
 })
 
+//////////////////////
 // VOCAL DAMAGE
+//////////////////////
 register_node("damage", "vocalfunction", {
     title:"Vocal Damage", desc:
-'This covers abnormal glottal function caused by damage to features of the glottis, notably the vocal folds.',
+'This covers abnormal glottal function caused by damage to features of the glottis, notably the vocal folds, or from behavioral issues (e.g. MTD).',
     color:"#222",
     tooltip:" ",
 })
@@ -205,7 +244,7 @@ register_node("nodules", "damage", {
 })
 register_node("muscletension", "damage", {
     title:"Muscle Tension", desc:
-'Muscle tension is what is happening in muscle tension dysphonia. It appears in two modes; primary and secondary. Primary MTD is when muscles outside the larynx, such as in the neck, are being tensed when they shouldn\'t be. This is extraneous muscle tension. Secondary is when muscles in the larynx (usually the adductors and abductors) are tensing in direct opposition to eachother. Both forms can disable a voice completely in the medium term, or cause significant enough fatigue that it becomes untenable to speak for longer than a few minutes. If you get fatigue within 30 minutes of sustained conversation, there is a significant issue and you should see a Speech Language Pathologist.\n\n\
+'Muscle tension is what is happening in Muscle Tension Dysphonia (MTD). It appears in two modes; primary and secondary. Primary MTD is when muscles outside the larynx, such as in the neck, are being tensed when they shouldn\'t be. This is extraneous muscle tension. Secondary is when muscles in the larynx (usually the adductors and abductors) are tensing in direct opposition to eachother. Both forms can disable a voice completely in the medium term, or cause significant enough fatigue that it becomes untenable to speak for longer than a few minutes. If you get fatigue within 30 minutes of sustained conversation, there is a significant issue and you should see a Speech Language Pathologist.\n\n\
 This is surprisingly common in transvoice students, though thankfully it is usually not the extent of a diagnosis, and is often accidentally treated throughout the training journey. If you have concerns, contact an SLP or otherwise seek a second opinion.',
     color:"#443",
     tooltip:" ",
@@ -213,9 +252,13 @@ This is surprisingly common in transvoice students, though thankfully it is usua
 
 
 
+
+
+//////////////////////
 // PITCH
+//////////////////////
 register_node("pitch", "glottal", {
-    title:"Pitch", desc:
+    title:"Pitch", size: 4, desc:
 'Pitch is the frequency of the vocal folds.',
     color:"#595055",
     tooltip:" ",
@@ -270,7 +313,10 @@ register_node("creak", "m0", {
 })
 
 
+
+//////////////////////
 // OTHER PHONATION
+//////////////////////
 register_node("otherphonation", "glottal", {
     title:"Other Phonation Sources", desc:
 'Alternate, and usually undesirable ways to make sounds.',
@@ -294,9 +340,50 @@ register_node("arytenoids", "otherphonation", {
 
 
 
+
+
+//////////////////////
+// SPEECH
+//////////////////////
+register_node("speech", "root", {
+    title:"Speech", size: 8, desc:
+'Anything regarding speech, which is how voice is applied to speaking words in phrases. This includes speech patterns and other things that are not voice, but are how the voice is applied to communication.',
+    color:"#344",
+    tooltip:" ",
+})
+//////////////////////
+register_node("intonation", "speech", {
+    title:"Intonation", desc:
+'Intonation is how the voice goes up and down in pitch during speech, and the pattern with which it does so.\n\
+--> monotone --> no intonation',
+    color:"#644",
+    tooltip:" ",
+})
+register_node("tempo", "speech", {
+    title:"Tempo", desc:
+'This is how fast words are spoken, and how that speed of speech changes in order to be more expressive.',
+    color:"#256",
+    tooltip:" ",
+})
+register_node("emphasis", "speech", {
+    title:"Emphasis", desc:
+'Emphasis is when we change something about the voice in order to draw more attention to or place more importance on some word or phrase. In masculine voices this is often done with pushing, or adding power and volume. Other ways include intonation, slowing tempo and changing articulation.',
+    color:"#556",
+    tooltip:" ",
+})
+register_instance("basepitch", "speech")
+
+
+
+
+
+
+
+//////////////////////
 // RESONANCE
+//////////////////////
 register_node("resonance", "root", {
-    title:"Resonance", desc:
+    title:"Resonance", size: 8, desc:
 "Resonance is how the vocal tract affects the sound that is passed through it. It is a filter, so it will highlight or reduce the signal sent from the glottis.",
     color:"#473747",
     tooltip:" ",
@@ -309,14 +396,16 @@ register_node("larynx", "resonance", {
 })
 register_node("articulation", "resonance", {
     title:"Articulation", desc:
-'[under construction]',
+'Articulation is how and how much we move the mouth when speaking. Mumbling is low articulation, while some accents such as "valley girl" have a lot of articulation. Articulation is specifically about "how much" we do a vowel. If we do the "a" vowel in "bat" and we mumble it, it is underdone or underarticulated. If we say it as if mockingly, this will be overdone or overarticulated. Changing the amount that we articulate vowels during speech can allow a lot of expressive freedom. \n\
+\n\
+An example of this is "oh my god". Said underarticulated, it may sound like "uh muh guhd". Said in an overarticulated way, it may sound more like "ouw maiy gaud".',
     color:"#445",
     tooltip:" ",
 })
 register_node("mouthspace", "articulation", {
     title:"Mouth Space", desc:
-'[under construction]',
-    color:"#445",
+'Mouth space is a way to change resonance. We can shift things around in the mouth to raise resonance without necessarily changing vowel. This act of raising resonance using the mouth while maintaining the same vowel is mouth space. It\'s extremely important as a gendered aspect, and particularly useful at low pitches where vocal weight is typically heavier and resonance is typically darker.',
+    color:"#765",
     tooltip:" ",
 })
 register_node("vowel", "articulation", {
@@ -334,11 +423,33 @@ register_node("macrovowel", "vowel", {
 
 register_node("opc", "resonance", {
     title:"Oropharyngeal Constriction", desc:
-"OPC is oropharyngeal constriction. It's not the bad kind of constriction however, and does not require effort to activate. This is associated with hyperfem voices, as it significantly boosts resonance / brightness. At the back of the mouth, above the root of the tongue, is an arch which can be constricted inward to reduce the size of the opening at the back of the mouth. This smaller opening causes the resonance frequency to raise, giving a resonance boost.",
-    color:"#445",
+"Oropharyngeal Constriction (OPC). It's not the bad kind of constriction however, and does not require effort to activate. This is associated with hyperfem voices, as it significantly boosts resonance / brightness. At the back of the mouth, above the root of the tongue, is an arch which can be constricted inward to reduce the size of the opening at the back of the mouth. This smaller opening causes the resonance frequency to raise, giving a resonance boost.",
+    color:"#747",
+    tooltip:"",
+})
+register_node("pharyngealconstriction", "resonance", {
+    title:"Pharyngeal Constriction", desc:
+"Unlike OPC this is usually not ideal. Pharyngeal constriction is when the throat between the larynx and the mouth (the pharynx) is constricted. This is esentially squeezing the throat. It raises the resonant frequencies slightly. Pharyngeal constriction usually comes from compensation, when trying to raise the larynx or when doing other resonance raising modifications. It is not particularly damaging but can lead to tension habits if done regularly.",
+    color:"#645",
+    tooltip:"",
+})
+register_node("formants", "resonance", {
+    title:"Formants", desc:
+"A formant is an area of the voice that is highlighted due to resonance effects. The voice is made up of a fundamental (pitch) and many harmonics and some turbulent noise. These harmonics that are higher (in multiples of the fundamental) in frequency can be highlighted by the filter effect of resonance, and these areas that highlight the harmonics are formants.\n\n\
+A more technical description is that formants are the peak of resonance frequencies locally in the frequencies of the voice. Since the vocal tract is not a perfect smooth straight tube, it doesn't just highlight exactly one frequency, but instead a range, concentrated in a peak which we define as a formant frequency.\n\nUsually these formants are referred to with numbers:\n\
+F0 --> fundamental (pitch)\n\
+F1 --> 1st formant from lowest freq to highest\n\
+F(n) --> (n)th formant",
+    color:"#547",
     tooltip:"",
 })
 
+register_node("vocalsize", "resonance", {
+    title:"Vocal Size", desc:
+'Vocal Size is a way of intuitively explaining resonance by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal tract, and it is important to avoid such connotations to avoid tension.',
+    color:"#454050",
+    tooltip:" ",
+})
 
 
 
@@ -348,7 +459,7 @@ register_node("opc", "resonance", {
 
 // VOCAL COVERS
 register_node("covers", "root", {
-    title:"Vocal Covers", desc:
+    title:"Vocal Covers", size: 8, desc:
 'A vocal cover is a feature of voice that is unintended and usually mutes or otherwise impedes the intended function or sound.',
     color:"#443",
     tooltip:" ",
@@ -369,6 +480,19 @@ register_node("lowiahollow", "covers", {
     title:"Low IA Hollowness", desc:
 'Low IA closure voices can become hollow, losing their harmonic power and brightness. This can sound similar to m2 / falsetto.',
     color:"#344",
+    tooltip:" ",
+})
+
+
+
+
+//////////////////////
+// TRAINING RELATED
+//////////////////////
+register_node("training", "root", {
+    title:"Training Related", size: 8, desc:
+`Covers anything about voice training as an act, rather than specifically about the actual voice.`,
+    color:"#373737",
     tooltip:" ",
 })
 
