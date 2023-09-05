@@ -1,3 +1,7 @@
+/*
+Copyright (c) 2023 Sumi, SumianVoice <sumianvoice.com> under the MIT license
+*/
+
 const slider = document.getElementById("parent1");
 const rootnode = document.getElementById("root");
 

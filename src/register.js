@@ -1,3 +1,7 @@
+/*
+Licensed under MIT License, Copyright 2023 Sumi, sumianvoice.com
+*/
+
 const parent = document.getElementById("root");
 parent.list = parent
 
