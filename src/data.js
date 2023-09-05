@@ -421,27 +421,27 @@ register_instance("basepitch", "speech")
 //////////////////////
 register_node("resonance", "root", {
     title:"Resonance", size: 8, desc:
-"Resonance is how the vocal tract affects the sound that is passed through it. It is a filter, so it will highlight or reduce the signal sent from the glottis.",
+`Resonance is how the vocal tract affects the sound that is passed through it. It is a filter, so it will highlight or reduce the signal sent from the glottis.`,
     color:"#473747",
     tooltip:" ",
 })
 register_node("larynx", "resonance", {
     title:"Larynx", desc:
-"The larynx is what houses the vocal folds. By shifting this up and down we can change the resonance of the voice.",
+`The larynx is what houses the vocal folds. By shifting this up and down we can change the resonance of the voice.`,
     color:"#445",
     tooltip:" ",
 })
 register_node("articulation", "resonance", {
     title:"Articulation", desc:
-'Articulation is how and how much we move the mouth when speaking. Mumbling is low articulation, while some accents such as "valley girl" have a lot of articulation. Articulation is specifically about "how much" we do a vowel. If we do the "a" vowel in "bat" and we mumble it, it is underdone or underarticulated. If we say it as if mockingly, this will be overdone or overarticulated. Changing the amount that we articulate vowels during speech can allow a lot of expressive freedom. \n\
+`Articulation is how and how much we move the mouth when speaking. Mumbling is low articulation, while some accents such as "valley girl" have a lot of articulation. Articulation is specifically about "how much" we do a vowel. If we do the "a" vowel in "bat" and we mumble it, it is underdone or underarticulated. If we say it as if mockingly, this will be overdone or overarticulated. Changing the amount that we articulate vowels during speech can allow a lot of expressive freedom. \n\
 \n\
-An example of this is "oh my god". Said underarticulated, it may sound like "uh muh guhd". Said in an overarticulated way, it may sound more like "ouw maiy gaud".',
+An example of this is "oh my god". Said underarticulated, it may sound like "uh muh guhd". Said in an overarticulated way, it may sound more like "ouw maiy gaud".`,
     color:"#445",
     tooltip:" ",
 })
 register_node("mouthspace", "articulation", {
     title:"Mouth Space", desc:
-'Mouth space is a way to change resonance. We can shift things around in the mouth to raise resonance without necessarily changing vowel. This act of raising resonance using the mouth while maintaining the same vowel is mouth space. It\'s extremely important as a gendered aspect, and particularly useful at low pitches where vocal weight is typically heavier and resonance is typically darker.',
+`Mouth space is a way to change resonance. We can shift things around in the mouth to raise resonance without necessarily changing vowel. This act of raising resonance using the mouth while maintaining the same vowel is mouth space. It\'s extremely important as a gendered aspect, and particularly useful at low pitches where vocal weight is typically heavier and resonance is typically darker.`,
     color:"#645",
     tooltip:" ",
 })
@@ -472,43 +472,43 @@ register_node("feminineaccent", "mouthspace", {
 
 register_node("vowel", "articulation", {
     title:"Vowel", desc:
-'Vowels are made by changing the first two resonance formants, F1 and F2. Their relative position to eachother determines the vowel. Far apart, they create the "eee" as in "happ <b>y</b>" vowel. Close together and high they create the "a" as in "b <b>a</b> t" vowel.',
+`Vowels are made by changing the first two resonance formants, F1 and F2. Their relative position to eachother determines the vowel. Far apart, they create the "eee" as in "happ <b>y</b>" vowel. Close together and high they create the "a" as in "b <b>a</b> t" vowel.`,
     color:"#455",
     tooltip:" ",
 })
 register_node("macrovowel", "vowel", {
     title:"Macrovowel", desc:
-'A Macrovowel is achieved by shifting the shape of the mouth slightly toward some vowel, usually to brighten ("a") or darken ("uh") the whole voice.',
+`A Macrovowel is achieved by shifting the shape of the mouth slightly toward some vowel, usually to brighten ("a") or darken ("uh") the whole voice.`,
     color:"#657",
     tooltip:" ",
 })
 
 register_node("opc", "resonance", {
     title:"Oropharyngeal Constriction", desc:
-"Oropharyngeal Constriction (OPC). It's not the bad kind of constriction however, and does not require effort to activate. This is associated with hyperfem voices, as it significantly boosts resonance / brightness. At the back of the mouth, above the root of the tongue, is an arch which can be constricted inward to reduce the size of the opening at the back of the mouth. This smaller opening causes the resonance frequency to raise, giving a resonance boost.",
+`Oropharyngeal Constriction (OPC). It's not the bad kind of constriction however, and does not require effort to activate. This is associated with hyperfem voices, as it significantly boosts resonance / brightness. At the back of the mouth, above the root of the tongue, is an arch which can be constricted inward to reduce the size of the opening at the back of the mouth. This smaller opening causes the resonance frequency to raise, giving a resonance boost.`,
     color:"#747",
     tooltip:"",
 })
 register_node("pharyngealconstriction", "resonance", {
     title:"Pharyngeal Constriction", desc:
-"Unlike OPC this is usually not ideal. Pharyngeal constriction is when the throat between the larynx and the mouth (the pharynx) is constricted. This is esentially squeezing the throat. It raises the resonant frequencies slightly. Pharyngeal constriction usually comes from compensation, when trying to raise the larynx or when doing other resonance raising modifications. It is not particularly damaging but can lead to tension habits if done regularly.",
+`Unlike OPC this is usually not ideal. Pharyngeal constriction is when the throat between the larynx and the mouth (the pharynx) is constricted. This is esentially squeezing the throat. It raises the resonant frequencies slightly. Pharyngeal constriction usually comes from compensation, when trying to raise the larynx or when doing other resonance raising modifications. It is not particularly damaging but can lead to tension habits if done regularly.`,
     color:"#645",
     tooltip:"",
 })
 register_node("formants", "resonance", {
     title:"Formants", desc:
-"A formant is an area of the voice that is highlighted due to resonance effects. The voice is made up of a fundamental (pitch) and many harmonics and some turbulent noise. These harmonics that are higher (in multiples of the fundamental) in frequency can be highlighted by the filter effect of resonance, and these areas that highlight the harmonics are formants.\n\n\
+`A formant is an area of the voice that is highlighted due to resonance effects. The voice is made up of a fundamental (pitch) and many harmonics and some turbulent noise. These harmonics that are higher (in multiples of the fundamental) in frequency can be highlighted by the filter effect of resonance, and these areas that highlight the harmonics are formants.\n\n\
 A more technical description is that formants are the peak of resonance frequencies locally in the frequencies of the voice. Since the vocal tract is not a perfect smooth straight tube, it doesn't just highlight exactly one frequency, but instead a range, concentrated in a peak which we define as a formant frequency.\n\nUsually these formants are referred to with numbers:\n\
 F0 --> fundamental (pitch)\n\
 F1 --> 1st formant from lowest freq to highest\n\
-F(n) --> (n)th formant",
+F(n) --> (n)th formant`,
     color:"#547",
     tooltip:"",
 })
 
 register_node("vocalsize", "resonance", {
     title:"Vocal Size", desc:
-'Vocal Size is a way of intuitively explaining resonance by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal trac but instead about the size or stature of the hypothetical speaker.',
+`Vocal Size is a way of intuitively explaining resonance by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal trac but instead about the size or stature of the hypothetical speaker.`,
     color:"#454050",
     tooltip:" ",
 })
@@ -524,25 +524,25 @@ register_node("vocalsize", "resonance", {
 //////////////////////
 register_node("covers", "root", {
     title:"Vocal Covers", size: 8, desc:
-'A vocal cover is a feature of voice that is unintended and usually mutes or otherwise impedes the intended function or sound.',
+`A vocal cover is a feature of voice that is unintended and usually mutes or otherwise impedes the intended function or sound.`,
     color:"#334438",
     tooltip:" ",
 })
 register_node("tongueroot", "covers", {
     title:"Tongue Root Retraction", desc:
-'Associated with Stitch, Kermit, Meatwad. This is a slightly dark quality which can sound like something is stuck in the throat. It is achieved by moving the base of the tongue backward.',
+`Associated with Stitch, Kermit, Meatwad. This is a slightly dark quality which can sound like something is stuck in the throat. It is achieved by moving the base of the tongue backward.`,
     color:"#344",
     tooltip:" ",
 })
 register_node("nasality", "covers", {
     title:"Nasality", desc:
-'Nasality is when air is let through the nasal passage on sounds that don\'t need this. Nasal sounds like N, M and NG are meant to be nasal, but most other sounds should not have air coming through the nose. We can test this by saying a phrase which doesn\'t have any nasal sounds in it, and pinching the nose; if it sounds honky, it is nasal.',
+`Nasality is when air is let through the nasal passage on sounds that don\'t need this. Nasal sounds like N, M and NG are meant to be nasal, but most other sounds should not have air coming through the nose. We can test this by saying a phrase which doesn\'t have any nasal sounds in it, and pinching the nose; if it sounds honky, it is nasal.`,
     color:"#344",
     tooltip:" ",
 })
 register_node("lowiahollow", "covers", {
     title:"Low IA Hollowness", desc:
-'Low IA closure voices can become hollow, losing their harmonic power and brightness. This can sound similar to m2 / falsetto.',
+`Low IA closure voices can become hollow, losing their harmonic power and brightness. This can sound similar to m2 / falsetto.`,
     color:"#344",
     tooltip:" ",
 })
