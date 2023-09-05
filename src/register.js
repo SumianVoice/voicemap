@@ -66,6 +66,11 @@ function register_node(id, in_node_name, def) {
         def.title += "ERROR! THIS WILL OVERWRITE " + id
     }
 
+    if (def.desc == "") {
+        def.desc = `<b class="hlight">[under construction]</b>`
+    }
+    def.desc = def.desc.replaceAll("[wip]", '<br><br><b class="hlight">[under construction]</b>')
+
     registered_node_definitions[id] = def
 
     const new_tree_step = registered_nodes[in_node_name]._tree_step + 1

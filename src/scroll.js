@@ -113,7 +113,7 @@ function zoom(x = null) {
 
   if (x != null) {
     const canZoom = x >= zoomMinimum;
-    console.log(canZoom, x)
+    // console.log(canZoom, x)
     if (canZoom) document.documentElement.style.setProperty("--zoom", x);
   }
 
