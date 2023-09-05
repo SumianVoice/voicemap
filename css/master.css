@@ -1,34 +1,72 @@
-
-html *{
+html * {
     margin: 0;
     padding: 0;
     color: #ccc;
     font-family: arial;
+
+    touch-action: none;
 }
-body {
+  html {
+    overflow: hidden;
+}
+
+  body {
     background: #222;
 }
 
-#button {
+  #button {
     width: 300px;
     border-radius: 10px;
 }
-.center {
+
+  .center {
     text-align: center;
 }
-button {
+
+  button {
     background: #444;
     border: none;
     padding: 10px;
     font-size: 2rem;
+
+    user-select: none;
 }
-button:hover {
+
+  button:hover {
     background: #669;
 }
-button:active {
+
+  button:active {
     background: #667;
 }
-textarea {
+
+  button:disabled {
+    background: #333 !important;
+    opacity: 20% !important;
+}
+
+  #zoom_buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    gap: 1rem;
+
+    background: #222;
+    padding: 1rem;
+    border: solid #666 1px;
+    border-radius: 16px;
+}
+  #zoom_buttons button {
+    aspect-ratio: 1 / 1;
+    height: 3rem;
+    font-size: 1.5rem;
+    padding: auto;
+    display: block;
+}
+
+  textarea {
     background: #333;
     border: none;
     color: #aaa;
@@ -40,31 +78,46 @@ textarea {
     font-size: 2rem;
 }
 
+  .parent {
+    top: 50%;
+    left: 50%;
 
-
-.parent {
-    width:100vw;
-    height:100vh;
-    outline:5px solid red;
-    overflow-x: scroll;
-    overflow-y: scroll;
-    float:left;
+    width: 601vw;
+    height: 601vh;
+    padding: 150vh;
+    outline: 5px solid red;
+    float: left;
     overscroll-behavior: none;
+
+    overflow: hidden;
+    transition: transform 0.1s;
+    transform: translate(-50%, -50%) scale(var(--zoom));
+    transform-origin: center center;
+    position: relative;
 }
-.child {
-    padding-left: 2000px;
-    padding-top: 2000px;
-    width:12000px;
-    height:12000px;
-    float:left;
-    font-size:15px;
-    font-family:arial;
+  #scroll_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+  .child {
+    padding-left: 6000px;
+    padding-top: 6000px;
+    width: 20000px;
+    height: 20000px;
+    float: left;
+    font-size: 15px;
+    font-family: arial;
     /* padding:10px; */
     cursor: pointer;
     display: flex;
 }
 
-.no_select {
+  .no_select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -73,13 +126,11 @@ textarea {
     user-select: none;
 }
 
-
-.hlight {
+  .hlight {
     color: rgb(238, 116, 45);
 }
 
-
-.node {
+  .node {
     background: #444;
     /* outline: 2px solid #333; */
     margin: 16px 8px 16px 8px;
@@ -93,7 +144,7 @@ textarea {
     align-items: center;
 }
 
-.node_list {
+  .node_list {
     margin: 8px 8px 8px 8px;
     display: grid;
     grid-template-columns: auto auto;
@@ -103,7 +154,7 @@ textarea {
     height: fit-content;
 }
 
-.title {
+  .title {
     text-align: center;
     width: 100%;
     background-color: #ffffff08;
@@ -112,17 +163,17 @@ textarea {
     border-radius: 8px;
 }
 
-.tooltip {
+  .tooltip {
     color: #00000000;
     margin-top: 8px;
     transition: color 0.2s ease-in-out;
 }
 
-.node:hover > .tooltip {
+  .node:hover > .tooltip {
     color: #ffffff30;
 }
 
-.desc {
+  .desc {
     /* text-align: center; */
     /* align-self: flex-start; */
     width: 500px;

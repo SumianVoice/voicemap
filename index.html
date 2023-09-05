@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" style="--zoom: 0.5;">
   <head>
-    <meta property="og:url"                content="https://voicemap.sumianvoice.com" />
-    <meta property="og:type"               content="app" />
-    <meta property="og:title"              content="" />
-    <meta property="og:description"        content="" />
-    <meta property="og:image"              content="" />
-    <meta content="" property="og:image">
-    <meta content="" property="twitter:image">
-    <meta property="theme-color" content="#2f4">
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=0.5, maximum-scale=20.0, minimum-scale=0.001, user-scalable=yes"/>
+    <meta property="og:url" content="https://voicemap.sumianvoice.com" />
+    <meta property="og:type" content="app" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta content="" property="og:image" />
+    <meta content="" property="twitter:image" />
+    <meta property="theme-color" content="#2f4" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes"
+    />
     <title>Voice Map</title>
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/master.css" />
   </head>
   <body>
-    <div class="parent" id="parent1">
-        <div class="child no_select" id="root">
-        </div>
+    <div id="scroll_wrapper">
+      <div class="parent" id="parent1">
+        <div class="child no_select" id="root"></div>
+      </div>
     </div>
+
+    <div id="zoom_buttons">
+      <button id="zoom_in">+</button>
+      <button id="zoom_out">-</button>
+      <button id="zoom_equal" disabled>=</button>
+    </div>
+
     <script src="src/register.js" charset="utf-8"></script>
     <script src="src/data.js" charset="utf-8"></script>
     <script src="src/scroll.js" charset="utf-8"></script>
