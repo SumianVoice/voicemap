@@ -1,5 +1,6 @@
 /*
-Copyright (c) 2023 Sumi, SumianVoice <sumianvoice.com> under the MIT license
+Portions Copyright (c) 2023 "aeggy" nelinearni under the MIT license
+Portions Copyright (c) 2023 Sumi, SumianVoice <sumianvoice.com> under the MIT license
 */
 
 const slider = document.getElementById("parent1");
