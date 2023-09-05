@@ -201,19 +201,19 @@ register_node("vocalfunction", "glottal", {
 // SOVTE
 register_node("sovte", "vocalfunction", {
     title:"SOVTEs", desc:
-'Semi Occluded Vocal Tract Exercises [under construction]',
+'Semi Occluded Vocal Tract Exercises <b class="hlight">[under construction]<b>',
     color:"#346",
     tooltip:" ",
 })
 register_node("liptrills", "sovte", {
     title:"Lip Trills", desc:
-'[under construction]',
+'<b class="hlight">[under construction]<b>',
     color:"#455",
     tooltip:" ",
 })
 register_node("sovteshj", "sovte", {
     title:"SH and J", desc:
-'[under construction]',
+'<b class="hlight">[under construction]<b>',
     color:"#455",
     tooltip:" ",
 })
@@ -229,10 +229,15 @@ register_node("damage", "vocalfunction", {
 })
 register_node("atrophy", "damage", {
     title:"Atrophy", desc:
-'Atrophy is when muscles lose their ability to activate due to very long periods of disuse. This usually takes many years, and is often reversable but with effort proportional to how long whatever function has been neglected.\n\n\
+'Atrophy is when muscles lose some of their ability to activate due to very long periods of disuse. This usually takes many years, and is often reversable but with effort proportional to how long whatever function has been neglected.\n\n\
 Common points of atrophy are:\n\
---> adductor (closure) muscles (IA and LCA) --> usually from neglecting the ability to become loud\n\
---> TA muscles (the "vocal weight" muscle) --> sometimes intentionally, usually from neglecting lower pitches\n',
+--> Adductor (closure) muscles (IA and LCA)\n\
+Usually from neglecting the ability to become loud\n\
+--> TA muscles (the "vocal weight" muscle)\n\
+Sometimes intentionally, usually from neglecting lower pitches\n\
+--> M2 access\n\
+Usually just through disuse, sometimes due to avoiding it\n\
+',
     color:"#334",
     tooltip:" ",
 })
@@ -405,19 +410,30 @@ An example of this is "oh my god". Said underarticulated, it may sound like "uh 
 register_node("mouthspace", "articulation", {
     title:"Mouth Space", desc:
 'Mouth space is a way to change resonance. We can shift things around in the mouth to raise resonance without necessarily changing vowel. This act of raising resonance using the mouth while maintaining the same vowel is mouth space. It\'s extremely important as a gendered aspect, and particularly useful at low pitches where vocal weight is typically heavier and resonance is typically darker.',
-    color:"#765",
+    color:"#645",
     tooltip:" ",
 })
+register_node("uhh-iii", "mouthspace", {
+    title:"UHH and III", desc:
+`If we say "uhhh", we will achieve most likely large mouth space and a darker voice. Then we can compare this to the "iii" sound as in "happ<b>y</b>", which will cause a smaller mouth space. It's important to note that we might get a smile expression through this; that's not necessary for small mouth space, so bear that in mind.\n\
+\n\
+This can then tell us vaguely how to affect mouth space
+`,
+    color:"#945",
+    type:"exercise",
+    tooltip:" ",
+})
+
 register_node("vowel", "articulation", {
     title:"Vowel", desc:
-'[under construction]',
-    color:"#445",
+'Vowels are made by changing the first two resonance formants, F1 and F2. Their relative position to eachother determines the vowel. Far apart, they create the "eee" as in "happ <b>y</b>" vowel. Close together and high they create the "a" as in "b <b>a</b> t" vowel.',
+    color:"#455",
     tooltip:" ",
 })
 register_node("macrovowel", "vowel", {
     title:"Macrovowel", desc:
-'[under construction]',
-    color:"#445",
+'A Macrovowel is achieved by shifting the shape of the mouth slightly toward some vowel, usually to brighten ("a") or darken ("uh") the whole voice.',
+    color:"#657",
     tooltip:" ",
 })
 
@@ -446,7 +462,7 @@ F(n) --> (n)th formant",
 
 register_node("vocalsize", "resonance", {
     title:"Vocal Size", desc:
-'Vocal Size is a way of intuitively explaining resonance by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal tract, and it is important to avoid such connotations to avoid tension.',
+'Vocal Size is a way of intuitively explaining resonance by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal trac but instead about the size or stature of the hypothetical speaker.',
     color:"#454050",
     tooltip:" ",
 })
@@ -457,11 +473,13 @@ register_node("vocalsize", "resonance", {
 
 
 
+//////////////////////
 // VOCAL COVERS
+//////////////////////
 register_node("covers", "root", {
     title:"Vocal Covers", size: 8, desc:
 'A vocal cover is a feature of voice that is unintended and usually mutes or otherwise impedes the intended function or sound.',
-    color:"#443",
+    color:"#334438",
     tooltip:" ",
 })
 register_node("tongueroot", "covers", {

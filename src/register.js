@@ -69,16 +69,19 @@ function register_node(id, in_node_name, def) {
     registered_node_definitions[id] = def
 
     const new_tree_step = registered_nodes[in_node_name]._tree_step + 1
-    const new_scale_factor = 1 / (new_tree_step**1.2) * 20
+    const new_scale_factor = Math.round(1 / (new_tree_step**1.2) * 20 * 1000) / 1000
 
+    // div
     let code = '<div class="node" id="' + id + '"';
     code += ' style="background-color:' + def.color + ";" +
     "padding:" + String(new_scale_factor * 10) + "px;" +
+    "margin:" + String(new_scale_factor * 6) + "px;" +
     '\">'
     // title
     code += '<h2 class="title"';
-    code += ' style="font-size:' + String(new_scale_factor) + "rem;" + "\""
-    code += ">"
+    code += ' style="font-size:' + String(new_scale_factor) + "rem;"
+    code += 'height:' + String(new_scale_factor*1.2) + "rem;"
+    code += "\"" + ">"
     code += (def.title || "") + '</h2>';
     // desc
     code += '<p class="desc"';
@@ -101,6 +104,7 @@ function register_node(id, in_node_name, def) {
 
     const fragment = html_fragment_from_string(code);
     registered_nodes[in_node_name]._list.appendChild(fragment)
+    // registered_nodes[in_node_name].style.margin = String(new_scale_factor * 20) + "px"
     registered_nodes[id] = document.getElementById(id)
     registered_nodes[id]._list = document.getElementById(id + "_list")
     registered_nodes[id]._tree_step = new_tree_step
