@@ -56,6 +56,8 @@ function register_node(id, in_node_name, def) {
         return;
     }
 
+    if (def.type == "exercise") { return; } // disable exercises until better method for display available
+
     def.desc = def.desc.replaceAll("\n", "<br>")
     def.title = def.title.replaceAll("\n", "<br>")
     def.tooltip = def.tooltip.replaceAll("\n", "<br>")
@@ -74,7 +76,7 @@ function register_node(id, in_node_name, def) {
     registered_node_definitions[id] = def
 
     const new_tree_step = registered_nodes[in_node_name]._tree_step + 1
-    const new_scale_factor = Math.round(1 / (new_tree_step**1.2) * 20 * 1000) / 1000
+    const new_scale_factor = Math.round(1 / (new_tree_step**1.2) * 15 * 1000) / 1000
 
     // div
     let code = '<div class="node" id="' + id + '"';
@@ -85,7 +87,7 @@ function register_node(id, in_node_name, def) {
     // title
     code += '<h2 class="title"';
     code += ' style="font-size:' + String(new_scale_factor) + "rem;"
-    code += 'height:' + String(new_scale_factor*1.2) + "rem;"
+    code += 'height:max(fit-content, ' + String(new_scale_factor*1.2) + "rem);"
     code += "\"" + ">"
     code += (def.title || "") + '</h2>';
     // desc
@@ -106,6 +108,10 @@ function register_node(id, in_node_name, def) {
     //     code += "<br>"
     //     console.log("blah")
     // }
+
+    if (def.type == "spacer") {
+        code = `<div id="` + id + `"></div>`
+    }
 
     const fragment = html_fragment_from_string(code);
     registered_nodes[in_node_name]._list.appendChild(fragment)

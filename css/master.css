@@ -134,10 +134,9 @@ textarea {
 
 .node {
     background: #444;
-    /* outline: 2px solid #333; */
     margin: 8px;
     padding: 1rem;
-    box-shadow: #00002020 12px 12px 20px;
+    box-shadow: #00002020 8px 8px 12px;
     border-radius: 8px;
     width: fit-content;
     height: fit-content;
@@ -183,4 +182,9 @@ textarea {
     /* text-align: center; */
     /* align-self: flex-start; */
     width: 500px;
+}
+a {
+    color: #eda;
+    font-weight: bold;
+    text-decoration: none;
 }
