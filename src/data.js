@@ -95,24 +95,24 @@ If you are unsure of what to do or are just starting out, try these notes below 
 
 register_node("inutitivefem", "inutitive", {
     title:"Feminisation Guide", desc:
-`Never try hard. Never force it. Go a little higher and speak like a girl for a while. <b>If it's right, it will feel effortless.</b>\n\
-\n\
-Don't overthink it, just listen and pay attention to the voice as a whole.\n\
-Continue until goal is reached or any issues arise.\n\
-\n\
-This will work for most beginners if taken seriously.\n\
+`Never try hard. Never force it. Go a little higher and speak like a girl for a while. <b>If it's right, it will feel effortless.</b>
+
+Don't overthink it, just listen and pay attention to the voice as a whole.
+Continue until goal is reached or any issues arise.
+
+This will work for most beginners if taken seriously.
 `,
     color:"#946",
     tooltip:` `,
 })
 register_node("inutitivemasc", "inutitive", {
     title:"Masculinisation Guide", desc:
-`Never try hard. Never force it. Avoid rough or buzzy sounds. Try to hit lower notes repeatedly and gain more vocal power. Try speaking in a deeper, darker tone.\n\
-\n\
-Don't overthink it, just listen and pay attention to the voice as a whole.\n\
-Continue until goal is reached or any issues arise.\n\
-\n\
-This will work for most beginners if taken seriously.\n\
+`Never try hard. Never force it. Avoid rough or buzzy sounds. Try to hit lower notes repeatedly and gain more vocal power. Try speaking in a deeper, darker tone.
+
+Don't overthink it, just listen and pay attention to the voice as a whole.
+Continue until goal is reached or any issues arise.
+
+This will work for most beginners if taken seriously.
 `,
     color:"#469",
     tooltip:` `,
@@ -199,6 +199,15 @@ register_node("fullness", "vocalweight", {
 `Overfull relates to a voice that has too high vocal weight (and usually closure) for and too high resonance. As a result we get a buzzy or "nerdy" sound.\n\
 Underfull is when a voice has either too low weight or too low resonance, resulting in a dark or hooty voice.`,
     color:"#566",
+    tooltip:` `,
+})
+register_node("m2aslightweight", "vocalweight", {
+    title:"Falsetto as a Guide", desc:
+`Falsetto or m2 has light vocal weight; too light. It has qualities we dont want, such as instability and hollowness, but the most obvious difference is vocal weight / fold mass. We can use this as a guide; as we go higher in pitch to reach lighter weight, we will get closer to that falsetto quality. This can help with direction, and often prevent strain. Note that this will not allow for a both strong / loud and light voice, only a light voice. Learning to reduce weight through pitch naturalisation, phrase repetition or other methods is better if volume, clarity or high closure is desired. However, this can be an excellent way to give context to those other methods, as long as it isn't entirely relied on.
+
+We can also start low, then try to make the voice more like falsetto. As soon as we are about to speak, we instead just do a slightly lower pitch than we were about to, andw this process can continue all through the range. This can effectively prevent strain since we're always doing a lower pitch than our voice is adjusted to, and this is likely the lightest you can get though "just go directly to a light voice without pre-priming the voice" methods.
+`,
+    color:"#758",
     tooltip:` `,
 })
 
@@ -542,6 +551,15 @@ register_node("larynxheight", "resonance", {
     title:"Larynx Height", desc:
 `The larynx is what houses the vocal folds. By shifting this up and down we can change the resonance of the voice.`,
     color:"#446",
+    tooltip:` `,
+})
+register_node("thyrohyoid-stylohyoid", "larynxheight", {
+    title:"Thyrohyoid and Stylohyoid", desc:
+`Both muscles raise the larynx, but usually only the thyrohyoid (TH) is involved in the natural conflation with pitch. When the thyroid tilts to stretch the vocal folds, the thyrohyoid will typically also activate and raise the larynx slightly. This is a natural process.
+
+When "manually" raising the larynx such as through whisper exercises or in an attempt to do a brighter voice, we usually use both the TH and stylohyoid (SH) muscles. It is possible in some cases that the SH does not trigger for this, and this can result in a loss of resonance range in some students.
+`,
+    color:"#456",
     tooltip:` `,
 })
 register_node("whisperintro", "larynxheight", {
