@@ -272,7 +272,10 @@ register_node("hyperadduction", "closure", {
     title:"Hyperadduction", desc:
 `Hyperadduction can <b class="hlight">irreparably damage</b> the vocal folds, cause nodules, pain and more awful things you don't want.\n\
 Do not do it under <b class="hlight">any circumstances</b> for any reason for any length of time. \
-Hyperadduction is when the vocal folds are pressed together very tightly, but unlike pressed phonation, this is taken to the extreme. It is often accidentally employed to reach higher notes at the very top of the range. Never force your voice to go "a little bit higher" when it's already requiring effort.`,
+Hyperadduction is when the vocal folds are pressed together very tightly, but unlike pressed phonation, this is taken to the extreme. It is often accidentally employed to reach higher notes at the very top of the range. Never force your voice to go "a little bit higher" when it's already requiring effort.
+
+Hyperadduction usually shows up as around 8000 to 15,000hz harmonics, and this can be a somewhat reliable way to test for it. FVF causes a similar signal this high in frequency but less periodic and more noisy. FVF is the safer of the two of course.
+`,
     color:"#222",
     tooltip:` `,
 })
@@ -332,7 +335,7 @@ register_node("sovteshj", "sovte", {
 //////////////////////
 register_node("damage", "vocalfunction", {
     title:"Vocal Damage and Disorder", desc:
-`This covers abnormal glottal function caused by damage to features of the glottis, notably the vocal folds, or from behavioral issues (e.g. MTD).`,
+`This covers abnormal glottal function caused by damage to features of the glottis, notably the vocal folds, or from behavioral issues (e.g. MTD). Almost everything here is a "seek medical help" situation.`,
     color:"#222",
     tooltip:` `,
 })
@@ -347,20 +350,32 @@ Sometimes intentionally, usually from neglecting lower pitches\n\
 --> M2 access\n\
 Usually just through disuse, sometimes due to avoiding it\n\
 `,
-    color:"#334",
-    tooltip:` `,
-})
-register_node("nodules", "damage", {
-    title:"Nodules", desc:
-`Nodules are scar-like tissue which forms on the edge of the vocal folds after long term damage. The causes are primarily hyperadduction, constant overuse of function through screaming, and others. The damage from this is not usually permanent, but it is substantially long term, and professional help is often needed to reduce the damage.`,
-    color:"#334",
+    color:"#233",
     tooltip:` `,
 })
 register_node("muscletension", "damage", {
     title:"Muscle Tension", desc:
 `Muscle tension is what is happening in Muscle Tension Dysphonia (MTD). It appears in two modes; primary and secondary. Primary MTD is when muscles outside the larynx, such as in the neck, are being tensed when they shouldn\'t be. This is extraneous muscle tension. Secondary is when muscles in the larynx (usually the adductors and abductors) are tensing in direct opposition to eachother. Both forms can disable a voice completely in the medium term, or cause significant enough fatigue that it becomes untenable to speak for longer than a few minutes. If you get fatigue within 30 minutes of sustained conversation, there is a significant issue and you should see a Speech Language Pathologist.\n\n\
 This is surprisingly common in transvoice students, though thankfully it is usually not the extent of a diagnosis, and is often accidentally treated throughout the training journey. If you have concerns, contact an SLP or otherwise seek a second opinion.`,
-    color:"#443",
+    color:"#332",
+    tooltip:` `,
+})
+register_node("nodules", "damage", {
+    title:"Nodules", desc:
+`Nodules are hardened scar-like or callous-like tissue which forms on the edge of the vocal folds after long term damage. The causes are primarily hyperadduction, constant overuse of function through screaming, and others. The damage from this is not usually permanent, but it is substantially long term, and professional help is often needed to reduce the damage.`,
+    color:"#333",
+    tooltip:` `,
+})
+register_node("vocalpolyp", "damage", {
+    title:"Vocal Polyp", desc:
+`A lesion on a vocal fold similar to a blister.`,
+    color:"#333",
+    tooltip:` `,
+})
+register_node("vocalcyst", "damage", {
+    title:"Vocal Cyst", desc:
+`A rounded mass on a vocal fold usually as a result of severe and rapid damage. Can be permanent.`,
+    color:"#333",
     tooltip:` `,
 })
 
@@ -440,7 +455,7 @@ As a method of singing however it is quite useful when learned properly; just ge
 })
 register_node("beltblend", "belting", {
     title:"Belt Blend", desc:
-`It might seem impossible at first, but it is possible to belt up to some point and then, still in the belt, blend into m2. Not much is actually known about this and how to do it currently.
+`It might seem impossible at first, but it is possible to belt up to some point and then, still in the belt, blend into m2. Not much is actually known about this and how to do it currently. This like most vocal features does not require strain or effort, but is a careful balance.
 
 As far as can be deduced, this is likely through reducing TA while balancing CT, keeping or increasing closure and reducing the air pressure slighlty. All of these things are theoretically needed in order to go from a pushed, loud belt into a gradually lighter but still full sounding m2.
 `,
@@ -484,7 +499,10 @@ register_node("otherphonation", "glottal", {
 })
 register_node("fvf", "otherphonation", {
     title:"False Vocal Folds", desc:
-`The false vocal folds or ventricular folds are just above the true vocal folds, and can sometimes interrupt normal phonation causing subharmonics or be used as compensation for inadequate closure or atrophied vocal folds. They are not particularly damaging for the voice, but more of an annoyance or a sign of another problem. The sound they usually cause can be described as a rough, buzzy overtone, or a "rattle" sound.`,
+`The false vocal folds or ventricular folds are just above the true vocal folds, and can sometimes interrupt normal phonation causing subharmonics or be used as compensation for inadequate closure or atrophied vocal folds. They are not particularly damaging for the voice, but more of an annoyance or a sign of another problem. The sound they usually cause can be described as a rough, buzzy overtone, or a "rattle" sound.
+
+Typically they cause aperiodic (messy) sounds in the 8000 to 15,000hz range. It can sound similar to hyperadduction, but less harmonic / more rough, since hyperadduction causes clear harmonics instead of noise. How FVF effects look on a spectrogram can be described as similar to vocal fry, but in the 10khz range instead of the 30-200hz range.
+It is unclear exactly why and how FVF causes this high frequency.`,
     color:"#444",
     tooltip:` `,
 })
@@ -657,17 +675,24 @@ register_node("opc", "resonance", {
 })
 register_node("pharyngealconstriction", "resonance", {
     title:"Pharyngeal Constriction", desc:
-`Unlike OPC this is usually not ideal. Pharyngeal constriction is when the throat between the larynx and the mouth (the pharynx) is constricted. This is esentially squeezing the throat. It raises the resonant frequencies slightly. Pharyngeal constriction usually comes from compensation, when trying to raise the larynx or when doing other resonance raising modifications. It is not particularly damaging but can lead to tension habits if done regularly.`,
+`Unlike OPC this is usually not ideal. Pharyngeal constriction is when the throat between the larynx and the mouth (the pharynx) is constricted. This is esentially squeezing the throat. It raises the resonant frequencies slightly and trying to max out resonance range is usually how people accidentally do it.
+
+Pharyngeal constriction usually comes from compensation, when trying to raise the larynx or when doing other resonance raising modifications. It is not particularly damaging but can lead to tension habits if done regularly.`,
     color:"#645",
     tooltip:` `,
 })
 register_node("formants", "resonance", {
     title:"Formants", desc:
-`A formant is an area of the voice that is highlighted due to resonance effects. The voice is made up of a fundamental (pitch) and many harmonics and some turbulent noise. These harmonics that are higher (in multiples of the fundamental) in frequency can be highlighted by the filter effect of resonance, and these areas that highlight the harmonics are formants.\n\n\
-A more technical description is that formants are the peak of resonance frequencies locally in the frequencies of the voice. Since the vocal tract is not a perfect smooth straight tube, it doesn't just highlight exactly one frequency, but instead a range, concentrated in a peak which we define as a formant frequency.\n\nUsually these formants are referred to with numbers:\n\
-F0 --> fundamental (pitch)\n\
-F1 --> 1st formant from lowest freq to highest\n\
-F(n) --> (n)th formant`,
+`A formant is an area of the voice that is highlighted due to resonance effects. The voice is made up of a fundamental (pitch) and many harmonics and some turbulent noise. These harmonics that are higher (in multiples of the fundamental) in frequency can be highlighted by the filter effect of resonance, and these areas that highlight the harmonics are formants.
+A more technical description is that formants are the peak of resonance frequencies locally in the frequencies of the voice. Since the vocal tract is not a perfect smooth straight tube, it doesn't just highlight exactly one frequency, but instead a range, concentrated in a peak which we define as a formant frequency.
+
+Usually these formants are referred to with F and a number to denote which formant, starting from the lowest frequency:
+F0 --> fundamental (pitch)
+F1 --> 1st formant from lowest freq to highest
+F(n) --> (n)th formant
+
+Note that it is possible to make other formants happen that are in between the formants we usually see, but these do not replace the existing F1 F2 etc. So if nasal resonance joins the F1 and F2, the "old" F3 is still called F3. We don't downrank it to F2 because there are now less formants below it.
+`,
     color:"#547",
     tooltip:` `,
 })
