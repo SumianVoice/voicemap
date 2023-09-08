@@ -262,7 +262,7 @@ register_node("breathiness", "closure", {
 register_node("hyperadduction", "closure", {
     title:"Hyperadduction", desc:
 `Hyperadduction can <b class="hlight">irreparably damage</b> the vocal folds, cause nodules, pain and more awful things you don't want.\n\
-Do not do it under <b class="hlight">any circumstances</b> for any reason for any length of time.\
+Do not do it under <b class="hlight">any circumstances</b> for any reason for any length of time. \
 Hyperadduction is when the vocal folds are pressed together very tightly, but unlike pressed phonation, this is taken to the extreme. It is often accidentally employed to reach higher notes at the very top of the range. Never force your voice to go "a little bit higher" when it's already requiring effort.`,
     color:"#222",
     tooltip:` `,
@@ -343,7 +343,7 @@ Usually just through disuse, sometimes due to avoiding it\n\
 })
 register_node("nodules", "damage", {
     title:"Nodules", desc:
-`Nodules or vocal fold polyps are scar-like tissue which forms on the edge of the vocal folds after long term damage. The causes are primarily hyperadduction, constant overuse of function through screaming, and others. The damage from this is not usually permanent, but it is substantially long term, and professional help is often needed to reduce the damage.`,
+`Nodules are scar-like tissue which forms on the edge of the vocal folds after long term damage. The causes are primarily hyperadduction, constant overuse of function through screaming, and others. The damage from this is not usually permanent, but it is substantially long term, and professional help is often needed to reduce the damage.`,
     color:"#334",
     tooltip:` `,
 })
@@ -410,11 +410,32 @@ register_node("creak", "m0", {
     color:"#644",
     tooltip:` `,
 })
+register_node("frymix", "m0", {
+    title:"Fry Mix", desc:
+`Since mechanisms are not necessarily distinct but rather separations on a spectrum, it is possible to blend most mechanisms. Just as we can adjust the needed components to blend between m1 and m2, we can blend between m1 and m0. This will sound high in closure and will reduce in fullness / weight in most instances.
+
+It is usually to be avoided unless for stylistic reasons, or for singing. It is sometimes accidentally achieved during voice masculinisation training, since it allows for much lower pitches (e.g. a normal floor of 120hz down to a floor of 90hz with fry mix).
+`,
+    color:"#554",
+    tooltip:` `,
+})
 
 register_node("belting", "pitch", {
     title:"Belting", desc:
-``,
+`Belting is a singing concept, and the process allows a singer to hit higher notes without blending with m2. It works by increasing air pressure, fold mass / vocal weight and closure. As a result, we get a kind of controlled yelling. It is advised to not learn belting until m2 blending is fully mastered, since belting will drastically cut down the top of the pitch range for most people if it's the only way they ever reach high notes. The ability to do m2 at all can atrophy over long preiods.
+
+As a method of singing however it is quite useful when learned properly; just getting louder and pushing the voice to go higher is <i>not how you do it</i> though, it requires a proper balance of all the elements mentioned above, or else we will only achieve a lot of compensation and strain.
+`,
     color:"#556",
+    tooltip:` `,
+})
+register_node("beltblend", "belting", {
+    title:"Belt Blend", desc:
+`It might seem impossible at first, but it is possible to belt up to some point and then, still in the belt, blend into m2. Not much is actually known about this and how to do it currently.
+
+As far as can be deduced, this is likely through reducing TA while balancing CT, keeping or increasing closure and reducing the air pressure slighlty. All of these things are theoretically needed in order to go from a pushed, loud belt into a gradually lighter but still full sounding m2.
+`,
+    color:"#345",
     tooltip:` `,
 })
 
