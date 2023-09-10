@@ -42,7 +42,7 @@ button:active {
 
 button:disabled {
     background: #333 !important;
-    opacity: 20% !important;
+    opacity: 80% !important;
 }
 
 #zoom_buttons {
@@ -57,10 +57,11 @@ button:disabled {
     padding: 1rem;
     border: solid #666666 1px;
     border-radius: 16px;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 #zoom_buttons button {
-    aspect-ratio: 1 / 1;
+    /* aspect-ratio: 1 / 1; */
+    min-width: 4rem;
     height: 4rem;
     font-size: 1.5rem;
     padding: auto;
@@ -183,8 +184,55 @@ textarea {
     /* align-self: flex-start; */
     width: 500px;
 }
+
 a {
     color: #eda;
     font-weight: bold;
     text-decoration: none;
+}
+a:hover {
+    color: #ba7;
+}
+
+sup {
+    color: #877;
+}
+
+
+/* Tooltip container */
+.tt {
+    position: relative;
+    display: inline-block;
+    color: #988;
+}
+
+/* Tooltip text */
+.tt .tooltiptext {
+    visibility: hidden;
+    max-width: max-content;
+    width: max-content;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tt:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }

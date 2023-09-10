@@ -7,16 +7,17 @@ Licensed under MIT License, Copyright 2023 Sumi, sumianvoice.com
 
 register_node("About", "root", {
     title:"About", desc:
-`Welcome! This is a project by Sumi to put in one place as much voice information as is available. It is more a reference than a guide; you won't learn how to change your voice here, you'll just learn about voice itself and how it works.\n\
-\n\
-<b>What I did do:</b>\n\
-<i style="color:#888">- understand and then describe all of the concepts here</i>\n\
-<b>What I did not do:</b>\n\
-<i style="color:#888">- personally invent and pioneer everything here</i>\n\
-\n\n\
-<i style="color:#555">Copyright (c) 2023 Sumi, <<a style="color:#595040" href="https://sumianvoice.com">sumianvoice.com</a>>\nDistributed under open source MIT license</i>\
-\n\n\
-<b class="hlight">Work In Progress</b>\
+`Welcome! This is a project by Sumi to put in one place as much voice information as is available. It is more a reference than a guide; you won't learn how to change your voice here, you'll just learn about voice itself and how it works.
+
+<b>What I did do:</b>
+<i style="color:#888">- understand and then describe all of the concepts here</i>
+<b>What I did not do:</b>
+<i style="color:#888">- personally invent and pioneer everything here</i>
+
+<i style="color:#555">Copyright (c) 2023 Sumi, <<a style="color:#595040" href="https://sumianvoice.com">sumianvoice.com</a>>
+Distributed under open source MIT license</i>
+
+<b class="hlight">Work In Progress</b>
 `,
     color:"#333",
     tooltip:` `,
@@ -149,19 +150,17 @@ register_node("vfvm", "glottal", {
 //////////////////////
 register_node("naturalisation", "vfvm", {
     title:"Pitch Naturalisation", desc:
-`Each pitch has its desired level of vibratory mass / weight, so there is an equillibrium that can be found between pitch and weight. \n\
-Pitch Naturalisation is the process and concept of naturally adjusting a voice to this equillibrium.\n\
-\n\
-Usually we use this by raising pitch very slightly, then letting the voice naturally adjust without letting clarity and volume be sacrificed. We can also do this long term by raising the base pitch of the voice slightly and speaking here for a matter of several days or weeks. Given the right conditions, a voice will usually adjust rather than become strained or forced.\n\
-\n\
-Naturalised voices:\n\
---> sound like they have always been speeking at this pitch\n\
---> are sustainable and effortless to produce\n\
-Non-naturalised voices:\n\
---> sound forced or "pushed" or stressed\n\
---> are tiring or requires high level of concentration\n\
-\n\
-\
+`Each pitch has its desired level of vibratory mass / weight, so there is an equillibrium that can be found between pitch and weight.
+Pitch Naturalisation is the process and concept of naturally adjusting a voice to this equillibrium.tt{{This concept is the core of the Pitch Intuitive Practice Methodology designed by Sumianvoice, which is a near standalone methodology for changing the voice using the existing positive conflations people have with pitch.}}
+
+Usually we use this by raising pitch very slightly, then letting the voice naturally adjust without letting clarity and volume be sacrificed. We can also do this long term by raising the base pitch of the voice slightly and speaking here for a matter of several days or weeks. Given the right conditions, a voice will usually adjust rather than become strained or forced.
+
+Naturalised voices:
+--> sound like they have always been speeking at this pitch
+--> are sustainable and effortless to produce
+Non-naturalised voices:
+--> sound forced or "pushed" or stressed
+--> are tiring or requires high level of concentration
 `,
     color:"#075",
     tooltip:` `,
@@ -203,7 +202,7 @@ Underfull is when a voice has either too low weight or too low resonance, result
 })
 register_node("m2aslightweight", "vocalweight", {
     title:"Falsetto as a Guide", desc:
-`Falsetto or m2 has light vocal weight; too light. It has qualities we dont want, such as instability and hollowness, but the most obvious difference is vocal weight / fold mass. We can use this as a guide; as we go higher in pitch to reach lighter weight, we will get closer to that falsetto quality. This can help with direction, and often prevent strain. Note that this will not allow for a both strong / loud and light voice, only a light voice. Learning to reduce weight through pitch naturalisation, phrase repetition or other methods is better if volume, clarity or high closure is desired. However, this can be an excellent way to give context to those other methods, as long as it isn't entirely relied on.
+`Falsetto or m2 has extremely light vocal weight. It is essentially "too light". It has some qualities we don't want, such as instability and hollowness, but overall it can be a very useful voice feminisation method. We can use this as a guide; as we go higher in pitch to reach lighter weight, we will get closer to that falsetto quality. This can help with direction, and often prevent strain. Note that this will not allow for a both strong / loud and light voice, only a light voice. Learning to reduce weight through pitch naturalisation, phrase repetition or other methods is better if volume, clarity or high closure is desired. However, this can be an excellent way to give context to those other methods, as long as it isn't entirely relied on.
 
 We can also start low, then try to make the voice more like falsetto. As soon as we are about to speak, we instead just do a slightly lower pitch than we were about to, andw this process can continue all through the range. This can effectively prevent strain since we're always doing a lower pitch than our voice is adjusted to, and this is likely the lightest you can get though "just go directly to a light voice without pre-priming the voice" methods.
 `,
@@ -384,6 +383,21 @@ register_node("vocalcyst", "damage", {
 
 
 //////////////////////
+// tvfconstriction
+//////////////////////
+register_node("tvfconstriction", "closure", {
+    title:"Vocal Fold Constriction", desc:
+`The true vocal folds can be constricted or tensed, and this can cause some issues, including loss of clarity, instability, more creak, more subharmonics and more. This can be due to muscle tension between adductors and abductors, or just too much of one adductor muscle vs another.
+`,
+    color:"#655",
+    tooltip:` `,
+})
+
+
+
+
+
+//////////////////////
 // PITCH
 //////////////////////
 register_node("pitch", "glottal", {
@@ -394,24 +408,24 @@ register_node("pitch", "glottal", {
 })
 register_node("mechanisms", "pitch", {
     title:"Vocal Mechanisms", desc:
-`Laryngeal Vibratory Mechanisms`,
+`Laryngeal Vibratory Mechanisms tt{{See paper: DOI:10.1016/j.jvoice.2007.10.014 - 'Laryngeal Vibratory Mechanisms: The Notion of Vocal Register Revisited'}}`,
     color:"#444",
     tooltip:` `,
 })
 register_node("m1", "mechanisms", {
-    title:"M1", desc:
+    title:`M1 <i style="color:#999">(modal voice)</i>`, desc:
 `Normal speaking register. The folds get more contact and the ligament vibrates as well as the mucosa and some of the muscle (the TA).`,
     color:"#455",
     tooltip:` `,
 })
 register_node("m2", "mechanisms", {
-    title:"M2", desc:
+    title:`M2 <i style="color:#999">(falsetto)</i>`, desc:
 `Falsetto / Head Voice register, often hollow-sounding or at least less full than M1.`,
     color:"#455",
     tooltip:` `,
 })
 register_node("m3", "mechanisms", {
-    title:"M3", desc:
+    title:`M3 <i style="color:#999">(whistle)</i>`, desc:
 `Whistle Register. This can be dangerous; do not attempt without appropriate supervision and instruction.`,
     color:"#545",
     tooltip:` `,
@@ -463,6 +477,14 @@ As far as can be deduced, this is likely through reducing TA while balancing CT,
     tooltip:` `,
 })
 
+register_node("pitchmatching", "pitch", {
+    title:`Pitch Matching`, desc:
+`Pitch Matching is the ability to replicate a note you hear. Some people naturally have this from experience, some need to learn it.
+You can use <a href="https://szynalski.com/tone#G2,tri,v0.2">a tone generator</a> or any virtual keyboard or synth or DAW to do this.`,
+    color:"#456",
+    tooltip:` `,
+})
+
 register_node("cricothyroid", "pitch", {
     title:"Cricothyroid (CT)", desc:
 `The muscle controlling raising the pitch by tilting the thyroid cartilage (the shield-like cartilage of the larynx) and thereby stretching the vocal folds.`,
@@ -483,6 +505,8 @@ register_node("rangeexpansion", "pitch", {
     color:"#444",
     tooltip:` `,
 })
+
+
 
 
 
@@ -548,10 +572,57 @@ register_node("emphasis", "speech", {
     color:"#556",
     tooltip:` `,
 })
+
+
+
 register_instance("basepitch", "speech")
 
 
 
+register_node("microbehaviors", "speech", {
+    title:"Microbehaviors", desc:
+`Microbehaviors are a completely "what if" concept. It's used to explain features of voice too small and too automatic and subconscious to be able to directly influence, unlike concepts like weight and resonance which have very clear definitions. Microbehaviors are glottal, resonance or speech behaviors (or even maybe something else, who knows) which give a voice its distinct and unique "fingerprint". We don't really know much about it aside from "things happen and they make a voice sound different".
+
+When we keep vocal weight, resonance, pitch, and all the main concepts the same, yet we sound like one person rather than a seperate person, the difference is what is covered by this concept. It is the unexplained tiny changes that make up the difference between two unique voices. One notable example of a voice with a high level of this behavior which makes it unique is Druew. The basic characteristics such as weight, resonance, articulation, closure etc do not fully explain how it sounds so unique, and so the vague concept "microbehaviors" is invoked to explain this.
+
+As a subconscious and more or less inexplicable concept, it is mostly controlled through mimicry. Higher skill in mimicry allows for more control over these microbehaviors.
+
+Basically:
+--> we have no idea how it works
+--> but it happens and we can use it`,
+    color:"#466",
+    tooltip:` `,
+})
+
+
+
+
+register_node("onsets", "speech", {
+    title:"Onsets", desc:
+`Onsets are the very beginning of the voiced sound. It is the configuration the vocal folds are in when the sound starts.
+
+<h2>Soft Onsets</h2> Soft onsets are when the folds are open, then come together just as the air starts flowing through, leading to a smooth transition into phonation without any change in volume throughout.
+
+<h2>Hard Onsets</h2> Hard onsets start with the folds closed and with pressure already pushing against them. This means the beginning of the sound can be creaky or louder than the rest. This encourages more weight to a very small degree and also general roughness, TVF tension and more.
+
+<h2>Aspirate Onsets</h2> These start with the folds open like soft onsets, but the folds come together after the airflow has already begun, meaning we get a slightly breathy or aspirate start to the sound. This can encourage breathiness, but can be useful for some character voices.
+`,
+    color:"#456",
+    tooltip:` `,
+})
+register_node("offsets", "speech", {
+    title:"Offsets", desc:
+`Offsets are the very end of the voiced sound. It is the configuration the vocal folds are in when they stop vibrating.
+
+<h2>Soft Offsets</h2> The folds close just in time for the pressure to stop, meaning the voice comes to a smooth and immediate stop.
+
+<h2>Hard Offsets</h2> The folds close but the pressure keeps going for longer, meaning the folds have to press harder to stop the sound or creak / fry happens.
+
+<h2>Aspirate Offsets</h2> The folds just open, and the pressure stops after, meaning we have a small aspirate / breathy trailing end to the sound, or it will just fade out smoothly rather than abruptly ending.
+`,
+    color:"#456",
+    tooltip:` `,
+})
 
 
 
@@ -580,40 +651,12 @@ When "manually" raising the larynx such as through whisper exercises or in an at
     color:"#456",
     tooltip:` `,
 })
-register_node("whisperintro", "larynxheight", {
-    title:"Whisper Introduction\nTo Resonance", desc:
-``,
-    color:"#945",
-    type:"exercise",
-    tooltip:` `,
-})
-register_node("resonancestepping", "larynxheight", {
-    title:"Resonance Stepping", desc:
-``,
-    color:"#945",
-    type:"exercise",
-    tooltip:` `,
-})
 register_node("brightness", "resonance", {
     title:"Brightness", desc:
 `Brightness is a combination of the tone of the voice (from glottal behavior) and resonance. A bright voice has more high frequencies / more substantial high frequency harmonics. Importantly, it isn't just another name for resonance; a voice can be high resonance yet sound dark due to low clarity, breathiness, nasality, m2 or low IA, and more.`,
     color:"#455",
     tooltip:` `,
 })
-register_node("darktobright", "brightness", {
-    title:"Dark to Bright", desc:
-`--> do a dark, Patrick Star like voice\n\
---> go to whatever pitch you want to speak at\n\
---> start reading a passage, preferably long\n\
---> let the voice go back to normal brightness\n\
---> let the voice get a little brighter\n\
-`,
-    color:"#945",
-    type:"exercise",
-    tooltip:` `,
-})
-
-
 
 register_node("articulation", "resonance", {
     title:"Articulation", desc:
@@ -627,30 +670,6 @@ register_node("mouthspace", "articulation", {
     title:"Mouth Space", desc:
 `Mouth space is a way to change resonance. We can shift things around in the mouth to raise resonance without necessarily changing vowel. This act of raising resonance using the mouth while maintaining the same vowel is mouth space. It\'s extremely important as a gendered aspect, and particularly useful at low pitches where vocal weight is typically heavier and resonance is typically darker.`,
     color:"#645",
-    tooltip:` `,
-})
-register_node("uhh-iii", "mouthspace", {
-    title:"UHH and III", desc:
-`If we say "uhhh", we will achieve most likely large mouth space and a darker voice. Then we can compare this to the "iii" sound as in "happ<b>y</b>", which will cause a smaller mouth space. It's important to note that we might get a smile expression through this; that's not necessary for small mouth space, so bear that in mind.\n\
-\n\
-This can then tell us vaguely how to affect mouth space.\n\
-\n\
---> say "uhh" and note the larger mouth space\n\
---> say "happiiiiiy" and note the smaller mouth space\
-`,
-    color:"#945",
-    type:"exercise",
-    tooltip:` `,
-})
-register_node("feminineaccent", "mouthspace", {
-    title:`The "Feminine Accent"`, desc:
-`Our assumptions about what a "feminine way of speaking" would be is not completely accurate but it is a good starting point. If we do whatever way of speaking we think is feminine, we will likely achieve smaller mouth space, brigher sibilants and different articulation. This can get perhaps 80% of the features we need.\n\
-\n\
---> speak with whatever you think is an exaggerated feminine voice\n\
---> note the changes in how you articulate the mouth and the brighter S sounds\
-`,
-    color:"#945",
-    type:"exercise",
     tooltip:` `,
 })
 
@@ -737,8 +756,17 @@ register_node("lowiahollow", "covers", {
     color:"#544",
     tooltip:` `,
 })
+
 register_instance("breathiness", "covers")
 
+register_node("subharmonics", "covers", {
+    title:"Subharmonics", desc:
+`Subharmonics sound similar to creak or m0, but are more harmonic and less like random noise. They form for various reasons, but often due to true vocal fold tension / constriction and too much closure for the level of pressure / airflow.
+
+This presents itself as "extra harmonics". The folds get interrupted every second or third or etc cycle, and so it sounds like there are two voices at once. It isn't damaging but it can be very hard to build a habit that leaves it behind. It can be used in singing to do lower notes, or as a stylistic choice such as in certain types of overtone singing.`,
+    color:"#545",
+    tooltip:` `,
+})
 
 
 
