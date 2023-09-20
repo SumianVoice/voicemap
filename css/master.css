@@ -6,6 +6,10 @@ html * {
 
     touch-action: none;
 }
+b {
+    color: #ddd;
+}
+
 html {
     overflow: hidden;
 }
@@ -168,16 +172,6 @@ textarea {
     border-radius: 8px;
 }
 
-.tooltip {
-    color: #00000000;
-    margin-top: 8px;
-    transition: color 0.2s ease-in-out;
-}
-
-.node:hover > .tooltip {
-    color: #ffffff30;
-}
-
 .desc {
     margin-top: 10px;
     /* text-align: center; */
@@ -203,13 +197,13 @@ sup {
 .tt {
     position: relative;
     display: inline-block;
-    color: #988;
+    color: #ffeaaa50;
 }
 
 /* Tooltip text */
 .tt .tooltiptext {
     visibility: hidden;
-    max-width: max-content;
+    max-width: 500px;
     width: max-content;
     background-color: #222;
     color: #fff;
@@ -235,4 +229,17 @@ sup {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip {
+    opacity: 0;
+    color: #eeeeee40;
+    margin: 0px;
+    margin-top: 8px;
+    transition: opacity 0.2s ease-in-out;
+    height: fit-content;
+}
+
+.node:hover > .tooltip {
+    opacity: 1;
 }

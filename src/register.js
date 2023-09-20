@@ -49,35 +49,43 @@ function do_all_registered_instances() {
 
 const scale_factor_per_tree_step = 0.8
 
+function tooltipify(text) {
+    // parse tt{{blah}} as a notation / reference popup
+    const ttsplit = text.split(`tt{{`);
+    if (ttsplit.length > 0) {
+        text = ``;
+        for (let i = 0; i < ttsplit.length; i++) {
+            if (i > 0) {
+                const ttsplittmp = ttsplit[i].split(`}}`);
+                text += `<sup class="tt">[?]<span class="tooltiptext">` +  ttsplittmp[0]
+                text += `</span></sup>` + (ttsplittmp[1] || "")
+            } else {
+                text += ttsplit[i]
+            }
+        }
+    }
+    return text
+}
+
 function parse_def(id, in_node_name, def) {
     // keep track so can add later
     def.place_in = in_node_name;
     def.id = id;
 
-    def.desc = def.desc.replaceAll("\n", "<br>")
-    def.title = def.title.replaceAll("\n", "<br>")
-    def.tooltip = def.tooltip.replaceAll("\n", "<br>")
-    def.desc = def.desc.replaceAll("-->", '<b class="hlight">--></b>')
+    def.desc = def.desc.replaceAll("\n", "<br>");
+    def.title = def.title.replaceAll("\n", "<br>");
+    def.tooltip = def.tooltip.replaceAll("\n", "<br>");
+    def.desc = def.desc.replaceAll("-->", '<b class="hlight">--></b>');
 
     if (def.desc == "") {
-        def.desc = `<b class="hlight">[under construction]</b>`
+        def.desc = `<b class="hlight">[under construction]</b>`;
     }
-    def.desc = def.desc.replaceAll("[wip]", '<br><br><b class="hlight">[under construction]</b>')
+    def.desc = def.desc.replaceAll("[wip]", '<br><br><b class="hlight">[under construction]</b>');
 
-    // parse tt{{blah}} as a notation / reference popup
-    const ttsplit = def.desc.split(`tt{{`);
-    if (ttsplit.length > 0) {
-        def.desc = ``;
-        for (let i = 0; i < ttsplit.length; i++) {
-            if (i > 0) {
-                const ttsplittmp = ttsplit[i].split(`}}`);
-                def.desc += `<sup class="tt">[?]<span class="tooltiptext">` +  ttsplittmp[0]
-                def.desc += `</span></sup>` + (ttsplittmp[1] || "")
-            } else {
-                def.desc += ttsplit[i]
-            }
-        }
-    }
+    def.desc = tooltipify(def.desc);
+    def.tooltip = tooltipify(def.tooltip);
+    def.title = tooltipify(def.title);
+
     return def;
 }
 
@@ -95,7 +103,7 @@ function get_fragment_from_def(id, in_node_name, def) {
     '>';
     // title
     code += '<h2 class="title"';
-    code += ` style="`
+    code += ` style="`;
     code += `font-size:` + String(new_scale_factor) + "rem;";
     code += 'height:max(fit-content, ' + String(new_scale_factor*1.2) + "rem);";
     code += "\"" + ">";
@@ -109,10 +117,16 @@ function get_fragment_from_def(id, in_node_name, def) {
     code += (def.desc || "");
     code += "</div>";
 
-    code = code + '<div class="node_list" id="' + id + "_list" + '"></div></div>';
+    if (def.tooltip != " " && def.tooltip != null) {
+        code += `<p class="tooltip">`;
+        code += def.tooltip;
+        code += `</p>`;
+    }
+
+    code += '<div class="node_list" id="' + id + "_list" + '"></div></div>';
 
     if (def.type == "spacer") {
-        code = `<div id="` + id + `"></div>`
+        code = `<div id="` + id + `"></div>`;
     }
 
     return html_fragment_from_string(code);
@@ -163,6 +177,7 @@ window.onload = function() {
 const exercise_visibility = {
     fem : false,
     masc : false,
+    gen : false,
 };
 
 function show_nodes(type, bool) {
