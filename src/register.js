@@ -20,11 +20,11 @@ function html_fragment_from_string(html_string) {
 //        REGISTER
 ///////////////////////////////////////
 
-const registered_nodes = {
+const active_nodes = {
     "root" : parent
 }
 
-const registered_node_definitions = {
+const registered_nodes = {
     "root" : {}
 }
 
@@ -33,16 +33,17 @@ function register_instance(id, in_node_name) {
     if (instances_to_add[id] == null) {
         instances_to_add[id] = []
     }
-
     instances_to_add[id].push(in_node_name)
 }
+
 function do_all_registered_instances() {
-    for (var id of Object.keys(instances_to_add)) {
+    console.log("doing instances");
+    for (var id in instances_to_add) {
         const v = instances_to_add[id]
         for (let i = 0; i < v.length; i++) {
-            const def = registered_node_definitions[id]
+            const def = registered_nodes[id].def
             in_node_name = v[i]
-            register_node(id + String(i), in_node_name, def, {['skip_register']:true, ['is_copy']:true, ['old_id']:id})
+            construct_node(id + String(i), in_node_name, def, {['skip_register']:true, ['is_copy']:true, ['old_id']:id})
         }
     }
 }
@@ -86,15 +87,15 @@ function linkify(text) {
     return text
 }
 
-function parse_def(id, in_node_name, from_def) {
+function parse_def(id, in_node_name, def) {
     // keep track so can add later
-    var def = {}
-    for (k in from_def) {
-        def[k] = from_def[k];
-    }
+    // var def = {}
+    // for (k in from_def) {
+    //     def[k] = from_def[k];
+    //     if (k == "title") { console.log(def.title);}
+    // }
 
     def.place_in = in_node_name;
-    def.id = id;
 
     def.desc = def.desc.replaceAll("\n", "<br>");
     def.title = def.title.replaceAll("\n", "<br>");
@@ -119,7 +120,7 @@ function parse_def(id, in_node_name, from_def) {
 }
 
 function get_fragment_from_def(id, in_node_name, def) {
-    const new_tree_step = registered_nodes[in_node_name]._tree_step + 1;
+    const new_tree_step = active_nodes[in_node_name]._tree_step + 1;
     let new_scale_factor = Math.round(1 / (new_tree_step**1.1) * 10 * 1000) / 1000;
     new_scale_factor = Math.min(Math.max(2, new_scale_factor), 9);
 
@@ -162,51 +163,70 @@ function get_fragment_from_def(id, in_node_name, def) {
 }
 
 const exercise_tags = {"exf":1, "exm":1, "exg":1};
-const registered_nodes_index = []
+const active_nodes_index = []
 function register_node(id, in_node_name, fromdef, flags={}) {
-    if (registered_nodes[in_node_name] == null) {
-        console.log("CANNOT add node");
-        console.log(in_node_name);
+    fromdef.id = id
+    registered_nodes[id] = {
+        id : id,
+        in_node_name : in_node_name,
+        def : fromdef,
+        flags : flags,
+        added : false,
+    }
+}
+
+function construct_node(id, in_node_name, fromdef, flags={}) {
+    if (active_nodes[in_node_name] == null) {
+        console.log(`CANNOT add node "` + id + `" in node "` + in_node_name + `"`);
         console.log(fromdef);
-        return;
+        return false;
     }
     // copy table
     let def = {}; for (k in fromdef) {def[k] = fromdef[k];}
 
     if (flags.is_copy) {
-        def.desc = `t[[` + String(flags.old_id) + `|--> Highlight Original]]\n` + String(def.desc)
+        def.desc = `t[[` + String(def.id) + `|--> Highlight Original]]\n` + String(def.desc)
         console.log(flags)
     }
     // if this ID already exists, show an error
-    if (!flags.skip_register && registered_nodes[id] != null) {
+    if (!flags.skip_register && active_nodes[id] != null) {
         def.title += "ERROR! THIS WILL OVERWRITE " + id
     }
 
     def = parse_def(id, in_node_name, def);
 
     if (!flags.skip_register) {
-        registered_node_definitions[id] = def;
-        registered_nodes_index.push(def);
+        // registered_nodes[id] = def;
+        active_nodes_index.push(def);
     };
 
-    const new_tree_step = registered_nodes[in_node_name]._tree_step + 1;
+    const new_tree_step = active_nodes[in_node_name]._tree_step + 1;
 
     const fragment = get_fragment_from_def(id, in_node_name, def);
 
-    registered_nodes[in_node_name]._list.appendChild(fragment);
-    registered_nodes[id] = document.getElementById(id);
-    registered_nodes[id]._list = document.getElementById(id + "_list");
-    registered_nodes[id]._tree_step = new_tree_step;
+    active_nodes[in_node_name]._list.appendChild(fragment);
+    active_nodes[id] = document.getElementById(id);
+    active_nodes[id]._list = document.getElementById(id + "_list");
+    active_nodes[id]._tree_step = new_tree_step;
 
     if (flags.is_copy) {
-        registered_nodes[id].style["border"] = "#ffffff20 4px dashed";
+        active_nodes[id].style["border"] = "#ffffff20 4px dashed";
     }
     if (exercise_tags[def.type || "none"] != null) {
-        registered_nodes[id].style.display = "none";
+        active_nodes[id].style.display = "none";
+    }
+}
+
+function construct_all_nodes() {
+    for (var id in registered_nodes) {
+        if (id == "root") {continue;}
+        const v = registered_nodes[id];
+        construct_node(v.def.id, v.in_node_name, v.def, {});
     }
 }
 
 window.onload = function() {
+    construct_all_nodes()
     do_all_registered_instances()
 }
 
@@ -218,9 +238,9 @@ const exercise_visibility = {
 };
 
 function show_nodes(type, bool) {
-    for (var k in registered_nodes) {
-        const n = registered_nodes[k];
-        const def = registered_node_definitions[k];
+    for (var k in active_nodes) {
+        const n = active_nodes[k];
+        const def = registered_nodes[k];
         if (def && def.type == type) {
             n.style.display = (!bool && "none") || "flex";
         }
@@ -248,8 +268,8 @@ let tag_highlight_list = {}
 
 function show_tagged(tag) {
     console.log("looking for " + String(tag));
-    for (var k in registered_nodes) {
-        const n = registered_nodes[k];
+    for (var k in active_nodes) {
+        const n = active_nodes[k];
         if (k == tag) {
             n.style.transition = `1s all ease-in-out`;
             n.style.outline = `16px solid red`;
@@ -268,11 +288,11 @@ function update(dt) {
             tag_highlight_list[k] -= dt;
         } else if (tag_highlight_list[k] != -100) {
             tag_highlight_list[k] = -100;
-            const n = registered_nodes[k];
+            const n = active_nodes[k];
             n.style.transition = `1s all ease-in-out`;
             n.style.outline = `0px solid red`;
             // to make invisible again
-            // let def = registered_node_definitions[k]
+            // let def = registered_nodes[k]
             // if (exercise_tags[def.type] != null && !exercise_visibility[def.type]) {
             //     n.style.display = `none`;
             // }
