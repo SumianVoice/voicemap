@@ -42,7 +42,7 @@ function do_all_registered_instances() {
         for (let i = 0; i < v.length; i++) {
             const def = registered_node_definitions[id]
             in_node_name = v[i]
-            register_node(id + String(i), in_node_name, def, true)
+            register_node(id + String(i), in_node_name, def, {['skip_register']:true, ['is_copy']:true, ['old_id']:id})
         }
     }
 }
@@ -67,13 +67,39 @@ function tooltipify(text) {
     return text
 }
 
-function parse_def(id, in_node_name, def) {
+function linkify(text) {
+    // parse tt{{blah}} as a notation / reference popup
+    const ttsplit = text.split(`t[[`);
+    if (ttsplit.length > 0) {
+        text = ``;
+        for (let i = 0; i < ttsplit.length; i++) {
+            if (i > 0) {
+                const ttsplittmp = ttsplit[i].split(`]]`);
+                const elems = ttsplittmp[0].split(`|`);
+                text += `<span class="tag_link" onclick="show_tagged(\'` +  elems[0] + `\')">` + elems[1]
+                text += `</span>` + (ttsplittmp[1] || "")
+            } else {
+                text += ttsplit[i]
+            }
+        }
+    }
+    return text
+}
+
+function parse_def(id, in_node_name, from_def) {
     // keep track so can add later
+    var def = {}
+    for (k in from_def) {
+        def[k] = from_def[k];
+    }
+
     def.place_in = in_node_name;
     def.id = id;
 
     def.desc = def.desc.replaceAll("\n", "<br>");
     def.title = def.title.replaceAll("\n", "<br>");
+    def.title = def.title.replaceAll(/\<.*(small_subtitle).*\<\/\i\>/gi, "");
+    def.title += `<br>` + `<i class="small_subtitle">` + id + `</i>`;
     def.tooltip = def.tooltip.replaceAll("\n", "<br>");
     def.desc = def.desc.replaceAll("-->", '<b class="hlight">--></b>');
 
@@ -85,6 +111,9 @@ function parse_def(id, in_node_name, def) {
     def.desc = tooltipify(def.desc);
     def.tooltip = tooltipify(def.tooltip);
     def.title = tooltipify(def.title);
+
+    def.desc = linkify(def.desc);
+    // if (def.id == "naturalisation") { console.log(def.desc); }
 
     return def;
 }
@@ -132,24 +161,30 @@ function get_fragment_from_def(id, in_node_name, def) {
     return html_fragment_from_string(code);
 }
 
+const exercise_tags = {"exf":1, "exm":1, "exg":1};
 const registered_nodes_index = []
-function register_node(id, in_node_name, def, skip_register=false) {
+function register_node(id, in_node_name, fromdef, flags={}) {
     if (registered_nodes[in_node_name] == null) {
         console.log("CANNOT add node");
         console.log(in_node_name);
-        console.log(def);
+        console.log(fromdef);
         return;
     }
+    // copy table
+    let def = {}; for (k in fromdef) {def[k] = fromdef[k];}
+
+    if (flags.is_copy) {
+        def.desc = `t[[` + String(flags.old_id) + `|--> Highlight Original]]\n` + String(def.desc)
+        console.log(flags)
+    }
     // if this ID already exists, show an error
-    if (!skip_register && registered_nodes[id] != null) {
+    if (!flags.skip_register && registered_nodes[id] != null) {
         def.title += "ERROR! THIS WILL OVERWRITE " + id
     }
 
-    // if (def.type == "exercise") { return; } // disable exercises until better method for display available
-
     def = parse_def(id, in_node_name, def);
 
-    if (!skip_register) {
+    if (!flags.skip_register) {
         registered_node_definitions[id] = def;
         registered_nodes_index.push(def);
     };
@@ -163,7 +198,9 @@ function register_node(id, in_node_name, def, skip_register=false) {
     registered_nodes[id]._list = document.getElementById(id + "_list");
     registered_nodes[id]._tree_step = new_tree_step;
 
-    const exercise_tags = {"exf":1, "exm":1, "exg":1};
+    if (flags.is_copy) {
+        registered_nodes[id].style["border"] = "#ffffff20 4px dashed";
+    }
     if (exercise_tags[def.type || "none"] != null) {
         registered_nodes[id].style.display = "none";
     }
@@ -204,6 +241,53 @@ function show_exercise_gen() {
     exercise_visibility.gen = !exercise_visibility.gen;
     show_nodes("exg", exercise_visibility.gen);
     button_show_exercise_gen.style["background-color"] = ((exercise_visibility.gen && "#0a3") || "");
+}
+
+
+let tag_highlight_list = {}
+
+function show_tagged(tag) {
+    console.log("looking for " + String(tag));
+    for (var k in registered_nodes) {
+        const n = registered_nodes[k];
+        if (k == tag) {
+            n.style.transition = `1s all ease-in-out`;
+            n.style.outline = `16px solid red`;
+            n.style.display = `flex`;
+            tag_highlight_list[k] = 10
+        } else {
+            n.style.transition = `1s all ease-in-out`;
+            n.style.outline = `0px solid red`;
+        }
+    }
+}
+
+function update(dt) {
+    for (k in tag_highlight_list) {
+        if (tag_highlight_list[k] > 0) {
+            tag_highlight_list[k] -= dt;
+        } else if (tag_highlight_list[k] != -100) {
+            tag_highlight_list[k] = -100;
+            const n = registered_nodes[k];
+            n.style.transition = `1s all ease-in-out`;
+            n.style.outline = `0px solid red`;
+            // to make invisible again
+            // let def = registered_node_definitions[k]
+            // if (exercise_tags[def.type] != null && !exercise_visibility[def.type]) {
+            //     n.style.display = `none`;
+            // }
+        }
+    }
+}
+
+var lastUpdate = Date.now();
+var myInterval = setInterval(tick, 0);
+var total = 0
+function tick() {
+    var now = Date.now();
+    var dt = now - lastUpdate;
+    lastUpdate = now;
+    update(dt / 1000);
 }
 
 

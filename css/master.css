@@ -168,14 +168,26 @@ textarea {
     width: 100%;
     background-color: #ffffff08;
     box-shadow: #00000020 2px 2px 8px;
-    padding: 8px;
+    padding: 6px;
+    padding-bottom: 16px;
     border-radius: 8px;
+    /* display: flex; */
+    /* flex-direction:column; */
+}
+
+.small_subtitle {
+    color: #ffffff40;
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: right;
+    width: 200px;
+    position: absolute;
+    align-self: flex-end;
+    transform: translate(0.0rem, -0.30rem);
 }
 
 .desc {
     margin-top: 10px;
-    /* text-align: center; */
-    /* align-self: flex-start; */
     width: 500px;
 }
 
@@ -238,6 +250,22 @@ sup {
     margin-top: 8px;
     transition: opacity 0.2s ease-in-out;
     height: fit-content;
+}
+
+.tag_link {
+    /* color:#ffeeaaa0; */
+    display: inline-block;
+    border-radius: 0.2rem;
+    /* border: 1px solid #ffffff20; */
+    background: #ffeeaa10;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+}
+.tag_link:hover {
+    background: #ffeeaa20;
+}
+.tag_link:active {
+    background: #ffeeaa00;
 }
 
 .node:hover > .tooltip {

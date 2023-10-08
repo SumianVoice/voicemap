@@ -114,7 +114,7 @@ register_node("pitchnatloud", "naturalisation", {
 --> slow down as you get higher; F3 might take a minute or several to naturalise
 --> so spend more time on higher pitches
 --> if you notice a "pushing" to reach the higher intonation, don't raise base pitch
---> you can blend with m2, and this is mostly good, but you should wait until you need to
+--> you can blend with M2, and this is mostly good, but you should wait until you need to
 
 tt{{first known use: Sumianvoice}}
 `,
@@ -176,7 +176,7 @@ register_node("weightnotpitch", "vocalweight", {
 --> start at a low pitch relaxed
 --> go lighter, letting the voice raise in pitch if it wants to
 --> if it sounds like it's "the same but higher" then you probably raised pitch instead of going lighter so start again
---> eventually you'll reach m2, in which case do one more lighter voice and stop
+--> eventually you'll reach M2, in which case do one more lighter voice and stop
 
 tt{{first known use: Sumianvoice}}
 `,
@@ -223,7 +223,7 @@ register_node("opcinm2", "opc", {
     title:`OPC in M2`, desc:
 `Can be used to achieve OPC easier through using M2 to reduce compensation. Anything that would be a compensatory reaction to trying to do OPC would upset the very fragile M2 configuration.
 
---> do a hollow, dark / low resonance m2 note with "aaah"
+--> do a hollow, dark / low resonance M2 note with "aaah"
 --> do a brighter "aaah", adding some OPC
 --> use "uwawawa" repeated to add more OPC while keeping the whole configuration very relaxed
 --> focus on how effortless this is and the high resonance sound you get
@@ -245,7 +245,7 @@ register_node("sweetsounds", "vocalweight", {
 --> try to just do a "sweet" voice
 --> this description is intentionally vague, so as to let your subconscious do the work
 --> think of a sweet, soft voice you've heard before
---> this might mean going into or almost going into falsetto / m2
+--> this might mean going into or almost going into falsetto / M2
 --> to achieve the sweet quality, it's necessary to raise the pitch slightly, so start in a neutral or medium high pitch
 --> you can also let it raise gradually from a low pitch as you speak a passage, and as it raises make it sweeter and sweeter
 --> the resulting sound will be breathy most likely, so remove this after

@@ -2,7 +2,7 @@
 if (true) {
 const color = "#386";
 
-register_node("m2blend", "m2", {
+register_node("m2blend", "m2blending", {
     title:`Blend M2 with slides`, desc:
 `Blending M2 is where we match up the configuration of M1 and M2 so that there is no imbalance and no break.
 
@@ -20,7 +20,7 @@ register_node("m2blend", "m2", {
 })
 
 register_node("findingm2humming", "m2", {
-    title:`Finding m2 with Humming`, desc:
+    title:`Finding M2 with Humming`, desc:
 `This can help if you can't access M2 at all, or just to relax the higher range in general. Being able to access M2 is very important.
 
 --> do a hum at a low pitch
@@ -36,7 +36,7 @@ register_node("findingm2humming", "m2", {
 })
 
 register_node("findingm2hoots", "m2", {
-    title:`Finding m2 with Hoots`, desc:
+    title:`Finding M2 with Hoots`, desc:
 `Once you already have access to M2 but it's not reliable to get into it, this can sometimes be all we need to get out voice into M2.
 
 --> for this, you will need a puff of air in the "hoo", it should be fairly breathy
@@ -181,7 +181,7 @@ register_node("m2ohah_ia", "ia", {
     title:"M2 oh ah for IA", desc:
 `Good for reducing the "not enough IA" hollowness.
 
---> go to an m2 note
+--> go to an M2 note
 --> say in a lazy and passive way "ohh"
 --> note the low tone purity
 --> say "ah" or "hah" in a stronger posture
