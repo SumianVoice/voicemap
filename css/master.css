@@ -132,6 +132,14 @@ textarea {
     -ms-user-select: none;
     user-select: none;
 }
+.allow_select {
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
 
 .hlight {
     color: rgb(238, 116, 45);
@@ -236,10 +244,24 @@ sup {
     /* Fade in tooltip */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    transform: translateY(0.5rem);
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: auto;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tt:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tooltiptext:hover {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;

@@ -58,7 +58,7 @@ function tooltipify(text) {
         for (let i = 0; i < ttsplit.length; i++) {
             if (i > 0) {
                 const ttsplittmp = ttsplit[i].split(`}}`);
-                text += `<sup class="tt">[?]<span class="tooltiptext">` +  ttsplittmp[0]
+                text += `<sup class="tt" onmousedown="stopDragging()">[?]<span class="tooltiptext">` +  ttsplittmp[0]
                 text += `</span></sup>` + (ttsplittmp[1] || "")
             } else {
                 text += ttsplit[i]
