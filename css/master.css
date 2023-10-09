@@ -209,7 +209,9 @@ sup {
 .tt {
     position: relative;
     display: inline-block;
-    color: #ffeaaa50;
+    color: #ffffff60;
+    font-size: 0.6rem;
+    transform: translateY(-0.1rem);
 }
 
 /* Tooltip text */
