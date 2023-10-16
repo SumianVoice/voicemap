@@ -41,7 +41,7 @@ function do_all_registered_instances() {
     for (var id in instances_to_add) {
         const v = instances_to_add[id]
         for (let i = 0; i < v.length; i++) {
-            const def = registered_nodes[id].def
+            const def = registered_nodes[id]
             in_node_name = v[i]
             construct_node(id + String(i), in_node_name, def, {['skip_register']:true, ['is_copy']:true, ['old_id']:id})
         }
@@ -165,14 +165,12 @@ function get_fragment_from_def(id, in_node_name, def) {
 const exercise_tags = {"exf":1, "exm":1, "exg":1};
 const active_nodes_index = []
 function register_node(id, in_node_name, fromdef, flags={}) {
-    fromdef.id = id
-    registered_nodes[id] = {
-        id : id,
-        in_node_name : in_node_name,
-        def : fromdef,
-        flags : flags,
-        added : false,
-    }
+    let def = {}; for (k in fromdef) {def[k] = fromdef[k];}
+    def.id = id
+    def.in_node_name = in_node_name
+    def.added = false
+    def.flags = flags
+    registered_nodes[id] = def
 }
 
 function construct_node(id, in_node_name, fromdef, flags={}) {
@@ -186,7 +184,7 @@ function construct_node(id, in_node_name, fromdef, flags={}) {
 
     if (flags.is_copy) {
         def.desc = `t[[` + String(def.id) + `|--> Highlight Original]]\n` + String(def.desc)
-        console.log(flags)
+        // console.log(flags)
     }
     // if this ID already exists, show an error
     if (!flags.skip_register && active_nodes[id] != null) {
@@ -220,8 +218,8 @@ function construct_node(id, in_node_name, fromdef, flags={}) {
 function construct_all_nodes() {
     for (var id in registered_nodes) {
         if (id == "root") {continue;}
-        const v = registered_nodes[id];
-        construct_node(v.def.id, v.in_node_name, v.def, {});
+        const def = registered_nodes[id];
+        construct_node(def.id, def.in_node_name, def, {});
     }
 }
 
