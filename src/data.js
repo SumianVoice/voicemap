@@ -32,7 +32,7 @@ Distributed under open source <a style="color:#696040" href="https://github.com/
 //////////////////////
 // Intuitive
 //////////////////////
-register_node("inutitive", "root", {
+register_node("intuitive", "root", {
     title:"Intuitive Practice", desc:
 `Most students focus too much on the how and the why of voice, but often all that is needed is to <b>use the voice</b> and gently direct it toward the goal, especially for voice feminisation. You probably don't need to know all about these fancy terms and concepts or know about the physiology of the voice. As such, below constitutes "enough" to get any fairly typical voice gender-wise if starting from the beginning with no significant vocal issues.
 
@@ -48,7 +48,7 @@ There are some basic and t[[importantprinciples|important principles]] to take i
     tooltip:` `,
 })
 
-register_node("inutitivefem", "inutitive", {
+register_node("intuitivefem", "intuitive", {
     title:"Feminisation Guide", desc:
 `Never try hard. Never force it. Go a little higher and speak like a girl for a whilett{{whatever you think "feminine" sounds like; don't overthink it, just use whatever you are biased toward}}. <b>If it's right, it will feel effortless,</b> and the coordination can take time to develop.
 
@@ -61,7 +61,7 @@ This will work for most beginners if taken seriously.
     tooltip:` `,
 })
 
-register_node("inutitivemasc", "inutitive", {
+register_node("intuitivemasc", "intuitive", {
     title:"Masculinisation Guide", desc:
 `Never try hard. Never force it. Avoid rough or buzzy sounds.tt{{pressed phonation, hyperadduction, FVF and fry mix all share harsh or buzzy sounds, so be very cautious of anything like this}} Try to hit lower notes repeatedly and gain more vocal power. Try speaking in a slighlty deeper, darker tone and experiment with dark vowel sounds like "uhhh".
 
@@ -74,7 +74,7 @@ This will work for most beginners if taken seriously.
     tooltip:` `,
 })
 
-register_node("importantprinciples", "inutitive", {
+register_node("importantprinciples", "intuitive", {
     title:"Important Principles", desc:
 `<b>No Effort</b>
 You will never need to put more effort into any speech related training than you would into your untrained and relaxed voice. Ever. No exceptions. Yes this is true.
