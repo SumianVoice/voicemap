@@ -90,16 +90,17 @@ textarea {
     top: 50%;
     left: 50%;
 
-    width: 2000vw;
-    height: 2000vh;
-    padding: 150vh;
-    outline: 5px solid red;
+    width: 40000px;
+    height: 40000px;
+    padding: 1000px;
+    /* outline: 5px solid red; */
     float: left;
     overscroll-behavior: none;
 
     overflow: hidden;
-    transition: transform 0.2s;
-    transform: translate(-50%, -50%) scale(var(--zoom));
+    /* transition: transform 0.2s, filter 0.5s; */
+    transform: translate(-50%, -50%) scale(var(--zoomx), var(--zoomy));
+    filter: opacity(0);
     transform-origin: center center;
     position: relative;
 }

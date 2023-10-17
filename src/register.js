@@ -2,9 +2,9 @@
 Licensed under MIT License, Copyright 2023 Sumi, sumianvoice.com
 */
 
-const parent = document.getElementById("root");
-parent._list = parent
-parent._tree_step = 1
+const root = document.getElementById("root");
+root._list = root
+root._tree_step = 1
 
 function html_fragment_from_string(html_string) {
     let frag = document.createDocumentFragment(),
@@ -21,7 +21,7 @@ function html_fragment_from_string(html_string) {
 ///////////////////////////////////////
 
 const active_nodes = {
-    "root" : parent
+    "root" : root
 }
 
 const registered_nodes = {
