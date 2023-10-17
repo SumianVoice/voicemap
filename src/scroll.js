@@ -10,13 +10,13 @@ const about = document.querySelector("#About");
 // y = slider.scrollTop
 
 const drag = {
-  mouseDown: false,
-  start: { x: 0, y: 0 },
-  scroll: { x: 20000 + 400, y: 20000 + 400 }, /* half of .parent, plus the 40,000 above */
-  zoomedPercentage: 0,
-  last_tick : Date.now(),
-  zoom_target : 1,
-  zoom_now : 1,
+    mouseDown: false,
+    start: { x: 0, y: 0 },
+    scroll: { x: 20000 + 400, y: 20000 + 400 }, /* half of .parent, plus the 40,000 above */
+    zoomedPercentage: 0,
+    last_tick : Date.now(),
+    zoom_target : 1,
+    zoom_now : 1,
 };
 
 let startDragging = function (e) {
@@ -59,17 +59,17 @@ let initialZoom = 1.0;
 let initialDistance = 0;
 
 document.addEventListener("touchstart", (e) => {
-  if (e.touches.length === 2) {
-    drag.mouseDown = false;
-    e.preventDefault();
-    e.stopPropagation();
+    if (e.touches.length === 2) {
+        drag.mouseDown = false;
+        e.preventDefault();
+        e.stopPropagation();
 
-    initialDistance = Math.hypot(
-        e.touches[0].pageX - e.touches[1].pageX,
-        e.touches[0].pageY - e.touches[1].pageY
-    );
-    initialZoom = zoom();
-  }
+        initialDistance = Math.hypot(
+            e.touches[0].pageX - e.touches[1].pageX,
+            e.touches[0].pageY - e.touches[1].pageY
+        );
+        initialZoom = zoom();
+    }
 });
 
 document.addEventListener("touchmove", (e) => {
