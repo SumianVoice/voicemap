@@ -197,12 +197,17 @@ textarea {
     width: 200px;
     position: absolute;
     align-self: flex-end;
-    transform: translate(0.0rem, -0.30rem);
+    transform: translate(-10.0rem, -0.30rem);
 }
 
 .desc {
     margin-top: 10px;
     width: 500px;
+}
+@media screen and (max-width: 600px) {
+    .desc {
+        width: 350px;
+    }
 }
 
 a {
