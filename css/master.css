@@ -51,26 +51,31 @@ button:disabled {
 
 #zoom_buttons {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    bottom: 0rem;
+    left: -0.5rem;
+    width: 100%;
 
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    flex-flow: wrap;
+    /* flex-direction: column; */
+    gap: 0.5rem;
 
     background: #222222;
-    padding: 1rem;
-    border: solid #666666 1px;
+    padding: 0.5rem;
+    /* border: solid #666666 1px; */
     border-radius: 16px;
     opacity: 0.5;
 }
 #zoom_buttons button {
     /* aspect-ratio: 1 / 1; */
-    min-width: 4rem;
-    height: 4rem;
-    font-size: 1.5rem;
-    padding: auto;
+    min-width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    padding: 0.7rem;
     display: block;
-    border-radius: 16px;
+    border-radius: 0.7rem;
     background-color: #777777;
 }
 
@@ -150,7 +155,7 @@ textarea {
     background: #444;
     margin: 8px;
     padding: 1rem;
-    box-shadow: #00002020 8px 8px 12px;
+    box-shadow: #00002020 2px 2px 4px;
     border-radius: 8px;
     width: fit-content;
     height: fit-content;
@@ -176,7 +181,7 @@ textarea {
     text-align: center;
     width: 100%;
     background-color: #ffffff08;
-    box-shadow: #00000020 2px 2px 8px;
+    box-shadow: #00000020 2px 2px 4px;
     padding: 6px;
     padding-bottom: 16px;
     border-radius: 8px;
