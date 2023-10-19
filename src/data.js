@@ -264,7 +264,7 @@ resulting in phonation. High closure means the folds come together more complete
 })
 register_node("breathiness", "closure", {
     title:"Breathiness", desc:
-`Breathy voices are low in t[[closure|closure]], and this means air gets through without directly helping the vocal folds vibrate. This results in an airy and breathy voice. Breathy qualities are usually caused by low lateral cricoarytenoid muscle activity (t[[lca|LCA]]). It sounds slightly different to an air leak involving the t[[ia|interarytenoids]] (IA).`,
+`Breathy voices are low in t[[closure|closure]], and this means air gets through without directly helping the vocal folds vibrate. This results in an airy and breathy voice. Breathy qualities are usually caused by low lateral cricoarytenoid (t[[lca|LCA]]) and interarytenoid muscle activity. It sounds slightly different to an air leak involving tension and lack of t[[ia|interarytenoid muscle]] (IA) activity. This will usually "dull" the voice slightly, making it softer and slightly darker.`,
     color:"#456",
     tooltip:` `,
 })
