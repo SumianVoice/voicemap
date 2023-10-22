@@ -617,7 +617,7 @@ register_node("tempo", "speech", {
 })
 register_node("emphasis", "speech", {
     title:"Emphasis", desc:
-`Emphasis is when we change something about the voice in order to draw more attention to or place more importance on some word or phrase. In masculine voices this is often done with t[[pushing|pushing]], or adding power and volume. Other ways include t[[intonation|intonation]], slowing t[[tempo|tempo]] and changing t[[articulation|articulation]].`,
+`Emphasis is when we change something about the voice in order to draw more attention to or place more importance on some word or phrase. In masculine voices this is often done with t[[pushing|pushing]] i.e. adding power and volume. Other ways include t[[intonation|intonation]], slowing t[[tempo|tempo]] and changing t[[articulation|articulation]].`,
     color:"#556",
     tooltip:` `,
 })
@@ -681,13 +681,13 @@ register_node("offsets", "speech", {
 //////////////////////
 register_node("resonance", "root", {
     title:"Resonance", desc:
-`Resonance is how the vocal tract affects the sound that is passed through it. It is a filter, so it will highlight or reduce the signal sent from the glottis, based on the shape of the vocal tract.`,
+`Resonance is how the vocal tract affects the sound that is passed through it. It is a filter, so it will highlight or reduce the signal sent from the vocal folds / glottis, based on the shape of the vocal tract.`,
     color:"#473747",
     tooltip:` `,
 })
 register_node("larynxheight", "resonance", {
     title:"Larynx Height", desc:
-`The larynx is what houses the vocal folds. By shifting this up and down we can change the t[[resonance|resonance]] of the voice.`,
+`The larynx is what houses the vocal folds. By shifting this up and down we can change the t[[resonance|resonance]] of the voice. This is because the 'tube' that is the vocal tract is shorter when it is raised, since the sound starts further along the length of the vocal tract. A shorter tube will cause a higher frequency of resonance.`,
     color:"#446",
     tooltip:` `,
 })
