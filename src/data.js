@@ -436,25 +436,25 @@ register_node("mechanisms", "pitch", {
 B. Roubeau, N.H. Bernardoni, M. Castellengo
 <i>'Laryngeal Vibratory Mechanisms: The Notion of Vocal Register Revisited'</i>
 <a href="https://doi.org/10.1016/j.jvoice.2007.10.014">DOI:10.1016/j.jvoice.2007.10.014</a>}}
-These are mostly arbitrary delineations between different configurations, and given enough training it is possible to smoothly blend most mechanisms. M3 might be the exception here.`,
+These are mostly arbitrary delineations between different configurations which help define different type of voice production. Given enough training it is possible to smoothly blend most mechanisms, as they mostly just describe different levels of t[[closure|closure]] and t[[vfvm|fold vibratory mass]]. This means that given enough training, M1 and M2 for example become more or less irrelevant since the imbalance that would normally make them distinct is no longer an obstacle.`,
     color:"#444",
     tooltip:` `,
 })
 register_node("m1", "mechanisms", {
     title:`M1 <i style="color:#999">(modal voice)</i>`, desc:
-`Normal speaking register. The folds get more contact and the ligament vibrates as well as the mucosa and some of the muscle (the TA).`,
+`Normal speaking register. The folds get more complete contact (t[[closure|closure]], especially t[[ia|IA]]) and the ligament vibrates as well as the mucosa and some of the muscle (the t[[ta|TA]]).`,
     color:"#455",
     tooltip:` `,
 })
 register_node("m2", "mechanisms", {
     title:`M2 <i style="color:#999">(falsetto)</i>`, desc:
-`Falsetto / Head Voice register, often hollow-sounding or at least less full than M1.`,
+`Falsetto / Head Voice register, often hollow-sounding or at least less full than M1. This usually has only the mucosa and ligament vibrating or at least much less of the muscle and ligament than in M1. Often this is coupled with low t[[closure|closure]].`,
     color:"#455",
     tooltip:` `,
 })
 register_node("m2blending", "m2", {
     title:`M2 Blending <i style="color:#999">(mix voice)</i>`, desc:
-`It is possible to blend between M1 and M2, negating the break and smoothly transitioning. This process is a delicate balance of several parts of the voice and should not be effortful or tense.`,
+`It is possible to blend between M1 and M2, negating the break and smoothly transitioning. This process is a delicate balance of several parts of the voice and should not be effortful or tense. It is assumed that maintaining closure (t[[ia|IA]]) and reducing t[[vfvm|vibratory mass]] to reduce the imbalance that would cause the break is how this is done.`,
     color:"#457",
     tooltip:` `,
 })
@@ -466,13 +466,13 @@ register_node("m3", "mechanisms", {
 })
 register_node("m0", "mechanisms", {
     title:"M0", desc:
-`Vocal Fry register. This is usually at the very bottom of the range, but can happen anywhere due to airflow mechanics.`,
+`Vocal Fry register. This is usually at the very bottom of the range, but can happen anywhere due to airflow mechanics. Often there is a casual separation of t[[creak|'creak']] and 'fry', with creak being from too little airflow for periodic vibration to happen but still enough closure, and fry being caused by not being able to vibrate the folds any slower. These are different causes but achieve the same resulting vocal fold behavior.`,
     color:"#545",
     tooltip:` `,
 })
 register_node("mechanismbreak", "mechanisms", {
     title:"Vocal Break", desc:
-`Vocal Breaks, mechanism breaks, voice cracks. These happen due to an imbalance in fold vibratory mass / vocal weight. IA adduction probably also helps substantially to reduce instability here.`,
+`Vocal Breaks, mechanism breaks, voice cracks. These happen due to an imbalance in fold vibratory mass / vocal weight. IA adduction probably also helps substantially to reduce instability in this.`,
     color:"#445",
     tooltip:` `,
 })
@@ -521,10 +521,10 @@ You can use <a href="https://szynalski.com/tone#G2,tri,v0.2">a tone generator</a
 
 register_node("beating", "pitchmatching", {
     title:`Beating`, desc:
-`Beating is when two notes are played that are very close in frequency. If you play a 100hz note and a 105hz note, they will interfere with eachother every 5 hz. It will take 1 / (f1 / |f1 - f2|) seconds for both notes to line up and cancel out. This works the same way as active noise cancelling; if you imagine the sound wave as a swing, if it is pushed one way with some force, then as it is coming back it's pushed the same way with the same force, it cancels out. Vibrations in the air are similar, and you can cancel out some sound with the opposite of the same sound.
+`Beating is when two notes are played that are very close in frequency. If you play a 100hz note and a 105hz note, they will interfere with eachother every 5 hz. It will take 1 / (f1 / |f1 - f2|) seconds for both notes to line up and cancel out. This works the same way as active noise cancelling; if you imagine the sound wave as a swing, if it is pushed one way with some force, then as it is coming back it's pushed the same way with the same force, it cancels out. Vibrations in the air are similar, and you can cancel out some sound with the opposite of the same sound. Similarly the sound waves can add together at the peaks instead of cancel out, and this happens at the same frequency as the cancelling out of course.
 
 The result is that two sounds played at the same time will produce a kind of 'ghost' of a third note which is equal to the difference between the two notes.
-100hz and 105hz will play a ghost note at 5hz.
+100hz and 105hz will cause a 'ghost note' at 5hz. The original notes will still be heard, but will be morphed into a third frequency by this interaction between the sound waves.
 `,
     color:"#645",
     tooltip:` `,
