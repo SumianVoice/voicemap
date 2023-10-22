@@ -19,6 +19,7 @@ Many of these concepts and notes are proven through use, not academics and are j
 <i style="color:#666">Copyright (c) 2023 Sumi, <<a style="color:#696040" href="https://sumianvoice.com">sumianvoice.com</a>>
 Distributed under open source <a style="color:#696040" href="https://github.com/SumianVoice/voicemap/blob/master/LICENSE">MIT license</a>
 </i>
+Go to the <a href="https://github.com/SumianVoice/voicemap">GitHub page</a> to send in issues or star the repo!
 
 <b class="hlight">Work In Progress</b>
 `,
