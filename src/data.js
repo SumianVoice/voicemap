@@ -432,7 +432,10 @@ register_node("pitch", "glottal", {
 })
 register_node("mechanisms", "pitch", {
     title:"Vocal Mechanisms", desc:
-`Laryngeal Vibratory Mechanisms tt{{See paper: DOI:10.1016/j.jvoice.2007.10.014 - 'Laryngeal Vibratory Mechanisms: The Notion of Vocal Register Revisited'}}
+`Laryngeal Vibratory Mechanisms tt{{<u><h3>Further reading</h3></u>\
+B. Roubeau, N.H. Bernardoni, M. Castellengo
+<i>'Laryngeal Vibratory Mechanisms: The Notion of Vocal Register Revisited'</i>
+<a href="https://doi.org/10.1016/j.jvoice.2007.10.014">DOI:10.1016/j.jvoice.2007.10.014</a>}}
 These are mostly arbitrary delineations between different configurations, and given enough training it is possible to smoothly blend most mechanisms. M3 might be the exception here.`,
     color:"#444",
     tooltip:` `,
@@ -717,7 +720,9 @@ An example of this is "oh my god". Said underarticulated, it may sound like "uh 
 })
 register_node("mouthspace", "articulation", {
     title:"Mouth Space", desc:
-`Mouth space is a way to change t[[resonance|resonance]]. We can shift things around in the mouth to raise resonance without necessarily changing vowel. This act of raising resonance using the mouth while maintaining the same vowel is mouth space. It's extremely important as a gendered aspect, and particularly useful at low pitches where vocal weight is typically heavier and resonance is typically darker.`,
+`Mouth space is a way to change t[[resonance|resonance]]. We can shift things around in the mouth to raise resonance without necessarily changing vowel. This act of raising or lowering resonance using the mouth while maintaining the same vowel is mouth space. It's extremely important as a gendered aspect, and particularly useful for feminine voices at low pitches where vocal weight is typically heavier and resonance is typically darker.
+
+t[[vowel|Vowels]] exist because we control the t[[formants|formants]] F1 and F2 by changing the shape of the mouth, the aperture of the opening of the mouth and the position of the tongue. For example the eee vowel (happ<b>y</b>) has the F1 low and the F2 high, and this distinguishes it from the aaah vowel (UK "b<b>a</b>th") where the F1 and F2 are very close to each other because the tongue is lowered, aperture narrowed and mouth slightly larger in volume. Mouth space then is a way to change the frequency of these two formants and affect the presentation of the voice by shifting the shape, tongue position and aperture of the mouth. More importantly than raising the frequency of formants however, mouth space control allows for more feminine or masculine articulation and subtle cues that are more gendered than raw frequency.`,
     color:"#645",
     tooltip:` `,
 })
@@ -768,6 +773,22 @@ Note that it is possible to make other formants happen that are in between the f
 register_node("vocalsize", "resonance", {
     title:"Vocal Size", desc:
 `Vocal Sizett{{first known use: OVC, TransVoiceLessons}} is a way of intuitively explaining t[[resonance|resonance]] by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal tract but instead about the size or stature of the hypothetical speaker.`,
+    color:"#454050",
+    tooltip:` `,
+})
+
+register_node("subglottalresonance", "resonance", {
+    title:"Subglottal Resonance", desc:
+`Subglottal resonance covers two topics: the resonance chambers below the glottis in the airway and what their frequencies are, and how resonance frequencies overall change based on whether the glottis is open or closed.
+
+Since in an open tube the standing wave is propagated relative to the center of the tube, we get around half the effective length and double the resonance frequency as when the tube is closedtt{{you can test this using a toilet paper roll and making a "shh" sound into it while blocking and unblocking the other end with your hand, or look at the complex math behind it}}. In the case of voice, this change is really small so it's not worth using in any practical way, and a near open glottis during speech will mean severe breathiness which will make the harmonics in the voice less defined, causing the voice to overall sound darker despite the very slight increase in resonant frequency.
+
+In testing, the frequency of the F1 with closed glottis was approximately 87-93% of the frequency of the open glottis when noise was played into the mouth with a speaker meaning a ~10% increase when open.tt{{source: Sumi's informal testing, sample size 3, using externally induced vibration (speaker) at, above and below the larynx/glottis, at the mouth, using harmonic sounds, white and brown noise, using glottal taps as a way to open and close the glottis, as well as doing the same tests with constricted fold closure (glottal fricative / H sound) and voiced sounds using breathiness and normal closure sounds. Each test yielded the same changes, with some small variation due to the nature of the vocal tract not being a mathematical model.
+
+}} This is counterintuitive, since we all know that usually a larger space yields a lower resonance frequency, but in the case of voice, complexities in the pressures between supraglottal and subglottal volumes means that somehow, we get a result closer to an open tube than a tube going into a larger chamber.
+
+In terms of subglottal resonance frequencies however, these can be measured (with difficulty), and much research has gone into this, including as a way to fingerprint voices as the subglottal resonance frequencies are fairly unique and don't change during speech.
+`,
     color:"#454050",
     tooltip:` `,
 })

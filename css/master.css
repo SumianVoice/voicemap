@@ -230,16 +230,17 @@ sup {
     display: inline-block;
     color: #ffffff60;
     font-size: 0.6rem;
-    transform: translateY(-0.1rem);
+    transform: translate(-0.1rem);
 }
 
 /* Tooltip text */
 .tt .tooltiptext {
     visibility: hidden;
-    max-width: 500px;
-    width: max-content;
+    width: 500px;
+    /* width: max-content; */
     background-color: #222;
-    color: #fff;
+    border: 2px solid #333;
+    color: #ccc;
     text-align: center;
     padding: 1rem 1rem;
     border-radius: 20px;
@@ -249,13 +250,13 @@ sup {
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
+    /* left: 50%; */
+    /* margin-left: -60px; */
 
     /* Fade in tooltip */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    transform: translateY(0.5rem);
+    transform: translate(-250px, 0.5rem);
     -webkit-touch-callout: text;
     -webkit-user-select: text;
     -khtml-user-select: text;
