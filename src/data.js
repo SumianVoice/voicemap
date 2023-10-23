@@ -9,7 +9,7 @@ register_node("About", "root", {
     title:"About", desc:
 `Welcome! This is a project by Sumi to put in one place as much voice information as is available. It is more a reference than a guide; you won't learn much of how to change your own voice here, but instead learn about voice itself and how it works, and about voice pedagogy.
 
-Many of these concepts and notes are proven through use, not academics and are just a working theory used by teachers in the field to get the results we need. As with anything some random person on the internet says, question it and do your own research instead of implicitly trusting it. The focus of this project is mapping out currently known voice pedagogy, nothing more. If you have information, corrections or sources to add, please open an issue or contact Sumitt{{Discord: sumianvoice or <@340353849414123523>, info[at]sumianvoice.com}}
+Many of these concepts and notes are proven through use, not academics and are just a working theory used by teachers in the field to get the results we need. As with anything some random person on the internet says, question it and do your own research instead of implicitly trusting it. The focus of this project is mapping out currently known voice pedagogy, nothing more. If you have information, corrections or sources to add, please open an <a href="https://github.com/SumianVoice/voicemap">issue</a> or contact Sumitt{{Discord: sumianvoice or <@340353849414123523>, info[at]sumianvoice.com}}
 
 <b>What I did do:</b>
 <i style="color:#999">- understand and then describe all of the concepts here</i>
@@ -19,7 +19,6 @@ Many of these concepts and notes are proven through use, not academics and are j
 <i style="color:#666">Copyright (c) 2023 Sumi, <<a style="color:#696040" href="https://sumianvoice.com">sumianvoice.com</a>>
 Distributed under open source <a style="color:#696040" href="https://github.com/SumianVoice/voicemap/blob/master/LICENSE">MIT license</a>
 </i>
-Go to the <a href="https://github.com/SumianVoice/voicemap">GitHub page</a> to send in issues or star the repo!
 
 <b class="hlight">Work In Progress</b>
 `,
@@ -773,7 +772,7 @@ Note that it is possible to make other formants happen that are in between the f
 
 register_node("vocalsize", "resonance", {
     title:"Vocal Size", desc:
-`Vocal Sizett{{first known use: OVC, TransVoiceLessons}} is a way of intuitively explaining t[[resonance|resonance]] by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal tract but instead about the size or stature of the hypothetical speaker.`,
+`Vocal Sizett{{first known use: OVC, TransVoiceLessons}} is a way of intuitively explaining t[[resonance|resonance]] by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal tracttt{{Never attempt to change or shrink the vocal tract directly as this can lead to tension habits}} but instead about the size or stature of the hypothetical speaker and what kind of sound we expect from this speaker.`,
     color:"#454050",
     tooltip:` `,
 })
