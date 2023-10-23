@@ -1,25 +1,25 @@
 
 # Voice Map
 An interactive map of voice pedagogy.
-
-
-
+　
+　
+　
 ## Goals
 - provide a list of all of the characteristics and important concepts and facts in gendered voice pedagogy
 - provide this in the most accessible way to users while maintaining the ease of modification to update the information over time
-
-
-
+　
+　
+　
 ## Who is it for?
 For people interested in vocal pedagogy, or who want to get the 'big picture' of voice pedagogy as it currently stands.
-
-
-
+　
+　
+　
 ## Will it help me change my voice?
 Probably not, since it's only stating what these concepts are. There are exercises that can be optionally enabled, but it's recommended you use guides, videos, ask for help in discords and do your own research instead of getting stuck into the underlying mechanics and theory of it. The intuitive practice notice inside the map is worth looking at and explains this situation in more detail.
-
-
-
+　
+　
+　
 ## How do I help?
 Here are some things that would be very useful:
 - corrections to info that is wrong or outdated or just notifying of this
@@ -28,9 +28,9 @@ Here are some things that would be very useful:
 - new nodes that can be added if there are any missing
 
 If you want to contribute to any of those things, make an issue or send a message! As this is my personal pedagogy, I'd advise to open an issue to fix some wording or add anything, rather than going back and forth to get PRs merged due to wording or research being needed.
-
-
-
+　
+　
+　
 ## Contributing code
 I'd advise against it, but making the code more elegant and simple is a viable thing. Look at the issues that are open for things that should be fixed. Look for the "planned" or "need help" tags.
 
