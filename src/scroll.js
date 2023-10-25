@@ -3,16 +3,19 @@ Portions Copyright (c) 2023 "aeggy" nelinearni under the MIT license
 Portions Copyright (c) 2023 Sumi, SumianVoice <sumianvoice.com> under the MIT license
 */
 
+// const parent = document.getElementById("parent1");
 const parent = document.getElementById("parent1");
 const about = document.querySelector("#About");
 
 // x = slider.scrollLeft
 // y = slider.scrollTop
 
+window_offset = { x: 20000 + 400, y: 20000 + 400 }
+
 const drag = {
     mouseDown: false,
     start: { x: 0, y: 0 },
-    scroll: { x: 20000 + 400, y: 20000 + 400 }, /* half of .parent, plus the 40,000 above */
+    scroll: { x: window_offset.x, y: window_offset.y }, /* half of .parent, plus the 40,000 above */
     zoomedPercentage: 0,
     last_tick : Date.now(),
     zoom_target : 1,
@@ -46,6 +49,11 @@ document.addEventListener("pointermove", (e) => {
     const scrollY = (y - drag.start.y) / zoom();
     parent.scrollTop = drag.scroll.y - scrollY;
 });
+
+function scroll_to_position(x, y) {
+    parent.scrollLeft = x;
+    parent.scrollTop = y;
+}
 
 parent.scrollLeft = drag.scroll.x;
 parent.scrollTop = drag.scroll.y;

@@ -48,6 +48,43 @@ function do_all_registered_instances() {
     }
 }
 
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+        left: (rect.left + rect.right)/2 + window.scrollX + window_offset.x - window.innerWidth * 0.5,
+        top: rect.top + window.scrollY + window_offset.y - window.innerHeight * 0.3
+    };
+}
+function get_node_position(name) {
+    let element = active_nodes[name]
+    if (element == null) {
+        alert("no node " + name);
+        element = active_nodes["About"];
+    }
+    var rect = getOffset(element);
+    return rect;
+}
+function scroll_to_node(name) {
+    var rect = get_node_position(name);
+    scroll_to_position(rect.left, rect.top);
+}
+
+function get_url_vars() {
+    const vars = {};
+    const parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function go_to_url_tag() {
+    const vars = get_url_vars()
+    if (vars.goto) {
+        scroll_to_node(vars.goto);
+        show_tagged(vars.goto);
+    }
+}
+
 const scale_factor_per_tree_step = 0.8
 
 function tooltipify(text) {
@@ -226,6 +263,7 @@ function construct_all_nodes() {
 window.onload = function() {
     construct_all_nodes()
     do_all_registered_instances()
+    go_to_url_tag()
 }
 
 
