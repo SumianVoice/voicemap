@@ -23,8 +23,6 @@ const drag = {
 };
 
 let startDragging = function (e) {
-    // console.log(slider.offsetTop, slider.offsetTop)
-
     drag.mouseDown = true;
     drag.start.x = e.pageX - parent.offsetLeft;
     drag.start.y = e.pageY - parent.offsetTop;
@@ -43,11 +41,11 @@ document.addEventListener("pointermove", (e) => {
 
     const x = e.pageX - parent.offsetLeft;
     const scrollX = (x - drag.start.x) / zoom();
-    parent.scrollLeft = drag.scroll.x - scrollX;
 
     const y = e.pageY - parent.offsetTop;
     const scrollY = (y - drag.start.y) / zoom();
-    parent.scrollTop = drag.scroll.y - scrollY;
+
+    scroll_to_position(drag.scroll.x - scrollX, drag.scroll.y - scrollY);
 });
 
 function scroll_to_position(x, y) {
@@ -55,8 +53,9 @@ function scroll_to_position(x, y) {
     parent.scrollTop = y;
 }
 
-parent.scrollLeft = drag.scroll.x;
-parent.scrollTop = drag.scroll.y;
+
+scroll_to_position(drag.scroll.x, drag.scroll.y);
+
 // Add the event listeners
 document.addEventListener("pointerdown", startDragging, false);
 document.addEventListener("pointerup", stopDragging, false);

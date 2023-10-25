@@ -51,10 +51,11 @@ function do_all_registered_instances() {
 function getOffset(el) {
     const rect = el.getBoundingClientRect();
     return {
-        left: (rect.left + rect.right)/2 + window.scrollX + window_offset.x - window.innerWidth * 0.5,
-        top: rect.top + window.scrollY + window_offset.y - window.innerHeight * 0.3
+        left: ((rect.left + rect.right)/2 + parent.scrollLeft - window.innerWidth * 0.5) / drag.zoom_now,
+        top: (rect.top + parent.scrollTop - window.innerHeight * 0.3) / drag.zoom_now
     };
 }
+
 function get_node_position(name) {
     let element = active_nodes[name]
     if (element == null) {
@@ -81,7 +82,6 @@ function go_to_url_tag() {
     const vars = get_url_vars()
     if (vars.goto) {
         scroll_to_node(vars.goto);
-        show_tagged(vars.goto);
     }
 }
 
@@ -310,7 +310,7 @@ function show_tagged(tag) {
             n.style.transition = `1s all ease-in-out`;
             n.style.outline = `16px solid red`;
             n.style.display = `flex`;
-            tag_highlight_list[k] = 10
+            tag_highlight_list[k] = 10;
         } else {
             n.style.transition = `1s all ease-in-out`;
             n.style.outline = `0px solid red`;
