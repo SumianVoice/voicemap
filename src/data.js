@@ -107,7 +107,7 @@ register_node("glottal", "root", {
 //////////////////////
 register_node("vfvm", "glottal", {
     title:"Vocal Fold Geometry", desc:
-`Vocal Fold Vibratory Mass <b>(VFVM)</b> is the physical thing happening in the folds that causes several things; how much of the folds is vibrating is likely what causes the sound quality of t[[vocalweight|vocal weight]].tt{{source: internal testing by Sumi and based on various papers that mention how much of the folds is active and related notes during different mechanisms. Know this isn't hard fact, but a working theory or "the closest we know of as an explanation".
+`Vocal Fold Vibratory Mass <b>(VFVM)</b> is likely part of the physical thing happening in the folds that causes several things; how much of the folds is vibrating and the surface area when interacting is likely what causes the sound quality of t[[vocalweight|vocal weight]] and affects quotient.tt{{source: internal testing by Sumi and based on various footage of laryngoscopy and papers that mention how much of the folds is active and related notes during different mechanisms. Know this isn't hard fact, but a working theory or "the closest we know of as an explanation".
 
 <u><h3>Further reading</h3></u>\
 B. Roubeau, N.H. Bernardoni, M. Castellengo
