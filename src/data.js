@@ -123,7 +123,7 @@ C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
 <a href="https://doi.org/10.1121/1.3552874">DOI:10.1121/1.3552874</a>
 }} \
 \
-Contact area between the folds, quotient, and surface area engaged in creating pressure waves all contribute to the resulting sound. This can be thought of similar to the thickness of a guitar string. More mass in the string, deeper more bassy sound (and a predisposition to low pitch). High vibratory mass will result in a sort of "rumble" which is most notable at low pitches.
+Contact area between the folds, quotient, and surface area engaged in creating pressure waves all contribute to the resulting sound. This can be thought of similar to the thickness of a guitar string. More mass in the string results in a deeper more bassy sound (and a predisposition to low pitch). High vibratory mass will result in a sort of "rumble" which is most notable at low pitches.
 
 --> more vocal fold moving --> more VFVM --> sounds heavier
 --> less VFVM --> can achieve higher pitches easier`,
