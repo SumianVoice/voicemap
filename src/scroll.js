@@ -35,7 +35,7 @@ let stopDragging = function (event) {
 };
 document.addEventListener("pointermove", (e) => {
     e.preventDefault();
-    if (!drag.mouseDown) {
+    if (!drag.mouseDown || e.buttons == 0) {
         return;
     }
 

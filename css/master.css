@@ -27,6 +27,10 @@ body {
     text-align: center;
 }
 
+h1, h2, h3, h4 {
+    color: #ccc;
+}
+
 button {
     background: #444;
     border: none;
@@ -37,11 +41,11 @@ button {
 }
 
 button:hover {
-    background: #669;
+    background: #666;
 }
 
 button:active {
-    background: #667;
+    background: #555;
 }
 
 button:disabled {
@@ -307,3 +311,34 @@ sup {
 .node:hover > .tooltip {
     opacity: 1;
 }
+
+
+.audio_header {
+    align-self: flex-start;
+    margin-bottom: 0.3rem;
+    margin-top: 0.8rem;
+    color: #bbb;
+}
+
+.audio_list {
+    display: flex;
+    align-self: flex-start;
+    gap: 0.5rem;
+}
+
+.audio_button {
+    background-color: #ffffff20;
+    border-radius: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.3rem;
+}
+.audio_button:hover {
+    background-color: #ffffff30;
+}
+.audio_button:active {
+    background-color: #ffffff10;
+}
+
+
+
+

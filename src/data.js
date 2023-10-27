@@ -186,6 +186,12 @@ register_node("vocalweight", "vfvm", {
 `Vocal Weighttt{{first known use: TransVoiceLessons}} is a sound quality associated with low pitch, masculine voices. It can sound "rumbly" or just "heavy", and is linked with pitch. Higher pitches demand lighter vocal weight.`,
     color:"#267",
     tooltip:` `,
+    audio:{
+        ["Very<br>Heavy"]:"low_heavy.mp3",
+        ["Heavy"]:"E3_heavy.mp3",
+        ["Light"]:"E3_light.mp3",
+        ["Very<br>Light"]:"m2_full.mp3",
+    },
 })
 register_node("fullness", "vocalweight", {
     title:"Overfull and Underfull", desc:
@@ -213,6 +219,12 @@ register_node("quotient", "vfvm", {
 `Quotient is a fraction of how long the folds spend in the open state versus their closed state. Since it is possible to measure, unlike t[[vocalweight|vocal weight]] or active fold mass / VFVM, it is used in research. It closely approximates these other concepts under typical conditions. Usually this measurement is done with EGG.`,
     color:"#754",
     tooltip:` `,
+    audio:{
+        ["High CQ"]:"low_heavy.mp3",
+        ["Med CQ"]:"E3_heavy.mp3",
+        ["High OQ"]:"E3_light.mp3",
+        ["Higher OQ"]:"m2_full.mp3",
+    },
 })
 register_node("openquotient", "quotient", {
     title:"Open Quotient (OQ)", desc:
@@ -275,6 +287,9 @@ register_node("closureloss", "closure", {
 This can affect range, and it is thought that the main limiting factor for most beginners with range up to about B5 is that there is too much tension in the folds than needed, and this causes the student to either press harder and keep tensing up, or lose closure. As such it's important to realise that except in extreme cases, it is not a lack of effort that prevents high pitches but an excess of tension.`,
     color:"#556",
     tooltip:` `,
+    audio:{
+        ["Example"]:"closureloss.mp3",
+    },
 })
 register_node("lca", "closure", {
     title:"Lateral Cricoarytenoids (LCA)", desc:
@@ -825,6 +840,9 @@ register_node("lowiahollow", "covers", {
 `Low t[[ia|IA]] closure voices can become hollow, losing their harmonic power and brightness. This can sound similar to M2 / falsetto.`,
     color:"#544",
     tooltip:` `,
+    audio:{
+        ["Example"]:"low_ia.mp3",
+    },
 })
 
 register_instance("breathiness", "covers")

@@ -114,7 +114,7 @@ function linkify(text) {
             if (i > 0) {
                 const ttsplittmp = ttsplit[i].split(`]]`);
                 const elems = ttsplittmp[0].split(`|`);
-                text += `<span class="tag_link" onclick="show_tagged(\'` +  elems[0] + `\')">` + elems[1]
+                text += `<span class="tag_link" onmousedown="stopDragging()" onclick="show_tagged(\'` +  elems[0] + `\')">` + elems[1]
                 text += `</span>` + (ttsplittmp[1] || "")
             } else {
                 text += ttsplit[i]
@@ -156,6 +156,11 @@ function parse_def(id, in_node_name, def) {
     return def;
 }
 
+function play_audio(clip_path) {
+    var audio = new Audio(`audio/${clip_path}`);
+    audio.play();
+}
+
 function get_fragment_from_def(id, in_node_name, def) {
     const new_tree_step = active_nodes[in_node_name]._tree_step + 1;
     let new_scale_factor = Math.round(1 / (new_tree_step**1.1) * 10 * 1000) / 1000;
@@ -183,6 +188,17 @@ function get_fragment_from_def(id, in_node_name, def) {
     code += ">";
     code += (def.desc || "");
     code += "</div>";
+
+    if (def.audio) {
+        code += `<div class="desc">`
+        code += `<h3 class="audio_header">Audio Examples</h3>`;
+        code += `<div class="audio_list">`;
+        for (clipname in def.audio) {
+            code += `<button class="audio_button" onmousedown="stopDragging()" onclick="play_audio('${def.audio[clipname]}')">${clipname}</button>`
+        }
+        code += `</div>`;
+        code += `</div>`;
+    }
 
     if (def.tooltip != " " && def.tooltip != null) {
         code += `<p class="tooltip">`;
