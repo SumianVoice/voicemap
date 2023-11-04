@@ -157,6 +157,9 @@ register_node("stress", "naturalisation", {
 `When a voice has too much t[[vocalweight|vocal weight]] for the pitch, it is not naturalised. When we notice it is not naturalised, the sound quality that tells us this is "stress". Stress can be described as "pushing" or "forcing" the voice. It can have a harsh, tense quality to it that begs the question "why is this person forcing their voice to go high". It can also be so subtle as to be nearly unnoticeable especially if we aren't looking for it. If a voice finds it difficult to intonate up in pitch during speech, that's a sign of stress.`,
     color:"#357",
     tooltip:` `,
+    audio:{
+        ["Example"]:"stress.mp3",
+    },
 })
 register_node("basepitch", "naturalisation", {
     title:"Base Pitch", desc:
@@ -176,6 +179,9 @@ register_node("pushing", "naturalisation", {
 t[[belting|Belting]] is an example of a pushed configuration; it involves more t[[vfvmpressure|pressure]] and more weight in order to reach higher notes without leaving t[[m1|M1]].`,
     color:"#446",
     tooltip:` `,
+    audio:{
+        ["Example"]:"pushing.mp3",
+    },
 })
 
 //////////////////////
@@ -279,6 +285,10 @@ register_node("breathiness", "closure", {
 `Breathy voices are low in t[[closure|closure]], and this means air gets through without directly helping the vocal folds vibrate. This results in an airy and breathy voice. Breathy qualities are usually caused by low lateral cricoarytenoid (t[[lca|LCA]]) and interarytenoid muscle activity. It sounds slightly different to an air leak involving tension and lack of t[[ia|interarytenoid muscle]] (IA) activity. This will usually "dull" the voice slightly, making it softer and slightly darker.`,
     color:"#456",
     tooltip:` `,
+    audio:{
+        ["Breathy"]:"breathy.mp3",
+        ["Normal"]:"E3_light.mp3",
+    },
 })
 register_node("closureloss", "closure", {
     title:"Loss Of Closure", desc:
@@ -329,6 +339,9 @@ This usually shows up as around 8000 to 15,000hz harmonics, and this can be a so
 `,
     color:"#222",
     tooltip:` `,
+    audio:{
+        ["Example"]:"hyperadduction.mp3",
+    },
 })
 
 //////////////////////
@@ -466,6 +479,9 @@ register_node("m2", "mechanisms", {
 `Falsetto / Head Voice register, often hollow-sounding or at least less full than M1. This usually has only the mucosa and ligament vibrating or at least much less of the muscle and ligament than in M1. Often this is coupled with low t[[closure|closure]].`,
     color:"#455",
     tooltip:` `,
+    audio:{
+        ["Example"]:"m2.mp3",
+    },
 })
 register_node("m2blending", "m2", {
     title:`M2 Blending <i style="color:#999">(mix voice)</i>`, desc:
@@ -478,6 +494,9 @@ register_node("m3", "mechanisms", {
 `Whistle Register. This can be dangerous; do not attempt without appropriate supervision and instruction.`,
     color:"#545",
     tooltip:` `,
+    audio:{
+        ["Example"]:"m3.mp3",
+    },
 })
 register_node("m0", "mechanisms", {
     title:"M0", desc:
@@ -673,6 +692,11 @@ register_node("onsets", "speech", {
 `,
     color:"#456",
     tooltip:` `,
+    audio:{
+        ["Hard"]:"onsethard.mp3",
+        ["Soft"]:"onsetsoft.mp3",
+        ["Aspirate"]:"onsetaspirate.mp3",
+    },
 })
 register_node("offsets", "speech", {
     title:"Offsets", desc:
@@ -699,6 +723,11 @@ register_node("resonance", "root", {
 `Resonance is how the vocal tract affects the sound that is passed through it. It is a filter, so it will highlight or reduce the signal sent from the vocal folds / glottis, based on the shape of the vocal tract.`,
     color:"#473747",
     tooltip:` `,
+    audio:{
+        ["Low Resonance"]:"dark.mp3",
+        ["Med Resonance"]:"mouthspacesmall.mp3",
+        ["High Resonance"]:"bright.mp3",
+    },
 })
 register_node("larynxheight", "resonance", {
     title:"Larynx Height", desc:
@@ -722,6 +751,10 @@ register_node("brightness", "resonance", {
 `Brightness is a combination of the tone of the voice (from glottal behavior) and t[[resonance|resonance]]. A bright voice has more high frequencies / more substantial high frequency harmonics. Importantly, it isn't just another name for resonance; a voice can be high resonance yet sound dark due to low clarity, breathiness, nasality, M2 or low IA, and more.`,
     color:"#455",
     tooltip:` `,
+    audio:{
+        ["Dark"]:"dark.mp3",
+        ["Bright"]:"bright.mp3",
+    },
 })
 
 register_node("articulation", "resonance", {
@@ -732,6 +765,10 @@ An example of this is "oh my god". Said underarticulated, it may sound like "uh 
 `,
     color:"#445",
     tooltip:` `,
+    audio:{
+        ["Low Articulation"]:"underarticulated.mp3",
+        ["High Articulation"]:"overarticulated.mp3",
+    },
 })
 register_node("mouthspace", "articulation", {
     title:"Mouth Space", desc:
@@ -740,6 +777,10 @@ register_node("mouthspace", "articulation", {
 t[[vowel|Vowels]] exist because we control the t[[formants|formants]] F1 and F2 by changing the shape of the mouth, the aperture of the opening of the mouth and the position of the tongue. For example the eee vowel (happ<b>y</b>) has the F1 low and the F2 high, and this distinguishes it from the aaah vowel (UK "b<b>a</b>th") where the F1 and F2 are very close to each other because the tongue is lowered, aperture narrowed and mouth slightly larger in volume. Mouth space then is a way to change the frequency of these two formants and affect the presentation of the voice by shifting the shape, tongue position and aperture of the mouth. More importantly than raising the frequency of formants however, mouth space control allows for more feminine or masculine articulation and subtle cues that are more gendered than raw frequency.`,
     color:"#645",
     tooltip:` `,
+    audio:{
+        ["Large<br>Mouth space"]:"mouthspacelarge.mp3",
+        ["Small<br>Mouth space"]:"mouthspacesmall.mp3",
+    },
 })
 
 register_node("vowel", "articulation", {
@@ -760,6 +801,9 @@ register_node("opc", "resonance", {
 `Oropharyngeal Constriction (OPC). It's not the bad kind of constriction however, and does not require effort to activate. This is associated with hyperfem voices, as it significantly boosts t[[resonance|resonance]] / brightness. At the back of the mouth, above the root of the tongue, is an arch which can be constricted inward to reduce the size of the opening at the back of the mouth. This smaller opening causes the resonance frequency to raise, giving a resonance boost.`,
     color:"#747",
     tooltip:` `,
+    audio:{
+        ["Example"]:"opc.mp3",
+    },
 })
 register_node("pharyngealconstriction", "resonance", {
     title:"Pharyngeal Constriction", desc:
@@ -854,6 +898,9 @@ register_node("subharmonics", "covers", {
 This presents itself as "extra harmonics". The folds get interrupted every second or third or etc cycle, and so it sounds like there are two voices at once. It isn't damaging but it can be very hard to build a habit that leaves it behind. It can be used in singing to do lower notes, or as a stylistic choice such as in certain types of overtone singing.`,
     color:"#545",
     tooltip:` `,
+    audio:{
+        ["Example"]:"subharmonics.mp3",
+    },
 })
 
 
