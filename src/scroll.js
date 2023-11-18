@@ -101,7 +101,8 @@ document.addEventListener("wheel", (e) => {
 });
 
 document.addEventListener("dblclick", (e) => {
-    zoomRelative(0.3);
+    // disabled for sanity reasons
+    // zoomRelative(0.3);
 });
 
 // zoom

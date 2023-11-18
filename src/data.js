@@ -284,16 +284,18 @@ register_instance("pushing", "vfvmpressure")
 //////////////////////
 register_node("closure", "glottal", {
     title:"Closure", desc:
-`Closure covers the closing of the vocal folds, and this allows for the air pressure to push them open, \
-resulting in phonation. High closure means the folds come together more completely, low closure means they come together incompletely or with not enough contact, allowing air to get through without being "used" for vibrating the folds.\n\
-\n\
-<b class="hlight">You cannot feel closure.</b> If you think you can, there\'s something <u>wrong</u>. You also cannot control it directly, and if it is attempted, there will likely be t[[muscletension|muscle tension]] or strain involved.`,
+`Closure covers the closing of the vocal folds, and this allows for the air pressure to push them open,
+resulting in phonation. High closure means the folds come together more completely, low closure means they come together incompletely or with not enough contact, allowing air to get through without being "used" for vibrating the folds. High closure can sound t[[brightness|brighter]] because it boosts harmonic power in the high frequencies. The bright 'edge' heard in some voices is this effect.
+
+<b class="hlight">You cannot feel closure.</b> If you think you can, there's something <u>wrong</u>. You also cannot control it directly, and if it is attempted, there will likely be t[[muscletension|muscle tension]] or strain involved.`,
     color:"#546",
     tooltip:` `,
 })
 register_node("breathiness", "closure", {
     title:"Breathiness", desc:
-`Breathy voices are low in t[[closure|closure]], and this means air gets through without directly helping the vocal folds vibrate. This results in an airy and breathy voice. Breathy qualities are usually caused by low lateral cricoarytenoid (t[[lca|LCA]]) and interarytenoid muscle activity. It sounds slightly different to an air leak involving tension and lack of t[[ia|interarytenoid muscle]] (IA) activity. This will usually "dull" the voice slightly, making it softer and slightly darker.`,
+`Breathy voices are low in t[[closure|closure]], and this means air gets through without directly helping the vocal folds vibrate. This results in an airy and breathy voice. Breathy qualities are usually caused by low lateral cricoarytenoid (t[[lca|LCA]]) and interarytenoid muscle activity. It sounds slightly different to an air leak involving tension and lack of t[[ia|interarytenoid muscle]] (IA) activity. This will usually "dull" the voice slightly, making it softer and slightly darker.
+
+Breathiness is often a t[[compensation|compensation]]`,
     color:"#456",
     tooltip:` `,
     audio:{
@@ -761,7 +763,12 @@ source: Sumianvoice}}
 })
 register_node("brightness", "resonance", {
     title:"Brightness", desc:
-`Brightness is a combination of the tone of the voice (from glottal behavior) and t[[resonance|resonance]]. A bright voice has more high frequencies / more substantial high frequency harmonics. Importantly, it isn't just another name for resonance; a voice can be high resonance yet sound dark due to low clarity, breathiness, nasality, M2 or low IA, and more.`,
+`Brightness is a combination of the tone of the voice (from glottal behavior) and t[[resonance|resonance]]. A bright voice has more high frequencies / more substantial high frequency harmonics. Basically, brightness is harmonic power. Importantly, it isn't just another name for resonance; a voice can be high resonance yet sound dark due to low clarity, breathiness, nasality, M2 or low IA, and more.
+
+- a brighter voice will have more high frequencies present in the sound
+- a darker voice will be more concentrated towards the pitch of the voice rather than high harmonics
+- it's linked to but not 1:1 with resonance
+- high t[[closure|closure]] results in more brightness due to more harmonic power`,
     color:"#455",
     tooltip:` `,
     audio:{

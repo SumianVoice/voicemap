@@ -152,7 +152,7 @@ function parse_def(id, in_node_name, def) {
     def.desc = def.desc.replaceAll("\n", "<br>");
     def.title = def.title.replaceAll("\n", "<br>");
     def.title = def.title.replaceAll(/\<.*(small_subtitle).*\<\/\i\>/gi, "");
-    def.title += `<br>` + `<i class="small_subtitle">` + id + `</i>`;
+    def.title += `<br>` + `<i class="small_subtitle" onmousedown="stopDragging()">` + id + `</i>`;
     def.tooltip = def.tooltip.replaceAll("\n", "<br>");
     def.desc = def.desc.replaceAll("-->", '<b class="hlight">--></b>');
 
@@ -369,15 +369,10 @@ function update(dt) {
     }
 }
 
-var lastUpdate = Date.now();
-var myInterval = setInterval(tick, 0);
-var total = 0
-function tick() {
-    var now = Date.now();
-    var dt = now - lastUpdate;
-    lastUpdate = now;
+register_globalstep(function(dt){
     update(dt / 1000);
-}
+})
+
 
 
 /** @type {HTMLButtonElement} **/

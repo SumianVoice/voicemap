@@ -206,6 +206,7 @@ textarea {
     position: absolute;
     align-self: flex-end;
     transform: translate(-10.0rem, -0.30rem);
+    user-select: text;
 }
 
 .desc {
