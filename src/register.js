@@ -124,6 +124,21 @@ function linkify(text) {
     return text
 }
 
+function listify(text) {
+    const ttsplit = text.split(`<br>- `);
+    if (ttsplit.length > 0) {
+        text = ttsplit[0] + `<ul>`;
+        for (let i = 1; i < ttsplit.length; i++) {
+            text += `<li>${ttsplit[i]}</li>`
+
+            if (i == ttsplit.length - 1) {
+                text += `</ul>`
+            }
+        }
+    }
+    return text
+}
+
 function parse_def(id, in_node_name, def) {
     // keep track so can add later
     // var def = {}
@@ -140,6 +155,8 @@ function parse_def(id, in_node_name, def) {
     def.title += `<br>` + `<i class="small_subtitle">` + id + `</i>`;
     def.tooltip = def.tooltip.replaceAll("\n", "<br>");
     def.desc = def.desc.replaceAll("-->", '<b class="hlight">--></b>');
+
+    def.desc = listify(def.desc);
 
     if (def.desc == "") {
         def.desc = `<b class="hlight">[under construction]</b>`;

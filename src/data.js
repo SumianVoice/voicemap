@@ -125,8 +125,8 @@ C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
 \
 Contact area between the folds, quotient, and surface area engaged in creating pressure waves all contribute to the resulting sound. This can be thought of similar to the thickness of a guitar string. More mass in the string results in a deeper more bassy sound (and a predisposition to low pitch). High vibratory mass will result in a sort of "rumble" which is most notable at low pitches.
 
---> more vocal fold moving --> more VFVM --> sounds heavier
---> less VFVM --> can achieve higher pitches easier`,
+- more vocal fold moving --> more VFVM --> sounds heavier
+- less VFVM --> can achieve higher pitches easier`,
     color:"#445",
     tooltip:` `,
 })
@@ -142,12 +142,12 @@ Pitch Naturalisation is the process and concept of naturally adjusting a voice t
 Usually we use this by raising t[[basepitch|pitch]] very slightly, then letting the voice naturally adjust without letting clarity and volume be sacrificed. We can also do this long term by raising the base pitch of the voice slightly and speaking here for a matter of several days or weeks. Given the right conditions - specifically that there is not much conscious control or effort - a voice will adjust rather than become strained or forced.
 
 Naturalised voices:
---> sound like the speaker has been speeking at this pitch their whole life
---> sustainable and effortless to produce
+- sound like the speaker has been speeking at this pitch their whole life
+- sustainable and effortless to produce
 Non-naturalised voices:
---> sound forced or "pushed" or stressed
---> tiring or requires high level of concentration
---> might sound like the speaker is intentionally speaking higher
+- sound forced or "pushed" or stressed
+- tiring or requires high level of concentration
+- might sound like the speaker is intentionally speaking higher
 `,
     color:"#075",
     tooltip:` `,
@@ -296,8 +296,8 @@ register_node("closureloss", "closure", {
 
 This can affect range, and it is thought that the main limiting factor for most beginners for pitch range up to about B5 is that there is too much tension in the folds than needed, and this causes the student to either press harder and keep tensing up, or lose closure. As such it's important to realise that except in extreme cases, it is not a lack of effort that prevents high pitches but an excess of tension.
 
-Causes of closure loss:
-- excess tension in the folds
+Common causes of closure loss:
+- excess tension in the vocal folds
 - atrophy of t[[ia|IA muscles]]
 - excess of mucus on folds`,
     color:"#556",
@@ -396,12 +396,9 @@ register_node("atrophy", "damage", {
 `Atrophy is when muscles lose some of their ability to activate due to very long periods of disuse. This usually takes many years, and is often reversable but with effort proportional to how long whatever function has been neglected. This can be atrophy of the coordination to do something or physical atrophy of a muscle.
 
 Common points of atrophy are:
---> Adductor (closure) muscles (IA and LCA)
-Usually from neglecting the ability to become loud
---> TA muscles (the "vocal weight" muscle)
-Sometimes intentionally, usually from neglecting lower pitches
---> M2 access
-Usually just through disuse, sometimes due to avoiding it
+- Adductor (closure) muscles (IA and LCA), usually from neglecting the ability to become loud
+- TA muscles (the "vocal weight" muscle), sometimes intentionally, usually from neglecting lower pitches
+- M2 access, usually just through disuse, sometimes due to avoiding it
 `,
     color:"#233",
     tooltip:` `,
@@ -676,8 +673,8 @@ When we keep vocal weight, resonance, pitch, and all the main concepts the same,
 As a subconscious and more or less inexplicable concept, it is mostly controlled through mimicry. Higher skill in mimicry allows for more control over these microbehaviors.
 
 Basically:
---> we have no idea how it works
---> but it happens and we can use it`,
+- we have no idea how it works
+- but it happens and we can hear it and use it`,
     color:"#466",
     tooltip:` `,
 })
@@ -824,9 +821,9 @@ register_node("formants", "resonance", {
 A more technical description is that formants are the peak of resonance frequencies locally in the frequencies of the voice. Since the vocal tract is not a perfect smooth straight tube, it doesn't just highlight exactly one frequency, but instead a range, concentrated in a peak which we define as a formant frequency.
 
 Usually these formants are referred to with F and a number to denote which formant, starting from the lowest frequency:
-F0 --> fundamental (pitch)
-F1 --> 1st formant from lowest freq to highest
-F(n) --> (n)th formant
+- F0 --> fundamental (pitch)
+- F1 --> 1st formant from lowest freq to highest
+- F(n) --> (n)th formant
 
 Note that it is possible to make other formants happen that are in between the formants we usually see, but these do not replace the existing F1 F2 etc. So if nasal resonance joins the F1 and F2, the "old" F3 is still called F3. We don't downrank it to F2 because there now appears to be less formants below it.
 `,
@@ -989,12 +986,12 @@ register_node("DataResearch", "root", {
 `The following is a list of things we would very much like to have <b>data and research</b> for. If you find some, please notify us! It's likely that this research exists obscurely, or not at all.
 It can also be inspiration for research topics <i>hint hint</i>.
 
---> is IA activity specifically responsible for mechanism blending along with TA vs CT
---> is it possible that low IA can allow for partial vocal fold vibration
---> is only TA responsible for vocal fold vibratory mass and as such vocal weight
---> is vocal fold vibratory mass actually the cause of the sound, and how specifically (probably need high speed camera footage and skilled vocalist)
---> can the TA be hypertrophied physically
---> can the TA be atrophied physically
+- is IA activity specifically responsible for mechanism blending along with TA vs CT
+- is it possible that low IA can allow for partial vocal fold vibration
+- is only TA responsible for vocal fold vibratory mass and as such vocal weight
+- is vocal fold vibratory mass actually the cause of the sound, and how specifically (probably need high speed camera footage and skilled vocalist)
+- can the TA be hypertrophied physically
+- can the TA be atrophied physically
 `,
     color:"#333",
     tooltip:` `,

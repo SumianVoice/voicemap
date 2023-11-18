@@ -31,6 +31,10 @@ h1, h2, h3, h4 {
     color: #ccc;
 }
 
+ul {
+    margin-left: 20px;
+}
+
 button {
     background: #444;
     border: none;
