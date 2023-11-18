@@ -369,10 +369,7 @@ function update(dt) {
     }
 }
 
-register_globalstep(function(dt){
-    update(dt / 1000);
-})
-
+register_globalstep(update)
 
 
 /** @type {HTMLButtonElement} **/
