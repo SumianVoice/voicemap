@@ -3,7 +3,6 @@ Portions Copyright (c) 2023 "aeggy" nelinearni under the MIT license
 Portions Copyright (c) 2023 Sumi, SumianVoice <sumianvoice.com> under the MIT license
 */
 
-const parent = document.getElementById("parent1");
 
 var Zoom = {
     mouseDown : false,
@@ -14,15 +13,17 @@ var Zoom = {
     scrollTargetTop : 0,
 };
 
+Zoom.Rootnode = document.getElementById("parent1");
+
 Zoom.window_offset = { x: 20000 + 0, y: 20000 + 0 };
 Zoom.scroll = { x: Zoom.window_offset.x, y: Zoom.window_offset.y };
 
 Zoom.startDragging = function (e) {
     Zoom.mouseDown = true;
-    Zoom.start.x = e.pageX - parent.offsetLeft;
-    Zoom.start.y = e.pageY - parent.offsetTop;
-    Zoom.scroll.x = parent.scrollLeft;
-    Zoom.scroll.y = parent.scrollTop;
+    Zoom.start.x = e.pageX - Zoom.Rootnode.offsetLeft;
+    Zoom.start.y = e.pageY - Zoom.Rootnode.offsetTop;
+    Zoom.scroll.x = Zoom.Rootnode.scrollLeft;
+    Zoom.scroll.y = Zoom.Rootnode.scrollTop;
 };
 
 Zoom.stopDragging = function (event) {
@@ -66,10 +67,10 @@ document.addEventListener("pointermove", (e) => {
         return;
     }
 
-    const x = e.pageX - parent.offsetLeft;
+    const x = e.pageX - Zoom.Rootnode.offsetLeft;
     const scrollX = (x - Zoom.start.x) / Zoom.zoom();
 
-    const y = e.pageY - parent.offsetTop;
+    const y = e.pageY - Zoom.Rootnode.offsetTop;
     const scrollY = (y - Zoom.start.y) / Zoom.zoom();
 
     Zoom.scroll_to_position(Zoom.scroll.x - scrollX, Zoom.scroll.y - scrollY);
@@ -77,16 +78,16 @@ document.addEventListener("pointermove", (e) => {
 
 Zoom.scroll_to_position = function(x, y, override=true) {
     if (override) {
-        parent.scrollTargetLeft = x;
-        parent.scrollTargetTop = y;
+        Zoom.Rootnode.scrollTargetLeft = x;
+        Zoom.Rootnode.scrollTargetTop = y;
     }
-    parent.scrollLeft = x;
-    parent.scrollTop = y;
+    Zoom.Rootnode.scrollLeft = x;
+    Zoom.Rootnode.scrollTop = y;
 };
 
 Zoom.smooth_scroll_to_position = function(x, y) {
-    parent.scrollTargetLeft = x;
-    parent.scrollTargetTop = y;
+    Zoom.Rootnode.scrollTargetLeft = x;
+    Zoom.Rootnode.scrollTargetTop = y;
 };
 
 Zoom.lerp = function(start, end, ratio) {
@@ -94,11 +95,11 @@ Zoom.lerp = function(start, end, ratio) {
 };
 
 Globalstep.register_globalstep(function(dt) {
-    parent.scrollLeft = Zoom.lerp(parent.scrollLeft, parent.scrollTargetLeft, 0.03);
-    parent.scrollTop = Zoom.lerp(parent.scrollTop, parent.scrollTargetTop, 0.03);
+    Zoom.Rootnode.scrollLeft = Zoom.lerp(Zoom.Rootnode.scrollLeft, Zoom.Rootnode.scrollTargetLeft, 0.03);
+    Zoom.Rootnode.scrollTop = Zoom.lerp(Zoom.Rootnode.scrollTop, Zoom.Rootnode.scrollTargetTop, 0.03);
     Zoom.scroll_to_position(
-        Zoom.lerp(parent.scrollLeft, parent.scrollTargetLeft, 0.03),
-        Zoom.lerp(parent.scrollTop, parent.scrollTargetTop, 0.03), false
+        Zoom.lerp(Zoom.Rootnode.scrollLeft, Zoom.Rootnode.scrollTargetLeft, 0.03),
+        Zoom.lerp(Zoom.Rootnode.scrollTop, Zoom.Rootnode.scrollTargetTop, 0.03), false
         );
 });
 
@@ -142,7 +143,7 @@ document.addEventListener("touchmove", (e) => {
   }
 });
 
-document.addEventListener("wheel", (e) => {
+Zoom.Rootnode.addEventListener("wheel", (e) => {
     e.preventDefault();
     e.stopPropagation();
 
@@ -200,5 +201,5 @@ Zoom.zoom_equal.addEventListener("click", () => Zoom.zoom(Zoom.zoom_default));
 
 Zoom.zoom(1)
 
-parent.style.transition = "transform 0.2s, filter 0.8s";
-parent.style.filter = "opacity(1)";
+Zoom.Rootnode.style.transition = "transform 0.2s, filter 0.8s";
+Zoom.Rootnode.style.filter = "opacity(1)";
