@@ -50,27 +50,8 @@ Register.do_all_registered_instances = function() {
     }
 };
 
-Register.getOffset = function(el) {
-    const rect = el.getBoundingClientRect();
-    return {
-        left: ((rect.left + rect.right)/2 + parent.scrollLeft - window.innerWidth * 0.5) / Zoom.zoom_now,
-        top: (rect.top + parent.scrollTop - window.innerHeight * 0.3) / Zoom.zoom_now,
-    };
-};
-
-Register.get_node_position = function(name) {
-    let element = Register.active_nodes[name];
-    if (element == null) {
-        alert("no node " + name);
-        element = Register.active_nodes["About"];
-    }
-    var rect = Register.getOffset(element);
-    return rect;
-};
-
 Register.scroll_to_node = function(name) {
-    var rect = Register.get_node_position(name);
-    Zoom.scroll_to_position(rect.left, rect.top);
+    Zoom.go_to_element_id(name)
 };
 
 Register.get_url_vars = function() {
@@ -344,6 +325,7 @@ function show_tagged(tag) {
             n.style.outline = `16px solid red`;
             n.style.display = `flex`;
             Register.tag_highlight_list[k] = 10;
+            Zoom.go_to_element_id(tag, true)
         } else {
             n.style.transition = `1s all ease-in-out`;
             n.style.outline = `0px solid red`;

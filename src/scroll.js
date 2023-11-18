@@ -8,13 +8,13 @@ const parent = document.getElementById("parent1");
 var Zoom = {
     mouseDown : false,
     start : { x: 0, y: 0 },
-    zoomedPercentage: 0,
-    last_tick : Date.now(),
     zoom_target : 1,
     zoom_now : 1,
+    scrollTargetLeft : 0,
+    scrollTargetTop : 0,
 };
 
-Zoom.window_offset = { x: 20000 + 400, y: 20000 + 400 };
+Zoom.window_offset = { x: 20000 + 0, y: 20000 + 0 };
 Zoom.scroll = { x: Zoom.window_offset.x, y: Zoom.window_offset.y };
 
 Zoom.startDragging = function (e) {
@@ -27,6 +27,37 @@ Zoom.startDragging = function (e) {
 
 Zoom.stopDragging = function (event) {
   Zoom.mouseDown = false;
+};
+
+Zoom.get_position_of_element = function(obj) {
+    if (!obj) {return [0,0];}
+	var curleft = curtop = 0;
+	if (obj.offsetParent) {
+        do {
+			curleft += obj.offsetLeft;
+			curtop += obj.offsetTop;
+		} while (obj = obj.offsetParent);
+        return [curleft,curtop];
+    }
+};
+
+Zoom.go_to_element_id = function(id, smooth=false) {
+    const el = document.getElementById(id)
+    let pos = Zoom.get_position_of_element(el);
+    pos[0] += (-window.innerWidth/2) - Zoom.window_offset.x;
+    pos[1] += (-window.innerHeight/2) - Zoom.window_offset.y;
+
+    // literally just magic numbers, no touch
+    const s = el.getBoundingClientRect();
+    pos[0] += (s.right - s.left) * 0.5 / Zoom.zoom_now
+    pos[0] += -1000
+    pos[1] += -1000 + 200
+
+    if (smooth) {
+        Zoom.smooth_scroll_to_position(pos[0], pos[1]);
+    } else {
+        Zoom.scroll_to_position(pos[0], pos[1]);
+    }
 };
 
 document.addEventListener("pointermove", (e) => {
@@ -44,13 +75,35 @@ document.addEventListener("pointermove", (e) => {
     Zoom.scroll_to_position(Zoom.scroll.x - scrollX, Zoom.scroll.y - scrollY);
 });
 
-Zoom.scroll_to_position = function(x, y) {
+Zoom.scroll_to_position = function(x, y, override=true) {
+    if (override) {
+        parent.scrollTargetLeft = x;
+        parent.scrollTargetTop = y;
+    }
     parent.scrollLeft = x;
     parent.scrollTop = y;
-}
+};
+
+Zoom.smooth_scroll_to_position = function(x, y) {
+    parent.scrollTargetLeft = x;
+    parent.scrollTargetTop = y;
+};
+
+Zoom.lerp = function(start, end, ratio) {
+    return ((end - start) * ratio + start);
+};
+
+Globalstep.register_globalstep(function(dt) {
+    parent.scrollLeft = Zoom.lerp(parent.scrollLeft, parent.scrollTargetLeft, 0.03);
+    parent.scrollTop = Zoom.lerp(parent.scrollTop, parent.scrollTargetTop, 0.03);
+    Zoom.scroll_to_position(
+        Zoom.lerp(parent.scrollLeft, parent.scrollTargetLeft, 0.03),
+        Zoom.lerp(parent.scrollTop, parent.scrollTargetTop, 0.03), false
+        );
+});
 
 
-Zoom.scroll_to_position(Zoom.scroll.x, Zoom.scroll.y);
+Zoom.scroll_to_position(Zoom.scroll.x + 400, Zoom.scroll.y + 400);
 
 // Add the event listeners
 document.addEventListener("pointerdown", Zoom.startDragging, false);
@@ -116,11 +169,10 @@ Zoom.zoom = function(x = null) {
 
     if (x != null) {
         const canZoom = x >= Zoom.zoom_minimum && x <= 4;
-        // console.log(canZoom, x)
         if (canZoom) {
             document.documentElement.style.setProperty("--zoomx", x);
             document.documentElement.style.setProperty("--zoomy", x);
-            // Zoom.zoom_target = x
+            Zoom.zoom_now = x
         }
     }
 
@@ -138,7 +190,6 @@ Zoom.disable_buttons = function(zoomLevel = Zoom.zoom()) {
 Zoom.disable_buttons();
 
 Zoom.zoom_relative = function(x = 0) {
-    // console.log(x, Zoom.zoom())
     if (x == 0) return;
     const z = Zoom.zoom();
     Zoom.zoom(z + (x * Math.abs(z)) * 2);

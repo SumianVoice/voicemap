@@ -305,7 +305,7 @@ Breathiness is often a t[[compensation|compensation]]`,
 })
 Register.register_node("closureloss", "closure", {
     title:"Loss Of Closure", desc:
-`A Loss of t[[closure|Closure]] is when the voice cuts out, and only air comes out. This happens if there is some amount of tension in the folds and not the right closure. The folds are in position but do not close, and have too much tension lengthwise (i.e. pitch) to be vibrated and instead air just rushes past. This is natural, and isn't a problem, and <b>should not be forcibly avoided</b>. Forcing it will either trigger <b class="hlight">t[[hyp[eradduction|hyperadduction]]</b> (bad) or make the closure loss worse through more tension, so it is usually best to relax instead.
+`A Loss of t[[closure|Closure]] is when the voice cuts out, and only air comes out. This happens if there is some amount of tension in the folds and not the right closure. The folds are in position but do not close, and have too much tension lengthwise (i.e. pitch) to be vibrated and instead air just rushes past. This is natural, and isn't a problem, and <b>should not be forcibly avoided</b>. Forcing it will either trigger <b class="hlight">t[[hyperadduction|hyperadduction]]</b> (bad) or make the closure loss worse through more tension, so it is usually best to relax instead.
 
 This can affect range, and it is thought that the main limiting factor for most beginners for pitch range up to about B5 is that there is too much tension in the folds than needed, and this causes the student to either press harder and keep tensing up, or lose closure. As such it's important to realise that except in extreme cases, it is not a lack of effort that prevents high pitches but an excess of tension.
 
