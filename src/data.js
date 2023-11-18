@@ -215,6 +215,17 @@ We can also start low, then try to make the voice more like t[[m2|falsetto]]. As
     color:"#758",
     tooltip:` `,
 })
+register_node("vocalweightdarkconflation", "vocalweight", {
+    title:"Dark Heavy Voice Conflation", desc:
+`A heavy voice will seem darker due to several reasons:
+- heavy voices are typically darker, so there is a subconscious mental assumption
+- heavy voices typically use more air pressure and flow, resulting in a smoother, duller soundtt{{Note that heavy and buzzy are not the same thing. A heavy voice can sound dark and hollow due to low closure and high pressure, or bright and buzzy due to high closure. That high closure is encouraged by high resonance, so there is further conflations there.}}
+- the rumble-like sound quality of heavy vocal weight is auditorily similar to a dark low resonnace voice with normal closure
+
+`,
+    color:"#567",
+    tooltip:` `,
+})
 
 
 //////////////////////
