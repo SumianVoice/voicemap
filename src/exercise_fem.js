@@ -2,7 +2,7 @@
 if (true) {
 const color = "#a36"
 
-register_node("whisperintro", "larynxheight", {
+Register.register_node("whisperintro", "larynxheight", {
     title:"Whisper Introduction\nTo Resonance", desc:
 `Can be a good way to get acquainted with resonance initially. It's especially good since it will use the same vowel, so we can't get as confused as to whether we're actually raising and lowering the larynx.
 
@@ -18,7 +18,7 @@ tt{{first known use: Ama Rose of Scinguistics}}
     tooltip:` `,
 })
 
-register_node("resonancestepping", "larynxheight", {
+Register.register_node("resonancestepping", "larynxheight", {
     title:"Resonance Stepping", desc:
 `Voiced resonance steps
 - start at a low resonance yawn-like position and say a phrase or word like "one two three"
@@ -33,7 +33,7 @@ register_node("resonancestepping", "larynxheight", {
     tooltip:` `,
 })
 
-register_node("darktobright", "brightness", {
+Register.register_node("darktobright", "brightness", {
     title:"Dark to Bright", desc:
 `This can be a good way to actually apply resonance range you already have, without as much compensation and other issues coming in if we do it correctly.
 
@@ -49,7 +49,7 @@ tt{{first known use: Sumianvoice}}
     tooltip:` `,
 })
 
-register_node("uhh-iii", "mouthspace", {
+Register.register_node("uhh-iii", "mouthspace", {
     title:"UHH and III", desc:
 `If we say "uhhh", we will achieve most likely large mouth space and a darker voice. Then we can compare this to the "iii" sound as in "happ<b>y</b>", which will cause a smaller mouth space. It's important to note that we might get a smile expression through this; that's not necessary for small mouth space, so bear that in mind.
 
@@ -63,7 +63,7 @@ This can then tell us vaguely how to affect mouspace.
     tooltip:` `,
 })
 
-register_node("feminineaccent", "mouthspace", {
+Register.register_node("feminineaccent", "mouthspace", {
     title:`The "Feminine Accent"`, desc:
 `Our assumptions about what a "feminine way of speaking" would be is not completely accurate but it is a good starting point. If we do whatever way of speaking we think is feminine, we will likely achieve smaller mouth space, brigher sibilants and different articulation. This can get perhaps 80% of the features we need.
 
@@ -75,7 +75,7 @@ register_node("feminineaccent", "mouthspace", {
     tooltip:` `,
 })
 
-register_node("pitchnatfloat", "naturalisation", {
+Register.register_node("pitchnatfloat", "naturalisation", {
     title:`Pitch Naturalization Floating`, desc:
 `Pitch naturalization using pitch "floating". This is a good introduction to pitch naturalisation, and the basic idea is "just do a slightly higher voice and let it adjust". It is very basic and intuitive, but extends even into advanced control especially with set pitch naturalisation.
 
@@ -99,7 +99,7 @@ tt{{first known use: Sumianvoice}}
     tooltip:` `,
 })
 
-register_node("pitchnatloud", "naturalisation", {
+Register.register_node("pitchnatloud", "naturalisation", {
     title:`Loud Pitch Naturalisation`, desc:
 `Good for reducing compensations like breathiness, tension etc if it happens during normal pitch naturalisation, and also helps with gaining loud volume without weight coming back in.
 
@@ -124,7 +124,7 @@ tt{{first known use: Sumianvoice}}
     tooltip:` `,
 })
 
-register_node("setpitchnat", "naturalisation", {
+Register.register_node("setpitchnat", "naturalisation", {
     title:`Set Pitch Naturalisation`, desc:
 `Useful for advanced control and isolating vocal weight, but also for getting a light vocal weight at a low pitch which is otherwise difficult.
 
@@ -144,7 +144,7 @@ tt{{first known use: Sumianvoice}}
     tooltip:` `,
 })
 
-register_node("phraserepetition", "naturalisation", {
+Register.register_node("phraserepetition", "naturalisation", {
     title:`Phrase Repetition`, desc:
 `Phrase Repetition can be used to gain comfortable speaking range, blend M2 and more. It's a good way to intuitively smooth out any issues in the voice and to habitualise anything we want.
 
@@ -165,7 +165,7 @@ tt{{first known use: Sumianvoice}}
 
 
 
-register_node("weightnotpitch", "vocalweight", {
+Register.register_node("weightnotpitch", "vocalweight", {
     title:`Think Weight, not Pitch`, desc:
 `Think about pitch as being weight, not notes. This can help control weight, though it won't help with high volumes like pitch naturalisation would.
 
@@ -187,7 +187,7 @@ tt{{first known use: Sumianvoice}}
 })
 
 
-register_node("m2highresonance", "larynxheight", {
+Register.register_node("m2highresonance", "larynxheight", {
     title:`M2 for Resonance Range`, desc:
 `Using M2 to get very high resonance or OPC can help because any tension or compensations would upset the fragile M2 configuration, making it obvious if there is a problem.
 
@@ -203,7 +203,7 @@ tt{{first known use: Sumianvoice}}
     type:"exf",
     tooltip:` `,
 })
-register_node("vampireslides", "larynxheight", {
+Register.register_node("vampireslides", "larynxheight", {
     title:`Vampire Slides`, desc:
 `Vampire slides from a low to high resonance whisper. We can use this to raise or lower resonance, usually through larynx height though other changes can happen too. This is more for range, rather than just understanding the concept. It's best to prioritise using voiced exercises instead of these whisper / unvoiced ones unless you have a reason.
 
@@ -220,7 +220,7 @@ tt{{first known use: TransVoiceLessons}}
     type:"exf",
     tooltip:` `,
 })
-register_node("opcinm2", "opc", {
+Register.register_node("opcinm2", "opc", {
     title:`OPC in M2`, desc:
 `Can be used to achieve OPC easier through using M2 to reduce compensation. Anything that would be a compensatory reaction to trying to do OPC would upset the very fragile M2 configuration.
 
@@ -239,7 +239,7 @@ tt{{first known use: Sumianvoice}}
     type:"exf",
     tooltip:` `,
 })
-register_node("sweetsounds", "vocalweight", {
+Register.register_node("sweetsounds", "vocalweight", {
     title:`Sweet Sounds`, desc:
 `Sweet Sounds is a behavioral trigger to encourage a light vocal weight, high resonance voice. It is a way to intuitively encourage these without actually consciously controlling anything.
 

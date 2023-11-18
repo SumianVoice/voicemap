@@ -3,79 +3,75 @@ Portions Copyright (c) 2023 "aeggy" nelinearni under the MIT license
 Portions Copyright (c) 2023 Sumi, SumianVoice <sumianvoice.com> under the MIT license
 */
 
-// const parent = document.getElementById("parent1");
 const parent = document.getElementById("parent1");
-const about = document.querySelector("#About");
 
-// x = slider.scrollLeft
-// y = slider.scrollTop
-
-window_offset = { x: 20000 + 400, y: 20000 + 400 }
-
-const drag = {
-    mouseDown: false,
-    start: { x: 0, y: 0 },
-    scroll: { x: window_offset.x, y: window_offset.y }, /* half of .parent, plus the 40,000 above */
+var Zoom = {
+    mouseDown : false,
+    start : { x: 0, y: 0 },
     zoomedPercentage: 0,
     last_tick : Date.now(),
     zoom_target : 1,
     zoom_now : 1,
 };
 
-let startDragging = function (e) {
-    drag.mouseDown = true;
-    drag.start.x = e.pageX - parent.offsetLeft;
-    drag.start.y = e.pageY - parent.offsetTop;
-    drag.scroll.x = parent.scrollLeft;
-    drag.scroll.y = parent.scrollTop;
+Zoom.window_offset = { x: 20000 + 400, y: 20000 + 400 };
+Zoom.scroll = { x: Zoom.window_offset.x, y: Zoom.window_offset.y };
+
+Zoom.startDragging = function (e) {
+    Zoom.mouseDown = true;
+    Zoom.start.x = e.pageX - parent.offsetLeft;
+    Zoom.start.y = e.pageY - parent.offsetTop;
+    Zoom.scroll.x = parent.scrollLeft;
+    Zoom.scroll.y = parent.scrollTop;
 };
 
-let stopDragging = function (event) {
-  drag.mouseDown = false;
+Zoom.stopDragging = function (event) {
+  Zoom.mouseDown = false;
 };
+
 document.addEventListener("pointermove", (e) => {
     e.preventDefault();
-    if (!drag.mouseDown || e.buttons == 0) {
+    if (!Zoom.mouseDown || e.buttons == 0) {
         return;
     }
 
     const x = e.pageX - parent.offsetLeft;
-    const scrollX = (x - drag.start.x) / zoom();
+    const scrollX = (x - Zoom.start.x) / Zoom.zoom();
 
     const y = e.pageY - parent.offsetTop;
-    const scrollY = (y - drag.start.y) / zoom();
+    const scrollY = (y - Zoom.start.y) / Zoom.zoom();
 
-    scroll_to_position(drag.scroll.x - scrollX, drag.scroll.y - scrollY);
+    Zoom.scroll_to_position(Zoom.scroll.x - scrollX, Zoom.scroll.y - scrollY);
 });
 
-function scroll_to_position(x, y) {
+Zoom.scroll_to_position = function(x, y) {
     parent.scrollLeft = x;
     parent.scrollTop = y;
 }
 
 
-scroll_to_position(drag.scroll.x, drag.scroll.y);
+Zoom.scroll_to_position(Zoom.scroll.x, Zoom.scroll.y);
 
 // Add the event listeners
-document.addEventListener("pointerdown", startDragging, false);
-document.addEventListener("pointerup", stopDragging, false);
-document.addEventListener("pointerleave", stopDragging, false);
+document.addEventListener("pointerdown", Zoom.startDragging, false);
+document.addEventListener("pointerup", Zoom.stopDragging, false);
+document.addEventListener("pointerleave", Zoom.stopDragging, false);
 
 // Pinch zoom using the 'pinch' event
-let initialZoom = 1.0;
-let initialDistance = 0;
+Zoom.initial_zoom = 1.0;
+Zoom.initial_distance = 0;
 
 document.addEventListener("touchstart", (e) => {
     if (e.touches.length === 2) {
-        drag.mouseDown = false;
+        Zoom.mouseDown = false;
         e.preventDefault();
         e.stopPropagation();
 
-        initialDistance = Math.hypot(
+        Zoom.initial_distance = Math.hypot(
             e.touches[0].pageX - e.touches[1].pageX,
-            e.touches[0].pageY - e.touches[1].pageY
+            e.touches[0].pageY - e.touches[1].pageY,
         );
-        initialZoom = zoom();
+        Zoom.initial_zoom = Zoom.zoom();
     }
 });
 
@@ -86,10 +82,10 @@ document.addEventListener("touchmove", (e) => {
 
     const currentDistance = Math.hypot(
         e.touches[0].pageX - e.touches[1].pageX,
-        e.touches[0].pageY - e.touches[1].pageY
+        e.touches[0].pageY - e.touches[1].pageY,
     );
-    const zoomFactor = currentDistance / initialDistance;
-    zoom(initialZoom * zoomFactor);
+    const zoomFactor = currentDistance / Zoom.initial_distance;
+    Zoom.zoom(Zoom.initial_zoom * zoomFactor);
   }
 });
 
@@ -97,61 +93,61 @@ document.addEventListener("wheel", (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-    zoomRelative(-e.deltaY / 1000);
+    Zoom.zoom_relative(-e.deltaY / 1000);
 });
 
 document.addEventListener("dblclick", (e) => {
     // disabled for sanity reasons
-    // zoomRelative(0.3);
+    // Zoom.zoom_relative(0.3);
 });
 
 // zoom
 /** @type {HTMLButtonElement} **/
-const zoom_in = document.querySelector("#zoom_in");
+Zoom.zoom_in = document.querySelector("#zoom_in");
 /** @type {HTMLButtonElement} **/
-const zoom_out = document.querySelector("#zoom_out");
+Zoom.zoom_out = document.querySelector("#zoom_out");
 /** @type {HTMLButtonElement} **/
-const zoom_equal = document.querySelector("#zoom_equal");
+Zoom.zoom_equal = document.querySelector("#zoom_equal");
 
-const zoomMinimum = 0.09;
-const zoomDefault = 0.5;
-function zoom(x = null) {
+Zoom.zoom_minimum = 0.09;
+Zoom.zoom_default = 0.5;
+Zoom.zoom = function(x = null) {
     const rootStyle = getComputedStyle(document.documentElement);
 
     if (x != null) {
-        const canZoom = x >= zoomMinimum && x <= 4;
+        const canZoom = x >= Zoom.zoom_minimum && x <= 4;
         // console.log(canZoom, x)
         if (canZoom) {
             document.documentElement.style.setProperty("--zoomx", x);
             document.documentElement.style.setProperty("--zoomy", x);
-            // drag.zoom_target = x
+            // Zoom.zoom_target = x
         }
     }
 
     const currentZoom = rootStyle.getPropertyValue("--zoomx");
-    disableButtons(currentZoom);
+    Zoom.disable_buttons(currentZoom);
 
     return parseFloat(currentZoom);
 }
 
-function disableButtons(zoomLevel = zoom()) {
-    zoom_in.disabled = false; // TODO
-    zoom_out.disabled = !(zoomLevel / 2 >= zoomMinimum);
-    zoom_equal.disabled = zoomLevel == zoomDefault;
+Zoom.disable_buttons = function(zoomLevel = Zoom.zoom()) {
+    Zoom.zoom_in.disabled = false; // TODO
+    Zoom.zoom_out.disabled = !(zoomLevel / 2 >= Zoom.zoom_minimum);
+    Zoom.zoom_equal.disabled = zoomLevel == Zoom.zoom_default;
 }
-disableButtons();
+Zoom.disable_buttons();
 
-function zoomRelative(x = 0) {
-    // console.log(x, zoom())
+Zoom.zoom_relative = function(x = 0) {
+    // console.log(x, Zoom.zoom())
     if (x == 0) return;
-    const z = zoom()
-    zoom(z + (x * Math.abs(z)) * 2);
+    const z = Zoom.zoom();
+    Zoom.zoom(z + (x * Math.abs(z)) * 2);
 }
-zoom_in.addEventListener("click", () => zoom(zoom() * 2));
-zoom_out.addEventListener("click", () => zoom(zoom() / 2));
-zoom_equal.addEventListener("click", () => zoom(zoomDefault));
+Zoom.zoom_in.addEventListener("click", () => Zoom.zoom(Zoom.zoom() * 2));
+Zoom.zoom_out.addEventListener("click", () => Zoom.zoom(Zoom.zoom() / 2));
+Zoom.zoom_equal.addEventListener("click", () => Zoom.zoom(Zoom.zoom_default));
 
-zoom(1)
+Zoom.zoom(1)
 
 parent.style.transition = "transform 0.2s, filter 0.8s";
 parent.style.filter = "opacity(1)";

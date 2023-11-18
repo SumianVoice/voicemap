@@ -2,7 +2,7 @@
 if (true) {
 const color = "#37a";
 
-register_node("weightlayerslides", "vocalweight", {
+Register.register_node("weightlayerslides", "vocalweight", {
     title:"Weight Layer Slides", desc:
 `Can be used to get a heavier voice.
 
@@ -20,7 +20,7 @@ register_node("weightlayerslides", "vocalweight", {
     type:"exm",
     tooltip:` `,
 })
-register_node("haahhaww", "brightness", {
+Register.register_node("haahhaww", "brightness", {
     title:"Haah and Haww", desc:
 `Affects mostly mouth shape, and some larynx height.
 

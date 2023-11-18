@@ -2,7 +2,7 @@
 if (true) {
 const color = "#386";
 
-register_node("m2blend", "m2blending", {
+Register.register_node("m2blend", "m2blending", {
     title:`Blend M2 with slides`, desc:
 `Blending M2 is where we match up the configuration of M1 and M2 so that there is no imbalance and no break.
 
@@ -19,7 +19,7 @@ register_node("m2blend", "m2blending", {
     tooltip:` `,
 })
 
-register_node("findingm2humming", "m2", {
+Register.register_node("findingm2humming", "m2", {
     title:`Finding M2 with Humming`, desc:
 `This can help if you can't access M2 at all, or just to relax the higher range in general. Being able to access M2 is very important.
 
@@ -35,7 +35,7 @@ register_node("findingm2humming", "m2", {
     tooltip:` `,
 })
 
-register_node("findingm2hoots", "m2", {
+Register.register_node("findingm2hoots", "m2", {
     title:`Finding M2 with Hoots`, desc:
 `Once you already have access to M2 but it's not reliable to get into it, this can sometimes be all we need to get out voice into M2.
 
@@ -54,7 +54,7 @@ tt{{first known use: Sumianvoice}}
 })
 
 
-register_node("pitchmatchingsequence", "pitchmatching", {
+Register.register_node("pitchmatchingsequence", "pitchmatching", {
     title:`Pitch Matching Sequence`, desc:
 `Good as an introductory exercise for pitch matching.
 
@@ -69,7 +69,7 @@ register_node("pitchmatchingsequence", "pitchmatching", {
     type:"exg",
     tooltip:` `,
 })
-register_node("pitchmatchingrandom", "pitchmatching", {
+Register.register_node("pitchmatchingrandom", "pitchmatching", {
     title:`Pitch Matching Random`, desc:
 `Choosing notes to match at random is a good way to gain better skill since we can't "just raise" or "just lower", we have to actually match it with no context except the note itself.
 
@@ -82,7 +82,7 @@ register_node("pitchmatchingrandom", "pitchmatching", {
     type:"exg",
     tooltip:` `,
 })
-register_node("pitchmatchingpreempting", "pitchmatching", {
+Register.register_node("pitchmatchingpreempting", "pitchmatching", {
     title:`Pitch Matching Preempting`, desc:
 `For much more control over pitch matching.
 
@@ -99,7 +99,7 @@ register_node("pitchmatchingpreempting", "pitchmatching", {
     type:"exg",
     tooltip:` `,
 })
-register_node("beatingexercise", "pitchmatching", {
+Register.register_node("beatingexercise", "pitchmatching", {
     title:`Beating Exercise`, desc:
 `Beating is when two notes don't quite match, so every so many vibrations one will cancel the other out. This more or less creates another freqency which is the difference between the two notes.
 
@@ -116,7 +116,7 @@ register_node("beatingexercise", "pitchmatching", {
     tooltip:` `,
 })
 
-register_node("rangeexpandsovte", "rangeexpansion", {
+Register.register_node("rangeexpandsovte", "rangeexpansion", {
     title:`Range expansion with SOVTEs`, desc:
 `Range expansion with SOVTEs.
 
@@ -137,7 +137,7 @@ register_node("rangeexpandsovte", "rangeexpansion", {
 
 
 
-register_node("reducetvfconstriction", "tvfconstriction", {
+Register.register_node("reducetvfconstriction", "tvfconstriction", {
     title:"Reducing TVF Constriction", desc:
 `To adjust airflow without constriction / squeezing.
 
@@ -161,7 +161,7 @@ tt{{first known use: Sumianvoice}}
 })
 
 
-register_node("breathinessstepping", "breathiness", {
+Register.register_node("breathinessstepping", "breathiness", {
     title:"Breathiness Stepping", desc:
 `Can reduce breathiness or even train higher closure for volume and clarity.
 
@@ -177,7 +177,7 @@ register_node("breathinessstepping", "breathiness", {
     type:"exg",
     tooltip:` `,
 })
-register_node("m2ohah_ia", "ia", {
+Register.register_node("m2ohah_ia", "ia", {
     title:"M2 oh ah for IA", desc:
 `Good for reducing the "not enough IA" hollowness.
 
@@ -195,7 +195,7 @@ tt{{first known use: Sumianvoice}}
     type:"exg",
     tooltip:` `,
 })
-register_node("sternvoice", "ia", {
+Register.register_node("sternvoice", "ia", {
     title:"Stern Voice", desc:
 `This can help gain better closure and stability.
 - talk as if slightly angry, or talking to a dog that did something wrong

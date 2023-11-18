@@ -3,8 +3,8 @@ Licensed under MIT License, Copyright 2023 Sumi, sumianvoice.com
 */
 
 const root = document.getElementById("root");
-root._list = root
-root._tree_step = 1
+root._list = root;
+root._tree_step = 1;
 
 function html_fragment_from_string(html_string) {
     let frag = document.createDocumentFragment(),
@@ -20,74 +20,75 @@ function html_fragment_from_string(html_string) {
 //        REGISTER
 ///////////////////////////////////////
 
-const active_nodes = {
-    "root" : root
-}
-
-const registered_nodes = {
-    "root" : {}
-}
-
-let instances_to_add = {}
-function register_instance(id, in_node_name) {
-    if (instances_to_add[id] == null) {
-        instances_to_add[id] = []
+var Register = {
+    active_nodes : {
+        "root" : root,
+    },
+    registered_nodes : {
+        "root" : {},
     }
-    instances_to_add[id].push(in_node_name)
-}
+};
 
-function do_all_registered_instances() {
+Register.instances_to_add = {};
+
+Register.register_instance = function(id, in_node_name) {
+    if (Register.instances_to_add[id] == null) {
+        Register.instances_to_add[id] = [];
+    }
+    Register.instances_to_add[id].push(in_node_name);
+};
+
+Register.do_all_registered_instances = function() {
     console.log("doing instances");
-    for (var id in instances_to_add) {
-        const v = instances_to_add[id]
+    for (var id in Register.instances_to_add) {
+        const v = Register.instances_to_add[id];
         for (let i = 0; i < v.length; i++) {
-            const def = registered_nodes[id]
-            in_node_name = v[i]
-            construct_node(id + String(i), in_node_name, def, {['skip_register']:true, ['is_copy']:true, ['old_id']:id})
+            const def = Register.registered_nodes[id];
+            in_node_name = v[i];
+            Register.construct_node(id + String(i), in_node_name, def, {['skip_register']:true, ['is_copy']:true, ['old_id']:id});
         }
     }
-}
+};
 
-function getOffset(el) {
+Register.getOffset = function(el) {
     const rect = el.getBoundingClientRect();
     return {
-        left: ((rect.left + rect.right)/2 + parent.scrollLeft - window.innerWidth * 0.5) / drag.zoom_now,
-        top: (rect.top + parent.scrollTop - window.innerHeight * 0.3) / drag.zoom_now
+        left: ((rect.left + rect.right)/2 + parent.scrollLeft - window.innerWidth * 0.5) / Zoom.zoom_now,
+        top: (rect.top + parent.scrollTop - window.innerHeight * 0.3) / Zoom.zoom_now,
     };
-}
+};
 
-function get_node_position(name) {
-    let element = active_nodes[name]
+Register.get_node_position = function(name) {
+    let element = Register.active_nodes[name];
     if (element == null) {
         alert("no node " + name);
-        element = active_nodes["About"];
+        element = Register.active_nodes["About"];
     }
-    var rect = getOffset(element);
+    var rect = Register.getOffset(element);
     return rect;
-}
-function scroll_to_node(name) {
-    var rect = get_node_position(name);
-    scroll_to_position(rect.left, rect.top);
-}
+};
 
-function get_url_vars() {
+Register.scroll_to_node = function(name) {
+    var rect = Register.get_node_position(name);
+    Zoom.scroll_to_position(rect.left, rect.top);
+};
+
+Register.get_url_vars = function() {
     const vars = {};
     const parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
         vars[key] = value;
     });
     return vars;
-}
+};
 
-function go_to_url_tag() {
-    const vars = get_url_vars()
+Register.go_to_url_tag = function() {
+    const vars = Register.get_url_vars();
     if (vars.goto) {
-        scroll_to_node(vars.goto);
+        Register.scroll_to_node(vars.goto);
     }
-}
+};
 
-const scale_factor_per_tree_step = 0.8
-
-function tooltipify(text) {
+Register.tooltipify = function(text) {
     // parse tt{{blah}} as a notation / reference popup
     const ttsplit = text.split(`tt{{`);
     if (ttsplit.length > 0) {
@@ -95,17 +96,17 @@ function tooltipify(text) {
         for (let i = 0; i < ttsplit.length; i++) {
             if (i > 0) {
                 const ttsplittmp = ttsplit[i].split(`}}`);
-                text += `<sup class="tt" onmousedown="stopDragging()">[?]<span class="tooltiptext">` +  ttsplittmp[0]
-                text += `</span></sup>` + (ttsplittmp[1] || "")
+                text += `<sup class="tt" onmousedown="Zoom.stopDragging()">[?]<span class="tooltiptext">` +  ttsplittmp[0];
+                text += `</span></sup>` + (ttsplittmp[1] || "");
             } else {
-                text += ttsplit[i]
+                text += ttsplit[i];
             }
         }
     }
-    return text
-}
+    return text;
+};
 
-function linkify(text) {
+Register.linkify = function(text) {
     // parse tt{{blah}} as a notation / reference popup
     const ttsplit = text.split(`t[[`);
     if (ttsplit.length > 0) {
@@ -114,32 +115,32 @@ function linkify(text) {
             if (i > 0) {
                 const ttsplittmp = ttsplit[i].split(`]]`);
                 const elems = ttsplittmp[0].split(`|`);
-                text += `<span class="tag_link" onmousedown="stopDragging()" onclick="show_tagged(\'` +  elems[0] + `\')">` + elems[1]
-                text += `</span>` + (ttsplittmp[1] || "")
+                text += `<span class="tag_link" onmousedown="Zoom.stopDragging()" onclick="show_tagged(\'` +  elems[0] + `\')">` + elems[1];
+                text += `</span>` + (ttsplittmp[1] || "");
             } else {
-                text += ttsplit[i]
+                text += ttsplit[i];
             }
         }
     }
-    return text
-}
+    return text;
+};
 
-function listify(text) {
+Register.listify = function(text) {
     const ttsplit = text.split(`<br>- `);
     if (ttsplit.length > 0) {
         text = ttsplit[0] + `<ul>`;
         for (let i = 1; i < ttsplit.length; i++) {
-            text += `<li>${ttsplit[i]}</li>`
+            text += `<li>${ttsplit[i]}</li>`;
 
             if (i == ttsplit.length - 1) {
-                text += `</ul>`
+                text += `</ul>`;
             }
         }
     }
-    return text
-}
+    return text;
+};
 
-function parse_def(id, in_node_name, def) {
+Register.parse_def = function(id, in_node_name, def) {
     // keep track so can add later
     // var def = {}
     // for (k in from_def) {
@@ -152,34 +153,34 @@ function parse_def(id, in_node_name, def) {
     def.desc = def.desc.replaceAll("\n", "<br>");
     def.title = def.title.replaceAll("\n", "<br>");
     def.title = def.title.replaceAll(/\<.*(small_subtitle).*\<\/\i\>/gi, "");
-    def.title += `<br>` + `<i class="small_subtitle" onmousedown="stopDragging()">` + id + `</i>`;
+    def.title += `<br>` + `<i class="small_subtitle" onmousedown="Zoom.stopDragging()">` + id + `</i>`;
     def.tooltip = def.tooltip.replaceAll("\n", "<br>");
     def.desc = def.desc.replaceAll("-->", '<b class="hlight">--></b>');
 
-    def.desc = listify(def.desc);
+    def.desc = Register.listify(def.desc);
 
     if (def.desc == "") {
         def.desc = `<b class="hlight">[under construction]</b>`;
     }
     def.desc = def.desc.replaceAll("[wip]", '<br><br><b class="hlight">[under construction]</b>');
 
-    def.desc = tooltipify(def.desc);
-    def.tooltip = tooltipify(def.tooltip);
-    def.title = tooltipify(def.title);
+    def.desc = Register.tooltipify(def.desc);
+    def.tooltip = Register.tooltipify(def.tooltip);
+    def.title = Register.tooltipify(def.title);
 
-    def.desc = linkify(def.desc);
+    def.desc = Register.linkify(def.desc);
     // if (def.id == "naturalisation") { console.log(def.desc); }
 
     return def;
-}
+};
 
 function play_audio(clip_path) {
     var audio = new Audio(`audio/${clip_path}`);
     audio.play();
 }
 
-function get_fragment_from_def(id, in_node_name, def) {
-    const new_tree_step = active_nodes[in_node_name]._tree_step + 1;
+Register.get_fragment_from_def = function(id, in_node_name, def) {
+    const new_tree_step = Register.active_nodes[in_node_name]._tree_step + 1;
     let new_scale_factor = Math.round(1 / (new_tree_step**1.1) * 10 * 1000) / 1000;
     new_scale_factor = Math.min(Math.max(2, new_scale_factor), 9);
 
@@ -211,7 +212,7 @@ function get_fragment_from_def(id, in_node_name, def) {
         code += `<h3 class="audio_header">Audio Examples</h3>`;
         code += `<div class="audio_list">`;
         for (clipname in def.audio) {
-            code += `<button class="audio_button" onmousedown="stopDragging()" onclick="play_audio('${def.audio[clipname]}')">${clipname}</button>`
+            code += `<button class="audio_button" onmousedown="Zoom.stopDragging()" onclick="play_audio('${def.audio[clipname]}')">${clipname}</button>`
         }
         code += `</div>`;
         code += `</div>`;
@@ -230,21 +231,21 @@ function get_fragment_from_def(id, in_node_name, def) {
     }
 
     return html_fragment_from_string(code);
-}
+};
 
-const exercise_tags = {"exf":1, "exm":1, "exg":1};
-const active_nodes_index = []
-function register_node(id, in_node_name, fromdef, flags={}) {
+Register.exercise_tags = {"exf":1, "exm":1, "exg":1};
+Register.active_nodes_index = []
+Register.register_node = function(id, in_node_name, fromdef, flags={}) {
     let def = {}; for (k in fromdef) {def[k] = fromdef[k];}
     def.id = id
     def.in_node_name = in_node_name
     def.added = false
     def.flags = flags
-    registered_nodes[id] = def
-}
+    Register.registered_nodes[id] = def
+};
 
-function construct_node(id, in_node_name, fromdef, flags={}) {
-    if (active_nodes[in_node_name] == null) {
+Register.construct_node = function(id, in_node_name, fromdef, flags={}) {
+    if (Register.active_nodes[in_node_name] == null) {
         console.log(`CANNOT add node "` + id + `" in node "` + in_node_name + `"`);
         console.log(fromdef);
         return false;
@@ -257,129 +258,126 @@ function construct_node(id, in_node_name, fromdef, flags={}) {
         // console.log(flags)
     }
     // if this ID already exists, show an error
-    if (!flags.skip_register && active_nodes[id] != null) {
+    if (!flags.skip_register && Register.active_nodes[id] != null) {
         def.title += "ERROR! THIS WILL OVERWRITE " + id
     }
 
-    def = parse_def(id, in_node_name, def);
+    def = Register.parse_def(id, in_node_name, def);
 
     if (!flags.skip_register) {
-        // registered_nodes[id] = def;
-        active_nodes_index.push(def);
+        // Register.registered_nodes[id] = def;
+        Register.active_nodes_index.push(def);
     };
 
-    const new_tree_step = active_nodes[in_node_name]._tree_step + 1;
+    const new_tree_step = Register.active_nodes[in_node_name]._tree_step + 1;
 
-    const fragment = get_fragment_from_def(id, in_node_name, def);
+    const fragment = Register.get_fragment_from_def(id, in_node_name, def);
 
-    active_nodes[in_node_name]._list.appendChild(fragment);
-    active_nodes[id] = document.getElementById(id);
-    active_nodes[id]._list = document.getElementById(id + "_list");
-    active_nodes[id]._tree_step = new_tree_step;
+    Register.active_nodes[in_node_name]._list.appendChild(fragment);
+    Register.active_nodes[id] = document.getElementById(id);
+    Register.active_nodes[id]._list = document.getElementById(id + "_list");
+    Register.active_nodes[id]._tree_step = new_tree_step;
 
     if (flags.is_copy) {
-        active_nodes[id].style["border"] = "#ffffff20 4px dashed";
+        Register.active_nodes[id].style["border"] = "#ffffff20 4px dashed";
     }
-    if (exercise_tags[def.type || "none"] != null) {
-        active_nodes[id].style.display = "none";
+    if (Register.exercise_tags[def.type || "none"] != null) {
+        Register.active_nodes[id].style.display = "none";
     }
-}
+};
 
-function construct_all_nodes() {
-    for (var id in registered_nodes) {
+Register.construct_all_nodes = function() {
+    for (var id in Register.registered_nodes) {
         if (id == "root") {continue;}
-        const def = registered_nodes[id];
-        construct_node(def.id, def.in_node_name, def, {});
+        const def = Register.registered_nodes[id];
+        Register.construct_node(def.id, def.in_node_name, def, {});
     }
-}
+};
 
 window.onload = function() {
-    construct_all_nodes()
-    do_all_registered_instances()
-    go_to_url_tag()
-}
+    Register.construct_all_nodes()
+    Register.do_all_registered_instances()
+    Register.go_to_url_tag()
+};
 
-
-const exercise_visibility = {
+Register.exercise_visibility = {
     fem : false,
     masc : false,
     gen : false,
 };
 
-function show_nodes(type, bool) {
-    for (var k in active_nodes) {
-        const n = active_nodes[k];
-        const def = registered_nodes[k];
+Register.show_nodes = function(type, bool) {
+    for (var k in Register.active_nodes) {
+        const n = Register.active_nodes[k];
+        const def = Register.registered_nodes[k];
         if (def && def.type == type) {
             n.style.display = (!bool && "none") || "flex";
         }
     }
-}
+};
 
-function show_exercise_fem() {
-    exercise_visibility.fem = !exercise_visibility.fem;
-    show_nodes("exf", exercise_visibility.fem);
-    button_show_exercise_fem.style["background-color"] = ((exercise_visibility.fem && "#c37") || "");
-}
-function show_exercise_masc() {
-    exercise_visibility.masc = !exercise_visibility.masc;
-    show_nodes("exm", exercise_visibility.masc);
-    button_show_exercise_masc.style["background-color"] = ((exercise_visibility.masc && "#37c") || "");
-}
-function show_exercise_gen() {
-    exercise_visibility.gen = !exercise_visibility.gen;
-    show_nodes("exg", exercise_visibility.gen);
-    button_show_exercise_gen.style["background-color"] = ((exercise_visibility.gen && "#0a3") || "");
-}
+Register.show_exercise_fem = function() {
+    Register.exercise_visibility.fem = !Register.exercise_visibility.fem;
+    Register.show_nodes("exf", Register.exercise_visibility.fem);
+    Register.button_show_exercise_fem.style["background-color"] = ((Register.exercise_visibility.fem && "#c37") || "");
+};
+Register.show_exercise_masc = function() {
+    Register.exercise_visibility.masc = !Register.exercise_visibility.masc;
+    Register.show_nodes("exm", Register.exercise_visibility.masc);
+    Register.button_show_exercise_masc.style["background-color"] = ((Register.exercise_visibility.masc && "#37c") || "");
+};
+Register.show_exercise_gen = function() {
+    Register.exercise_visibility.gen = !Register.exercise_visibility.gen;
+    Register.show_nodes("exg", Register.exercise_visibility.gen);
+    Register.button_show_exercise_gen.style["background-color"] = ((Register.exercise_visibility.gen && "#0a3") || "");
+};
 
 
-let tag_highlight_list = {}
+Register.tag_highlight_list = {};
 
 function show_tagged(tag) {
     console.log("looking for " + String(tag));
-    for (var k in active_nodes) {
-        const n = active_nodes[k];
+    for (var k in Register.active_nodes) {
+        const n = Register.active_nodes[k];
         if (k == tag) {
             n.style.transition = `1s all ease-in-out`;
             n.style.outline = `16px solid red`;
             n.style.display = `flex`;
-            tag_highlight_list[k] = 10;
+            Register.tag_highlight_list[k] = 10;
         } else {
             n.style.transition = `1s all ease-in-out`;
             n.style.outline = `0px solid red`;
         }
     }
-}
+};
 
-function update(dt) {
-    for (k in tag_highlight_list) {
-        if (tag_highlight_list[k] > 0) {
-            tag_highlight_list[k] -= dt;
-        } else if (tag_highlight_list[k] != -100) {
-            tag_highlight_list[k] = -100;
-            const n = active_nodes[k];
+Globalstep.register_globalstep(function(dt) {
+    for (k in Register.tag_highlight_list) {
+        if (Register.tag_highlight_list[k] > 0) {
+            Register.tag_highlight_list[k] -= dt;
+        } else if (Register.tag_highlight_list[k] != -100) {
+            Register.tag_highlight_list[k] = -100;
+            const n = Register.active_nodes[k];
             n.style.transition = `1s all ease-in-out`;
             n.style.outline = `0px solid red`;
             // to make invisible again
-            // let def = registered_nodes[k]
-            // if (exercise_tags[def.type] != null && !exercise_visibility[def.type]) {
+            // let def = Register.registered_nodes[k]
+            // if (Register.exercise_tags[def.type] != null && !Register.exercise_visibility[def.type]) {
             //     n.style.display = `none`;
             // }
         }
     }
-}
-
-register_globalstep(update)
+});
 
 
 /** @type {HTMLButtonElement} **/
-const button_show_exercise_masc = document.querySelector("#button_show_exercise_masc");
-button_show_exercise_masc.addEventListener("click", show_exercise_masc);
+Register.button_show_exercise_masc = document.querySelector("#button_show_exercise_masc");
+Register.button_show_exercise_masc.addEventListener("click", Register.show_exercise_masc);
 /** @type {HTMLButtonElement} **/
-const button_show_exercise_fem = document.querySelector("#button_show_exercise_fem");
-button_show_exercise_fem.addEventListener("click", show_exercise_fem);
+Register.button_show_exercise_fem = document.querySelector("#button_show_exercise_fem");
+Register.button_show_exercise_fem.addEventListener("click", Register.show_exercise_fem);
 /** @type {HTMLButtonElement} **/
-const button_show_exercise_gen = document.querySelector("#button_show_exercise_gen");
-button_show_exercise_gen.addEventListener("click", show_exercise_gen);
+Register.button_show_exercise_gen = document.querySelector("#button_show_exercise_gen");
+Register.button_show_exercise_gen.addEventListener("click", Register.show_exercise_gen);
 
 
