@@ -957,13 +957,12 @@ Register.register_node("training", "root", {
 
 Register.register_node("compensation", "training", {
     title:"Compensation", desc:
-`Compensation is when we consciously try to achieve some goal, but lack the coordination or feel we lack it. As a result the body recruits muscles it doesn't need, just to force the goal to be achieved. Often this is very unhelpful, and leads to hard to change habits.
+`Compensationtt{{first known defined use: Sumianvoice, specifically in regard to its features in voice and strain etc}} is when we consciously try to achieve some goal, but lack the coordination or feel we lack it. As a result the body recruits muscles it doesn't need, just to force the goal to be achieved. Often this is very unhelpful, and leads to hard to change habits.
 
 Compensation thrives on lack of awareness and effort, so most of what we need to do to reduce it is be passively aware; know what is happening and draw attention to it, but not try hard to change it. It is different to conflation, which is more to do with linking two things by habit rather than unintentionally doing something due to effort.
 
 Common compensations are:
-- strain
-- tension and t[[fatigue|fatigue]]
+- tension, strain and t[[fatigue|fatigue]]
 - t[[breathiness|breathiness]]
 - buzzy or rattle-like sounds (t[[fvf|FVF]] or t[[hyperadduction|hyperadduction]])`,
     color:"#545",

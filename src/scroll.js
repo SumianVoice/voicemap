@@ -95,11 +95,11 @@ Zoom.lerp = function(start, end, ratio) {
 };
 
 Globalstep.register_globalstep(function(dt) {
-    Zoom.Rootnode.scrollLeft = Zoom.lerp(Zoom.Rootnode.scrollLeft, Zoom.Rootnode.scrollTargetLeft, 0.03);
-    Zoom.Rootnode.scrollTop = Zoom.lerp(Zoom.Rootnode.scrollTop, Zoom.Rootnode.scrollTargetTop, 0.03);
+    Zoom.Rootnode.scrollLeft = Zoom.lerp(Zoom.Rootnode.scrollLeft, Zoom.Rootnode.scrollTargetLeft, 0.1);
+    Zoom.Rootnode.scrollTop = Zoom.lerp(Zoom.Rootnode.scrollTop, Zoom.Rootnode.scrollTargetTop, 0.1);
     Zoom.scroll_to_position(
-        Zoom.lerp(Zoom.Rootnode.scrollLeft, Zoom.Rootnode.scrollTargetLeft, 0.03),
-        Zoom.lerp(Zoom.Rootnode.scrollTop, Zoom.Rootnode.scrollTargetTop, 0.03), false
+        Zoom.Rootnode.scrollLeft,
+        Zoom.Rootnode.scrollTop, false
         );
 });
 
