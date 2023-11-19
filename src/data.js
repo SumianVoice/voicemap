@@ -295,7 +295,7 @@ Register.register_node("breathiness", "closure", {
     title:"Breathiness", desc:
 `Breathy voices are low in t[[closure|closure]], and this means air gets through without directly helping the vocal folds vibrate. This results in an airy and breathy voice. Breathy qualities are usually caused by low lateral cricoarytenoid (t[[lca|LCA]]) and interarytenoid muscle activity. It sounds slightly different to an air leak involving tension and lack of t[[ia|interarytenoid muscle]] (IA) activity. This will usually "dull" the voice slightly, making it softer and slightly t[[brightness|darker]].
 
-Breathiness is often a t[[compensation|compensation]]`,
+Breathiness is often a t[[compensation|compensation]].`,
     color:"#456",
     tooltip:` `,
     audio:{
