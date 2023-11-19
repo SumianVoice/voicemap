@@ -96,7 +96,7 @@ Register.linkify = function(text) {
             if (i > 0) {
                 const ttsplittmp = ttsplit[i].split(`]]`);
                 const elems = ttsplittmp[0].split(`|`);
-                text += `<span class="tag_link" onmousedown="Zoom.stopDragging()" onclick="show_tagged(\'` +  elems[0] + `\')">` + elems[1];
+                text += `<span class="tag_link" data-tag="${elems[0]}" onmousedown="Zoom.stopDragging()" onclick="show_tagged('${elems[0]}')">` + elems[1];
                 text += `</span>` + (ttsplittmp[1] || "");
             } else {
                 text += ttsplit[i];
@@ -275,10 +275,21 @@ Register.construct_all_nodes = function() {
     }
 };
 
+Register.find_tag_errors = function() {
+    var elems = document.getElementsByClassName(`tag_link`);
+    for (var i=0; i<elems.length; i++) {
+        var id = elems[i].getAttribute(`data-tag`)
+        if (Register.active_nodes[id] == null) {
+            console.log(`[ERROR] no node with name ${id}`)
+        }
+    }
+};
+
 window.onload = function() {
     Register.construct_all_nodes()
     Register.do_all_registered_instances()
     Register.go_to_url_tag()
+    Register.find_tag_errors()
 };
 
 Register.exercise_visibility = {

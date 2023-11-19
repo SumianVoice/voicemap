@@ -107,7 +107,7 @@ Register.register_node("glottal", "root", {
 //////////////////////
 Register.register_node("vfvm", "glottal", {
     title:"Vocal Fold Geometry", desc:
-`Vocal Fold Vibratory Mass <b>(VFVM)</b> is likely part of the physical thing happening in the folds that causes several things; how much of the folds is vibrating and the surface area when interacting is likely what causes the sound quality of t[[vocalweight|vocal weight]] and affects quotient.tt{{source: internal testing by Sumi and based on various footage of laryngoscopy and papers that mention how much of the folds is active and related notes during different mechanisms. Know this isn't hard fact, but a working theory or "the closest we know of as an explanation".
+`Vocal Fold Vibratory Mass <b>(VFVM)</b> is likely part of the physical thing happening in the folds that causes several things; how much of the folds is vibrating and the surface area when interacting is likely what causes the sound quality of t[[vocalweight|vocal weight]] and affects t[[quotient|quotient]].tt{{source: internal testing by Sumi and based on various footage of laryngoscopy and papers that mention how much of the folds is active and related notes during different mechanisms. Know this isn't hard fact, but a working theory or "the closest we know of as an explanation".
 
 <u><h3>Further reading</h3></u>\
 B. Roubeau, N.H. Bernardoni, M. Castellengo
@@ -123,7 +123,7 @@ C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
 <a href="https://doi.org/10.1121/1.3552874">DOI:10.1121/1.3552874</a>
 }} \
 \
-Contact area between the folds, quotient, and surface area engaged in creating pressure waves all contribute to the resulting sound. This can be thought of similar to the thickness of a guitar string. More mass in the string results in a deeper more bassy sound (and a predisposition to low pitch). High vibratory mass will result in a sort of "rumble" which is most notable at low pitches.
+Contact area between the folds, t[[quotient|quotient]], and surface area engaged in creating pressure waves all contribute to the resulting sound. This can be thought of similar to the thickness of a guitar string. More mass in the string results in a deeper more bassy sound (and a predisposition to low pitch). High vibratory mass will result in a sort of "rumble" which is most notable at low pitches.
 
 - more vocal fold moving --> more VFVM --> sounds heavier
 - less VFVM --> can achieve higher pitches easier`,
@@ -136,16 +136,16 @@ Contact area between the folds, quotient, and surface area engaged in creating p
 //////////////////////
 Register.register_node("naturalisation", "vfvm", {
     title:"Pitch Naturalisation", desc:
-`Each pitch has its desired level of vibratory mass / weight, so there is an equillibrium that can be found between pitch and t[[vocalweight|vocal weight]].
+`Each pitch has its desired level of t[[vfvm|vibratory mass]] / t[[vocalweight|weight]], so there is an equillibrium that can be found between pitch and t[[vocalweight|vocal weight]].
 Pitch Naturalisation is the process and concept of naturally adjusting a voice to this equillibrium.tt{{Pitch Naturalisation is the core of the Pitch Intuitive Practice Methodology (PIPM) designed by Sumi / Sumianvoice, which is a near standalone methodology for changing the voice using the existing positive conflations most people have with pitch.}}
 
-Usually we use this by raising t[[basepitch|pitch]] very slightly, then letting the voice naturally adjust without letting clarity and volume be sacrificed. We can also do this long term by raising the base pitch of the voice slightly and speaking here for a matter of several days or weeks. Given the right conditions - specifically that there is not much conscious control or effort - a voice will adjust rather than become strained or forced.
+Usually we use this by raising pitch very slightly, then letting the voice naturally adjust without letting clarity and volume be sacrificed. We can also do this long term by raising the t[[basepitch|base pitch]] of the voice slightly and speaking here for a matter of several days or weeks. Given the right conditions - specifically that there is not much conscious control or effort which would cause t[[compensation|compensation]] - a voice will adjust rather than become strained or forced.
 
 Naturalised voices:
 - sound like the speaker has been speeking at this pitch their whole life
 - sustainable and effortless to produce
 Non-naturalised voices:
-- sound forced or "pushed" or stressed
+- sound forced or "t[[pushing|pushed]]" or stressed
 - tiring or requires high level of concentration
 - might sound like the speaker is intentionally speaking higher
 `,
@@ -154,7 +154,7 @@ Non-naturalised voices:
 })
 Register.register_node("stress", "naturalisation", {
     title:"Stress", desc:
-`When a voice has too much t[[vocalweight|vocal weight]] for the pitch, it is not naturalised. When we notice it is not naturalised, the sound quality that tells us this is "stress". Stress can be described as "pushing" or "forcing" the voice. It can have a harsh, tense quality to it that begs the question "why is this person forcing their voice to go high". It can also be so subtle as to be nearly unnoticeable especially if we aren't looking for it. If a voice finds it difficult to intonate up in pitch during speech, that's a sign of stress.`,
+`When a voice has too much t[[vocalweight|vocal weight]] for the pitch, it is not t[[naturalisation|naturalised]]. When we notice it is not naturalised, the sound quality that tells us this is "stress". Stress can be described as "pushing" or "forcing" the voice. It can have a harsh, tense quality to it that begs the question "why is this person forcing their voice to go high". It can also be so subtle as to be nearly unnoticeable especially if we aren't looking for it. If a voice finds it difficult to intonate up in pitch during speech, that's a sign of stress.`,
     color:"#357",
     tooltip:` `,
     audio:{
@@ -175,7 +175,7 @@ Oak is strong and also gives <b style="color:#bbb">shade</b>.</i>
 })
 Register.register_node("pushing", "naturalisation", {
     title:"Pushing", desc:
-`Pushingtt{{first known (actually defined) use: Sumianvoice}} is when a voice adds more pressure in order to force a voice to get higher in pitch or louder, and usually results in t[[stress|stress]] through adding more t[[vocalweight|vocal weight]] / t[[vfvm|fold mass]] and often tense or improper closure when it is done as a t[[compensation|compensation]].
+`Pushingtt{{first known (actually defined) use: Sumianvoice}} is when a voice adds more pressure in order to force a voice to get higher in pitch or louder, and usually results in t[[stress|stress]] through adding more t[[vocalweight|vocal weight]] / t[[vfvm|fold mass]] and often tense or improper t[[closure|closure]] when it is done as a t[[compensation|compensation]].
 t[[belting|Belting]] is an example of a pushed configuration; it involves more t[[vfvmpressure|pressure]] and more weight in order to reach higher notes without leaving t[[m1|M1]].`,
     color:"#446",
     tooltip:` `,
@@ -201,14 +201,14 @@ Register.register_node("vocalweight", "vfvm", {
 })
 Register.register_node("fullness", "vocalweight", {
     title:"Overfull and Underfull", desc:
-`Overfulltt{{first known use: TransVoiceLessons}} relates to a voice that has too high vocal weight (and usually closure) for and too high resonance. As a result we get a buzzy or "nerdy" sound.\n\
-Underfull is when a voice has either too low weight or too low resonance, resulting in a dark or hooty voice.`,
+`Overfulltt{{first known use: TransVoiceLessons}} relates to a voice that has too high vocal weight (and usually t[[closure|closure]]) for and too high resonance. As a result we get a buzzy or "nerdy" sound.\n\
+Underfull is when a voice has either too low weight or too low t[[resonance|resonance]], resulting in a dark or hooty voice.`,
     color:"#566",
     tooltip:` `,
 })
 Register.register_node("m2aslightweight", "vocalweight", {
     title:"Falsetto as a Guide", desc:
-`Falsetto or t[[m2|M2]] has extremely light vocal weight. It is essentially "too light". It has some qualities we don't want, such as instability and hollowness, but overall it can be a very useful voice feminisation method. We can use this as a guide; as we go higher in pitch to reach lighter weight, we will get closer to that falsetto quality. This can help with direction, and often prevent strain and t[[pushing|pushing]]. Note that this will not allow for a both strong / loud and light voice, only a light voice. Learning to reduce vocal weight through t[[naturalisation|pitch naturalisation]], t[[phraserepetition|phrase repetition]] or other methods is better if volume, clarity or high closure is desired. However, this can be an excellent way to give context to those other methods, as long as it isn't entirely relied on.
+`Falsetto or t[[m2|M2]] has extremely light t[[vocalweight|vocal weight]]. It is essentially "too light". It has some qualities we don't want, such as instability and hollowness from low t[[closure|closure]], but overall it can be a very useful voice feminisation method. We can use this as a guide; as we go higher in pitch to reach lighter weight, we will get closer to that falsetto quality. This can help with direction, and often prevent strain and t[[pushing|pushing]]. Note that this will not allow for a both strong / loud and light voice, only a light voice. Learning to reduce vocal weight through t[[naturalisation|pitch naturalisation]], t[[phraserepetition|phrase repetition]] or other methods is better if volume, clarity or high t[[closure|closure]] is desired. However, this can be an excellent way to give context to those other methods, as long as it isn't entirely relied on.
 
 We can also start low, then try to make the voice more like t[[m2|falsetto]]. As soon as we are about to speak, we instead just do a slightly lower pitch than we were about to, and this process can continue all through the range. This can prevent strain effectively since we're always doing a lower pitch than our voice is adjusted to, and this is likely the lightest you can get though "just go directly to a light voice without pre-priming the voice" methods.
 `,
@@ -217,10 +217,10 @@ We can also start low, then try to make the voice more like t[[m2|falsetto]]. As
 })
 Register.register_node("vocalweightdarkconflation", "vocalweight", {
     title:"Dark Heavy Voice Conflation", desc:
-`A heavy voice will seem darker due to several reasons:
+`A heavy voice will seem t[[brightness|darker]] due to several reasons:
 - heavy voices are typically darker, so there is a subconscious mental assumption
-- heavy voices typically use more air pressure and flow, resulting in a smoother, duller soundtt{{Note that heavy and buzzy are not the same thing. A heavy voice can sound dark and hollow due to low closure and high pressure, or bright and buzzy due to high closure. That high closure is encouraged by high resonance, so there is further conflations there.}}
-- the rumble-like sound quality of heavy vocal weight is auditorily similar to a dark low resonnace voice with normal closure
+- heavy voices typically use more t[[vfvmpressure|air pressure]] and flow, resulting in a smoother, duller soundtt{{Note that heavy and buzzy are not the same thing. A heavy voice can sound dark and hollow due to low t[[closure|closure]] and high pressure, or bright and buzzy due to high closure. That high closure is encouraged by high resonance, so there is further conflations there.}}
+- the rumble-like sound quality of heavy vocal weight is auditorily similar to a dark low t[[resonance|resonnace]] voice with normal closure
 
 `,
     color:"#567",
@@ -233,7 +233,7 @@ Register.register_node("vocalweightdarkconflation", "vocalweight", {
 //////////////////////
 Register.register_node("quotient", "vfvm", {
     title:"Quotient", desc:
-`Quotient is a fraction of how long the folds spend in the open state versus their closed state. Since it is possible to measure, unlike t[[vocalweight|vocal weight]] or active fold mass / VFVM, it is used in research. It closely approximates these other concepts under typical conditions. Usually this measurement is done with EGG.`,
+`Quotient is a fraction of how long the folds spend in the open state versus their closed state. Since it is possible to measure, unlike t[[vocalweight|vocal weight]] or t[[vfvm|active fold mass / VFVM]], it is used in research. It closely approximates these other concepts under typical conditions. Usually this measurement is done with EGG.`,
     color:"#754",
     tooltip:` `,
     audio:{
@@ -268,8 +268,8 @@ C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
 <a href="https://doi.org/10.1121/1.3552874">DOI:10.1121/1.3552874</a>
 }}
 
---> more air pressure --> more vfvm / vocal weight (if enough closure)
---> more "pushing" --> more vfvm / vocal weight`,
+- more air pressure --> more vfvm / vocal weight (if enough closure)
+- more "pushing" --> more vfvm / vocal weight`,
     color:"#556",
     tooltip:` `,
 })
@@ -293,7 +293,7 @@ resulting in phonation. High closure means the folds come together more complete
 })
 Register.register_node("breathiness", "closure", {
     title:"Breathiness", desc:
-`Breathy voices are low in t[[closure|closure]], and this means air gets through without directly helping the vocal folds vibrate. This results in an airy and breathy voice. Breathy qualities are usually caused by low lateral cricoarytenoid (t[[lca|LCA]]) and interarytenoid muscle activity. It sounds slightly different to an air leak involving tension and lack of t[[ia|interarytenoid muscle]] (IA) activity. This will usually "dull" the voice slightly, making it softer and slightly darker.
+`Breathy voices are low in t[[closure|closure]], and this means air gets through without directly helping the vocal folds vibrate. This results in an airy and breathy voice. Breathy qualities are usually caused by low lateral cricoarytenoid (t[[lca|LCA]]) and interarytenoid muscle activity. It sounds slightly different to an air leak involving tension and lack of t[[ia|interarytenoid muscle]] (IA) activity. This will usually "dull" the voice slightly, making it softer and slightly t[[brightness|darker]].
 
 Breathiness is often a t[[compensation|compensation]]`,
     color:"#456",
@@ -305,7 +305,7 @@ Breathiness is often a t[[compensation|compensation]]`,
 })
 Register.register_node("closureloss", "closure", {
     title:"Loss Of Closure", desc:
-`A Loss of t[[closure|Closure]] is when the voice cuts out, and only air comes out. This happens if there is some amount of tension in the folds and not the right closure. The folds are in position but do not close, and have too much tension lengthwise (i.e. pitch) to be vibrated and instead air just rushes past. This is natural, and isn't a problem, and <b>should not be forcibly avoided</b>. Forcing it will either trigger <b class="hlight">t[[hyperadduction|hyperadduction]]</b> (bad) or make the closure loss worse through more tension, so it is usually best to relax instead.
+`A Loss of t[[closure|Closure]] is when the voice cuts out, and only air comes out. This happens if there is some amount of tension in the folds and not the right closure. The folds are in position but do not close, and have too much tension lengthwise (i.e. t[[pitch|pitch]]) to be vibrated and instead air just rushes past. This is natural, and isn't a problem, and <b>should not be forcibly avoided</b>. Forcing it will either trigger <b class="hlight">t[[hyperadduction|hyperadduction]]</b> (bad) or make the closure loss worse through more tension, so it is usually best to relax instead.
 
 This can affect range, and it is thought that the main limiting factor for most beginners for pitch range up to about B5 is that there is too much tension in the folds than needed, and this causes the student to either press harder and keep tensing up, or lose closure. As such it's important to realise that except in extreme cases, it is not a lack of effort that prevents high pitches but an excess of tension.
 
@@ -321,13 +321,13 @@ Common causes of closure loss:
 })
 Register.register_node("lca", "closure", {
     title:"Lateral Cricoarytenoids (LCA)", desc:
-`The LCA muscles adduct (push together) the vocal folds mostly in the middle. This is how phonation is possible, by putting the folds in the path of the air pressure in order for them to be made to vibrate. However without t[[ia|IA]], the closure will be incomplete and air leaky, and possibly unstable. The t[[thyroarytenoid|TA]] can contribute to this middle of the folds closure / medialisation as well.`,
+`The LCA muscles adduct (push together) the vocal folds mostly in the middle. This is how phonation is possible, by putting the folds in the path of the air pressure in order for them to be made to vibrate. However without t[[ia|IA]], the t[[closure|closure]] will be incomplete and air leaky, and possibly unstable. The t[[thyroarytenoid|TA]] can contribute to this middle of the folds closure / medialisation as well.`,
     color:"#466",
     tooltip:` `,
 })
 Register.register_node("ia", "closure", {
     title:"Interarytenoids (IA)", desc:
-`The IA muscles increase closure at the back of the folds and provide some stability.tt{{Mostly hypothetical, based on Sumi's testing and the behaviors of students' voices, but no hard empirical data for most of this.
+`The IA muscles increase t[[closure|closure]] at the back of the folds and provide some stability.tt{{Mostly hypothetical, based on Sumi's testing and the behaviors of students' voices, but no hard empirical data for most of this.
 
 <u><h3>Further reading</h3></u>\
 C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
@@ -375,7 +375,7 @@ Register.register_node("vocalfunction", "glottal", {
 // SOVTE
 Register.register_node("sovte", "vocalfunction", {
     title:"SOVTEs", desc:
-`Semi Occluded Vocal Tract Exercises. These are exercises that can be done in a relaxed way but give good opportunities to train the voice in various fundamental ways. Mostly they help with clarity, reducing strain and tension, stability, and t[[closure|closure]]. These all must be done in a relaxed way and not pushed, and it's best not to set arbitrary goals like "hit this specific note" since that will allow for more compensation and tension if predisposed to it.
+`Semi Occluded Vocal Tract Exercises. These are exercises that can be done in a relaxed way but give good opportunities to train the voice in various fundamental ways. Mostly they help with clarity, reducing strain and tension, stability, and t[[closure|closure]]. These all must be done in a relaxed way and not pushed, and it's best not to set arbitrary goals like "hit this specific note" since that will allow for more t[[compensation|compensation]] and tension if predisposed to it.
 
 These work by partially blocking the airway above the folds, such as at the lips, which causes backpressure on the folds, as a kind of air cushion.
 Often these are done by picking random pitches or doing progressively higher pitches, providing one is careful not to force the voice or try hard.`,
@@ -400,7 +400,7 @@ Register.register_node("sovteshj", "sovte", {
 //////////////////////
 Register.register_node("damage", "vocalfunction", {
     title:"Vocal Damage and Disorder", desc:
-`This covers abnormal glottal function caused by damage to features of the glottis, notably the vocal folds, or from behavioral issues (e.g. MTD). Almost everything here is a "seek medical help" situation.`,
+`This covers abnormal glottal function caused by damage to features of the glottis, notably the vocal folds, or from behavioral issues (e.g. t[[muscletension|MTD]]). Almost everything here is a "seek medical help" situation.`,
     color:"#222",
     tooltip:` `,
 })
@@ -409,21 +409,35 @@ Register.register_node("atrophy", "damage", {
 `Atrophy is when muscles lose some of their ability to activate due to very long periods of disuse. This usually takes many years, and is often reversable but with effort proportional to how long whatever function has been neglected. This can be atrophy of the coordination to do something or physical atrophy of a muscle.
 
 Common points of atrophy are:
-- Adductor (closure) muscles (IA and LCA), usually from neglecting the ability to become loud
-- TA muscles (the "vocal weight" muscle), sometimes intentionally, usually from neglecting lower pitches
-- M2 access, usually just through disuse, sometimes due to avoiding it
+- Adductor (t[[closure|closure]]) muscles (t[[ia|IA]] and t[[lca|LCA]]), usually from neglecting the ability to become loud
+- t[[thyroarytenoid|TA]] muscles (the "t[[vocalweight|vocal weight]]" muscle), sometimes intentionally, usually from neglecting lower pitches
+- t[[m2|M2]] access, usually just through disuse, sometimes due to avoiding it
 `,
     color:"#233",
     tooltip:` `,
 })
 Register.register_node("muscletension", "damage", {
     title:"Muscle Tension", desc:
-`Muscle tension is what is happening in Muscle Tension Dysphonia (MTD). It appears in two modes; primary and secondary. Primary MTD is when muscles outside the larynx, such as in the neck, are being tensed when they shouldn't be. This is extraneous muscle tension. Secondary is when muscles in the larynx (usually the adductors and abductors) are tensing in direct opposition to eachother.tt{{source: Dysphonia.org, <a href="https://dysphonia.org/voice-conditions/muscle-tension-dysphonia/">https://dysphonia.org/voice-conditions/muscle-tension-dysphonia/</a>}} Both forms can disable a voice completely in the long term, or cause significant enough fatigue that it becomes untenable to speak for longer than a few minutes. If you get fatigue within 30 minutes of sustained conversation, there is likely a significant issue and you should see a Speech Language Pathologist (SLP).
+`Muscle tension is what is happening in Muscle Tension Dysphonia (MTD). It appears in two modes; primary and secondary. Primary MTD is when muscles outside the larynx, such as in the neck, are being tensed when they shouldn't be. This is extraneous muscle tension. Secondary is when muscles in the larynx (usually the adductors and abductors) are tensing in direct opposition to eachother.tt{{source: Dysphonia.org, <a href="https://dysphonia.org/voice-conditions/muscle-tension-dysphonia/">https://dysphonia.org/voice-conditions/muscle-tension-dysphonia/</a>}} Both forms can disable a voice completely in the long term, or cause significant enough t[[fatigue|fatigue]] that it becomes untenable to speak for longer than a few minutes. If you get fatigue within 30 minutes of sustained conversation, there is likely a significant issue and you should see a Speech Language Pathologist (SLP).
 
 
 General muscle tension is surprisingly common in transvoice students, though thankfully it is usually not the extent of a diagnosis.
 If you have any concerns, it is advisable to contact an SLP or otherwise seek a second opinion.`,
     color:"#332",
+    tooltip:` `,
+})
+Register.register_node("fatigue", "damage", {
+    title:"Fatigue", desc:
+`When the voice is either overused such as when speaking loudly for several hours with minimal rest, the voice will feel lazy as if it doesn't want to work any more. It might also feel as though the same functions you did before take more effort. This is fatigue, and is normal in the case mentioned of extreme overuse, however it can be a sign of t[[muscletension|muscle tension]] or other issues if it happesns regularly, or if it happens within an hour of starting speaking. Often this also is accompanied by a feeling of tension or discomfort.
+
+Common causes are:
+- forcing the voice and t[[pushing|pushing]] it to a higher pitch than is comfortable
+- trying to consciously control things too much and getting t[[compensation|compensation]]
+- learning through methods that encourage muscle tension such as swallow and hold and similar "just make the throat forcibly smaller" methods
+- speaking very loudly and with high pressure
+
+It is slightly different from a voice just being 'tired' which can be more described as the voice becoming weak over time due to it being used for strenuous exercises. This can happen for example when doing t[[sovte|SOVTEs]] for too long. Unlike fatigue, it usually does not include discormfort or tension.`,
+    color:"#134",
     tooltip:` `,
 })
 Register.register_node("nodules", "damage", {
@@ -454,7 +468,7 @@ Register.register_node("vocalcyst", "damage", {
 //////////////////////
 Register.register_node("tvfconstriction", "closure", {
     title:"Vocal Fold Constriction", desc:
-`The true vocal folds can be constricted or tensed, and this can cause some issues, including loss of clarity, instability, more creak, more subharmonics and more. This might be due to t[[muscletension|muscle tension]] between adductors and abductors, or just too much of one adductor muscle vs another such as high LCA vs low IA.
+`The true vocal folds can be constricted or tensed, and this can cause some issues, including loss of clarity, instability, more creak, more t[[subharmonics|subharmonics]] and more. This might be due to t[[muscletension|muscle tension]] between adductors and abductors, or just too much of one adductor muscle vs another such as high t[[lca|LCA]] vs low t[[ia|IA]].
 `,
     color:"#655",
     tooltip:` `,
@@ -469,7 +483,7 @@ Register.register_node("tvfconstriction", "closure", {
 //////////////////////
 Register.register_node("pitch", "glottal", {
     title:"Pitch", desc:
-`Pitch is the frequency of the vocal folds.`,
+`Pitch is the frequency of the vocal folds. Several muscles such as the t[[thyroarytenoid|thyroarytenoids]] and t[[cricothyroid|cricothyroids]] change the level of lengthwise tension in the vocal folds and this defines the frequency with which they vibrate.`,
     color:"#595055",
     tooltip:` `,
 })
@@ -479,19 +493,21 @@ Register.register_node("mechanisms", "pitch", {
 B. Roubeau, N.H. Bernardoni, M. Castellengo
 <i>'Laryngeal Vibratory Mechanisms: The Notion of Vocal Register Revisited'</i>
 <a href="https://doi.org/10.1016/j.jvoice.2007.10.014">DOI:10.1016/j.jvoice.2007.10.014</a>}}
-These are mostly arbitrary delineations between different configurations which help define different type of voice production. Given enough training it is possible to smoothly blend most mechanisms, as they mostly just describe different levels of t[[closure|closure]] and t[[vfvm|fold vibratory mass]]. This means that given enough training, M1 and M2 for example become more or less irrelevant since the imbalance that would normally make them distinct is no longer an obstacle.`,
+These are mostly arbitrary delineations between different configurations which help define different type of voice production. Given enough training it is possible to smoothly t[[m2blend|blend]] most mechanisms, as they mostly just describe different levels of t[[closure|closure]] and t[[vfvm|fold vibratory mass]]. This means that given enough training, M1 and M2 for example become more or less irrelevant since the imbalance that would normally make them distinct is no longer an obstacle.`,
     color:"#444",
     tooltip:` `,
 })
 Register.register_node("m1", "mechanisms", {
     title:`M1 <i style="color:#999">(modal voice)</i>`, desc:
-`Normal speaking register. The folds get more complete contact (t[[closure|closure]], especially t[[ia|IA]]) and the ligament vibrates as well as the mucosa and some of the muscle (the t[[ta|TA]]).`,
+`Normal speaking register. The folds get more complete contact (t[[closure|closure]], especially t[[ia|IA]]) and the ligament vibrates as well as the mucosa and some of the muscle (the t[[thyroarytenoid|TA]]).`,
     color:"#455",
     tooltip:` `,
 })
 Register.register_node("m2", "mechanisms", {
     title:`M2 <i style="color:#999">(falsetto)</i>`, desc:
-`Falsetto / Head Voice register, often hollow-sounding or at least less full than M1. This usually has only the mucosa and ligament vibrating or at least much less of the muscle and ligament than in M1. Often this is coupled with low t[[closure|closure]].`,
+`Falsetto / Head Voice register, often hollow-sounding or at least less full than M1. This usually has only the mucosa and ligament vibrating or at least much less of the muscle and ligament than in M1. Often this is coupled with low t[[closure|closure]].
+
+Falsetto refers to the hollow sound quality, where M2 refers to the vibratory pattern.`,
     color:"#455",
     tooltip:` `,
     audio:{
@@ -500,7 +516,7 @@ Register.register_node("m2", "mechanisms", {
 })
 Register.register_node("m2blending", "m2", {
     title:`M2 Blending <i style="color:#999">(mix voice)</i>`, desc:
-`It is possible to blend between M1 and M2, negating the break and smoothly transitioning. This process is a delicate balance of several parts of the voice and should not be effortful or tense. It is assumed that maintaining closure (t[[ia|IA]]) and reducing t[[vfvm|vibratory mass]] to reduce the imbalance that would cause the break is how this is done.`,
+`It is possible to blend between M1 and M2, negating the break and smoothly transitioning. This process is a delicate balance of several parts of the voice and should not be effortful or tense. It is assumed that maintaining t[[closure|closure]] (especially t[[ia|IA]]) and reducing t[[vfvm|vibratory mass]] to reduce the imbalance that would cause the break is how this is done.`,
     color:"#457",
     tooltip:` `,
 })
@@ -515,19 +531,19 @@ Register.register_node("m3", "mechanisms", {
 })
 Register.register_node("m0", "mechanisms", {
     title:"M0", desc:
-`Vocal Fry register. This is usually at the very bottom of the range, but can happen anywhere due to airflow mechanics. Often there is a casual separation of t[[creak|'creak']] and 'fry', with creak being from too little airflow for periodic vibration to happen but still enough closure, and fry being caused by not being able to vibrate the folds any slower. These are different causes but achieve the same resulting vocal fold behavior.`,
+`Vocal Fry register. This is usually at the very bottom of the range, but can happen anywhere due to airflow mechanics. Often there is a casual separation of t[[creak|'creak']] and 'fry', with creak being from too little airflow for periodic vibration to happen but still enough t[[closure|closure]], and fry being caused by not being able to vibrate the folds any slower. These are different causes but achieve the same resulting vocal fold behavior.`,
     color:"#545",
     tooltip:` `,
 })
 Register.register_node("mechanismbreak", "mechanisms", {
     title:"Vocal Break", desc:
-`Vocal Breaks, mechanism breaks, voice cracks. These happen due to an imbalance in fold vibratory mass / vocal weight. IA adduction probably also helps substantially to reduce instability in this.`,
+`Vocal breaks, mechanism breaks, voice cracks. These happen due to an imbalance in fold vibratory mass / t[[vocalweight|vocal weight]]. t[[ia|IA]] adduction probably also helps substantially to reduce instability in this.`,
     color:"#445",
     tooltip:` `,
 })
 Register.register_node("creak", "m0", {
     title:"Creak", desc:
-`Vocal Fry specifically caused by airflow mechanics, at a pitch higher than the bottom of the range where M0 is forced to happen.`,
+`Vocal fry specifically caused by airflow mechanics, at a pitch higher than the bottom of the range where t[[m2|M0]] is forced to happen.`,
     color:"#644",
     tooltip:` `,
 })
@@ -543,9 +559,9 @@ It is usually to be avoided unless for stylistic reasons, or for singing. It is 
 
 Register.register_node("belting", "pitch", {
     title:"Belting", desc:
-`Belting is a singing concept, and the process allows a singer to hit higher notes without blending with t[[m2|M2]]. It works by increasing t[[vfvmpressure|air pressure]], fold mass / t[[vocalweight|vocal weight]] and closure. As a result, we get a kind of controlled yelling. It is advised to not learn belting until t[[m2blending|M2 blending]] is somewhat mastered, since belting will drastically cut down the top of the pitch range for most people and make vocal weight harder to control if it's the only way they ever reach high notes. The ability to do M2 at all can t[[atrophy|atrophy]] over long periods.
+`Belting is a singing concept, and the process allows a singer to hit higher notes without blending with t[[m2|M2]]. It works by increasing t[[vfvmpressure|air pressure]], fold mass / t[[vocalweight|vocal weight]] and t[[closure|closure]]. As a result, we get a kind of controlled yelling. It is advised to not learn belting until t[[m2blending|M2 blending]] is somewhat mastered, since belting will drastically cut down the top of the pitch range for most people and make vocal weight harder to control if it's the only way they ever reach high notes. The ability to do M2 at all can t[[atrophy|atrophy]] over long periods.
 
-As a method of singing however it is quite useful when learned properly; just getting louder and pushing the voice to go higher is <i>not how you do it</i> though, it requires a proper balance of all the elements mentioned above, or else we will only achieve a lot of compensation and strain.
+As a method of singing however it is quite useful when learned properly; just getting louder and pushing the voice to go higher is <i>not how you do it</i> though, it requires a proper balance of all the elements mentioned above, or else we will only achieve a lot of t[[compensation|compensation]] and strain.
 `,
     color:"#556",
     tooltip:` `,
@@ -554,7 +570,7 @@ Register.register_node("beltblend", "belting", {
     title:"Belt Blend", desc:
 `It might seem impossible at first, but it is possible to t[[belting|belt]] up to some point and then, still in the belt, blend into t[[m2|M2]]. Not much is actually known about this and how to do it currently. This like most vocal features does not require strain or effort, but is a careful balance.
 
-As far as can be deduced, this is likely through reducing t[[thyroarytenoid|TA]] while balancing t[[cricothyroid|CT]], keeping or increasing closure and reducing the air pressure slighlty. All of these things are theoretically needed in order to go from a pushed, loud belt into a gradually lighter but still full sounding M2.
+As far as can be deduced, this is likely through reducing t[[thyroarytenoid|TA]] while balancing t[[cricothyroid|CT]], keeping or increasing t[[closure|closure]] and reducing the air pressure slighlty. All of these things are theoretically needed in order to go from a pushed, loud belt into a gradually lighter but still full sounding M2.
 `,
     color:"#345",
     tooltip:` `,
@@ -587,7 +603,7 @@ Register.register_node("cricothyroid", "pitch", {
 })
 Register.register_node("thyroarytenoid", "pitch", {
     title:"Thyroarytenoid (TA)", desc:
-`The muscle controlling lowering the pitch by contracting the vocal folds. This likely contributes substantially to fold vibratory mass, since the folds will bulk up slightly. It, along with the CT control pitch, usually with both contracting somewhat; the CT providing tension, and the TA providing slight amounts of closure, and allowing for a more full sound.`,
+`The muscle controlling lowering the pitch by contracting the vocal folds. This likely contributes substantially to fold vibratory mass, since the folds will bulk up slightly. It, along with the CT control pitch, usually with both contracting somewhat; the CT providing tension, and the TA providing slight amounts of t[[closure|closure]], and allowing for a more full sound.`,
     color:"#444",
     tooltip:` `,
 })
@@ -621,9 +637,9 @@ Register.register_node("otherphonation", "glottal", {
 })
 Register.register_node("fvf", "otherphonation", {
     title:"False Vocal Folds", desc:
-`The false vocal folds or ventricular folds are just above the true vocal folds, and can sometimes interrupt normal phonation causing subharmonics or be used as compensation for inadequate closure or atrophied vocal folds. They are not particularly damaging for the voice, but more of an annoyance or a sign of another problem. The sound they usually cause can be described as a rough, buzzy overtone, or a "rattle" sound.
+`The false vocal folds or ventricular folds are just above the true vocal folds, and can sometimes interrupt normal phonation causing t[[subharmonics|subharmonics]] or be used as t[[compensation|compensation]] for inadequate t[[closure|closure]] or atrophied vocal folds. They are not particularly damaging for the voice, but more of an annoyance or a sign of another problem. The sound they usually cause can be described as a rough, buzzy overtone, or a "rattle" sound.
 
-Typically they cause aperiodic (messy) sounds in the 8000 to 15,000hz range. It can sound similar to t[[hyperadduction|hyperadduction]], but less harmonic / more rough, since hyperadduction causes clear harmonics instead of noise. How FVF effects look on a spectrogram can be described as similar to vocal fry, but in the 10khz range instead of the 30-200hz range.
+Typically they cause aperiodic (messy) sounds in the 8000 to 15,000hz range. It can sound similar to t[[hyperadduction|hyperadduction]], but less harmonic / more rough, since hyperadduction causes clear harmonics instead of noise. How FVF effects look on a spectrogram can be described as similar to t[[m0|vocal fry]], but in the 10khz range instead of the 30-200hz range.
 It is unclear exactly why and how FVF causes this high frequency.`,
     color:"#444",
     tooltip:` `,
@@ -681,7 +697,7 @@ Register.register_node("microbehaviors", "speech", {
     title:"Microbehaviors", desc:
 `Microbehaviorstt{{first known use: Sumianvoice}} are a completely "what if" concept. It's used to explain features of voice too small and too automatic and subconscious to be able to directly influence, unlike concepts like t[[vocalweight|weight]] and t[[resonance|resonance]] which have very clear definitions. Microbehaviors are glottal, resonance or speech behaviors (or even maybe something else, who knows) which give a voice its distinct and unique "fingerprint". We don't really know much about it aside from "things happen and they make a voice sound different".
 
-When we keep vocal weight, resonance, pitch, and all the main concepts the same, yet we sound like one person rather than a seperate person, the difference is what is covered by this concept. It is the unexplained tiny changes that make up the difference between two unique voices. One notable example of a voice with a high level of this behavior which makes it unique is Druew. The basic characteristics such as weight, resonance, t[[articulation|articulation]], closure etc do not fully explain how it sounds so unique, and so the vague concept "microbehaviors" is invoked to explain this.
+When we keep vocal weight, resonance, pitch, and all the main concepts the same, yet we sound like one person rather than a seperate person, the difference is what is covered by this concept. It is the unexplained tiny changes that make up the difference between two unique voices. One notable example of a voice with a high level of this behavior which makes it unique is Druew. The basic characteristics such as weight, resonance, t[[articulation|articulation]], t[[closure|closure]] etc do not fully explain how it sounds so unique, and so the vague concept "microbehaviors" is invoked to explain this.
 
 As a subconscious and more or less inexplicable concept, it is mostly controlled through mimicry. Higher skill in mimicry allows for more control over these microbehaviors.
 
@@ -701,7 +717,7 @@ Register.register_node("onsets", "speech", {
 
 <h2>Soft Onsets</h2> Soft onsets are when the folds are open, then come together just as the air starts flowing through, leading to a smooth transition into phonation without any change in volume throughout.
 
-<h2>Hard Onsets</h2> Hard onsets start with the folds closed and with pressure already pushing against them. This means the beginning of the sound can be t[[m0|creaky]] or louder than the rest. This encourages more weight to a very small degree and also general roughness, TVF tension and more.
+<h2>Hard Onsets</h2> Hard onsets start with the folds closed and with pressure already pushing against them. This means the beginning of the sound can be t[[m0|creaky]] or louder than the rest. This encourages more t[[vocalweight|weight]] to a very small degree and also general roughness, TVF tension and more.
 
 <h2>Aspirate Onsets</h2> These start with the folds open like soft onsets, but the folds come together after the airflow has already begun, meaning we get a slightly breathy or aspirate start to the sound. This can encourage breathiness, but can be useful for some character voices.
 `,
@@ -721,7 +737,7 @@ Register.register_node("offsets", "speech", {
 
 <h2>Hard Offsets</h2> The folds close but the pressure keeps going for longer, meaning the folds have to press harder to stop the sound or t[[m0|creak / fry]] happens.
 
-<h2>Aspirate Offsets</h2> The folds just open, and the pressure stops after, meaning we have a small aspirate / breathy trailing end to the sound, or it will just fade out smoothly rather than abruptly ending.
+<h2>Aspirate Offsets</h2> The folds just open, and the pressure stops after, meaning we have a small aspirate / t[[breathiness|breathy]] trailing end to the sound, or it will just fade out smoothly rather than abruptly ending.
 `,
     color:"#456",
     tooltip:` `,
@@ -752,7 +768,7 @@ Register.register_node("larynxheight", "resonance", {
 })
 Register.register_node("thyrohyoid-stylohyoid", "larynxheight", {
     title:"Thyrohyoid and Stylohyoid", desc:
-`Both muscles raise the larynx, but usually only the thyrohyoid (TH) is involved in the natural conflation with pitch. When the thyroid tilts to stretch the vocal folds, the thyrohyoid will typically also activate and raise the larynx slightly. This is a natural process.
+`Both muscles raise the t[[larynxheight|larynx]], but usually only the thyrohyoid (TH) is involved in the natural conflation with pitch. When the thyroid tilts to stretch the vocal folds, the thyrohyoid will typically also activate and raise the larynx slightly. This is a natural process.
 
 When "manually" raising the larynx such as through whisper exercises or in an attempt to do a brighter voice, we usually use both the TH and stylohyoid (SH) muscles. It is possible in some cases that the SH does not trigger for this, and this can result in a loss of resonance range in some students.tt{{This is from 3 students and Sumi's testing on this, achieved through doing pitch slides to gauge natural conflation's effect, and then whisper and voiced resonance exercises to test manual control's effect. The results were conclusive, but this is a sample size of 4.
 
@@ -792,7 +808,7 @@ An example of this is "oh my god". Said underarticulated, it may sound like "uh 
 })
 Register.register_node("mouthspace", "articulation", {
     title:"Mouth Space", desc:
-`Mouth space is a way to change t[[resonance|resonance]]. We can shift things around in the mouth to raise resonance without necessarily changing vowel. This act of raising or lowering resonance using the mouth while maintaining the same vowel is mouth space. It's extremely important as a gendered aspect, and particularly useful for feminine voices at low pitches where vocal weight is typically heavier and resonance is typically darker.
+`Mouth space is a way to change t[[resonance|resonance]]. We can shift things around in the mouth to raise resonance without necessarily changing t[[vowel|vowel]]. This act of raising or lowering resonance using the mouth while maintaining the same vowel is mouth space. It's extremely important as a gendered aspect, and particularly useful for feminine voices at low pitches where vocal weight is typically heavier and resonance is typically darker.
 
 t[[vowel|Vowels]] exist because we control the t[[formants|formants]] F1 and F2 by changing the shape of the mouth, the aperture of the opening of the mouth and the position of the tongue. For example the eee vowel (happ<b>y</b>) has the F1 low and the F2 high, and this distinguishes it from the aaah vowel (UK "b<b>a</b>th") where the F1 and F2 are very close to each other because the tongue is lowered, aperture narrowed and mouth slightly larger in volume. Mouth space then is a way to change the frequency of these two formants and affect the presentation of the voice by shifting the shape, tongue position and aperture of the mouth. More importantly than raising the frequency of formants however, mouth space control allows for more feminine or masculine articulation and subtle cues that are more gendered than raw frequency.`,
     color:"#645",
@@ -818,7 +834,7 @@ Register.register_node("macrovowel", "vowel", {
 
 Register.register_node("opc", "resonance", {
     title:"Oropharyngeal Constriction", desc:
-`Oropharyngeal Constriction (OPC). It's not the bad kind of constriction however, and does not require effort to activate. This is associated with hyperfem voices, as it significantly boosts t[[resonance|resonance]] / brightness. At the back of the mouth, above the root of the tongue, is an arch which can be constricted inward to reduce the size of the opening at the back of the mouth. This smaller opening causes the resonance frequency to raise, giving a resonance boost.`,
+`Oropharyngeal Constriction (OPC). It's not the bad kind of constriction however, and does not require effort to activate. This is associated with hyperfem voices, as it significantly boosts t[[resonance|resonance]] / t[[brightness|brightness]]. At the back of the mouth, above the root of the tongue, is an arch which can be constricted inward to reduce the size of the opening at the back of the mouth. This smaller opening causes the resonance frequency to raise, giving a resonance boost.`,
     color:"#747",
     tooltip:` `,
     audio:{
@@ -829,7 +845,7 @@ Register.register_node("pharyngealconstriction", "resonance", {
     title:"Pharyngeal Constriction", desc:
 `Unlike OPC this is usually not ideal. Pharyngeal constriction is when the throat between the larynx and the mouth (the pharynx) is constricted. This is esentially squeezing the throat. It raises the resonant frequencies slightly and trying to max out t[[resonance|resonance]] range is usually how people accidentally do it.
 
-Pharyngeal constriction usually comes from compensation, when trying to raise the larynx or when doing other resonance raising modifications. It is not particularly damaging but can lead to tension habits if done regularly.`,
+Pharyngeal constriction usually comes from t[[compensation|compensation]], when trying to raise the larynx or when doing other resonance raising modifications. It is not particularly damaging but can lead to t[[muscletension|tension]] habits if done regularly.`,
     color:"#645",
     tooltip:` `,
 })
@@ -843,7 +859,7 @@ Usually these formants are referred to with F and a number to denote which forma
 - F1 --> 1st formant from lowest freq to highest
 - F(n) --> (n)th formant
 
-Note that it is possible to make other formants happen that are in between the formants we usually see, but these do not replace the existing F1 F2 etc. So if nasal resonance joins the F1 and F2, the "old" F3 is still called F3. We don't downrank it to F2 because there now appears to be less formants below it.
+Note that it is possible to make other formants happen that are in between the formants we usually see, but these do not replace the existing F1 F2 etc. So if t[[nasality|nasal]] resonance joins the F1 and F2, the "old" F3 is still called F3. We don't downrank it to F2 because there now appears to be less formants below it.
 `,
     color:"#547",
     tooltip:` `,
@@ -851,7 +867,7 @@ Note that it is possible to make other formants happen that are in between the f
 
 Register.register_node("vocalsize", "resonance", {
     title:"Vocal Size", desc:
-`Vocal Sizett{{first known use: OVC, TransVoiceLessons}} is a way of intuitively explaining t[[resonance|resonance]] by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal tracttt{{Never attempt to change or shrink the vocal tract directly as this can lead to tension habits}} but instead about the size or stature of the hypothetical speaker and what kind of sound we expect from this speaker.`,
+`Vocal Sizett{{first known use: OVC, TransVoiceLessons}} is a way of intuitively explaining t[[resonance|resonance]] by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal tracttt{{Never attempt to change or shrink the vocal tract directly as this can lead to t[[muscletension|tension habits]]}} but instead about the size or stature of the hypothetical speaker and what kind of sound we expect from this speaker.`,
     color:"#454050",
     tooltip:` `,
 })
@@ -862,7 +878,7 @@ Register.register_node("subglottalresonance", "resonance", {
 
 Since in an open tube the standing wave is propagated relative to the center of the tube, we get around half the effective length and double the resonance frequency as when the tube is closedtt{{you can test this out using a toilet paper roll (or any tube) and making a "shh" sound into it while blocking and unblocking the other end with your hand, or look at the complex math behind it}}. In the case of voice, this change is really small so it's not worth using in any practical way, and a near open glottis during speech will mean severe breathiness which will make the harmonics in the voice less defined, causing the voice to overall sound darker despite the very slight increase in resonant frequency.
 
-In testing, the frequency of the F1 with closed glottis was approximately 87-93% of the frequency of the open glottis when noise was played into the mouth with a speaker meaning a ~10% increase when open.tt{{source: Sumi's informal testing, sample size 3, using externally induced vibration (speaker) at, above and below the larynx/glottis, at the mouth, using harmonic sounds, white and brown noise, using glottal taps as a way to open and close the glottis, as well as doing the same tests with constricted fold closure (glottal fricative / H sound) and voiced sounds using breathiness and normal closure sounds. Each test yielded the same changes, with some small variation due to the nature of the vocal tract not being a mathematical model.
+In testing, the frequency of the F1 with closed glottis was approximately 87-93% of the frequency of the open glottis when noise was played into the mouth with a speaker meaning a ~10% increase when open.tt{{source: Sumi's informal testing, sample size 3, using externally induced vibration (speaker) at, above and below the larynx/glottis, at the mouth, using harmonic sounds, white and brown noise, using glottal taps as a way to open and close the glottis, as well as doing the same tests with constricted fold t[[closure|closure]] (glottal fricative / H sound) and voiced sounds using breathiness and normal closure sounds. Each test yielded the same changes, with some small variation due to the nature of the vocal tract not being a mathematical model.
 
 }} This is counterintuitive, since we all know that usually a larger space yields a lower resonance frequency, but in the case of voice, complexities in the pressures between supraglottal and subglottal volumes means that somehow, we get a result closer to an open tube than a tube going into a larger chamber.
 
@@ -895,13 +911,17 @@ Register.register_node("tongueroot", "covers", {
 })
 Register.register_node("nasality", "covers", {
     title:"Nasality", desc:
-`Nasality is when air is let through the nasal passage on sounds that don\'t need this. Nasal sounds like N, M and NG are meant to be nasal, but most other sounds should not have air coming through the nose. We can test this by saying a phrase which doesn\'t have any nasal sounds in it, and pinching the nose; if it sounds honky, it is nasal.`,
+`Nasality is when air is let through the nasal passage on sounds that don't need this. Nasal sounds like N, M and NG are meant to be nasal, but most other sounds should not have air coming through the nose. We can test this by saying a phrase which doesn't have any nasal sounds in it, and pinching the nose; if it sounds honky, it is nasal.
+
+Here are some sentences containing no nasal sounds to test:
+- That black cat attacked the plastic bag.
+- The elevator stopped for us at the third floor.`,
     color:"#544",
     tooltip:` `,
 })
 Register.register_node("lowiahollow", "covers", {
     title:"Low IA Hollowness", desc:
-`Low t[[ia|IA]] closure voices can become hollow, losing their harmonic power and brightness. This can sound similar to M2 / falsetto.`,
+`Low t[[ia|IA]] closure voices can become hollow, losing their harmonic power and t[[brightness|brightness]]. This can sound similar to t[[m2|M2 / falsetto]].`,
     color:"#544",
     tooltip:` `,
     audio:{
@@ -913,7 +933,7 @@ Register.register_instance("breathiness", "covers")
 
 Register.register_node("subharmonics", "covers", {
     title:"Subharmonics", desc:
-`Subharmonics sound similar to creak or m0, but are more harmonic and less like random noise. They form for various reasons, but often due to true vocal fold tension / constriction and too much closure for the level of pressure / airflow.
+`Subharmonics sound similar to creak or t[[m0|M0]], but are more harmonic and less like random noise. They form for various reasons, but often due to true vocal fold tension / constriction and too much t[[closure|closure]] for the level of pressure / airflow.
 
 This presents itself as "extra harmonics". The folds get interrupted every second or third or etc cycle, and so it sounds like there are two voices at once. It isn't damaging but it can be very hard to build a habit that leaves it behind. It can be used in singing to do lower notes, or as a stylistic choice such as in certain types of overtone singing.`,
     color:"#545",
@@ -943,9 +963,9 @@ Compensation thrives on lack of awareness and effort, so most of what we need to
 
 Common compensations are:
 - strain
-- tension and fatigue
-- breathiness
-- buzzy or rattle-like sounds (FVF or hyperadduction)`,
+- tension and t[[fatigue|fatigue]]
+- t[[breathiness|breathiness]]
+- buzzy or rattle-like sounds (t[[fvf|FVF]] or t[[hyperadduction|hyperadduction]])`,
     color:"#545",
     tooltip:` `,
 })
@@ -959,11 +979,11 @@ Register.register_node("conflation", "training", {
 `Conflation is when we confuse or link together similar concepts or sounds. It usually happens due to misunderstanding how something sounds, such as thinking we are raising pitch when we actually raise resonance. Conflations can be positive, such as the conflation between medium to high pitch and light weight,
 
 Common conflations are:
-- pitch and resonance
+- pitch and t[[resonance|resonance]]
 - pitch and tension
-- pitch and breathiness
-- closure and tension
-- resonance and tongue root`,
+- pitch and t[[breathiness|breathiness]]
+- t[[closure|closure]] and tension
+- resonance and t[[tongueroot|tongue root]]`,
     color:"#455",
     tooltip:` `,
 })
@@ -971,7 +991,7 @@ Common conflations are:
 Register.register_node("pitchresconflation", "conflation", {
     title:"Pitch-Resonance Conflation", desc:
 `This is when either:
-1. we try to raise pitch, but the larynx raises / resonance raises instead
+1. we try to raise pitch, but the t[[larynxheight|larynx]] raises / t[[resonance|resonance]] raises instead
 2. we try to change resonance but pitch changes instead
 3. we try to do either on its own but both change
 
