@@ -137,7 +137,7 @@ Contact area between the folds, t[[quotient|quotient]], and surface area engaged
 Register.register_node("naturalisation", "vfvm", {
     title:"Pitch Naturalisation", desc:
 `Each pitch has its desired level of t[[vfvm|vibratory mass]] / t[[vocalweight|weight]], so there is an equillibrium that can be found between pitch and t[[vocalweight|vocal weight]].
-Pitch Naturalisation is the process and concept of naturally adjusting a voice to this equillibrium.tt{{Pitch Naturalisation is the core of the Pitch Intuitive Practice Methodology (PIPM) designed by Sumi / Sumianvoice, which is a near standalone methodology for changing the voice using the existing positive conflations most people have with pitch.}}
+Pitch Naturalisation is the process and concept of naturally adjusting a voice to this equillibrium.tt{{Pitch Naturalisation is the core of the Pitch Intuitive Practice Methodology (PIPM) designed by Sumi / Sumianvoice, which is a near standalone methodology for changing the voice using the existing positive conflations most people have with pitch.}} Since this is only useful for reducing weight to match a higher pitch, it's a concept used mostly for voice feminisation and sometimes general range.
 
 Usually we use this by raising pitch very slightly, then letting the voice naturally adjust without letting clarity and volume be sacrificed. We can also do this long term by raising the t[[basepitch|base pitch]] of the voice slightly and speaking here for a matter of several days or weeks. Given the right conditions - specifically that there is not much conscious control or effort which would cause t[[compensation|compensation]] - a voice will adjust rather than become strained or forced.
 
@@ -222,6 +222,7 @@ Register.register_node("vocalweightdarkconflation", "vocalweight", {
 - heavy voices typically use more t[[vfvmpressure|air pressure]] and flow, resulting in a smoother, duller soundtt{{Note that heavy and buzzy are not the same thing. A heavy voice can sound dark and hollow due to low t[[closure|closure]] and high pressure, or bright and buzzy due to high closure. That high closure is encouraged by high resonance, so there is further conflations there.}}
 - the rumble-like sound quality of heavy vocal weight is auditorily similar to a dark low t[[resonance|resonnace]] voice with normal closure
 
+Note that since there is a conflation between closure and vocal weight. If the closure is kept the same, the above follows, but if the closure is let to increase with conflation with weight it will often sound the same or brighter.
 `,
     color:"#567",
     tooltip:` `,
@@ -269,7 +270,9 @@ C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
 }}
 
 - more air pressure --> more vfvm / vocal weight (if enough closure)
-- more "pushing" --> more vfvm / vocal weight`,
+- more "pushing" --> more vfvm / vocal weight
+
+This has some but limited impact on the ability to increase weight; while more pressure encourages more weight it does not build the ability to do it, only allows the level of weight already built.`,
     color:"#556",
     tooltip:` `,
 })
@@ -586,7 +589,7 @@ You can use <a href="https://szynalski.com/tone#G2,tri,v0.2">a tone generator</a
 
 Register.register_node("beating", "pitchmatching", {
     title:`Beating`, desc:
-`Beating is when two notes are played that are very close in frequency. If you play a 100hz note and a 105hz note, they will interfere with eachother every 5 hz. It will take 1 / (f1 / |f1 - f2|) seconds for both notes to line up and cancel out. This works the same way as active noise cancelling; if you imagine the sound wave as a swing, if it is pushed one way with some force, then as it is coming back it's pushed the same way with the same force, it cancels out. Vibrations in the air are similar, and you can cancel out some sound with the opposite of the same sound. Similarly the sound waves can add together at the peaks instead of cancel out, and this happens at the same frequency as the cancelling out of course.
+`Beating is when two notes are played that are very close in frequency. If you play a 100hz note and a 105hz note, they will interfere with eachother every 5 hz. It will take a certain amount of cycles for both notes to line up and cancel out. This works the same way as active noise cancelling; if you imagine the sound wave as a swing, if it is pushed one way with some force, then as it is coming back it's pushed the same way with the same force, it cancels out. Vibrations in the air are similar, and you can cancel out some sound with the opposite of the same sound. Similarly the sound waves can add together at the peaks instead of cancel out, and this happens at the same frequency as the cancelling out of course.
 
 The result is that two sounds played at the same time will produce a kind of 'ghost' of a third note which is equal to the difference between the two notes.
 100hz and 105hz will cause a 'ghost note' at 5hz. The original notes will still be heard, but will be morphed into a third frequency by this interaction between the sound waves.
@@ -601,6 +604,7 @@ Register.register_node("cricothyroid", "pitch", {
     color:"#444",
     tooltip:` `,
 })
+
 Register.register_node("thyroarytenoid", "pitch", {
     title:"Thyroarytenoid (TA)", desc:
 `The muscle controlling lowering the pitch by contracting the vocal folds. This likely contributes substantially to fold vibratory mass, since the folds will bulk up slightly. It, along with the CT control pitch, usually with both contracting somewhat; the CT providing tension, and the TA providing slight amounts of t[[closure|closure]], and allowing for a more full sound.`,
@@ -608,14 +612,13 @@ Register.register_node("thyroarytenoid", "pitch", {
     tooltip:` `,
 })
 
-
 Register.register_node("rangeexpansion", "pitch", {
     title:"Range Expansion", desc:
 `It is possible to expand the pitch range in several ways, and for two main ends.
 1. to expand the comfortable speaking range
 2. to expand the overall phonation range
 
-If we want to expand the range in which we speak, it is a different goal than reaching the absolute highest note we can, and requires a different approach.`,
+If we want to expand the range in which we speak, it is a different goal than reaching the absolute highest note we can, and requires a different approach. Both will not require physical effort or strain, but instead a precise coordination in order to minimise tension while keeping enough closure to continue making the voice function.`,
     color:"#444",
     tooltip:` `,
 })
@@ -670,13 +673,18 @@ Register.register_node("speech", "root", {
 Register.register_node("intonation", "speech", {
     title:"Intonation", desc:
 `Intonation is how the voice goes up and down in pitch during speech, and the pattern with which it does so.
---> monotone = no intonation`,
+- monotone = no intonation
+- pitch goes up when you start speaking and eventually comes down = intonation
+
+The pitch a voice returns to after it intonates up is called the t[[basepitch|base pitch]].
+
+Generally speaking, feminine voices will have higher intonation range and move up and down through the range with higher frequency, while masculine voices tent to have a more subdued intonation pattern, although it is important to note that these generalisations don't make a voice more feminine or more masculine directly, but but augment other patterns such as articulation. Plenty of masculine voices have huge intonation range and frequency, but since they don't have the articulation and other patterns and feature of voice, they don't sound feminine.`,
     color:"#644",
     tooltip:` `,
 })
 Register.register_node("tempo", "speech", {
     title:"Tempo", desc:
-`This is how fast words are spoken, and how that speed of speech changes in order to be more expressive.`,
+`This is how fast words are spoken, and how that speed of speech changes in order to be more expressive. A generalisation, but not a rule, is that feminine voices typically have more changes to tempo throughout speech, where masculine voices are more often at a similar tempo throughout.`,
     color:"#256",
     tooltip:` `,
 })
@@ -798,6 +806,8 @@ Register.register_node("articulation", "resonance", {
 `Articulation is how and how much we move the mouth when speaking. Mumbling is low articulation, while some accents such as "valley girl" have a lot of articulation. Articulation is specifically about "how much" we do a vowel. If we do the "a" vowel in "bat" and we mumble it, it is underdone or underarticulated. If we say it as if mockingly, this will be overdone or overarticulated. Changing the amount that we articulate vowels during speech can allow a lot of expressive freedom.
 
 An example of this is "oh my god". Said underarticulated, it may sound like "uh muh guhd". Said in an overarticulated way, it may sound more like "ouw maiy gaud".
+
+This can be used as a way to make a voice substantially more feminine, or to make it neutral. Which vowels we articulate and how and how much is a complex mix of behaviors, but can substantially influence gender perception. Feminine voices often have more articulation overall, but the more important thing is the patterns of articulation.
 `,
     color:"#445",
     tooltip:` `,
@@ -808,9 +818,9 @@ An example of this is "oh my god". Said underarticulated, it may sound like "uh 
 })
 Register.register_node("mouthspace", "articulation", {
     title:"Mouth Space", desc:
-`Mouth space is a way to change t[[resonance|resonance]]. We can shift things around in the mouth to raise resonance without necessarily changing t[[vowel|vowel]]. This act of raising or lowering resonance using the mouth while maintaining the same vowel is mouth space. It's extremely important as a gendered aspect, and particularly useful for feminine voices at low pitches where vocal weight is typically heavier and resonance is typically darker.
+`Mouth space is a way to change t[[resonance|resonance]]. We can shift things around in the mouth to raise resonance without necessarily changing t[[vowel|vowel]]. This act of changing the shape of the mouth while maintaining the same vowel is mouth space. It's extremely important as a gendered aspect, and particularly useful for feminine voices at low pitches where resonance is typically lower.
 
-t[[vowel|Vowels]] exist because we control the t[[formants|formants]] F1 and F2 by changing the shape of the mouth, the aperture of the opening of the mouth and the position of the tongue. For example the eee vowel (happ<b>y</b>) has the F1 low and the F2 high, and this distinguishes it from the aaah vowel (UK "b<b>a</b>th") where the F1 and F2 are very close to each other because the tongue is lowered, aperture narrowed and mouth slightly larger in volume. Mouth space then is a way to change the frequency of these two formants and affect the presentation of the voice by shifting the shape, tongue position and aperture of the mouth. More importantly than raising the frequency of formants however, mouth space control allows for more feminine or masculine articulation and subtle cues that are more gendered than raw frequency.`,
+Mouth space does affect resonance frequencies / t[[formants|formants]], but more importantly, it allows for more feminine or masculine t[[articulation|articulation]] and subtle cues that are more gendered than raw frequency. Often, the effects of mouth space are not even obvious on a spectrogram. We can to some degree use either "speak in a mumbled way" for large mouth space and low articulation, or "speak like a valley girl" or "just speak in a feminine way" to trigger small mouth space and more articulation.`,
     color:"#645",
     tooltip:` `,
     audio:{

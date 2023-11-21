@@ -29,6 +29,7 @@ var Register = {
     }
 };
 
+
 Register.instances_to_add = {};
 
 Register.register_instance = function(id, in_node_name) {
@@ -37,6 +38,7 @@ Register.register_instance = function(id, in_node_name) {
     }
     Register.instances_to_add[id].push(in_node_name);
 };
+
 
 Register.do_all_registered_instances = function() {
     console.log("doing instances");
@@ -50,9 +52,11 @@ Register.do_all_registered_instances = function() {
     }
 };
 
+
 Register.scroll_to_node = function(name) {
     Zoom.go_to_element_id(name)
 };
+
 
 Register.get_url_vars = function() {
     const vars = {};
@@ -62,12 +66,14 @@ Register.get_url_vars = function() {
     return vars;
 };
 
+
 Register.go_to_url_tag = function() {
     const vars = Register.get_url_vars();
     if (vars.goto) {
         Register.scroll_to_node(vars.goto);
     }
 };
+
 
 Register.tooltipify = function(text) {
     // parse tt{{blah}} as a notation / reference popup
@@ -86,6 +92,7 @@ Register.tooltipify = function(text) {
     }
     return text;
 };
+
 
 Register.linkify = function(text) {
     // parse tt{{blah}} as a notation / reference popup
@@ -106,20 +113,36 @@ Register.linkify = function(text) {
     return text;
 };
 
-Register.listify = function(text) {
-    const ttsplit = text.split(`<br>- `);
-    if (ttsplit.length > 0) {
-        text = ttsplit[0] + `<ul>`;
-        for (let i = 1; i < ttsplit.length; i++) {
-            text += `<li>${ttsplit[i]}</li>`;
 
-            if (i == ttsplit.length - 1) {
-                text += `</ul>`;
+Register.listify = function(text) {
+    const ttsplit = text.split(`<br>`);
+    if (ttsplit.length == 0) { return; }
+
+    var was_inside_list = false;
+    text = "";
+    for (let i = 0; i < ttsplit.length; i++) {
+        // is a bullet point
+        if (ttsplit[i].startsWith("- ")) {
+            // is the first bullet point in the block
+            if (!was_inside_list) {
+                text += `<ul>`;
+                was_inside_list = true;
             }
+            // slice after 2 so it takes away the "- "
+            text += `<li>${ttsplit[i].slice(2)}</li>`;
+        // is the line after the last bullet point
+        } else if (was_inside_list) {
+            text += `</ul>`;
+            was_inside_list = false;
+            text += ttsplit[i];
+        // is a normal line
+        } else {
+            text += `<br>` + ttsplit[i];
         }
     }
     return text;
 };
+
 
 Register.parse_def = function(id, in_node_name, def) {
     // keep track so can add later
@@ -155,10 +178,12 @@ Register.parse_def = function(id, in_node_name, def) {
     return def;
 };
 
+
 function play_audio(clip_path) {
     var audio = new Audio(`audio/${clip_path}`);
     audio.play();
 }
+
 
 Register.get_fragment_from_def = function(id, in_node_name, def) {
     const new_tree_step = Register.active_nodes[in_node_name]._tree_step + 1;
@@ -214,6 +239,7 @@ Register.get_fragment_from_def = function(id, in_node_name, def) {
     return html_fragment_from_string(code);
 };
 
+
 Register.exercise_tags = {"exf":1, "exm":1, "exg":1};
 Register.active_nodes_index = []
 Register.register_node = function(id, in_node_name, fromdef, flags={}) {
@@ -224,6 +250,7 @@ Register.register_node = function(id, in_node_name, fromdef, flags={}) {
     def.flags = flags
     Register.registered_nodes[id] = def
 };
+
 
 Register.construct_node = function(id, in_node_name, fromdef, flags={}) {
     if (Register.active_nodes[in_node_name] == null) {
@@ -267,6 +294,7 @@ Register.construct_node = function(id, in_node_name, fromdef, flags={}) {
     }
 };
 
+
 Register.construct_all_nodes = function() {
     for (var id in Register.registered_nodes) {
         if (id == "root") {continue;}
@@ -274,6 +302,7 @@ Register.construct_all_nodes = function() {
         Register.construct_node(def.id, def.in_node_name, def, {});
     }
 };
+
 
 Register.find_tag_errors = function() {
     var elems = document.getElementsByClassName(`tag_link`);
@@ -285,6 +314,7 @@ Register.find_tag_errors = function() {
     }
 };
 
+
 window.onload = function() {
     Register.construct_all_nodes()
     Register.do_all_registered_instances()
@@ -292,11 +322,13 @@ window.onload = function() {
     Register.find_tag_errors()
 };
 
+
 Register.exercise_visibility = {
     fem : false,
     masc : false,
     gen : false,
 };
+
 
 Register.show_nodes = function(type, bool) {
     for (var k in Register.active_nodes) {
@@ -307,6 +339,7 @@ Register.show_nodes = function(type, bool) {
         }
     }
 };
+
 
 Register.show_exercise_fem = function() {
     Register.exercise_visibility.fem = !Register.exercise_visibility.fem;
@@ -343,6 +376,7 @@ function show_tagged(tag) {
         }
     }
 };
+
 
 Globalstep.register_globalstep(function(dt) {
     for (k in Register.tag_highlight_list) {
