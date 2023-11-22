@@ -44,6 +44,9 @@ Zoom.get_position_of_element = function(obj) {
 
 Zoom.go_to_element_id = function(id, smooth=false) {
     const el = document.getElementById(id)
+    if (el.style.display == "none") {
+        el.style.display = "flex";
+    }
     let pos = Zoom.get_position_of_element(el);
     pos[0] += (-window.innerWidth/2) - Zoom.window_offset.x;
     pos[1] += (-window.innerHeight/2) - Zoom.window_offset.y;
