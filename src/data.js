@@ -260,8 +260,8 @@ Register.register_node("closedquotient", "quotient", {
 
 
 Register.register_node("vfvmpressure", "vfvm", {
-    title:"Pressure --> Vibratory Mass", desc:
-`When we speak, we supply some amount of pressure from the lungs. This can be "used up" either by the vocal folds coming together like a valve (t[[closure|closure]]), or by the pressure needing to push more mass out of the way. This means that more pressure - provided there is otherwise normal closure - will encourage more VFVM or vocal weight.tt{{This is known mostly due to informal testing by Sumi, along with various papers which mention related facts.
+    title:"Pressure to Vibratory Mass", desc:
+`When we speak, we supply some amount of pressure from the lungs. This can be "used up" either by the vocal folds coming together like a valve (t[[closure|closure]]), or by the pressure building up longer and needing to push more mass out of the way. This means that more pressure - provided there is otherwise normal closure - will encourage more VFVM / vocal weight.tt{{This is known mostly due to informal testing by Sumi, along with various papers which mention related facts.
 
 <u><h3>Further reading</h3></u>\
 C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
