@@ -421,7 +421,7 @@ Common points of atrophy are:
 })
 Register.register_node("muscletension", "damage", {
     title:"Muscle Tension", desc:
-`Muscle tension is what is happening in Muscle Tension Dysphonia (MTD). It appears in two modes; primary and secondary. Primary MTD is when muscles outside the larynx, such as in the neck, are being tensed when they shouldn't be. This is extraneous muscle tension. Secondary is when muscles in the larynx (usually the adductors and abductors) are tensing in direct opposition to eachother.tt{{source: Dysphonia.org, <a href="https://dysphonia.org/voice-conditions/muscle-tension-dysphonia/">https://dysphonia.org/voice-conditions/muscle-tension-dysphonia/</a>}} Both forms can disable a voice completely in the long term, or cause significant enough t[[fatigue|fatigue]] that it becomes untenable to speak for longer than a few minutes. If you get fatigue within 30 minutes of sustained conversation, there is likely a significant issue and you should see a Speech Language Pathologist (SLP).
+`Muscle tension is what is happening in Muscle Tension Dysphonia (MTD). It appears in two modes; primary and secondary. Primary MTD is when muscles outside the larynx, such as in the neck, are being tensed when they shouldn't be. This is extraneous muscle tension. Secondary is when muscles in the larynx (usually the adductors and abductors) are tensing in direct opposition to eachother.tt{{source: Dysphonia.org, <a href="https://dysphonia.org/voice-conditions/muscle-tension-dysphonia/">https://dysphonia.org/voice-conditions/muscle-tension-dysphonia/</a>}} Both forms can disable a voice completely in the long term, or cause significant enough t[[fatigue|fatigue]] that it becomes untenable to speak for longer than a few minutes. If a voice gets fatigue within 30 minutes of sustained conversation, there is likely a significant issue and a Speech Language Pathologist (SLP) should be consulted about this.
 
 
 General muscle tension is surprisingly common in transvoice students, though thankfully it is usually not the extent of a diagnosis.
@@ -431,7 +431,7 @@ If you have any concerns, it is advisable to contact an SLP or otherwise seek a 
 })
 Register.register_node("fatigue", "damage", {
     title:"Fatigue", desc:
-`When the voice is either overused such as when speaking loudly for several hours with minimal rest, the voice will feel lazy as if it doesn't want to work any more. It might also feel as though the same functions you did before take more effort. This is fatigue, and is normal in the case mentioned of extreme overuse, however it can be a sign of t[[muscletension|muscle tension]] or other issues if it happesns regularly, or if it happens within an hour of starting speaking. Often this also is accompanied by a feeling of tension or discomfort.
+`When the voice is either overused such as when speaking loudly for several hours with minimal rest, the voice will feel lazy as if it doesn't want to work any more. It might also feel as though the same functions that could easily be done before take more effort. This is fatigue, and is normal in the case  extremely long amounts of time using the voice, however it can be a sign of t[[muscletension|muscle tension]] or other issues if it happesns regularly, or if it happens within an hour of starting speaking. Often this also is accompanied by a feeling of tension or discomfort, or a slight 'muscle burn' sensation.
 
 Common causes are:
 - forcing the voice and t[[pushing|pushing]] it to a higher pitch than is comfortable
@@ -439,8 +439,29 @@ Common causes are:
 - learning through methods that encourage muscle tension such as swallow and hold and similar "just make the throat forcibly smaller" methods
 - speaking very loudly and with high pressure
 
-It is slightly different from a voice just being 'tired' which can be more described as the voice becoming weak over time due to it being used for strenuous exercises. This can happen for example when doing t[[sovte|SOVTEs]] for too long. Unlike fatigue, it usually does not include discormfort or tension.`,
+It is slightly different from a voice just being 'tired' which can be more described as the voice becoming weak over time due to it being used excessively. This can happen for example when doing t[[sovte|SOVTEs]] for too long. Unlike fatigue, it usually does not include discormfort or tension.`,
     color:"#134",
+    tooltip:` `,
+})
+Register.register_node("fatiguevstiredness", "fatigue", {
+    title:"Fatigue vs Tiredness", desc:
+`It is normal to have the voice feel weaker after several hours of constant speaking, but not after less than 60 minutes. These are the differences between fatigue and tiredness.
+
+Fatigue
+- commonly includes 'muscle burn' sensation
+- is a sign of muscle tension or overuse
+- can happen very soon after speaking (within 60min)
+- usually symptoms reduce substantially within seconds of stopping speaking
+
+Tiredness
+- completely natural
+- only happens after several (2+) hours of speaking
+- a dull, weak feeling, but no pain or burn
+- does not subside immediately, but the voice remains feeling week for some time after stopping speaking
+
+Both are to be avoided, but fatigue is a sign of a larger problem. Usually tiredness will come from just using the voice at all, where fatigue comes from incorrect use of voice, such as muscle tension and constriction.
+`,
+    color:"#246",
     tooltip:` `,
 })
 Register.register_node("nodules", "damage", {
