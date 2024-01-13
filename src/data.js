@@ -220,7 +220,7 @@ Register.register_node("vocalweightdarkconflation", "vocalweight", {
 `A heavy voice will seem t[[brightness|darker]] due to several reasons:
 - heavy voices are typically darker, so there is a subconscious mental assumption
 - heavy voices typically use more t[[vfvmpressure|air pressure]] and flow, resulting in a smoother, duller soundtt{{Note that heavy and buzzy are not the same thing. A heavy voice can sound dark and hollow due to low t[[closure|closure]] and high pressure, or bright and buzzy due to high closure. That high closure is encouraged by high resonance, so there is further conflations there.}}
-- the rumble-like sound quality of heavy vocal weight is auditorily similar to a dark low t[[resonance|resonnace]] voice with normal closure
+- the rumble-like sound quality of heavy vocal weight is auditorily similar to a dark low t[[resonance|resonance]] voice with normal closure
 
 Note that since there is a conflation between closure and vocal weight. If the closure is kept the same, the above follows, but if the closure is let to increase with conflation with weight it will often sound the same or brighter.
 `,
