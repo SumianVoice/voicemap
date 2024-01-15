@@ -431,7 +431,7 @@ If you have any concerns, it is advisable to contact an SLP or otherwise seek a 
 })
 Register.register_node("fatigue", "damage", {
     title:"Fatigue", desc:
-`When the voice is either overused such as when speaking loudly for several hours with minimal rest, the voice will feel lazy as if it doesn't want to work any more. It might also feel as though the same functions that could easily be done before take more effort. This is fatigue, and is normal in the case  extremely long amounts of time using the voice, however it can be a sign of t[[muscletension|muscle tension]] or other issues if it happesns regularly, or if it happens within an hour of starting speaking. Often this also is accompanied by a feeling of tension or discomfort, or a slight 'muscle burn' sensation.
+`When the voice is either overused such as when speaking loudly for several hours with minimal rest, the voice will feel lazy as if it doesn't want to work any more. It might also feel as though the same functions that could easily be done before take more effort. This is fatigue, and is normal in the case  extremely long amounts of time using the voice, however it can be a sign of t[[muscletension|muscle tension]] or other issues if it happens regularly, or if it happens within an hour of starting speaking. Often this also is accompanied by a feeling of tension or discomfort, or a slight 'muscle burn' sensation.
 
 Common causes are:
 - forcing the voice and t[[pushing|pushing]] it to a higher pitch than is comfortable
