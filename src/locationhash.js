@@ -1,5 +1,4 @@
 window.addEventListener("load", (event) => {
-    console.log("page is fully loaded");
 
     if(window.location.hash) {
         //captures hash, puts it in lowercase, and removes all symbols
