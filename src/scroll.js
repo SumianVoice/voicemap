@@ -1,6 +1,7 @@
 /*
 Portions Copyright (c) 2023 "aeggy" nelinearni under the MIT license
-Portions Copyright (c) 2023 Sumi, SumianVoice <sumianvoice.com> under the MIT license
+Portions Copyright (c) 2023 Sumi, SumianVoice <sumianvoice.com> <https://github.com/SumianVoice/voicemap>
+    offered under MIT License <https://opensource.org/license/MIT/>
 */
 
 

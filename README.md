@@ -40,12 +40,8 @@ Here is an inexhaustive list of things you *shouldn't* just make PRs for since t
 - making any part of the code more difficult to understand or add to
 - making any 'build process' - currently, the map can be run locally without building it or using any tools other than basic JS in any browser, and it must stay that way; no jekyll or npm or any other build steps or outside dependencies whatsoever
 
-Here are things we *really want* though:
-- fix zooming and panning happening when clicking on links and tooltips
-- allow for post #tags so that you can send a link like https://map.sumianvoice.com/#basepitch and it shows that node
-- any optimisation of code to be less dumb, and more reasonably organised or better variable names etc
-
 However, when adding or changing any code through a PR, you **must** do the following:
-- state clearly and explicitly what license you offer the changes under, or include a license within the files, or license it as the existing LICENSE file, e.g. "I offer these changes under CC0" or "this is under the license already existing in the project and I **[ do | do not ]** require attribution"
+- either offer changes under a public domain equivalent license and explicitly state this, or:
+ - for each file changed, add your copyright notice and choice of license in the block comment at the top of the file
 - read the rest of the readme above
 - do a sanity check; are you sure this actually makes things better and not just more like the thing you usually do (see every open source project ever)

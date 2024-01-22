@@ -1,5 +1,6 @@
 /*
-Licensed under MIT License, Copyright 2023 Sumi, sumianvoice.com
+Copyright (c) 2023 Sumi, SumianVoice <sumianvoice.com> <https://github.com/SumianVoice/voicemap>
+    offered under MIT License <https://opensource.org/license/MIT/>
 */
 
 
