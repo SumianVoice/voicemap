@@ -378,6 +378,23 @@ function show_tagged(tag) {
     }
 };
 
+function returnFoundTag(tag){
+    for (var nodeName in Register.active_nodes) {
+        const node = Register.active_nodes[nodeName];
+        if (nodeName == tag) {
+            return [node, nodeName]
+        } 
+    }
+};
+
+function jumpToTag(node, nodeName){
+    node.style.transition = `1s all ease-in-out`;
+    node.style.outline = `16px solid red`;
+    node.style.display = `flex`;
+    Register.tag_highlight_list[nodeName] = 10;
+    Zoom.go_to_element_id(nodeName, false)
+};
+
 
 Globalstep.register_globalstep(function(dt) {
     for (k in Register.tag_highlight_list) {
