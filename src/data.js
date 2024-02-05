@@ -261,8 +261,8 @@ Register.register_node("closedquotient", "quotient", {
 
 
 Register.register_node("vfvmpressure", "vfvm", {
-    title:"Pressure to Vibratory Mass", desc:
-`When we speak, we supply some amount of pressure from the lungs. This can be "used up" either by the vocal folds coming together like a valve (t[[closure|closure]]), or by the pressure building up longer and needing to push more mass out of the way. This means that more pressure - provided there is otherwise normal closure - will encourage more VFVM / vocal weight.tt{{This is known mostly due to informal testing by Sumi, along with various papers which mention related facts.
+    title:"Pressure to Vibratory Mass / CQ", desc:
+`When we speak, we supply some amount of pressure from the lungs. This can be "used up" either by the vocal folds coming together like a valve (t[[closure|closure]]), or by the pressure building up longer. This means that more pressure - provided there is otherwise normal closure - will encourage more VFVM / vocal weight.tt{{This is known mostly due to informal testing by Sumi, along with various papers which mention related facts. Theoretically, higher pressure with the same closure should result in higher closed quotient, the effect of which is to make the voice heavier.
 
 <u><h3>Further reading</h3></u>\
 C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
@@ -273,7 +273,7 @@ C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
 - more air pressure --> more vfvm / vocal weight (if enough closure)
 - more "pushing" --> more vfvm / vocal weight
 
-This has some but limited impact on the ability to increase weight; while more pressure encourages more weight it does not build the ability to do it, only allows the level of weight already built.`,
+This has some but limited impact on the ability to increase weight; while more pressure encourages more weight it does not build the ability to do it, only allows the level of weight already built. Pressure feels like power, but does not require effort in any way.`,
     color:"#556",
     tooltip:` `,
 })
