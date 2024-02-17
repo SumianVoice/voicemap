@@ -184,6 +184,17 @@ t[[belting|Belting]] is an example of a pushed configuration; it involves more t
         ["Example"]:"pushing.mp3",
     },
 })
+Register.register_node("pitchresistance", "naturalisation", {
+    title:"Pitch Resistance", desc:
+`Pitch Resistancett{{first known use: Sumianvoice 2023}} is when a voice attempts to raise in pitch, but something resists this. Usually this is because of too much t[[vfvmpressure|pressure]] which converts to t[[cq|CQ]]. The result is that the voice sounds t[[stress|stressed]]. Because it is most commonly caused by pressure / CQ / weight, it can be used as a sign of t[[pushing|pushing]] too much.
+
+Another potential cause of this resistance however is t[[pitchresconflation|pitch-resonance conflation]]. This can happen when the larynx is already at the top of its range, and the voice tries to raise pitch in this configuration. The pitch-resonance conflation triggers, but the larynx cannot move, so the pitch cannot move either. The simple test for this is to slide up in pitch again with a lower resonance, and if it doesn't get resistance then it was likely pitch-resonance conflation.`,
+    color:"#645",
+    tooltip:` `,
+    audio:{
+        ["Example"]:"pushing.mp3",
+    },
+})
 
 //////////////////////
 // VOCAL WEIGHT
@@ -432,7 +443,7 @@ If you have any concerns, it is advisable to contact an SLP or otherwise seek a 
 })
 Register.register_node("fatigue", "damage", {
     title:"Fatigue", desc:
-`When the voice is either overused such as when speaking loudly for several hours with minimal rest, the voice will feel lazy as if it doesn't want to work any more. It might also feel as though the same functions that could easily be done before take more effort. This is fatigue, and is normal in the case  extremely long amounts of time using the voice, however it can be a sign of t[[muscletension|muscle tension]] or other issues if it happens regularly, or if it happens within an hour of starting speaking. Often this also is accompanied by a feeling of tension or discomfort, or a slight 'muscle burn' sensation.
+`When the voice is either overused such as when speaking loudly for several hours with minimal rest or when it is strained when doing something incorrectly or with effort, the voice will feel lazy as if it doesn't want to work any more. It might also feel as though the same functions that could easily be done before take more effort. This is fatigue, and is normal in the case  extremely long amounts of time using the voice, however it can be a sign of t[[muscletension|muscle tension]] or other issues if it happens regularly, or if it happens within an hour of starting speaking. Often this also is accompanied by a feeling of tension or discomfort, or a slight 'muscle burn' sensation.
 
 Common causes are:
 - forcing the voice and t[[pushing|pushing]] it to a higher pitch than is comfortable
