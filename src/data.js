@@ -469,7 +469,7 @@ Tiredness
 - completely natural
 - only happens after several (2+) hours of speaking
 - a dull, weak feeling, but no pain or burn
-- does not subside immediately, but the voice remains feeling week for some time after stopping speaking
+- does not subside immediately, but the voice remains feeling weak for some time after stopping speaking
 
 Both are to be avoided, but fatigue is a sign of a larger problem. Usually tiredness will come from just using the voice at all, where fatigue comes from incorrect use of voice, such as muscle tension and constriction.
 `,
