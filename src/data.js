@@ -552,7 +552,12 @@ Falsetto refers to the hollow sound quality, where M2 refers to the vibratory pa
 })
 Register.register_node("m2blending", "m2", {
     title:`M2 Blending <i style="color:#999">(mix voice)</i>`, desc:
-`It is possible to blend between M1 and M2, negating the break and smoothly transitioning. This process is a delicate balance of several parts of the voice and should not be effortful or tense. It is assumed that maintaining t[[closure|closure]] (especially t[[ia|IA]]) and reducing t[[vfvm|vibratory mass]] to reduce the imbalance that would cause the break is how this is done.`,
+`It is possible to blend between M1 and M2, negating the break and smoothly transitioning. This process is a delicate balance of several parts of the voice and should not be effortful or tense. It is assumed that maintaining t[[closure|closure]] (especially t[[ia|IA]]) and reducing t[[vfvmpressure|pressure]] and t[[vfvm|vibratory mass]] to reduce the imbalance that would cause the break is how this is done. There is also some evidence that t[[thyroarytenoid|TA]] and t[[cricothyroid|CT]] in tension are involved in breakstt{{\
+In particular, this Kochis-Jennings paper shows that in abrupt transitions, TA and CT are in more tension than in smooth transitions.
+
+Kochis-Jennings KA, Finnegan EM, Hoffman HT, Jaiswal S, Hull D.
+<i>'Cricothyroid muscle and thyroarytenoid muscle dominance in vocal register control: preliminary results'</i>
+<a href="https://doi.org/10.1016/j.jvoice.2014.01.017">DOI:10.1016/j.jvoice.2014.01.017</a>}}.`,
     color:"#457",
     tooltip:` `,
 })
