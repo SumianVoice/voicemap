@@ -797,7 +797,7 @@ Register.register_node("offsets", "speech", {
 //////////////////////
 Register.register_node("resonance", "root", {
     title:"Resonance", desc:
-`Resonance is how the vocal tract affects the sound that is passed through it. It is a filter, so it will highlight or reduce the signal sent from the vocal folds / glottis, based on the shape of the vocal tract.`,
+`Resonance is how the shape of the vocal tract affects the sound that is passed through it. It is a filter, so it will highlight or reduce each frequency of the voice as it passes through, based on the shape of the vocal tract. It is essentially which parts of the spectrum get highlighted. Higher resonance configurations mean higher frequencies get highlighted (making the voice sound brighter overall) and lower resonance means lower frequencies get highlighted (making the voice sound darker overall).`,
     color:"#473747",
     tooltip:` `,
     audio:{
@@ -1007,10 +1007,10 @@ Register.register_node("compensation", "training", {
     title:"Compensation", desc:
 `Compensationtt{{first known defined use: Sumianvoice, specifically in regard to its features in voice and strain etc}} is when we consciously try to achieve some goal, but lack the coordination or feel we lack it. As a result the body recruits muscles it doesn't need, just to force the goal to be achieved. Often this is very unhelpful, and leads to hard to change habits.
 
-Compensation thrives on lack of awareness and effort, so most of what we need to do to reduce it is be passively aware; know what is happening and draw attention to it, but not try hard to change it. It is different to conflation, which is more to do with linking two things by habit rather than unintentionally doing something due to effort.
+Compensation thrives on lack of awareness and on effort, so most of what we need to do to reduce it is be passively aware; know what is happening and draw attention to it, but not try hard to change it. It is different to conflation, which is more to do with linking two things by habit rather than unintentionally doing something due to effort.
 
 Common compensations are:
-- tension, strain and t[[fatigue|fatigue]]
+- tension and strain (leading to t[[fatigue|fatigue]])
 - t[[breathiness|breathiness]]
 - buzzy or rattle-like sounds (t[[fvf|FVF]] or t[[hyperadduction|hyperadduction]])`,
     color:"#545",
@@ -1023,7 +1023,7 @@ Register.register_instance("pushing", "compensation")
 
 Register.register_node("conflation", "training", {
     title:"Conflation", desc:
-`Conflation is when we confuse or link together similar concepts or sounds. It usually happens due to misunderstanding how something sounds, such as thinking we are raising pitch when we actually raise resonance. Conflations can be positive, such as the conflation between medium to high pitch and light weight,
+`Conflation is when we confuse or link together similar concepts or sounds. It usually happens due to misunderstanding how something sounds, such as thinking we are raising pitch when we actually raise resonance. Conflations can be positive, such as the conflation between medium to high pitch and light weight, but most conflations get in the way or prevent fine control over a feature of voice instead. Generally, it is advised to reduce all conflations so that greater control is achieved if those conflations get in the way of training such as with t[[pitchresconflation|pitch-resonance conflation]].
 
 Common conflations are:
 - pitch and t[[resonance|resonance]]
