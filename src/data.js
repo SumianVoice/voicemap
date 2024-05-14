@@ -218,6 +218,22 @@ Underfull is when a voice has either too low weight or too low t[[resonance|reso
     color:"#566",
     tooltip:` `,
 })
+Register.register_node("vocalweightgeneralisations", "vocalweight", {
+    title:"Vocal Weight\nGeneralisations", desc:
+`There are certain generalisations that help determine or change vocal weight. These are assuming normal voice characteristics, so if you're extremely breathy or any other issue is happening, these might not be accurate.
+
+No resistance to going low in pitch --> <b>heavier</b>
+No resistance to going high in pitch --> <i>lighter</i>
+More powerful or "pushed" voice --> <b>heavier</b>
+Less forceful, more delicate voice --> <i>lighter</i>
+Strong, forcefull and gritty voice --> <b>heavier</b>
+Clear tone, crisp, "ringing" rather than booming --> <i>lighter</i>
+
+These hold true in so many circumstances because vocal weight has an inverse relationship with pitch. The higher the pitch, the lower the vocal weight wants to be. If there is an imbalance, the voice may become unstable and yodel, or may sound stressed or strained as if there is resistance to going higher in pitch.
+`,
+    color:"#376",
+    tooltip:` `,
+})
 Register.register_node("m2aslightweight", "vocalweight", {
     title:"Falsetto as a Guide", desc:
 `Falsetto or t[[m2|M2]] has extremely light t[[vocalweight|vocal weight]]. It is essentially "too light". It has some qualities we don't want, such as instability and hollowness from low t[[closure|closure]], but overall it can be a very useful voice feminisation method. We can use this as a guide; as we go higher in pitch to reach lighter weight, we will get closer to that falsetto quality. This can help with direction, and often prevent strain and t[[pushing|pushing]]. Note that this will not allow for a both strong / loud and light voice, only a light voice. Learning to reduce vocal weight through t[[naturalisation|pitch naturalisation]], t[[phraserepetition|phrase repetition]] or other methods is better if volume, clarity or high t[[closure|closure]] is desired. However, this can be an excellent way to give context to those other methods, as long as it isn't entirely relied on.
