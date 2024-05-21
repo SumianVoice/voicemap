@@ -226,7 +226,7 @@ No resistance to going low in pitch --> <b>heavier</b>
 No resistance to going high in pitch --> <i>lighter</i>
 More powerful or "pushed" voice --> <b>heavier</b>
 Less forceful, more delicate voice --> <i>lighter</i>
-Strong, forcefull and gritty voice --> <b>heavier</b>
+Strong, forceful and gritty voice --> <b>heavier</b>
 Clear tone, crisp, "ringing" rather than booming --> <i>lighter</i>
 
 These hold true in so many circumstances because vocal weight has an inverse relationship with pitch. The higher the pitch, the lower the vocal weight wants to be. If there is an imbalance, the voice may become unstable and yodel, or may sound stressed or strained as if there is resistance to going higher in pitch.
