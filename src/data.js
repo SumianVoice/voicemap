@@ -516,6 +516,14 @@ Register.register_node("vocalcyst", "damage", {
     color:"#333",
     tooltip:` `,
 })
+Register.register_node("diplophonia", "damage", {
+    title:"Diplophonia", desc:
+`Diplophonia is when the vocal folds vibrate in two distinct places, causing two independent sounds. This is not the same as subharmonics which are bound to the t[[pitch|F0]], in diplophonia the extra frequency can diverge from the other, meaning the vocal folds have two vibratory patterns occuring simultaneouslytt{{<img src="img/diplophonia-vs-subharmonics.jpg" width=300 />}}. This means the voice is either damaged, such as with t[[nodules|nodules]], t[[vocalcyst|vocal cysts]], t[[vocalpolyp|vocal polyps]] or is extremely tense at an extremely high pitch.
+
+It is a warning sign that a voice has already received medium-or-longer-term damage to the folds themselves, or it's about to. If this is observed, stop immediately, do only light voice use, and seek a professional opinion.`,
+    color:"#332",
+    tooltip:` `,
+})
 
 
 
