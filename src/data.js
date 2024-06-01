@@ -186,7 +186,7 @@ t[[belting|Belting]] is an example of a pushed configuration; it involves more t
 })
 Register.register_node("pitchresistance", "naturalisation", {
     title:"Pitch Resistance", desc:
-`Pitch Resistancett{{first known use: Sumianvoice 2023}} is when a voice attempts to raise in pitch, but something resists this. Usually this is because of too much t[[vfvmpressure|pressure]] which converts to t[[cq|CQ]]. The result is that the voice sounds t[[stress|stressed]]. Because it is most commonly caused by pressure / CQ / weight, it can be used as a sign of t[[pushing|pushing]] too much.
+`Pitch Resistancett{{first known use: Sumianvoice 2023}} is when a voice attempts to raise in pitch, but something resists this. Usually this is because of too much t[[vfvmpressure|pressure]] which converts to t[[closedquotient|CQ]]. The result is that the voice sounds t[[stress|stressed]]. Because it is most commonly caused by pressure / CQ / weight, it can be used as a sign of t[[pushing|pushing]] too much.
 
 Another potential cause of this resistance however is t[[pitchresconflation|pitch-resonance conflation]]. This can happen when the larynx is already at the top of its range, and the voice tries to raise pitch in this configuration. The pitch-resonance conflation triggers, but the larynx cannot move, so the pitch cannot move either. The simple test for this is to slide up in pitch again with a lower resonance, and if it doesn't get resistance then it was likely pitch-resonance conflation.`,
     color:"#645",
@@ -201,7 +201,7 @@ Another potential cause of this resistance however is t[[pitchresconflation|pitc
 //////////////////////
 Register.register_node("vocalweight", "vfvm", {
     title:"Vocal Weight", desc:
-`Vocal Weighttt{{first known use: TransVoiceLessons}} is a sound quality associated with low pitch, masculine voices. It can sound "rumbly" or just "heavy", and is linked with pitch. Higher pitches demand lighter vocal weight.`,
+`Vocal Weighttt{{first known use: TransVoiceLessons}} is a sound quality associated with low pitch, masculine voices. It can sound "rumbly" or just "heavy", and is linked with pitch. Higher pitches demand lighter vocal weight else they will sound forced or t[[stress|stressed]]. This is a perceptual, subjective quality we hear, but it is mostly explained by t[[closedquotient|closed quotient]] which it is derived from. Heavy vocal weight and high t[[resonance|resonance]] can sound cartoonish or "goblin-like".`,
     color:"#267",
     tooltip:` `,
     audio:{
@@ -280,7 +280,13 @@ Register.register_node("openquotient", "quotient", {
 })
 Register.register_node("closedquotient", "quotient", {
     title:"Closed Quotient (CQ)", desc:
-`How long as a fraction of a cycle the vocal folds are closed and resisting air pressure.`,
+`How long as a fraction of a cycle the vocal folds are closed and resisting air pressure. This affects the sound wave created, making it less like a sinewave and more like a "squashed" sinewave with a longer low pressure component. More CQ is associated with higher t[[vocalweight|vocal weight]].`,
+    color:"#544",
+    tooltip:` `,
+})
+Register.register_node("speedquotient", "quotient", {
+    title:"Speed Quotient (SQ)", desc:
+`How quickly the vocal folds move between open and closed state. Somewhat affected by adduction.`,
     color:"#544",
     tooltip:` `,
 })
