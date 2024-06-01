@@ -57,6 +57,34 @@ button:disabled {
     opacity: 80% !important;
 }
 
+.floating_message {
+    width: 50vw;
+    height: fit-content;
+    min-height: 30px;
+    padding: 40px;
+
+    position: fixed;
+    top: 0;
+    left: 25vw;
+    z-index: 5;
+    color: #555;
+    text-shadow: #55555580 1px 1px 2px;
+
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: wrap;
+    /* flex-direction: column; */
+
+    background: #aaa;
+    padding: 0.5rem;
+}
+.floating_message * {
+    color: #555;
+}
+
 .get_link {
     width: 0.9rem;
     height: 0.9rem;

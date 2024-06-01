@@ -198,11 +198,10 @@ async function copy_to_clipboard(text) {
 }
 
 function get_link(id) {
-    let domain = ""
-    try {domain = location.href.split("/?", 1)[0]}
-    catch {}
-    history.replaceState(null, "", `?goto=` + id)
-    copy_to_clipboard(location.href)
+    let domain = "https://map.sumianvoice.com/";
+    history.replaceState(null, "", `?goto=` + id);
+    copy_to_clipboard(domain + `?goto=` + id);
+    Register.show_message(`<p>Copied　<i style="color:#172">"${domain + `?goto=` + id}"</i>　to clipboard!</p>`, 2);
 }
 
 
@@ -361,6 +360,35 @@ Register.show_nodes = function(type, bool) {
     }
 };
 
+Register.existing_messages = [];
+Register.show_message = function(msg, time) {
+    Register.existing_messages.push([msg, time, false]);
+}
+Register.messages_active = true;
+Register.floating_message_container = document.getElementById("floating_message_container");
+Register.handle_messages = function(dt) {
+    for (let i = Register.existing_messages.length-1; i >= 0; i--) {
+        let def = Register.existing_messages[i];
+        if (def[1] > 0) {
+            def[1] -= dt
+        } else {
+            Register.existing_messages.splice(i, 1);
+        }
+    }
+    let first = Register.existing_messages[0];
+    if ((first != null) && !first[2]) {
+        Register.floating_message_container.style = `display: flex; filter: opacity(${Math.max(first[1], 0)});`;
+        Register.floating_message_container.innerHTML = first[0];
+        first[2] = true;
+        Register.messages_active = true;
+    } else if ((first == null) && (Register.messages_active)) {
+        Register.messages_active = false;
+        Register.floating_message_container.style = `display: none;`;
+    }
+    if (first && first[1] < 0.5) {
+        Register.floating_message_container.style = `filter: opacity(${Math.max(first[1]*2, 0)});`;
+    }
+}
 
 Register.show_exercise_fem = function() {
     Register.exercise_visibility.fem = !Register.exercise_visibility.fem;
@@ -400,6 +428,7 @@ function show_tagged(tag) {
 
 
 Globalstep.register_globalstep(function(dt) {
+    Register.handle_messages(dt);
     for (k in Register.tag_highlight_list) {
         if (Register.tag_highlight_list[k] > 0) {
             Register.tag_highlight_list[k] -= dt;
