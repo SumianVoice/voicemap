@@ -238,13 +238,13 @@ textarea {
     background-color: #ffffff08;
     box-shadow: #00000020 2px 2px 4px;
     padding: 6px;
-    padding-bottom: 16px;
+    padding-bottom: 22px;
     border-radius: 8px;
     /* display: flex; */
     /* flex-direction:column; */
 }
 .subtitle_container {
-    margin: -0.9rem -0rem -1rem -0rem;
+    margin: -1.4rem 0rem 1rem 0rem;
 }
 .small_subtitle {
     color: #ffffff40;

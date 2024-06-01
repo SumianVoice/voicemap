@@ -158,10 +158,6 @@ Register.parse_def = function(id, in_node_name, def) {
     def.desc = def.desc.replaceAll("\n", "<br>");
     def.title = def.title.replaceAll("\n", "<br>");
     def.title = def.title.replaceAll(/\<.*(small_subtitle).*\<\/\i\>/gi, "");
-    def.title += `<br>`;
-    def.title += `<div class="subtitle_container"><i class="small_subtitle" onmousedown="Zoom.stopDragging()">${id}</i>`;
-    // link copy
-    def.title += `<img src="img/linkcopy.svg" class="get_link" onclick="get_link('` + id + `')" /></div>`
     def.tooltip = def.tooltip.replaceAll("\n", "<br>");
     def.desc = def.desc.replaceAll("-->", '<b class="hlight">--></b>');
 
@@ -224,6 +220,10 @@ Register.get_fragment_from_def = function(id, in_node_name, def) {
     code += 'height:max(fit-content, ' + String(new_scale_factor*1.2) + "rem);";
     code += "\"" + ">";
     code += (def.title || "") + '</h2>';
+    code += `<br>`
+    code += `<div class="subtitle_container"><i class="small_subtitle" onmousedown="Zoom.stopDragging()">${id}</i>`
+    // link copy
+    code += `<img src="img/linkcopy.svg" class="get_link" onclick="get_link('` + id + `')" /></div>`
     // desc
     code += '<div class="desc"';
     // code += ' style=\"font-size:' + String(new_scale_factor * 0.5) + "rem;" +
