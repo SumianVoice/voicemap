@@ -57,6 +57,25 @@ button:disabled {
     opacity: 80% !important;
 }
 
+.get_link {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 0;
+    margin-left: 0.2rem;
+    margin-top: -1rem;
+    padding: 5px;
+    background-color: #00000040;
+    border-radius: 40%;
+    transform: translate(0, 5px);
+    filter: opacity(0.2);
+}
+.get_link:hover {
+    filter: opacity(0.6);
+}
+.get_link:active {
+    filter: opacity(0.15);
+}
+
 #zoom_buttons {
     position: fixed;
     bottom: 0rem;
@@ -196,16 +215,18 @@ textarea {
     /* display: flex; */
     /* flex-direction:column; */
 }
-
+.subtitle_container {
+    margin: -0.9rem -0rem -1rem -0rem;
+}
 .small_subtitle {
     color: #ffffff40;
     font-size: 1rem;
     font-weight: 100;
     text-align: right;
     width: 200px;
-    position: absolute;
+    /* position: absolute; */
     align-self: flex-end;
-    transform: translate(-10.0rem, -0.30rem);
+    /* transform: translate(-10.0rem, -0.30rem); */
     user-select: text;
 }
 

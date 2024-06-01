@@ -158,7 +158,10 @@ Register.parse_def = function(id, in_node_name, def) {
     def.desc = def.desc.replaceAll("\n", "<br>");
     def.title = def.title.replaceAll("\n", "<br>");
     def.title = def.title.replaceAll(/\<.*(small_subtitle).*\<\/\i\>/gi, "");
-    def.title += `<br>` + `<i class="small_subtitle" onmousedown="Zoom.stopDragging()">` + id + `</i>`;
+    def.title += `<br>`;
+    def.title += `<div class="subtitle_container"><i class="small_subtitle" onmousedown="Zoom.stopDragging()">${id}</i>`;
+    // link copy
+    def.title += `<img src="img/linkcopy.svg" class="get_link" onclick="get_link('` + id + `')" /></div>`
     def.tooltip = def.tooltip.replaceAll("\n", "<br>");
     def.desc = def.desc.replaceAll("-->", '<b class="hlight">--></b>');
 
@@ -183,6 +186,23 @@ Register.parse_def = function(id, in_node_name, def) {
 function play_audio(clip_path) {
     var audio = new Audio(`audio/${clip_path}`);
     audio.play();
+}
+
+async function copy_to_clipboard(text) {
+    try {
+        await navigator.clipboard.writeText(text);
+        console.log('Page URL copied to clipboard: ' + text);
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+    }
+}
+
+function get_link(id) {
+    let domain = ""
+    try {domain = location.href.split("/?", 1)[0]}
+    catch {}
+    history.replaceState(null, "", `?goto=` + id)
+    copy_to_clipboard(location.href)
 }
 
 
