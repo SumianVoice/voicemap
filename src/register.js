@@ -209,7 +209,7 @@ Register.get_fragment_from_def = function(id, in_node_name, def) {
     // div
     let code = '<div class="node" id="' + id + '"';
     code += ' style="background-color:' + def.color + ";" +
-    "padding:" + String(new_scale_factor * 10) + "px;" +
+    `padding:${String(new_scale_factor * 10)}px ${String(new_scale_factor * 15)}px;` +
     "margin:" + String(new_scale_factor * 6) + "px;" +
     '\"' +
     '>';
@@ -219,11 +219,11 @@ Register.get_fragment_from_def = function(id, in_node_name, def) {
     code += `font-size:` + String(new_scale_factor) + "rem;";
     code += 'height:max(fit-content, ' + String(new_scale_factor*1.2) + "rem);";
     code += "\"" + ">";
-    code += (def.title || "") + '</h2>';
-    code += `<br>`
-    code += `<div class="subtitle_container"><i class="small_subtitle" onmousedown="Zoom.stopDragging()">${id}</i>`
+    code += (def.title || "");
+    code += `<img src="img/linkcopy.svg" class="get_link" onclick="get_link('` + id + `')" />`;
+    code += '</h2>';
+    // code += `<div class="subtitle_container"><i class="small_subtitle" onmousedown="Zoom.stopDragging()">${id}</i></div>`
     // link copy
-    code += `<img src="img/linkcopy.svg" class="get_link" onclick="get_link('` + id + `')" /></div>`
     // desc
     code += '<div class="desc"';
     // code += ' style=\"font-size:' + String(new_scale_factor * 0.5) + "rem;" +
