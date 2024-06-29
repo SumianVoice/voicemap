@@ -11,6 +11,7 @@ Register.register_node("whisperintro", "larynxheight", {
     title:"Whisper Introduction\nTo Resonance", desc:
 `Can be a good way to get acquainted with resonance initially. It's especially good since it will use the same vowel, so we can't get as confused as to whether we're actually raising and lowering the larynx.
 
+
 - in a whisper, say "whisper" or another word
 - say the same word repeatedly, and make the whisper go "lower"
 - make it go "higher"
@@ -26,6 +27,8 @@ tt{{first known use: Ama Rose of Scinguistics}}
 Register.register_node("resonancestepping", "larynxheight", {
     title:"Resonance Stepping", desc:
 `Voiced resonance steps
+
+
 - start at a low resonance yawn-like position and say a phrase or word like "one two three"
 - <b>keep the pitch the same</b> throughout this exercise
 - relax and go to a neutral, not trying position and say the same thing
@@ -41,6 +44,8 @@ Register.register_node("resonancestepping", "larynxheight", {
 Register.register_node("singingresonancestepping", "pitchresconflation", {
     title:"Singing resonance stepping", desc:
 `Reduces the coupling between pitch and resonance which would otherwise decrease range.
+
+
 - start at any relaxed pitch, in a dark, low resonance, yawn-like voice
 - "wobble" the pitch up and down
 - glide down from a higher pitch and back up, making little hills in pitch, **keeping the resonance / brightness the same as you go**
@@ -61,6 +66,8 @@ tt{{first known use: Sumianvoice}}
 Register.register_node("resonancepitchglidehills", "pitchresconflation", {
     title:"Resonance pitch glide hills for deconflation", desc:
 `Reduces the coupling between pitch and resonance which would otherwise decrease range.
+
+
 - start at any relaxed pitch, in a dark, low resonance, yawn-like voice
 - "wobble" the pitch up and down
 - glide down from a higher pitch and back up, making little hills in pitch, **keeping the resonance / brightness the same as you go**
@@ -80,6 +87,7 @@ Register.register_node("darktobright", "brightness", {
     title:"Dark to Bright", desc:
 `This can be a good way to actually apply resonance range you already have, without as much compensation and other issues coming in if we do it correctly.
 
+
 - do a dark, Patrick Star like voice
 - go to whatever pitch you want to speak at
 - start reading a passage, preferably long
@@ -98,6 +106,7 @@ Register.register_node("uhh-iii", "mouthspace", {
 
 This can then tell us vaguely how to affect mouspace.
 
+
 - say "uhh" and note the larger mouth space
 - say "happiiiiiy" and note the smaller mouth space
 `,
@@ -110,6 +119,7 @@ Register.register_node("feminineaccent", "mouthspace", {
     title:`The "Feminine Accent"`, desc:
 `Our assumptions about what a "feminine way of speaking" would be is not completely accurate but it is a good starting point. If we do whatever way of speaking we think is feminine, we will likely achieve smaller mouth space, brigher sibilants and different articulation. This can get perhaps 80% of the features we need.
 
+
 - speak with whatever you think is an exaggerated feminine voice
 - note the changes in how you articulate the mouth and the brighter S sounds
 `,
@@ -121,6 +131,7 @@ Register.register_node("feminineaccent", "mouthspace", {
 Register.register_node("pitchnatfloat", "naturalisation", {
     title:`Pitch Naturalization Floating`, desc:
 `Pitch naturalization using pitch "floating". This is a good introduction to pitch naturalisation, and the basic idea is "just do a slightly higher voice and let it adjust". It is very basic and intuitive, but extends even into advanced control especially with set pitch naturalisation.
+
 
 - speak at your relaxed, not-doing-anything pitch
 - make sure to start strong, possibly a little bit louder and heavier than normal
@@ -145,6 +156,7 @@ tt{{first known use: Sumianvoice}}
 Register.register_node("pitchnatloud", "naturalisation", {
     title:`Loud Pitch Naturalisation`, desc:
 `Good for reducing compensations like breathiness, tension etc if it happens during normal pitch naturalisation, and also helps with gaining loud volume without weight coming back in.
+
 
 - do the normal pitch naturalisation exercises but loud
 - "trying to speak over the noise at a party" level of volume is ideal, don't shout but don't let it go quiet
@@ -171,6 +183,7 @@ Register.register_node("setpitchnat", "naturalisation", {
     title:`Set Pitch Naturalisation`, desc:
 `Useful for advanced control and isolating vocal weight, but also for getting a light vocal weight at a low pitch which is otherwise difficult.
 
+
 - pick a pitch to use as a base pitch; make sure it's not too high, it should be easy to do in your heavier, more masculine voice
 - slide up to this pitch and speak one phrase monotone, keeping it loud and strong
 - start the second phrase a little higher, but have it come down to the base pitch again by the end, making it easier to add intonation
@@ -191,6 +204,7 @@ Register.register_node("phraserepetition", "naturalisation", {
     title:`Phrase Repetition`, desc:
 `Phrase Repetition can be used to gain comfortable speaking range, blend M2 and more. It's a good way to intuitively smooth out any issues in the voice and to habitualise anything we want.
 
+
 - find a balanced configuration to speak at a moderate pitch (e.g. 165hz / E3)
 - say a phrase with high intonation (e.g. "when you draw fewer lines" from Pikat)
 - do this at randomly chosen pitches
@@ -206,11 +220,50 @@ tt{{first known use: Sumianvoice}}
     tooltip:` `,
 })
 
+Register.register_node("intuitivebasepitch", "basepitch", {
+    title:`Intuitive Base Pitch`, desc:
+`This helps maintain a consistent base pitch, and that means it's easier to let the voice t[[naturalisation|naturalise]] to the pitch.
 
+
+- base pitch is the pitch that you always come back down to after inflection / intonation; it's almost always the lowest note in speech
+- play the note or hum the note of where you want to speak
+- use a phrase that starts at the base pitch like "the north wind and the sun had a quarrel"
+- intonation will be higher than the base pitch of course, so you'll probably go higher than the base pitch in the middle
+- to start, when you intonate up and it starts coming down again, make sure it hits the base pitch
+- gradually start to just speak naturally instead of control the pitch, but whenever your voice hits that base pitch, just notice that and draw attention to it
+- likewise pay attention to if your voice drops below the base pitch
+- you can also draw out the base pitch note longer if you need to (e.g. on "quarrel"), but prioritise just noticing it passively
+- eventually you'll memorise and keep the base pitch subconsciously without needing to drill for it
+
+tt{{first known use: Sumianvoice}}
+`,
+    color:color,
+    type:"exf",
+    tooltip:` `,
+})
+
+Register.register_node("contrivedbasepitch", "basepitch", {
+    title:`Contrived base pitch`, desc:
+`This helps if having difficulty with t[[intuitivebasepitch|Intuitive Base Pitch]]. It forces the pitch to return. It is still wise to not push the pitch very high; only go as high as feels comfortable and doesn't sound t[[stress|stressed]].
+
+
+- say a phrase, where the last word is intentionally on some specific pitch you want to speak at
+- e.g. "The north wind and the sun had a **quarrel**"
+- hold that last word longer than usual, to keep track of the pitch better
+- make this a contrived and intentional pattern, where the voice goes up for intonation and then only on the last word hitting that pitch you want
+- continue until it becomes natural and you don't need to control it constantly anymore
+
+tt{{first known use: Sumianvoice}}
+`,
+    color:color,
+    type:"exf",
+    tooltip:` `,
+})
 
 Register.register_node("weightnotpitch", "vocalweight", {
     title:`Think Weight, not Pitch`, desc:
 `Think about pitch as being weight, not notes. This can help control weight, though it won't help with high volumes like pitch naturalisation would.
+
 
 - weight affects base pitch directly, so if you change weight, you will get a different base pitch
 - think about sweet voices, falsetto etc. They are light, and you can just scale up toward them
@@ -234,6 +287,7 @@ Register.register_node("m2highresonance", "larynxheight", {
     title:`M2 for Resonance Range`, desc:
 `Using M2 to get very high resonance or OPC can help because any tension or compensations would upset the fragile M2 configuration, making it obvious if there is a problem.
 
+
 - stay relaxed, never force this, take it slow, don't push it to the max
 - say a dark, low resonance "uhh" at F4 / 330hz or wherever feels easy to do
 - let it go back to normal, or let it go slightly brighter but don't push it to the limit as it can end up becoming constricted
@@ -246,9 +300,11 @@ tt{{first known use: Sumianvoice}}
     type:"exf",
     tooltip:` `,
 })
+
 Register.register_node("vampireslides", "larynxheight", {
     title:`Vampire Slides`, desc:
 `Vampire slides from a low to high resonance whisper. We can use this to raise or lower resonance, usually through larynx height though other changes can happen too. This is more for range, rather than just understanding the concept. It's best to prioritise using voiced exercises instead of these whisper / unvoiced ones unless you have a reason.
+
 
 - make sure it's not constricted; more air but less sound is good. It should feel like normal breathing
 - if you're just starting out, just stop here and try voiced exercises
@@ -266,6 +322,7 @@ tt{{first known use: TransVoiceLessons}}
 Register.register_node("opcinm2", "opc", {
     title:`OPC in M2`, desc:
 `Can be used to achieve OPC easier through using M2 to reduce compensation. Anything that would be a compensatory reaction to trying to do OPC would upset the very fragile M2 configuration.
+
 
 - do a hollow, dark / low resonance M2 note with "aaah"
 - do a brighter "aaah", adding some OPC
@@ -285,6 +342,7 @@ tt{{first known use: Sumianvoice}}
 Register.register_node("sweetsounds", "vocalweight", {
     title:`Sweet Sounds`, desc:
 `Sweet Sounds is a behavioral trigger to encourage a light vocal weight, high resonance voice. It is a way to intuitively encourage these without actually consciously controlling anything.
+
 
 - try to just do a "sweet" voice
 - this description is intentionally vague, so as to let your subconscious do the work
