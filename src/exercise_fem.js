@@ -38,6 +38,44 @@ Register.register_node("resonancestepping", "larynxheight", {
     tooltip:` `,
 })
 
+Register.register_node("singingresonancestepping", "pitchresconflation", {
+    title:"Singing resonance stepping", desc:
+`Reduces the coupling between pitch and resonance which would otherwise decrease range.
+- start at any relaxed pitch, in a dark, low resonance, yawn-like voice
+- "wobble" the pitch up and down
+- glide down from a higher pitch and back up, making little hills in pitch, **keeping the resonance / brightness the same as you go**
+- only go as high as you can do completely relaxed
+- slowly increase the height of the hills, but never add strain
+- there should be no difference in effort, volume or much of anything else between the pitches
+- don't "push" or "squeeze"
+- notice how every pitch feels the same and sounds similar, and pay attention to the resonance staying the same
+- do with dark, normal and bright voices
+
+tt{{first known use: Sumianvoice}}
+`,
+    color:color,
+    type:"exf",
+    tooltip:` `,
+})
+
+Register.register_node("resonancepitchglidehills", "pitchresconflation", {
+    title:"Resonance pitch glide hills for deconflation", desc:
+`Reduces the coupling between pitch and resonance which would otherwise decrease range.
+- start at any relaxed pitch, in a dark, low resonance, yawn-like voice
+- "wobble" the pitch up and down
+- glide down from a higher pitch and back up, making little hills in pitch, **keeping the resonance / brightness the same as you go**
+- only go as high as you can do completely relaxed
+- slowly increase the height of the hills, but never add strain
+- there should be no difference in effort, volume or much of anything else between the pitches
+- don't "push" or "squeeze"
+- notice how every pitch feels the same and sounds similar, and pay attention to the resonance staying the same
+- do with dark, normal and bright voices
+`,
+    color:color,
+    type:"exf",
+    tooltip:` `,
+})
+
 Register.register_node("darktobright", "brightness", {
     title:"Dark to Bright", desc:
 `This can be a good way to actually apply resonance range you already have, without as much compensation and other issues coming in if we do it correctly.
