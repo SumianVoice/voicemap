@@ -164,7 +164,7 @@ Register.register_node("stress", "naturalisation", {
 })
 Register.register_node("basepitch", "naturalisation", {
     title:"Base Pitch", desc:
-`Base Pitchtt{{first known use: Sumianvoice (but probably not the first use)\n\nNote it was used in Scinguistics in 2020 and probably elsewhere but defined as the fundamental freq rather than a speech pattern feature like this is defined as. It was much later (2022) defined as a return to note and tested in a research project conducted on the Voice Art Project Discord server, but used before then for some time as an automatically returned-to pitch to aid in changing pitch and keeping that change consistent.}} is the pitch a voice naturally returns to after intonation. Since pitch and t[[vocalweight|vocal weight]] are linked, base pitch represents the pitch that a voice is t[[naturalisation|naturalised]] to, and this is usually the lowest note a voice will naturally go to, and is sort of like an anchor or "home position".
+`Base Pitchtt{{first known use: 2022, Sumianvoice (but probably not the first use)\n\nNote it was used in Scinguistics in 2020 and probably elsewhere but defined as the fundamental freq rather than a speech pattern feature like this is defined as. It was much later (2022) defined as a return to note and tested in a research project conducted on the Voice Art Project Discord server, but used before then for some time as an automatically returned-to pitch to aid in changing pitch and keeping that change consistent.}} is the pitch a voice naturally returns to after intonation. Since pitch and t[[vocalweight|vocal weight]] are linked, base pitch represents the pitch that a voice is t[[naturalisation|naturalised]] to, and this is usually the lowest note a voice will naturally go to, and is sort of like an anchor or "home position".
 
 For example if we speak at F3/175hz, the voice will go above F3 for intonation and then eventually return to F3 as the lowest note time after time. It can be changed at will once trained, and is the basis of t[[naturalisation|pitch naturalisation]]. It is possible for a voice to hit lower notes than the base pitch it is naturalised to, but generally this will be rare or used for expressiveness of speech rather than a natural phenomenon.
 
@@ -389,7 +389,7 @@ Register.register_instance("lowiahollow", "ia")
 
 Register.register_node("hyperadduction", "closure", {
     title:"Hyperadduction", desc:
-`Hyperadductiontt{{first known use: Sumianvoice}} can <b class="hlight">irreparably damage</b> the vocal folds, cause t[[nodules|nodules,]] pain and more awful things you don't want.
+`Hyperadductiontt{{first known use: 2022, Sumianvoice}} can <b class="hlight">irreparably damage</b> the vocal folds, cause t[[nodules|nodules,]] pain and more awful things you don't want.
 Do not do it under <b class="hlight">any circumstances</b> for any reason for any length of time. It causes a buzzy, extremely high frequency 'rattle' sound.
 
 Hyperadduction is when the vocal folds are pressed together very tightly, but unlike pressed phonation, this is taken to the extreme. It is often accidentally employed to reach higher notes at the very top of the range. Never force your voice to go "a little bit higher" when it's already requiring effort.
@@ -775,7 +775,7 @@ Register.register_instance("basepitch", "speech")
 
 Register.register_node("microbehaviors", "speech", {
     title:"Microbehaviors", desc:
-`Microbehaviorstt{{first known use: Sumianvoice}} are a completely "what if" concept. It's used to explain features of voice too small and too automatic and subconscious to be able to directly influence, unlike concepts like t[[vocalweight|weight]] and t[[resonance|resonance]] which have very clear definitions. Microbehaviors are glottal, resonance or speech behaviors (or even maybe something else, who knows) which give a voice its distinct and unique "fingerprint". We don't really know much about it aside from "things happen and they make a voice sound different".
+`Microbehaviorstt{{first known use: 2022 Sumianvoice}} are a completely "what if" concept. It's used to explain features of voice too small and too automatic and subconscious to be able to directly influence, unlike concepts like t[[vocalweight|weight]] and t[[resonance|resonance]] which have very clear definitions. Microbehaviors are glottal, resonance or speech behaviors (or even maybe something else, who knows) which give a voice its distinct and unique "fingerprint". We don't really know much about it aside from "things happen and they make a voice sound different".
 
 When we keep vocal weight, resonance, pitch, and all the main concepts the same, yet we sound like one person rather than a seperate person, the difference is what is covered by this concept. It is the unexplained tiny changes that make up the difference between two unique voices. One notable example of a voice with a high level of this behavior which makes it unique is Druew. The basic characteristics such as weight, resonance, t[[articulation|articulation]], t[[closure|closure]] etc do not fully explain how it sounds so unique, and so the vague concept "microbehaviors" is invoked to explain this.
 
