@@ -107,8 +107,15 @@ Register.register_node("uhh-iii", "mouthspace", {
 This can then tell us vaguely how to affect mouspace.
 
 
-- say "uhh" and note the larger mouth space
-- say "happiiiiiy" and note the smaller mouth space
+- say "uhhh" and notice the large mouth space, how it opens up
+- say iii in a lazy, mumbled way, not moving the mouth much just for comparison
+- say iii like a "valley girl", or overdo the vowel to exaggerate it
+- compare between the dark "uhh" and bright "iii" sound
+- be careful not to do a wide smile during the iii
+- note the change in brightness, and also the change in mouth posture and mouth space
+- when speaking, try a dark "uhhh" like sound and then try doing a bright sound like you did with the iii
+- "baby speak" can also bring out small mouth space
+- when applying this to speech, just apply it, don't do the exercise and try to transition to speech, just bring it out while speaking
 `,
     color:color,
     type:"exf",
@@ -120,8 +127,12 @@ Register.register_node("feminineaccent", "mouthspace", {
 `Our assumptions about what a "feminine way of speaking" would be is not completely accurate but it is a good starting point. If we do whatever way of speaking we think is feminine, we will likely achieve smaller mouth space, brigher sibilants and different articulation. This can get perhaps 80% of the features we need.
 
 
-- speak with whatever you think is an exaggerated feminine voice
-- note the changes in how you articulate the mouth and the brighter S sounds
+- say some phrase in a mumbled, lazy way
+- say the same phrase again, but this time in an over-the-top feminine way - whatever you think is an exaggerated feminine voice
+- think "gay guy accent" or "valley girl"
+- note the changes in how you articulate (move) the mouth and the brighter S sounds, and how it reduces the space in the mouth
+- tone it back to a more natural level and try again
+- the more you notice the different articulations (how you move the mouth to make sounds) of different voices, the more you will understand it
 `,
     color:color,
     type:"exf",
