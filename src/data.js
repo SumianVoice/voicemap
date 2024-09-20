@@ -325,8 +325,7 @@ Register.register_instance("pushing", "vfvmpressure")
 //////////////////////
 Register.register_node("closure", "glottal", {
     title:"Closure", desc:
-`Closure covers the closing of the vocal folds, and this allows for the air pressure to push them open,
-resulting in phonation. High closure means the folds come together more completely, low closure means they come together incompletely or with not enough contact, allowing air to get through without being "used" for vibrating the folds. High closure can sound t[[brightness|brighter]] because it boosts harmonic power in the high frequencies. The bright 'edge' heard in some voices is this effect.
+`Closure covers the closing of the vocal folds, and this allows for the air pressure to push them open, resulting in phonation. High closure means the folds come together more completely, low closure means they come together incompletely or with not enough contact, allowing air to get through without being "used" for vibrating the folds. High closure can sound t[[brightness|brighter]] because it boosts harmonic power in the high frequencies. The bright 'edge' heard in some voices is this effect.
 
 <b class="hlight">You cannot feel closure.</b> If you think you can, there's something <u>wrong</u>. You also cannot control it directly, and if it is attempted, there will likely be t[[muscletension|muscle tension]] or strain involved.`,
     color:"#546",
