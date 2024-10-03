@@ -948,7 +948,17 @@ Note that it is possible to make other formants happen that are in between the f
 
 Register.register_node("vocalsize", "resonance", {
     title:"Vocal Size", desc:
-`Vocal Sizett{{first known use: OVC, TransVoiceLessons}} is a way of intuitively explaining t[[resonance|resonance]] by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal tracttt{{Never attempt to change or shrink the vocal tract directly as this can lead to t[[muscletension|tension habits]]}} but instead about the size or stature of the hypothetical speaker and what kind of sound we expect from this speaker.`,
+`Vocal Size or Acoustic Sizett{{
+<b>First known use:</b>
+David R R Smith, Roy D Patterson, Richard Turner, Hideki Kawahara, Toshio Irino, 2005
+<i>"The processing and perception of size information in speech sounds"</i>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2346562/">PubMed</a>, <a href="https://doi.org/10.1121/1.1828637">DOI</a>
+
+And later:
+Benjamin D. Charlton, Anna M. Taylor, and David Reby, 2013
+<i>"Are men better than women at acoustic size judgements?"</i>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3730639/">PubMed</a>, <a href="https://doi.org/10.1098%2Frsbl.2013.0270">DOI</a>}} \
+is a way of intuitively explaining t[[resonance|resonance]] by using descriptions of the physical stature of the speaker within the framework of character voices. A cartoon character who is a giant will have a booming, deep voice, where a small pixie will have a bright voice. These voices can then be described as a "small voice" or a "large voice", and the sound that is described is immediately understood. This is not about the size of the vocal tracttt{{Never attempt to change or shrink the vocal tract directly as this can lead to t[[muscletension|tension habits]]}} but instead about the size or stature of the hypothetical speaker and what kind of sound we expect from this speaker.`,
     color:"#454050",
     tooltip:` `,
 })
