@@ -296,8 +296,21 @@ Register.register_node("speedquotient", "quotient", {
 })
 
 
+Register.register_node("pressure", "vfvm", {
+    title:"Pressure", desc:
+`For the vocal folds to vibrate, we go through these steps:
+<b>1)</b> add pressure from the lungs
+<b>2)</b> close the vocal folds to block the airway
+<b>3)</b> the pressure builds up behind the folds
+<b>4)</b> the pressure overcomes the closing force of the folds, and pushes them out of the way
+<b>5)</b> they start to come closed again to repeat the cycle.
 
-Register.register_node("vfvmpressure", "vfvm", {
+How long is spent in (3) where the pressure is building up, and how much pressure there is, determines the felt pressure at the folds and contributes to (and likely is the primary cause) of t[[quotient|closed quotient]] and t[[vocalweight|vocal weight]].`,
+    color:"#357",
+    tooltip:` `,
+})
+
+Register.register_node("vfvmpressure", "pressure", {
     title:"Pressure to Vibratory Mass / CQ", desc:
 `When we speak, we supply some amount of pressure from the lungs. This can be "used up" either by the vocal folds coming together like a valve leading to higher t[[closure|closure]], or by the pressure building up longer leading to higher t[[closedquotient|CQ]]. This means that more pressure - provided there is otherwise normal closure - will encourage more VFVM / vocal weight.tt{{This is known mostly due to informal testing by Sumi, along with various papers which mention related facts. Theoretically, higher pressure with the same closure should result in higher closed quotient, the effect of which is to make the voice heavier.
 
