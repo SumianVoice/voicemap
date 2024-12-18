@@ -51,10 +51,10 @@ There are some basic and t[[importantprinciples|important principles]] to take i
 
 Register.register_node("intuitivefem", "intuitive", {
     title:"Feminisation Guide", desc:
-`Never try hard. Never force it. Go a little higher and speak like a girl for a whilett{{whatever you think "feminine" sounds like; don't overthink it, just use whatever you are biased toward}}. <b>If it's right, it will feel effortless,</b> and the coordination can take time to develop.
+`Never try hard. Never force it. Go a little higher and speak like a girl for a whilett{{whatever you think 'feminine' sounds like; don't overthink it, just use whatever you are biased toward}}. <b>If it's right, it will feel effortless,</b> and the coordination can take time to develop.
 
 Don't overthink it, just listen and pay attention to the voice as a whole.
-Continue until goal is reached or any issues arise. Don't try hard, don't push to go higher or achieve any arbitrary goal, just "lean" towards a feminine voicett{{use voice examples and listen to feminine voices regularly}} and speak.
+Continue until goal is reached or any issues arise. Don't try hard, don't push to go higher or achieve any arbitrary goal, just 'lean' towards a feminine voicett{{use voice examples and listen to feminine voices regularly}} and speak.
 
 This will work for most beginners if taken seriously.
 `,
@@ -124,7 +124,7 @@ C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
 <a href="https://doi.org/10.1121/1.3552874">DOI:10.1121/1.3552874</a>
 }} \
 \
-Contact area between the folds, t[[quotient|quotient]], and surface area engaged in creating pressure waves all contribute to the resulting sound. This can be thought of similar to the thickness of a guitar string. More mass in the string results in a deeper more bassy sound (and a predisposition to low pitch). High vibratory mass will result in a sort of "rumble" which is most notable at low pitches.
+Contact area between the folds, t[[quotient|quotient]], and surface area engaged in creating pressure waves all contribute to the resulting sound. This can be thought of similar to the thickness of a guitar string. More mass in the string results in a deeper more bassy sound (and a predisposition to low pitch). High vibratory mass will result in a sort of 'rumble' which is most notable at low pitches.
 
 - more vocal fold moving --> more VFVM --> sounds heavier
 - less VFVM --> can achieve higher pitches easier`,
@@ -146,27 +146,18 @@ Naturalised voices:
 - sound like the speaker has been speeking at this pitch their whole life
 - sustainable and effortless to produce
 Non-naturalised voices:
-- sound forced or "t[[pushing|pushed]]" or stressed
+- sound forced or 't[[pushing|pushed]]' or stressed
 - tiring or requires high level of concentration
 - might sound like the speaker is intentionally speaking higher
 `,
     color:"#075",
     tooltip:` `,
 })
-Register.register_node("stress", "naturalisation", {
-    title:"Stress", desc:
-`When a voice has too much t[[vocalweight|vocal weight]] for the pitch, it is not t[[naturalisation|naturalised]]. When we notice it is not naturalised, the sound quality that tells us this is "stress". Stress can be described as "pushing" or "forcing" the voice. It can have a harsh, tense quality to it that begs the question "why is this person forcing their voice to go high". It can also be so subtle as to be nearly unnoticeable especially if we aren't looking for it. If a voice finds it difficult to intonate up in pitch during speech, that's a sign of stress.`,
-    color:"#357",
-    tooltip:` `,
-    audio:{
-        ["Example"]:"stress.mp3",
-    },
-})
 Register.register_node("basepitch", "naturalisation", {
     title:"Base Pitch", desc:
-`Base Pitchtt{{first known use: 2022, Sumianvoice (but probably not the first use)\n\nNote it was used in Scinguistics in 2020 and probably elsewhere but defined as the fundamental freq rather than a speech pattern feature like this is defined as. It was much later (2022) defined as a return to note and tested in a research project conducted on the Voice Art Project Discord server, but used before then for some time as an automatically returned-to pitch to aid in changing pitch and keeping that change consistent.}} is the pitch a voice naturally returns to after intonation. Since pitch and t[[vocalweight|vocal weight]] are linked, base pitch represents the pitch that a voice is t[[naturalisation|naturalised]] to, and this is usually the lowest note a voice will naturally go to, and is sort of like an anchor or "home position".
+`Base Pitchtt{{first known use: 2022, Sumianvoice (but probably not the first use)\n\nNote it was used in Scinguistics in 2020 and probably elsewhere but defined as the fundamental freq rather than a speech pattern feature like this is defined as. It was much later (2022) defined as a return to note and tested in a research project conducted on the Voice Art Project Discord server, but used before then for some time as an automatically returned-to pitch to aid in changing pitch and keeping that change consistent.}} is the pitch a voice most often naturally returns to after intonation. It is in essence the 'home position' for the voice. Since pitch and t[[vocalweight|vocal weight]] are linked, base pitch represents the pitch that a voice is t[[naturalisation|naturalised]] to and has the appropriate vocal weight for, and this is usually the lowest note a voice will naturally go to during normal speech.
 
-For example if we speak at F3/175hz, the voice will go above F3 for intonation and then eventually return to F3 as the lowest note time after time. It can be changed at will once trained, and is the basis of t[[naturalisation|pitch naturalisation]]. It is possible for a voice to hit lower notes than the base pitch it is naturalised to, but generally this will be rare or used for expressiveness of speech rather than a natural phenomenon.
+For example if we speak at F3/175hz, the voice will go above F3 for intonation and then eventually return to F3 as the lowest note time after time. It can be changed at will once trained, and is the basis of t[[naturalisation|pitch naturalisation]]. It is possible for a voice to hit lower notes than the base pitch it is naturalised to, but generally this will be rare or used for expressiveness of speech that goes beyond that natural tendency to return to some pitch. Since it's a natural feature of voice, it stays very consistent over time.
 
 Physiologically, it is likely determined by t[[closedquotient|CQ]] and t[[vfvmpressure|pressure]].
 
@@ -178,22 +169,22 @@ Oak is strong and also gives <b style="color:#bbb">shade</b>.</i>
     color:"#547",
     tooltip:` `,
 })
-Register.register_node("pushing", "naturalisation", {
-    title:"Pushing", desc:
-`Pushingtt{{first known (actually defined) use: Sumianvoice}} is when a voice adds more pressure in order to force a voice to get higher in pitch or louder, and usually results in t[[stress|stress]] through adding more t[[vocalweight|vocal weight]] / t[[vfvm|fold mass]] and often tense or improper t[[closure|closure]] when it is done as a t[[compensation|compensation]].
-t[[belting|Belting]] is an example of a pushed configuration; it involves more t[[vfvmpressure|pressure]] and more weight in order to reach higher notes without leaving t[[m1|M1]].`,
-    color:"#446",
+Register.register_node("pitchresistance", "naturalisation", {
+    title:"Pitch Resistance", desc:
+`Pitch Resistancett{{first known use: Sumianvoice 2023}} is when a voice attempts to raise in pitch, but something resists this and it sounds stressed or forced. Usually this is because of too much t[[vfvmpressure|pressure]] which converts to t[[closedquotient|CQ]]. Because it is most commonly caused by pressure / CQ / weight, it can be used as a sign of t[[pushing|pushing]] too much. 'Letting it go' a little and letting it get closer to t[[m2|falsetto]] can help.
+
+Another, somewhat rare cause of this resistance is t[[pitchresconflation|pitch-resonance conflation]]. This can happen when the larynx is already at the top of its range, and the voice tries to raise pitch in this configuration. The pitch-resonance conflation triggers, but the larynx cannot move, so the pitch cannot move either. The simple test for this is to slide up in pitch again with a lower resonance, and if it doesn't get resistance then it was likely pitch-resonance conflation.`,
+    color:"#645",
     tooltip:` `,
     audio:{
         ["Example"]:"pushing.mp3",
     },
 })
-Register.register_node("pitchresistance", "naturalisation", {
-    title:"Pitch Resistance", desc:
-`Pitch Resistancett{{first known use: Sumianvoice 2023}} is when a voice attempts to raise in pitch, but something resists this. Usually this is because of too much t[[vfvmpressure|pressure]] which converts to t[[closedquotient|CQ]]. The result is that the voice sounds t[[stress|stressed]]. Because it is most commonly caused by pressure / CQ / weight, it can be used as a sign of t[[pushing|pushing]] too much.
-
-Another potential cause of this resistance however is t[[pitchresconflation|pitch-resonance conflation]]. This can happen when the larynx is already at the top of its range, and the voice tries to raise pitch in this configuration. The pitch-resonance conflation triggers, but the larynx cannot move, so the pitch cannot move either. The simple test for this is to slide up in pitch again with a lower resonance, and if it doesn't get resistance then it was likely pitch-resonance conflation.`,
-    color:"#645",
+Register.register_node("pushing", "naturalisation", {
+    title:"Pushing", desc:
+`Pushingtt{{first known (actually defined) use: Sumianvoice}} is when a voice adds more pressure in order to force a voice to get higher in pitch or louder, and usually results in t[[pitchresistance|pitch resistance]] through adding more t[[vocalweight|vocal weight]] / t[[vfvm|fold mass]] and often tense or improper t[[closure|closure]] when it is done as a t[[compensation|compensation]].
+t[[belting|Belting]] is an example of a pushed configuration; it involves more t[[vfvmpressure|pressure]] and more weight in order to reach higher notes without leaving t[[m1|M1]].`,
+    color:"#446",
     tooltip:` `,
     audio:{
         ["Example"]:"pushing.mp3",
@@ -205,7 +196,7 @@ Another potential cause of this resistance however is t[[pitchresconflation|pitc
 //////////////////////
 Register.register_node("vocalweight", "vfvm", {
     title:"Vocal Weight", desc:
-`Vocal Weighttt{{first known use: TransVoiceLessons}} is a sound quality associated with low pitch, masculine voices. It can sound "rumbly" or just "heavy", and is linked with pitch. Higher pitches demand lighter vocal weight else they will sound forced or t[[stress|stressed]]. This is a perceptual, subjective quality we hear, but it is mostly explained by t[[closedquotient|closed quotient]] which it is derived from. Heavy vocal weight and high t[[resonance|resonance]] can sound cartoonish or "goblin-like".`,
+`Vocal Weighttt{{first known use: TransVoiceLessons}} is a sound quality associated with low pitch, masculine voices. It can sound 'rumbly' or just 'heavy', and is linked with pitch. Higher pitches demand lighter vocal weight else they will sound forced or stressed because of tt[[pitchresistance|pitch resistance]]. This is a perceptual, subjective quality we hear, but it is mostly explained by t[[closedquotient|closed quotient]] which it is derived from. Heavy vocal weight and high t[[resonance|resonance]] can sound cartoonish or 'goblin-like'.`,
     color:"#267",
     tooltip:` `,
     audio:{
@@ -217,7 +208,7 @@ Register.register_node("vocalweight", "vfvm", {
 })
 Register.register_node("fullness", "vocalweight", {
     title:"Overfull and Underfull", desc:
-`Overfulltt{{first known use: TransVoiceLessons}} relates to a voice that has too high vocal weight (and usually t[[closure|closure]]) for and too high resonance. As a result we get a buzzy or "nerdy" sound.\n\
+`Overfulltt{{first known use: TransVoiceLessons}} relates to a voice that has too high vocal weight (and usually t[[closure|closure]]) for and too high resonance. As a result we get a buzzy or 'nerdy' sound.\n\
 Underfull is when a voice has either too low weight or too low t[[resonance|resonance]], resulting in a dark or hooty voice.`,
     color:"#566",
     tooltip:` `,
@@ -228,19 +219,19 @@ Register.register_node("vocalweightgeneralisations", "vocalweight", {
 
 No resistance to going low in pitch --> <b>heavier</b>
 No resistance to going high in pitch --> <i>lighter</i>
-More powerful or "pushed" voice --> <b>heavier</b>
+More powerful or 'pushed' voice --> <b>heavier</b>
 Less forceful, more delicate voice --> <i>lighter</i>
 Strong, forceful and gritty voice --> <b>heavier</b>
-Clear tone, crisp, "ringing" rather than booming --> <i>lighter</i>
+Clear tone, crisp, 'ringing' rather than booming --> <i>lighter</i>
 
-These hold true in so many circumstances because vocal weight has an inverse relationship with pitch. The higher the pitch, the lower the vocal weight wants to be. If there is an imbalance, the voice may become unstable and yodel, or may sound stressed or strained as if there is resistance to going higher in pitch.
+These hold true in so many circumstances because vocal weight has an inverse relationship with pitch. The higher the pitch, the lower the vocal weight wants to be. If there is an imbalance, the voice may become unstable and yodel, or may sound stressed or strained as if there is tt[[pitchresistance|resistance]] to going higher in pitch.
 `,
     color:"#376",
     tooltip:` `,
 })
 Register.register_node("m2aslightweight", "vocalweight", {
     title:"Falsetto as a Guide", desc:
-`Falsetto or t[[m2|M2]] has extremely light t[[vocalweight|vocal weight]]. It is essentially "too light". It has some qualities we don't want, such as instability and hollowness from low t[[closure|closure]], but overall it can be a very useful voice feminisation method. We can use this as a guide; as we go higher in pitch to reach lighter weight, we will get closer to that falsetto quality. This can help with direction, and often prevent strain and t[[pushing|pushing]]. Note that this will not allow for a both strong / loud and light voice, only a light voice. Learning to reduce vocal weight through t[[naturalisation|pitch naturalisation]], t[[phraserepetition|phrase repetition]] or other methods is better if volume, clarity or high t[[closure|closure]] is desired. However, this can be an excellent way to give context to those other methods, as long as it isn't entirely relied on.
+`Falsetto or t[[m2|M2]] has extremely light t[[vocalweight|vocal weight]]. It is essentially 'too light'. It has some qualities we don't want, such as instability and hollowness from low t[[closure|closure]], but overall it can be a very useful voice feminisation method. We can use this as a guide; as we go higher in pitch to reach lighter weight, we will get closer to that falsetto quality. This can help with direction, and often prevent strain and t[[pushing|pushing]]. Note that this will not allow for a both strong / loud and light voice, only a light voice. Learning to reduce vocal weight through t[[naturalisation|pitch naturalisation]], t[[phraserepetition|phrase repetition]] or other methods is better if volume, clarity or high t[[closure|closure]] is desired. However, this can be an excellent way to give context to those other methods, as long as it isn't entirely relied on.
 
 We can also start low, then try to make the voice more like t[[m2|falsetto]]. As soon as we are about to speak, we instead just do a slightly lower pitch than we were about to, and this process can continue all through the range. This can prevent strain effectively since we're always doing a lower pitch than our voice is adjusted to, and this is likely the lightest you can get though "just go directly to a light voice without pre-priming the voice" methods.
 `,
@@ -284,7 +275,7 @@ Register.register_node("openquotient", "quotient", {
 })
 Register.register_node("closedquotient", "quotient", {
     title:"Closed Quotient (CQ)", desc:
-`How long as a fraction of a cycle the vocal folds are closed and resisting air pressure. This affects the sound wave created, making it less like a sinewave and more like a "squashed" sinewave with a longer low pressure component. More CQ is associated with higher t[[vocalweight|vocal weight]].`,
+`How long as a fraction of a cycle the vocal folds are closed and resisting air pressure. This affects the sound wave created, making it less like a sinewave and more like a 'squashed' sinewave with a longer low pressure component. More CQ is associated with higher t[[vocalweight|vocal weight]].`,
     color:"#544",
     tooltip:` `,
 })
@@ -312,7 +303,7 @@ How long is spent in (3) where the pressure is building up, and how much pressur
 
 Register.register_node("vfvmpressure", "pressure", {
     title:"Pressure to Vibratory Mass / CQ", desc:
-`When we speak, we supply some amount of pressure from the lungs. This can be "used up" either by the vocal folds coming together like a valve leading to higher t[[closure|closure]], or by the pressure building up longer leading to higher t[[closedquotient|CQ]]. This means that more pressure - provided there is otherwise normal closure - will encourage more VFVM / vocal weight.tt{{This is known mostly due to informal testing by Sumi, along with various papers which mention related facts. Theoretically, higher pressure with the same closure should result in higher closed quotient, the effect of which is to make the voice heavier.
+`When we speak, we supply some amount of pressure from the lungs. This can be 'used up' either by the vocal folds coming together like a valve leading to higher t[[closure|closure]], or by the pressure building up longer leading to higher t[[closedquotient|CQ]]. This means that more pressure - provided there is otherwise normal closure - will encourage more VFVM / vocal weight.tt{{This is known mostly due to informal testing by Sumi, along with various papers which mention related facts. Theoretically, higher pressure with the same closure should result in higher closed quotient, the effect of which is to make the voice heavier.
 
 <u><h3>Further reading</h3></u>\
 C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
@@ -321,9 +312,9 @@ C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
 }}
 
 - more air pressure --> more vfvm / vocal weight (if enough closure)
-- more "pushing" --> more vfvm / vocal weight
+- more 'pushing' --> more vfvm / vocal weight
 
-This has some but limited impact on the ability to increase weight; while more pressure encourages more weight it does not build the ability to do it, only allows the level of weight already built. Pressure feels like power, but does not require effort in any way.`,
+This has some but limited impact on the ability to increase weight; while more pressure encourages more weight it does not build the ability to do it, it only allows the level of ability to do weight which has already been built. Pressure feels like a 'powerful' voice, but does not require effort in any way.`,
     color:"#556",
     tooltip:` `,
 })
@@ -338,7 +329,7 @@ Register.register_instance("pushing", "vfvmpressure")
 //////////////////////
 Register.register_node("closure", "glottal", {
     title:"Closure", desc:
-`Closure covers the closing of the vocal folds, and this allows for the air pressure to push them open, resulting in phonation. High closure means the folds come together more completely, low closure means they come together incompletely or with not enough contact, allowing air to get through without being "used" for vibrating the folds. High closure can sound t[[brightness|brighter]] because it boosts harmonic power in the high frequencies. The bright 'edge' heard in some voices is this effect.
+`Closure covers the closing of the vocal folds, and this allows for the air pressure to push them open, resulting in phonation. High closure means the folds come together more completely, low closure means they come together incompletely or with not enough contact, allowing air to get through without being 'used' for vibrating the folds. High closure can sound t[[brightness|brighter]] because it boosts harmonic power in the high frequencies. The bright 'edge' heard in some voices is this effect.
 
 <b class="hlight">You cannot feel closure.</b> If you think you can, there's something <u>wrong</u>. You also cannot control it directly, and if it is attempted, there will likely be t[[muscletension|muscle tension]] or strain involved.`,
     color:"#546",
@@ -402,7 +393,7 @@ Register.register_instance("lowiahollow", "ia")
 Register.register_node("hyperadduction", "closure", {
     title:"Hyperadduction", desc:
 `Hyperadductiontt{{first known use: 2022, Sumianvoice}} can <b class="hlight">irreparably damage</b> the vocal folds, cause t[[nodules|nodules,]] pain and more awful things you don't want.
-Do not do it under <b class="hlight">any circumstances</b> for any reason for any length of time. It causes a buzzy, extremely high frequency 'rattle' sound.
+Do not do it under <b class="hlight">any circumstances</b> for any reason for any length of time. It causes a buzzy, extremely high frequency "rattle" sound.
 
 Hyperadduction is when the vocal folds are pressed together very tightly, but unlike pressed phonation, this is taken to the extreme. It is often accidentally employed to reach higher notes at the very top of the range. Never force your voice to go "a little bit higher" when it's already requiring effort.
 
@@ -481,7 +472,7 @@ If you have any concerns, it is advisable to contact an SLP or otherwise seek a 
 })
 Register.register_node("fatigue", "damage", {
     title:"Fatigue", desc:
-`When the voice is either overused such as when speaking loudly for several hours with minimal rest or when it is strained when doing something incorrectly or with effort, the voice will feel lazy as if it doesn't want to work any more. It might also feel as though the same functions that could easily be done before take more effort. This is fatigue, and is normal in the case  extremely long amounts of time using the voice, however it can be a sign of t[[muscletension|muscle tension]] or other issues if it happens regularly, or if it happens within an hour of starting speaking. Often this also is accompanied by a feeling of tension or discomfort, or a slight 'muscle burn' sensation.
+`When the voice is either overused such as when speaking loudly for several hours with minimal rest or when it is strained when doing something incorrectly or with effort, the voice will feel lazy as if it doesn't want to work any more. It might also feel as though the same functions that could easily be done before take more effort. This is fatigue, and is normal in the case  extremely long amounts of time using the voice, however it can be a sign of t[[muscletension|muscle tension]] or other issues if it happens regularly, or if it happens within an hour of starting speaking. Often this also is accompanied by a feeling of tension or discomfort, or a slight "muscle burn" sensation.
 
 Common causes are:
 - forcing the voice and t[[pushing|pushing]] it to a higher pitch than is comfortable
@@ -489,7 +480,7 @@ Common causes are:
 - learning through methods that encourage muscle tension such as swallow and hold and similar "just make the throat forcibly smaller" methods
 - speaking very loudly and with high pressure
 
-It is slightly different from a voice just being 'tired' which can be more described as the voice becoming weak over time due to it being used excessively. This can happen for example when doing t[[sovte|SOVTEs]] for too long. Unlike fatigue, it usually does not include discormfort or tension.`,
+It is slightly different from a voice just being "tired" which can be more described as the voice becoming weak over time due to it being used excessively. This can happen for example when doing t[[sovte|SOVTEs]] for too long. Unlike fatigue, it usually does not include discormfort or tension.`,
     color:"#134",
     tooltip:` `,
 })
@@ -618,7 +609,7 @@ Register.register_node("m3", "mechanisms", {
 })
 Register.register_node("m0", "mechanisms", {
     title:"M0", desc:
-`Vocal Fry register. This is usually at the very bottom of the range, but can happen anywhere due to airflow mechanics. Often there is a casual separation of t[[creak|'creak']] and 'fry', with creak being from too little airflow for periodic vibration to happen but still enough t[[closure|closure]], and fry being caused by not being able to vibrate the folds any slower. These are different causes but achieve the same resulting vocal fold behavior.`,
+`Vocal Fry register. This is usually at the very bottom of the range, but can happen anywhere due to airflow mechanics. Often there is a casual separation of t[[creak|creak]] and fry, with creak being from too little airflow for periodic vibration to happen but still enough t[[closure|closure]] to make aperiodic sound, and fry being caused by not being able to vibrate the folds any slower for whatever configuration of voice, whether it be because of low pitch, low airflow, or tension. These are then mostly different causes but have the same resulting vocal fold behavior.`,
     color:"#545",
     tooltip:` `,
 })
@@ -724,7 +715,7 @@ Register.register_node("otherphonation", "glottal", {
 })
 Register.register_node("fvf", "otherphonation", {
     title:"False Vocal Folds", desc:
-`The false vocal folds or ventricular folds are just above the true vocal folds, and can sometimes interrupt normal phonation causing t[[subharmonics|subharmonics]] or be used as t[[compensation|compensation]] for inadequate t[[closure|closure]] or atrophied vocal folds. They are not particularly damaging for the voice, but more of an annoyance or a sign of another problem. The sound they usually cause can be described as a rough, buzzy overtone, or a "rattle" sound.
+`The false vocal folds or ventricular folds are just above the true vocal folds, and can sometimes interrupt normal phonation causing t[[subharmonics|subharmonics]] or be used as t[[compensation|compensation]] for inadequate t[[closure|closure]] or atrophied vocal folds. They are not particularly damaging for the voice, but more of an annoyance or a sign of another problem. The sound they usually cause can be described as a rough, buzzy overtone, or a 'rattle' sound.
 
 Typically they cause aperiodic (messy) sounds in the 8000 to 15,000hz range. It can sound similar to t[[hyperadduction|hyperadduction]], but less harmonic / more rough, since hyperadduction causes clear harmonics instead of noise. How FVF effects look on a spectrogram can be described as similar to t[[m0|vocal fry]], but in the 10khz range instead of the 30-200hz range.
 It is unclear exactly why and how FVF causes this high frequency.`,
@@ -760,9 +751,9 @@ Register.register_node("intonation", "speech", {
 - monotone = no intonation
 - pitch goes up when you start speaking and eventually comes down = intonation
 
-The pitch a voice returns to after it intonates up is called the t[[basepitch|base pitch]].
+The pitch a voice eventually and most often returns to after it intonates up is called the t[[basepitch|base pitch]].
 
-Generally speaking, feminine voices will have higher intonation range and move up and down through the range with higher frequency, while masculine voices tent to have a more subdued intonation pattern, although it is important to note that these generalisations don't make a voice more feminine or more masculine directly, but but augment other patterns such as articulation. Plenty of masculine voices have huge intonation range and frequency, but since they don't have the articulation and other patterns and feature of voice, they don't sound feminine.`,
+Generally speaking, feminine voices will have higher intonation range and move up and down through the range with higher frequency, while masculine voices tent to have a more subdued intonation pattern, although it is important to note that these generalisations don't make a voice more feminine or more masculine directly, but augment other patterns such as articulation. Plenty of masculine voices have huge intonation range and frequency for example, but since they don't have the articulation and other patterns and features of voice to go with it, they don't sound feminine.`,
     color:"#644",
     tooltip:` `,
 })
@@ -787,7 +778,7 @@ Register.register_instance("basepitch", "speech")
 
 Register.register_node("microbehaviors", "speech", {
     title:"Microbehaviors", desc:
-`Microbehaviorstt{{first known use: 2022 Sumianvoice}} are a completely "what if" concept. It's used to explain features of voice too small and too automatic and subconscious to be able to directly influence, unlike concepts like t[[vocalweight|weight]] and t[[resonance|resonance]] which have very clear definitions. Microbehaviors are glottal, resonance or speech behaviors (or even maybe something else, who knows) which give a voice its distinct and unique "fingerprint". We don't really know much about it aside from "things happen and they make a voice sound different".
+`Microbehaviorstt{{first known use: 2022 Sumianvoice}} are a completely "what if" concept. It's used to explain features of voice too small and too automatic and subconscious to be able to directly influence, unlike concepts like t[[vocalweight|weight]] and t[[resonance|resonance]] which have very clear definitions. Microbehaviors are glottal, resonance or speech behaviors (or even maybe something else, who knows) which give a voice its distinct and unique 'fingerprint'. We don't really know much about it aside from "things happen and they make a voice sound different".
 
 When we keep vocal weight, resonance, pitch, and all the main concepts the same, yet we sound like one person rather than a seperate person, the difference is what is covered by this concept. It is the unexplained tiny changes that make up the difference between two unique voices. One notable example of a voice with a high level of this behavior which makes it unique is Druew. The basic characteristics such as weight, resonance, t[[articulation|articulation]], t[[closure|closure]] etc do not fully explain how it sounds so unique, and so the vague concept "microbehaviors" is invoked to explain this.
 
@@ -854,7 +845,7 @@ Register.register_node("resonance", "root", {
 })
 Register.register_node("larynxheight", "resonance", {
     title:"Larynx Height", desc:
-`The larynx is what houses the vocal folds. By shifting this up and down we can change the t[[resonance|resonance]] of the voice. This is because the 'tube' that is the vocal tract is shorter when it is raised, since the sound starts further along the length of the vocal tract. A shorter tube will cause a higher frequency of resonance.`,
+`The larynx is what houses the vocal folds. By shifting this up and down we can change the t[[resonance|resonance]] of the voice. This is because the tube that is the vocal tract is shorter when it is raised, since the sound starts further along the length of the vocal tract. A shorter tube will cause a higher frequency of resonance.`,
     color:"#446",
     tooltip:` `,
 })
@@ -862,7 +853,7 @@ Register.register_node("thyrohyoid-stylohyoid", "larynxheight", {
     title:"Thyrohyoid and Stylohyoid", desc:
 `Both muscles raise the t[[larynxheight|larynx]], but usually only the thyrohyoid (TH) is involved in the natural conflation with pitch. When the thyroid tilts to stretch the vocal folds, the thyrohyoid will typically also activate and raise the larynx slightly. This is a natural process.
 
-When "manually" raising the larynx such as through whisper exercises or in an attempt to do a brighter voice, we usually use both the TH and stylohyoid (SH) muscles. It is possible in some cases that the SH does not trigger for this, and this can result in a loss of resonance range in some students.tt{{This is from 3 students and Sumi's testing on this, achieved through doing pitch slides to gauge natural conflation's effect, and then whisper and voiced resonance exercises to test manual control's effect. The results were conclusive, but this is a sample size of 4.
+When 'manually' raising the larynx such as through whisper exercises or in an attempt to do a brighter voice, we usually use both the TH and stylohyoid (SH) muscles. It is possible in some cases that the SH does not trigger for this, and this can result in a loss of resonance range in some students.tt{{This is from 3 students and Sumi's testing on this, achieved through doing pitch slides to gauge natural conflation's effect, and then whisper and voiced resonance exercises to test manual control's effect. The results were conclusive, but this is a sample size of 4.
 
 source: Sumianvoice}}
 `,
@@ -1039,7 +1030,7 @@ Register.register_node("subharmonics", "covers", {
     title:"Subharmonics", desc:
 `Subharmonics sound similar to creak or t[[m0|M0]], but are more harmonic and less like random noise. They form for various reasons, but often due to true vocal fold tension / constriction and too much t[[closure|closure]] for the level of pressure / airflow.
 
-This presents itself as "extra harmonics". The folds get interrupted every second or third or etc cycle, and so it sounds like there are two voices at once. It isn't damaging but it can be very hard to build a habit that leaves it behind. It can be used in singing to do lower notes, or as a stylistic choice such as in certain types of overtone singing.`,
+This presents itself as 'extra harmonics'. The folds get interrupted every second or third or etc cycle, and so it sounds like there are two voices at once. It isn't damaging but it can be very hard to build a habit that leaves it behind. It can be used in singing to do lower notes, or as a stylistic choice such as in certain types of overtone singing.`,
     color:"#545",
     tooltip:` `,
     audio:{
