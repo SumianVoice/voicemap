@@ -1014,6 +1014,12 @@ Here are some sentences containing no nasal sounds to test:
     color:"#544",
     tooltip:` `,
 })
+Register.register_node("nasopharyngealcover", "covers", {
+    title:"Nasopharyngeal Covers", desc:
+`This is hypothetical, and is a "it fits but hasn't been proven" feature of voice. The concept is that instead of plain nasality, some form of the nasopharynx and the surrounding area at the back, top of the mouth can be flexed slightly, leading to a nasality-like cover through this nasopharyngeal constriction / NPC. The difference is that it does not show up in nasality tests due to being airflow-independent, and slightly boosts formant levels at the cost of a dull quality similar to nasality. This can happen when trying to maximise formant frequencies in unvoiced exercises, or accidentally when training resonance in general. It is hard to detect and hard to remove, though there is potential in using low resonance and oropharyngeal expansion to force it to reduce.`,
+    color:"#544",
+    tooltip:` `,
+})
 Register.register_node("lowiahollow", "covers", {
     title:"Low IA Hollowness", desc:
 `Low t[[ia|IA]] closure voices can become hollow, losing their harmonic power and t[[brightness|brightness]]. This can sound similar to t[[m2|M2 / falsetto]].`,
