@@ -931,7 +931,7 @@ Register.register_node("pharyngealconstriction", "resonance", {
 `Unlike OPC this is usually not ideal. Pharyngeal constriction is when the throat between the larynx and the mouth (the pharynx) is constricted. This is esentially squeezing the throat. It raises the resonant frequencies slightly and trying to max out t[[resonance|resonance]] range is usually how people accidentally do it.
 
 Pharyngeal constriction usually comes from t[[compensation|compensation]], when trying to raise the larynx or when doing other resonance raising modifications. It is not particularly damaging but can lead to t[[muscletension|tension]] habits if done regularly.`,
-    color:"#645",
+    color:"#222",
     tooltip:` `,
 })
 Register.register_node("formants", "resonance", {
@@ -1096,6 +1096,51 @@ In the case of lost range, if our bodies are trying to hit a C6 in pitch because
     tooltip:` `,
 })
 
+Register.register_node("voicerisks", "training", {
+    title:"Voice Risks", desc:
+`Under no circumstances should anything below be imitated even as a joke. These all have severe safety issues, and are here to educate people of the risks of using unsafe methods. There is very little research done on the links between an exercise or feature of voice and any negative outcome however. If there is no citation for a statement, it is from anecdotal experience as a voice teacher along with other theory which suggests that link is more than coincidence.
+
+Obviously, this is not in any way exhaustive, and there are likely even risks mentioned on this very page that aren't listed below.`,
+    color:"#282828",
+    tooltip:` `,
+})
+Register.register_node("swallowandhold", "voicerisks", {
+    title:"Swallow and Hold", desc:
+`Swallow and hold was used in the past to force the larynx and therefore t[[resonance|resonance]] to raise, but swallowing also involves the overuse and abuse of non-speech related muscles, leading to extreme fatigue and muscle tension. This can set students back several years. The issue is that there is a small survival rate, and so people who used it and succeeded still spread it around as if it's safe, since it happened to work for them. They are part of the 0.1% who got lucky however.`,
+    color:"#222",
+    tooltip:` `,
+})
+Register.register_node("manualphysicalmanipulation", "voicerisks", {
+    title:"Manual Physical Manipulation", desc:
+`The use of physical force to move parts of the throat (i.e. the larynx). There have been people who have used their hands to push the larynx up. Not only does this not help train, it also means those muscles which would do that work are now forcibly compressed and others forcibly stretched. If lucky, this results in temporary pain and loss of function, and if unlucky, there's nearly no end to what can go wrong. Massaging the muscles around the larynx gently is safe, manually moving things with your hands is not.`,
+    color:"#222",
+    tooltip:` `,
+})
+Register.register_node("directmusclecontrol", "voicerisks", {
+    title:"Direct Muscle Control", desc:
+`Directly trying to make a single muscle activate usually results in many other compensations happening instead, or alongside the actual intended action. This can lead to muscle tension habits if unchecked, usually even if those compensations don't get in the way. Muscles are all primarily subconsciously activated, so when the conscious mind forces them into action, it is often very inaccurate due to the "tunnel vision" like focus of conscious intent. This is especially dangerous when manually trying to change speaking closure. For non-speech it is unlikely to do much long term, but if tensing the wrong muscles through conscious control becomes a habit that crosses into general speech, it can become a near permanent feature of voice, leading to things like muscle tension habits.`,
+    color:"#222",
+    tooltip:` `,
+})
+Register.register_node("physicalproprioception", "voicerisks", {
+    title:"Physical Sensations", desc:
+`There is barely any sensory inervation in the vocal tract, else we would feel irritation and numbness and other unpleasant sensations just by speaking. Instead, most physical sensation / proprioception of the vocal tract comes from larger features either outside the throat in the neck, further up the vocal tract like the soft palate, or from parts that are inside the throat but are usually not affected by any speech action.
+
+When you spoke prior to any voice training, you would not notice any physical sensations, because there were no large scale movements or tensions happening. This should remain the case during and after training. The problem with physical sensations is not the feeling of them, but the use of them to determine what to do, or when the sensation is expected as feedback, which is likely to result in tension just so you can feel that sensation. That is, you expect a sensation, so you tense up to make that sensation happen because that's easier than doing the sound you wanted.
+
+Any sensation is very unlikely to be a "correct" coordination of voice, but instead a source of tension. Feeling vague movements and vibrations is normal, but feeling pinpointed force / contraction or squeezing is just about always vocal dysfunction rather than a natural requirement to do that sound. As a general rule, if you notice you can feel something and you didn't have to go looking to find that feeling, it's extraneous tension.`,
+    color:"#222",
+    tooltip:` `,
+})
+Register.register_node("overuseoffry", "voicerisks", {
+    title:"Overuse of Fry", desc:
+`Overuse of t[[m0|fry / creak / m0]] can, over decades, lead to deterioration of the voice. There's very little evidence for this, and little known about whether this is coordination or physical damage, but there is a correlation.`,
+    color:"#222",
+    tooltip:` `,
+})
+
+Register.register_instance("pharyngealconstriction", "voicerisks")
+Register.register_instance("hyperadduction", "voicerisks")
 
 
 
