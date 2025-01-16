@@ -1104,7 +1104,7 @@ In the case of lost range, if our bodies are trying to hit a C6 in pitch because
 
 Register.register_node("voicerisks", "training", {
     title:"Voice Risks", desc:
-`Under no circumstances should anything written below be acted on or imitated even as a joke. They are here to educate people of the risks of using unsafe methods. There is very little research done on the links between any exercise or feature of voice and any negative outcome however, even in extreme cases such as swallow and hold. As such if there is no citation for a statement (most likelt all of them), it can be assumed to be from anecdotal experience as a voice teacher along with other theory which suggests that link is more than coincidence.
+`Under no circumstances should anything written below be acted on or imitated even as a joke. They are here to educate people of the risks of using unsafe methods. There is very little research done on the links between any exercise or feature of voice and any negative outcome however, even in extreme cases such as swallow and hold. As such if there is no citation for a statement (most likely all of them), it can be assumed to be from anecdotal experience as a voice teacher along with other theory which suggests that link is more than coincidence.
 
 Obviously, this is not in any way exhaustive, and there are likely even risks mentioned on this very page that aren't listed below.`,
     color:"#282828",
