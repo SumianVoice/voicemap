@@ -51,7 +51,7 @@ There are some basic and t[[importantprinciples|important principles]] to take i
 
 Register.register_node("intuitivefem", "intuitive", {
     title:"Feminisation Guide", desc:
-`Never try hard. Never force it. Go a little higher and speak like a girl for a whilett{{whatever you think 'feminine' sounds like; don't overthink it, just use whatever you are biased toward}}. <b>If it's right, it will feel effortless,</b> and the coordination can take time to develop.
+`Never try hard. Never force it. The voice should sound natural at all stages of training. Go a little higher and speak like a girl for a whilett{{whatever you think 'feminine' sounds like; don't overthink it, just use whatever you are biased toward.}}. <b>If it's right, it will feel effortless.</b> The coordination can take time to develop.
 
 Don't overthink it, just listen and pay attention to the voice as a whole.
 Continue until goal is reached or any issues arise. Don't try hard, don't push to go higher or achieve any arbitrary goal, just 'lean' towards a feminine voicett{{use voice examples and listen to feminine voices regularly}} and speak.
@@ -64,7 +64,7 @@ This will work for most beginners if taken seriously.
 
 Register.register_node("intuitivemasc", "intuitive", {
     title:"Masculinisation Guide", desc:
-`Never try hard. Never force it. Avoid rough or buzzy sounds.tt{{pressed phonation, hyperadduction, FVF and fry mix all share harsh or buzzy sounds, so be very cautious of anything like this}} Try to hit lower notes repeatedly and gain more vocal power. Try speaking in a slighlty deeper, darker tone and experiment with dark vowel sounds like "uhhh".
+`Never try hard. Never force it. The voice should sound natural at all stages of training. Avoid rough or buzzy sounds.tt{{pressed phonation, hyperadduction, FVF and fry mix all share harsh or buzzy sounds, so be very cautious of anything like this}} Try to hit lower notes repeatedly and gain more vocal power. Try speaking in a slighlty deeper, darker tone and experiment with dark vowel sounds like "haww".
 
 Don't overthink it, just listen and pay attention to the voice as a whole.
 Continue until goal is reached or any issues arise.
@@ -629,7 +629,7 @@ Register.register_node("frymix", "m0", {
     title:"Fry Mix", desc:
 `Since mechanisms are not necessarily distinct but instead mostly arbitrary delineations on a spectrum, it is possible to blend most mechanisms. Just as we can adjust the needed components to t[[m2blending|blend between M1 and M2]], we can blend between M1 and M0.
 
-It is usually to be avoided unless for stylistic reasons, or for singing. It is sometimes accidentally achieved during voice masculinisation training, since it allows for much lower pitches (e.g. a normal floor of 120hz down to a floor of 90hz with fry mix).
+It is usually to be avoided unless for stylistic reasons, or for singing. It is sometimes accidentally achieved during voice masculinisation training, since it allows for much lower pitches (e.g. a normal floor of 120hz down to a floor of 90hz with fry mix). Sometimes people use this during voice masculinisation thinking the lower pitch means progress has been made, but fry mix does not increase vocal weight or range, it only cheats a little more range. That is, using fry mix to increase range will alwaystt{{Technically there may be some exception to this, but it's yet to be discovered.}} result in failure.
 `,
     color:"#554",
     tooltip:` `,
