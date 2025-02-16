@@ -1061,20 +1061,21 @@ Register.register_node("training", "root", {
 
 Register.register_node("compensation", "training", {
     title:"Compensation", desc:
-`Compensationtt{{first known (defined) use: ca. 2022 Sumianvoice, specifically in regard to its features in voice and strain etc. it has been previously used to describe causes of MTD but no source has been found yet}} is when we consciously try to achieve some goal, but lack the coordination or feel we lack it. As a result the body recruits muscles it doesn't need, just to force the goal to be achieved. Often this is very unhelpful, and leads to hard to change habits.
+`Compensationtt{{first known (defined) use: ca. 2022 Sumianvoice, specifically in regard to its features in voice and strain etc. it has been previously used to describe causes of MTD but no source has been found yet}} is when we consciously try to achieve some goal, but lack the coordination or feel we lack it. As a result the body recruits muscles it doesn't need, in an attempt to force the goal to be achieved. Often this is very unhelpful and can lead to hard to change habits.
 
-Compensation thrives on lack of awareness and on effort, so most of what we need to do to reduce it is be passively aware; know what is happening and draw attention to it, but not try hard to change it. It is different to conflation, which is more to do with linking two things by habit rather than unintentionally doing something due to effort.
+Compensation thrives on lack of awareness and on effort, so most of what we need to do in order to reduce it is to be passively aware; know what is happening and draw attention to it, but not try hard to change it. It is different to conflation, which is more to do with linking two things by habit or misconception rather than unintentionally doing something due to effort.
 
 Common compensations are:
 - tension and strain (leading to t[[fatigue|fatigue]])
+- t[[pushing]] / adding pressure
 - t[[breathiness|breathiness]]
-- buzzy or rattle-like sounds (t[[fvf|FVF]] or t[[hyperadduction|hyperadduction]])`,
+- buzzy or rattle-like sounds (t[[fvf|FVF]] or t[[hyperadduction|hyperadduction]])
+- t[[nasopharyngealcover|nasopharyngeal constrictions]]
+- t[[nasality|nasality]]`,
     color:"#545",
     tooltip:` `,
 })
 
-
-Register.register_instance("pushing", "compensation")
 
 
 Register.register_node("conflation", "training", {
