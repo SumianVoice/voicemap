@@ -167,7 +167,7 @@ Zoom.zoom_out = document.querySelector("#zoom_out");
 /** @type {HTMLButtonElement} **/
 Zoom.zoom_equal = document.querySelector("#zoom_equal");
 
-Zoom.zoom_minimum = 0.09;
+Zoom.zoom_minimum = 0.07;
 Zoom.zoom_default = 0.5;
 Zoom.zoom = function(x = null) {
     const rootStyle = getComputedStyle(document.documentElement);
