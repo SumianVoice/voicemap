@@ -81,10 +81,13 @@ Register.register_node("importantprinciples", "intuitive", {
 You will never need to put more effort into any speech related training than you would into your untrained and relaxed voice. Ever. No exceptions. Yes this is true.
 
 <b>Passive Awareness</b>
-The harder you try to control things tightly, the less results you get so use <i>passive awareness</i> instead; listen intently but don't try to control too tightly.
+The harder you try to control things tightly, the less results you get, so use <i>passive awareness</i> instead; listen intently but don't try to control too tightly.
+
+<b>Understand the "why"</b>
+When doing an exercise or practice, don't just go through the motions, ask why. What <i>sound</i> did you get? <i>Why</i> does the exercise work? What sound do you <i>want</i>? Theory is not important to this.
 
 <b>Exploration</b>
-Exploration is key; we stumble around in the dark until we trip over the correct way or a hint of it, so explore with the above in mind.
+Exploration is key; we stumble around in the dark until we trip over the correct way or a hint of it, so explore and experiment with the above in mind, and let yourself make mistakes so you can learn from them.
 `,
     color:"#445",
     tooltip:` `,
