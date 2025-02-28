@@ -255,7 +255,7 @@ tt{{first known use: Sumianvoice}}
 
 Register.register_node("contrivedbasepitch", "basepitch", {
     title:`Contrived base pitch`, desc:
-`This helps if having difficulty with t[[intuitivebasepitch|Intuitive Base Pitch]]. It forces the pitch to return. It is still wise to not push the pitch very high; only go as high as feels comfortable and doesn't sound t[[stress|stressed]].
+`This helps if having difficulty with t[[intuitivebasepitch|Intuitive Base Pitch]]. It forces the pitch to return. It is still wise to not t[[pushing|push]] the pitch very high; only go as high as feels comfortable and doesn't sound stressed.
 
 
 - say a phrase, where the last word is intentionally on some specific pitch you want to speak at
