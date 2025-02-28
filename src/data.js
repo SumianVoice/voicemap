@@ -17,7 +17,7 @@ Many of these concepts and notes are proven through use, not academics and are j
 <b>What I did not do:</b>
 <i style="color:#999">- personally invent and pioneer everything here</i>
 
-<i style="color:#666">Copyright (c) 2023 Sumi, <<a style="color:#696040" href="https://sumianvoice.com">sumianvoice.com</a>>
+<i style="color:#666">Copyright (c) 2025 Sumi, <<a style="color:#696040" href="https://sumianvoice.com">sumianvoice.com</a>>
 Distributed under open source <a style="color:#696040" href="https://github.com/SumianVoice/voicemap/blob/master/LICENSE">MIT license</a>
 </i>
 
@@ -158,7 +158,7 @@ Non-naturalised voices:
 })
 Register.register_node("basepitch", "naturalisation", {
     title:"Base Pitch", desc:
-`Base Pitchtt{{first known use: 2022, Sumianvoice (but probably not the first use)\n\nNote it was used in Scinguistics in 2020 and probably elsewhere but defined as the fundamental freq rather than a speech pattern feature like this is defined as. It was much later (2022) defined as a return to note and tested in a research project conducted on the Voice Art Project Discord server, but used before then for some time as an automatically returned-to pitch to aid in changing pitch and keeping that change consistent.}} is the pitch a voice most often naturally returns to after intonation. It is in essence the 'home position' for the voice. Since pitch and t[[vocalweight|vocal weight]] are linked, base pitch represents the pitch that a voice is t[[naturalisation|naturalised]] to and has the appropriate vocal weight for, and this is usually the lowest note a voice will naturally go to during normal speech.
+`Base Pitchtt{{first known use: Sumianvoice, 2022 (but probably not the first use)\n\nNote it was used in Scinguistics in 2020 and probably elsewhere but defined as the fundamental freq rather than a speech pattern feature like this is defined as. It was much later (2022) defined as a return to note and tested in a research project conducted on the Voice Art Project Discord server, but used before then for some time as an automatically returned-to pitch to aid in changing pitch and keeping that change consistent.}} is the pitch a voice most often naturally returns to after intonation. It is in essence the 'home position' for the voice. Since pitch and t[[vocalweight|vocal weight]] are linked, base pitch represents the pitch that a voice is t[[naturalisation|naturalised]] to and has the appropriate vocal weight for, and this is usually the lowest note a voice will naturally go to during normal speech.
 
 For example if we speak at F3/175hz, the voice will go above F3 for intonation and then eventually return to F3 as the lowest note time after time. It can be changed at will once trained, and is the basis of t[[naturalisation|pitch naturalisation]]. It is possible for a voice to hit lower notes than the base pitch it is naturalised to, but generally this will be rare or used for expressiveness of speech that goes beyond that natural tendency to return to some pitch. Since it's a natural feature of voice, it stays very consistent over time.
 
@@ -174,7 +174,7 @@ Oak is strong and also gives <b style="color:#bbb">shade</b>.</i>
 })
 Register.register_node("pitchresistance", "naturalisation", {
     title:"Pitch Resistance", desc:
-`Pitch Resistancett{{first known use: Sumianvoice 2023}} is when a voice attempts to raise in pitch, but something resists this and it sounds stressed or forced. Usually this is because of too much t[[vfvmpressure|pressure]] which converts to t[[closedquotient|CQ]]. Because it is most commonly caused by pressure / CQ / weight, it can be used as a sign of t[[pushing|pushing]] too much. 'Letting it go' a little and letting it get closer to t[[m2|falsetto]] can help.
+`Pitch Resistancett{{first known use: Sumianvoice, 2023}} is when a voice attempts to raise in pitch, but something resists this and it sounds stressed or forced. Usually this is because of too much t[[vfvmpressure|pressure]] which converts to t[[closedquotient|CQ]]. Because it is most commonly caused by pressure / CQ / weight, it can be used as a sign of t[[pushing|pushing]] too much. 'Letting it go' a little and letting it get closer to t[[m2|falsetto]] can help.
 
 Another, somewhat rare cause of this resistance is t[[pitchresconflation|pitch-resonance conflation]]. This can happen when the larynx is already at the top of its range, and the voice tries to raise pitch in this configuration. The pitch-resonance conflation triggers, but the larynx cannot move, so the pitch cannot move either. The simple test for this is to slide up in pitch again with a lower resonance, and if it doesn't get resistance then it was likely pitch-resonance conflation.`,
     color:"#645",
@@ -395,7 +395,7 @@ Register.register_instance("lowiahollow", "ia")
 
 Register.register_node("hyperadduction", "closure", {
     title:"Hyperadduction", desc:
-`Hyperadductiontt{{first known use: 2022, Sumianvoice}} can <b class="hlight">irreparably damage</b> the vocal folds, cause t[[nodules|nodules,]] pain and more awful things you don't want.
+`Hyperadductiontt{{first known use: Sumianvoice, 2022}} can <b class="hlight">irreparably damage</b> the vocal folds, cause t[[nodules|nodules,]] pain and more awful things you don't want.
 Do not do it under <b class="hlight">any circumstances</b> for any reason for any length of time. It causes a buzzy, extremely high frequency "rattle" sound.
 
 Hyperadduction is when the vocal folds are pressed together very tightly, but unlike pressed phonation, this is taken to the extreme. It is often accidentally employed to reach higher notes at the very top of the range. Never force your voice to go "a little bit higher" when it's already requiring effort.
@@ -624,7 +624,7 @@ Register.register_node("mechanismbreak", "mechanisms", {
 })
 Register.register_node("noseperationhypothesis", "mechanisms", {
     title:"No Separation Hypothesis", desc:
-`This is a hypothesis by Sumianvoice, that the difference between mechanisms is not a vibratory pattern that is distinct and separated, but instead a grouping of features of voice that coincide with that resulting vibratory pattern. For example, M2 might have lower t[[ia|IA closure]], leading to incomplete vibration of the folds and lower t[[closedquotient|closed quotient]] (CQ), and the bifurcation event (break) could be explained as being caused by the imbalance of vibration frequency and t[[closedquotient|CQ]], with the easiest solution to that imbalance being the loss of IA closure. t[[m3|M3]] is simply very low pressure and high closure, and t[[m0|M0]] is when the vibration cannot happen slow enough, either due to not enough CQ to allow for a frequency that is so low / slow, or closure causing speed quotient (SQ) to take too much of the vibratory cycle and therefore lead to the same result. This hypothesis fits the anecdotal and experimental observation of many people, but it is not known if these are the physical factors or if the relationship is coincidental.
+`This is a hypothesistt{{first known attribution: Sumianvoice, 2024\n\nThere may be a mention of this in research somewhere, and if you find anything, send it in!}} that the difference between mechanisms is not a vibratory pattern that is distinct and separated, but instead a grouping of features of voice that coincide with that resulting vibratory pattern. For example, M2 might have lower t[[ia|IA closure]], leading to incomplete vibration of the folds and lower t[[closedquotient|closed quotient]] (CQ), and the bifurcation event (break) could be explained as being caused by the imbalance of vibration frequency and t[[closedquotient|CQ]], with the easiest solution to that imbalance being the loss of IA closure. t[[m3|M3]] is simply very low pressure and high closure, and t[[m0|M0]] is when the vibration cannot happen slow enough, either due to not enough CQ to allow for a frequency that is so low / slow, or closure causing speed quotient (SQ) to take too much of the vibratory cycle and therefore lead to the same result. This hypothesis fits the anecdotal and experimental observation of many people, but it is not known if these are the physical factors or if the relationship is coincidental.
 
 The lack of a bifurcation event in some (especially cis female) voices could be explained by either a lack of ability to increase CQ to imbalance causing levels, or that the pressure is too low to cause that CQ; in other words the voice is too t[[vocalweight|light]] to break.`,
     color:"#254",
@@ -789,7 +789,7 @@ Register.register_instance("basepitch", "speech")
 
 Register.register_node("microbehaviors", "speech", {
     title:"Microbehaviors", desc:
-`Microbehaviorstt{{first known use: 2022 Sumianvoice}} are a completely "what if" concept. It's used to explain features of voice too small and too automatic and subconscious to be able to directly influence, unlike concepts like t[[vocalweight|weight]] and t[[resonance|resonance]] which have very clear definitions. Microbehaviors are glottal, resonance or speech behaviors (or even maybe something else, who knows) which give a voice its distinct and unique 'fingerprint'. We don't really know much about it aside from "things happen and they make a voice sound different".
+`Microbehaviorstt{{first known use: Sumianvoice, 2022}} are a completely "what if" concept. It's used to explain features of voice too small and too automatic and subconscious to be able to directly influence, unlike concepts like t[[vocalweight|weight]] and t[[resonance|resonance]] which have very clear definitions. Microbehaviors are glottal, resonance or speech behaviors (or even maybe something else, who knows) which give a voice its distinct and unique 'fingerprint'. We don't really know much about it aside from "things happen and they make a voice sound different".
 
 When we keep vocal weight, resonance, pitch, and all the main concepts the same, yet we sound like one person rather than a seperate person, the difference is what is covered by this concept. It is the unexplained tiny changes that make up the difference between two unique voices. One notable example of a voice with a high level of this behavior which makes it unique is Druew. The basic characteristics such as weight, resonance, t[[articulation|articulation]], t[[closure|closure]] etc do not fully explain how it sounds so unique, and so the vague concept "microbehaviors" is invoked to explain this.
 
