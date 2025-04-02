@@ -161,7 +161,7 @@ textarea {
     overflow: hidden;
     /* transition: transform 0.2s, filter 0.5s; */
     transform: translate(-50%, -50%) scale(var(--zoomx), var(--zoomy));
-    filter: opacity(0);
+    filter: opacity(1);
     transform-origin: center center;
     position: relative;
 }

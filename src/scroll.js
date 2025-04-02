@@ -98,6 +98,7 @@ Zoom.lerp = function(start, end, ratio) {
     return ((end - start) * ratio + start);
 };
 
+Zoom.time = 0;
 Globalstep.register_globalstep(function(dt) {
     Zoom.Rootnode.scrollLeft = Zoom.lerp(Zoom.Rootnode.scrollLeft, Zoom.Rootnode.scrollTargetLeft, 0.1);
     Zoom.Rootnode.scrollTop = Zoom.lerp(Zoom.Rootnode.scrollTop, Zoom.Rootnode.scrollTargetTop, 0.1);
@@ -105,6 +106,16 @@ Globalstep.register_globalstep(function(dt) {
         Zoom.Rootnode.scrollLeft,
         Zoom.Rootnode.scrollTop, false
         );
+    // hopeful fix for animation of opacity failing
+    if (Zoom.time == 0) {
+        Zoom.Rootnode.style.transition = "transform 0.2s, filter 0.8s";
+        Zoom.Rootnode.style.filter = "opacity(1)";
+    }
+    Zoom.time += dt
+    if (Zoom.time > 1 && Zoom.Rootnode.style.filter == "opacity(1)") {
+        Zoom.Rootnode.style.transition = "transform 0.2s";
+        Zoom.Rootnode.style.filter = "";
+    }
 });
 
 
@@ -205,5 +216,4 @@ Zoom.zoom_equal.addEventListener("click", () => Zoom.zoom(Zoom.zoom_default));
 
 Zoom.zoom(1)
 
-Zoom.Rootnode.style.transition = "transform 0.2s, filter 0.8s";
-Zoom.Rootnode.style.filter = "opacity(1)";
+Zoom.Rootnode.style.filter = "opacity(0)";
