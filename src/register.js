@@ -27,7 +27,8 @@ var Register = {
     },
     registered_nodes : {
         "root" : {},
-    }
+    },
+    active_nodes_index : []
 };
 
 
@@ -44,11 +45,15 @@ Register.register_instance = function(id, in_node_name) {
 Register.do_all_registered_instances = function() {
     console.log("doing instances");
     for (var id in Register.instances_to_add) {
-        const v = Register.instances_to_add[id];
-        for (let i = 0; i < v.length; i++) {
+        const in_node_name_list = Register.instances_to_add[id];
+        for (let i = 0; i < in_node_name_list.length; i++) {
             const def = Register.registered_nodes[id];
-            in_node_name = v[i];
-            Register.construct_node(id + String(i), in_node_name, def, {['skip_register']:true, ['is_copy']:true, ['old_id']:id});
+            in_node_name = in_node_name_list[i];
+            Register.construct_node(
+                id + String(i),
+                in_node_name,
+                def,
+                {['skip_register']:false, ['is_copy']:true, ['old_id']:id});
         }
     }
 };
@@ -261,7 +266,6 @@ Register.get_fragment_from_def = function(id, in_node_name, def) {
 
 
 Register.exercise_tags = {"exf":1, "exm":1, "exg":1};
-Register.active_nodes_index = []
 Register.register_node = function(id, in_node_name, fromdef, flags={}) {
     let def = {}; for (k in fromdef) {def[k] = fromdef[k];}
     def.id = id
@@ -305,6 +309,7 @@ Register.construct_node = function(id, in_node_name, fromdef, flags={}) {
     Register.active_nodes[id] = document.getElementById(id);
     Register.active_nodes[id]._list = document.getElementById(id + "_list");
     Register.active_nodes[id]._tree_step = new_tree_step;
+    Register.active_nodes[id]._type = def.type;
 
     if (flags.is_copy) {
         Register.active_nodes[id].style["border"] = "#ffffff20 4px dashed";
@@ -353,8 +358,7 @@ Register.exercise_visibility = {
 Register.show_nodes = function(type, bool) {
     for (var k in Register.active_nodes) {
         const n = Register.active_nodes[k];
-        const def = Register.registered_nodes[k];
-        if (def && def.type == type) {
+        if (n && n._type == type) {
             n.style.display = (!bool && "none") || "flex";
         }
     }
