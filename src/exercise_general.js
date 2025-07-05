@@ -137,28 +137,29 @@ Register.register_node("rangeexpandsovte", "rangeexpansion", {
 
 
 
-Register.register_node("reducetvfconstriction", "tvfconstriction", {
-    title:"Reducing TVF Constriction", desc:
-`To adjust airflow without constriction / squeezing.
+Register.register_node("lightsigh", "tvfconstriction", {
+    title:"Light Sigh", desc:
+`Reducing TVF and FVF Constriction and closure imbalances.
 
-- problem: it's possible to constrict the folds to reduce the flow of air, instead of just not pushing from the lungs as much
-- solution:
-- imagine a birthday cake. On the cake are candles that are close together
+- imagine a birthday cake; on the cake are candles that are close together
 - breathe out so that you would blow out all of them as quickly as possible (high airflow)
 - breathe out so that you would blow out only one at a time (medium airflow)
 - breathe out so that you would only make them flicker but not go out (low airflow)
 - this is how you reduce the flow without constricting
-- it also allows you more time for breathing out so that you can do other exercises and tests with this
-- to apply to voiced sounds, simply breathe out in this low or medium airflow, then let any sound happen at all, like a sigh
+- to apply to voiced sounds, simply breathe out in this low or medium airflow for about 2 seconds, then let any sound happen at all, like a sigh
+- it's important to have this 2s of breath before the voice comes in, and it should come in smoothly and gently and slowly, rather than having any rough sections, creak or "forcing air through"
 - repeat, and make the onset of the sound "slower", draw out the addition of the sound
 - this should mean you use only the bare minimum of everything, and eliminate constriction and tension
 
-tt{{first known use: Sumianvoice}}
+tt{{first known use: Sumianvoice, pre 2022 06 16}}
 `,
     color:color,
     type:"exg",
     tooltip:` `,
 })
+
+Register.register_instance("lightsigh", "fvf")
+
 
 
 Register.register_node("breathinessstepping", "breathiness", {
