@@ -357,7 +357,7 @@ Register.register_node("closureloss", "closure", {
 This can affect range, and it is thought that the main limiting factor for most beginners for pitch range up to about B5 is that there is too much tension in the folds than needed, and this causes the student to either press harder and keep tensing up, or lose closure. As such it's important to realise that except in extreme cases, it is not a lack of effort that prevents high pitches but an excess of tension.
 
 Common causes of closure loss:
-- excess tension in the vocal folds
+- t[[tvfconstriction|excess tension in the vocal folds]]
 - atrophy of t[[ia|IA muscles]]
 - excess of mucus on folds`,
     color:"#556",
