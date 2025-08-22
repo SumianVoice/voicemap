@@ -111,7 +111,7 @@ Register.register_node("glottal", "root", {
 //////////////////////
 Register.register_node("vfvm", "glottal", {
     title:"Vocal Fold Geometry", desc:
-`Vocal Fold Vibratory Mass <b>(VFVM)</b> is likely part of the physical thing happening in the folds that causes several things; how much of the folds is vibrating and the surface area when interacting is likely what causes the sound quality of t[[vocalweight|vocal weight]] and affects t[[quotient|quotient]].tt{{source: internal testing by Sumi and based on various footage of laryngoscopy and papers that mention how much of the folds is active and related notes during different mechanisms. Know this isn't hard fact, but a working theory or "the closest we know of as an explanation".
+`Vocal Fold Vibratory Mass (VFVM) describes the physical vibration of the vocal folds. It covers how much of the folds vibrate, their contact area (see t[[closure|closure]]), and t[[closedquotient|closed quotient (CQ)]]. It is assumed that CQ and VFVM are determined by the levels of pressure and closure and their balance. The resulting sound, being high VFVM or low, is heard as heavy and light t[[vocalweight|vocal weight]] respectively.tt{{source: internal testing by Sumi and based on various footage of laryngoscopy and papers that mention how much of the folds is active and related notes during different mechanisms. Bear in mind this isn't hard fact, but a working theory or "the closest we know of as an explanation".
 
 <u><h3>Further reading</h3></u>\
 B. Roubeau, N.H. Bernardoni, M. Castellengo
@@ -127,9 +127,9 @@ C.T. Herbst, Q. Qiu, H.K. Schutte and J.G. Švec
 <a href="https://doi.org/10.1121/1.3552874">DOI:10.1121/1.3552874</a>
 }} \
 \
-Contact area between the folds, t[[quotient|quotient]], and surface area engaged in creating pressure waves all contribute to the resulting sound. This can be thought of similar to the thickness of a guitar string. More mass in the string results in a deeper more bassy sound (and a predisposition to low pitch). High vibratory mass will result in a sort of 'rumble' which is most notable at low pitches.
+This can be thought of similar to the thickness of a guitar string. More mass in the string results in a deeper more bassy sound (and a predisposition to low pitch).
 
-- more vocal fold moving --> more VFVM --> sounds heavier
+- more vocal fold vibrating --> more VFVM --> sounds heavier
 - less VFVM --> can achieve higher pitches easier`,
     color:"#445",
     tooltip:` `,
@@ -140,13 +140,18 @@ Contact area between the folds, t[[quotient|quotient]], and surface area engaged
 //////////////////////
 Register.register_node("naturalisation", "vfvm", {
     title:"Pitch Naturalisation", desc:
-`Each pitch has its desired level of t[[vfvm|vibratory mass]] / t[[vocalweight|weight]], so there is an equillibrium that can be found between pitch and t[[vocalweight|vocal weight]].
+`Each pitch has its desired level of t[[vfvm|vibratory mass]] / t[[vocalweight|weight]], so there is an t[[pitchweightrelation|equillibrium]] that can be found between pitch and t[[vocalweight|vocal weight]].
 Pitch Naturalisation is the process and concept of naturally adjusting a voice to this equillibrium.tt{{Pitch Naturalisation is the core of the Pitch Intuitive Practice Methodology (PIPM) designed by Sumi / Sumianvoice, which is a near standalone methodology for changing the voice using the existing positive conflations most people have with pitch.}} Since this is only useful for reducing weight to match a higher pitch, it's a concept used mostly for voice feminisation and sometimes general range.
 
-Usually we use this by raising pitch very slightly, then letting the voice naturally adjust without letting clarity and volume be sacrificed. We can also do this long term by raising the t[[basepitch|base pitch]] of the voice slightly and speaking here for a matter of several days or weeks. Given the right conditions - specifically that there is not much conscious control or effort which would cause t[[compensation|compensation]] - a voice will adjust rather than become strained or forced.
+The process can be applied as follows:
+- introduce an imbalance into the voice by raising pitch with slightly elevated volumett{{Normally the voice would t[[compensation|compensate]] and go t[[breathiness|breathy]] or quiet or t[[lowiahollow|falsetto-like]], but raising the volume by any amount guards against this somewhat. In other words, it's hard to be breathy or in falsetto when you have the intention to be louder.}}
+- now, only reducing the vocal weight can resolve the imbalance
+- wait for natural processes and intuitiontt{{Avoid conscious control or effort which would cause t[[compensation|compensation]] and prevent your voice naturally adjusting.}} to fix the imbalance by reducing the vocal weight
+
+Whether this process happens in one training session or slowly over days of natural speech is up to the student, and both methods function even better in tandem.
 
 Naturalised voices:
-- sound like the speaker has been speeking at this pitch their whole life
+- sound like the speaker has been speaking at this pitch their whole life
 - sustainable and effortless to produce
 Non-naturalised voices:
 - sound forced or 't[[pushing|pushed]]' or stressed
@@ -193,6 +198,13 @@ t[[belting|Belting]] is an example of a pushed configuration; it involves more t
         ["Example"]:"pushing.mp3",
     },
 })
+Register.register_node("pitchweightrelation", "naturalisation", {
+    title:"Pitch to Weight Relationship", desc:
+`Closed Quotient (t[[closedquotient|CQ]]) / t[[vocalweight|Weight]] defines the "window" of pitch a voice can comfortably achieve. That is, the more CQ there is, the lower the range is shifted, allowing access to lower pitches, but giving up access to higher pitches.tt{{This is not yet confirmed in research, but assumed true nearly unanimously, and can be tested easily even without access to specialised equipment.}}
+`,
+    color:"#256",
+    tooltip:` `,
+})
 
 //////////////////////
 // VOCAL WEIGHT
@@ -234,7 +246,7 @@ These hold true in so many circumstances because vocal weight has an inverse rel
 })
 Register.register_node("m2aslightweight", "vocalweight", {
     title:"Falsetto as a Guide", desc:
-`Falsetto or t[[m2|M2]] has extremely light t[[vocalweight|vocal weight]]. It is essentially 'too light'. It has some qualities we don't want, such as instability and hollowness from low t[[closure|closure]], but overall it can be a very useful voice feminisation method. We can use this as a guide; as we go higher in pitch to reach lighter weight, we will get closer to that falsetto quality. This can help with direction, and often prevent strain and t[[pushing|pushing]]. Note that this will not allow for a both strong / loud and light voice, only a light voice. Learning to reduce vocal weight through t[[naturalisation|pitch naturalisation]], t[[phraserepetition|phrase repetition]] or other methods is better if volume, clarity or high t[[closure|closure]] is desired. However, this can be an excellent way to give context to those other methods, as long as it isn't entirely relied on.
+`Falsetto or t[[m2|M2]] has extremely light t[[vocalweight|vocal weight]]. It is essentially 'too light'. It has some qualities we don't want, such as instability and hollowness from low t[[closure|closure]], but overall it can be a very useful tool for voice feminisation. Due to these qualities, we can't just use falsetto as a speech voice itself, but we can use it to nudge the voice in the right directions. As we go higher in pitch to reach lighter weight, we will get closer to that falsetto quality, but not necessarily reach it. This can help with direction, and can often prevent strain and t[[pushing|pushing]]. Note that this will not allow for a both strong / loud and light voice, only a light voice. Learning to reduce vocal weight through t[[naturalisation|pitch naturalisation]], t[[phraserepetition|phrase repetition]] or other methods is better if volume, clarity or high t[[closure|closure]] is desired.
 
 We can also start low, then try to make the voice more like t[[m2|falsetto]]. As soon as we are about to speak, we instead just do a slightly lower pitch than we were about to, and this process can continue all through the range. This can prevent strain effectively since we're always doing a lower pitch than our voice is adjusted to, and this is likely the lightest you can get though "just go directly to a light voice without pre-priming the voice" methods.
 `,
@@ -278,7 +290,7 @@ Register.register_node("openquotient", "quotient", {
 })
 Register.register_node("closedquotient", "quotient", {
     title:"Closed Quotient (CQ)", desc:
-`How long as a fraction of a cycle the vocal folds are closed and resisting air pressure. This affects the sound wave created, making it less like a sinewave and more like a 'squashed' sinewave with a longer low pressure component. More CQ is associated with higher t[[vocalweight|vocal weight]].`,
+`How long as a fraction of a cycle the vocal folds are closed and resisting air pressure. This affects the sound wave created, making it less like a sinewave and more like a 'squashed' sinewave with a longer low pressure component. More CQ is associated with higher t[[vocalweight|vocal weight]] and usually involves higher t[[pressure|pressure]].`,
     color:"#544",
     tooltip:` `,
 })
