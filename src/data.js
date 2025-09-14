@@ -160,6 +160,9 @@ Non-naturalised voices:
 `,
     color:"#075",
     tooltip:` `,
+    audio:{
+        ["Example"]:"pushing.mp3",
+    },
 })
 Register.register_node("basepitch", "naturalisation", {
     title:"Base Pitch", desc:

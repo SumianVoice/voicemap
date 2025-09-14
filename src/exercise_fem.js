@@ -41,20 +41,40 @@ Register.register_node("resonancestepping", "larynxheight", {
     tooltip:` `,
 })
 
+Register.register_node("singingresonancestepping", "larynxheight", {
+    title:"Word scaling", desc:
+`For range or to make your resonance changes more 'accurate' and based on sound.
+
+
+- say "quarrel" or any word in a dark voice, like Patrick Star (you can also just use "ah" or any sound)
+- E3 or F3 is good to use as a pitch, since starting at a higher pitch reduces the chance of accidentally raising pitch instead of resonance
+- gradually let the voice go back to neutral as you repeat the word
+- you can then make it higher and higher resonance, using resonance to do it; imagine the sound of the voice if it were higher resonance
+- make sure the pitch doesn't change when doing this
+- if you have strain or find you can't go any higher, take a break or start completely from the beginning
+- you can use any sound or word for this of course
+- when you hear the same result twice, stop and start from the beginning again since you won't make more progress at the top of the range by staying there all the time
+
+tt{{first known use: Sumianvoice}}
+`,
+    color:color,
+    type:"exf",
+    tooltip:` `,
+})
+
 Register.register_node("singingresonancestepping", "pitchresconflation", {
     title:"Singing resonance stepping", desc:
 `Reduces the coupling between pitch and resonance which would otherwise decrease range.
 
 
-- start at any relaxed pitch, in a dark, low resonance, yawn-like voice
-- "wobble" the pitch up and down
-- glide down from a higher pitch and back up, making little hills in pitch, **keeping the resonance / brightness the same as you go**
-- only go as high as you can do completely relaxed
-- slowly increase the height of the hills, but never add strain
-- there should be no difference in effort, volume or much of anything else between the pitches
-- don't "push" or "squeeze"
-- notice how every pitch feels the same and sounds similar, and pay attention to the resonance staying the same
-- do with dark, normal and bright voices
+- sing two notes and say "1 2 3" to step between them, like C3 and D3
+- so, "1" is on the low note, "2" is on the higher note, "3" comes back to the original note again
+- do this whole thing again, but this time in a dark, yawn-like voice
+- then do it again, normal
+- then do it again, slightly brighter
+- note the pitch staying the same, or if not, use different pitches such as ones that are closer or further apart
+- the idea is to keep resonance the same and step in pitch, and then change the resonance and do the same pitches
+- this means changing resonance without pitch, and pitch without resonance, leading to deconflation
 
 tt{{first known use: Sumianvoice}}
 `,
