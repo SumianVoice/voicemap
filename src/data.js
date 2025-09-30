@@ -627,7 +627,9 @@ Register.register_node("m3", "mechanisms", {
 })
 Register.register_node("m0", "mechanisms", {
     title:"M0", desc:
-`Vocal Fry register. This is usually at the very bottom of the range, but can happen anywhere due to airflow mechanics. Often there is a casual separation of t[[creak|creak]] and fry, with creak being from too little airflow for periodic vibration to happen but still enough t[[closure|closure]] to make aperiodic sound, and fry being caused by not being able to vibrate the folds any slower for whatever configuration of voice, whether it be because of low pitch, low airflow, or tension. These are then mostly different causes but have the same resulting vocal fold behavior.`,
+`Vocal Fry register. This is usually at the very bottom of the range, but can happen anywhere due to airflow mechanics. Often there is a casual separation of t[[creak|creak]] and fry, with creak being from too little airflow for periodic vibration to happen but still enough t[[closure|closure]] to make aperiodic sound, and fry being caused by not being able to vibrate the folds any slower for whatever configuration of voice, whether it be because of low pitch, low airflow, or tension. These are then mostly different causes but have the same resulting vocal fold behavior.
+
+It is likely that high amounts of fry being used very consistently over many years (decades) may lead to degradation of vocal fold tissue, but occasional use is widely considered safe.`,
     color:"#545",
     tooltip:` `,
 })
@@ -741,7 +743,7 @@ Register.register_node("otherphonation", "glottal", {
 })
 Register.register_node("fvf", "otherphonation", {
     title:"False Vocal Folds", desc:
-`The false vocal folds or ventricular folds are just above the true vocal folds, and can sometimes interrupt normal phonation causing t[[subharmonics|subharmonics]] or be used as t[[compensation|compensation]] for inadequate t[[closure|closure]] or atrophied vocal folds. They are not particularly damaging for the voice, but more of an annoyance or a sign of another problem. The sound they usually cause can be described as a rough, buzzy overtone, or a 'rattle' sound.
+`The false vocal folds or ventricular folds are just above the true vocal folds, and can sometimes interrupt normal phonation causing t[[subharmonics|subharmonics]] or be used as t[[compensation|compensation]] for inadequate t[[closure|closure]] or atrophied vocal folds. They are allegedly not particularly damaging for the voice, but more of an annoyance or a sign of another problem. The sound they usually cause can be described as a rough, buzzy overtone, or a 'rattle' sound.
 
 Typically they cause aperiodic (messy) sounds in the 8000 to 15,000hz range. It can sound similar to t[[hyperadduction|hyperadduction]], but less harmonic / more rough, since hyperadduction causes clear harmonics instead of noise. How FVF effects look on a spectrogram can be described as similar to t[[m0|vocal fry]], but in the 10khz range instead of the 30-200hz range.
 It is unclear exactly why and how FVF causes this high frequency.`,
@@ -956,7 +958,7 @@ Register.register_node("pharyngealconstriction", "resonance", {
     title:"Pharyngeal Constriction", desc:
 `Unlike OPC this is usually not ideal. Pharyngeal constriction is when the throat between the larynx and the mouth (the pharynx) is constricted. This is esentially squeezing the throat. It raises the resonant frequencies slightly and trying to max out t[[resonance|resonance]] range is usually how people accidentally do it.
 
-Pharyngeal constriction usually comes from t[[compensation|compensation]], when trying to raise the larynx or when doing other resonance raising modifications. It is not particularly damaging but can lead to t[[muscletension|tension]] habits if done regularly.`,
+Pharyngeal constriction usually comes from t[[compensation|compensation]], when trying to raise the larynx or when doing other resonance raising modifications. It appears to be not particularly damaging in itself but can lead to t[[muscletension|tension]] habits if done regularly.`,
     color:"#222",
     tooltip:` `,
 })
@@ -1062,7 +1064,7 @@ Register.register_node("subharmonics", "covers", {
     title:"Subharmonics", desc:
 `Subharmonics sound similar to creak or t[[m0|M0]], but are more harmonic and less like random noise. They form for various reasons, but often due to true vocal fold tension / constriction and too much t[[closure|closure]] for the level of pressure / airflow.
 
-This presents itself as 'extra harmonics'. The folds get interrupted every second or third or etc cycle, and so it sounds like there are two voices at once. It isn't damaging but it can be very hard to build a habit that leaves it behind. It can be used in singing to do lower notes, or as a stylistic choice such as in certain types of overtone singing.`,
+This presents itself as 'extra harmonics'. The folds get interrupted every second or third or etc cycle, and so it sounds like there are two voices at once. It likely isn't damaging to the voice (unless excessive and long term: see t[[m0|vocal fry]]), but it can be very hard to build a habit that leaves it behind. It can be used in singing to do lower notes, or as a stylistic choice such as in certain types of overtone singing.`,
     color:"#545",
     tooltip:` `,
     audio:{
