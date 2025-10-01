@@ -78,13 +78,13 @@ This will work for most beginners if taken seriously.
 Register.register_node("importantprinciples", "intuitive", {
     title:"Important Principles", desc:
 `<b>No Effort</b>
-You will never need to put more effort into any speech related training than you would into your untrained and relaxed voice. Ever. No exceptions. Yes this is true.
+You will never need to put more effort into any speech related training than you would into your untrained and relaxed voice. Ever. No exceptions. Using your voice should not feel any different from your old voicett{{Feeling sympathetic vibrations is normal, but feeling muscle use, a stretching stretching or tension, tightness etc are all unnecessary and should never be tolerated at any point for any length of time; keep it pure and natural, you don't have to "push through" some difficulty to arrive at some destination, instead you have to build good coordination from the ground up.}}.
 
 <b>Passive Awareness</b>
-The harder you try to control things tightly, the less results you get, so use <i>passive awareness</i> instead; listen intently but don't try to control too tightly.
+The harder you try to control things tightly, the less results you get due to t[[compensation|compensation]], so use <i>passive awareness</i> instead; listen intently but don't try to control too tightly. Convert conscious control into passive, subconscious coordinationtt{{Example: instead of trying to control the intonation pattern, which would sound unnatural and contrived, use a certain emotion like excitement or surprise to encourage the pattern you want. Another example is t[[basepitch|base pitch]], where we start of controlling the intonation a bit, but then allow it to become automatic and subconscious over time.}}.
 
 <b>Understand the "why"</b>
-When doing an exercise or practice, don't just go through the motions, ask why. What <i>sound</i> did you get? <i>Why</i> does the exercise work? What sound do you <i>want</i>? Theory is not important to this.
+When doing an exercise or practice, don't just go through the motions, ask why. What <i>sound</i> did you get? <i>Why</i> does the exercise work? What sound do you <i>want</i>? Theory is not important to this. Look for feedback from your use of voice; meaningful and actionable feedback is how you make progress. If you're not getting feedback when speaking, change what you're doing so you do get feedbacktt{{Feedback does not mean someone giving pointers on your voice, and in fact that's less helpful than good self-feedback. Feedback is when you do something voice-wise and hear it and think "oh, that's the wrong direction, maybe if I do this other thing it will improve". This leans to direct improvements. If you're not getting feedback, or it's meaningless, change what you're doing to optimise for meaningful feedback.}}.
 
 <b>Exploration</b>
 Exploration is key; we stumble around in the dark until we trip over the correct way or a hint of it, so explore and experiment with the above in mind, and let yourself make mistakes so you can learn from them.
