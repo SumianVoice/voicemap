@@ -1092,7 +1092,7 @@ Compensation thrives on lack of awareness and on effort, so most of what we need
 
 Common compensations are:
 - tension and strain (leading to t[[fatigue|fatigue]])
-- t[[pushing]] / adding pressure
+- t[[pushing|pushing]] / adding pressure
 - t[[breathiness|breathiness]]
 - buzzy or rattle-like sounds (t[[fvf|FVF]] or t[[hyperadduction|hyperadduction]])
 - t[[nasopharyngealcover|nasopharyngeal constrictions]]
