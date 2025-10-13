@@ -1041,6 +1041,11 @@ Here are some sentences containing no nasal sounds to test:
 - The elevator stopped for us at the third floor.`,
     color:"#544",
     tooltip:` `,
+    audio:{
+        ["Non-Nasal"]:"non-nasal.mp3",
+        ["Half Nasal"]:"nasal-half.mp3",
+        ["Full Nasal"]:"nasal-full.mp3",
+    },
 })
 Register.register_node("nasopharyngealcover", "covers", {
     title:"Nasopharyngeal Covers", desc:
