@@ -424,6 +424,13 @@ This usually shows up as around 8000 to 15,000hz harmonics, and this can be a so
     },
 })
 
+Register.register_node("iacqblocking", "ia", {
+    title:"IA CQ Blocking Hypothesis", desc:
+`This statestt{{This is a hypothesis, and is not (yet) supported by rigorous testing, it's simply the most "reasonable explanation" given basic testing and knowledge of the vocal tract.}} that the t[[ia|IA]] muscles relaxing slightly might force t[[cq|CQ]] to drastically reduce. The concept is that the mass of the folds in the path of the airflow can't properly vibrate when only part of the body of the folds is at an appropriate tension and t[[closure|closure]]. An t[[lowiaairleak|air leak]] might result, or it may be that only the mucosa and not the whole body of the fold can vibrate.\n\nAnecdotally this seems to be what happens in practice. If a voice slightly reduces IA closure (which will sound t[[lowiahollow0|slightly less "full"]]), the effects of high CQ no longer happen, such as stress / strain at high pitches and t[[mechanismbreak|mechanism breaks]]. Since CQ is such a low level mechanical feature, it's unlikely that something else would be the true cause of this relationship by in effect overriding CQ.`,
+    color:"#254",
+    tooltip:` `,
+})
+
 //////////////////////
 // VOCAL FUNCTION
 //////////////////////
