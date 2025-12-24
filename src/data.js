@@ -224,13 +224,6 @@ Register.register_node("vocalweight", "vfvm", {
         ["Very<br>Light"]:"m2_full.mp3",
     },
 })
-Register.register_node("fullness", "vocalweight", {
-    title:"Overfull and Underfull", desc:
-`Overfulltt{{first known use: TransVoiceLessons}} relates to a voice that has too high vocal weight (and usually t[[closure|closure]]) for and too high resonance. As a result we get a buzzy or 'nerdy' sound.\n\
-Underfull is when a voice has either too low weight or too low t[[resonance|resonance]], resulting in a dark or hooty voice.`,
-    color:"#566",
-    tooltip:` `,
-})
 Register.register_node("vocalweightgeneralisations", "vocalweight", {
     title:"Vocal Weight\nGeneralisations", desc:
 `There are certain generalisations that help determine or change vocal weight. These are assuming normal voice characteristics, so if you're extremely breathy or any other issue is happening, these might not be accurate.
@@ -266,6 +259,16 @@ Register.register_node("vocalweightdarkconflation", "vocalweight", {
 Note that since there is a conflation between closure and vocal weight. If the closure is kept the same, the above follows, but if the closure is let to increase with conflation with weight it will often sound the same or brighter.
 `,
     color:"#567",
+    tooltip:` `,
+})
+Register.register_node("underoverfull", "vocalweight", {
+    title:"Overfull and Underfull", desc:
+`Overfulltt{{first known use: TransVoiceLessons}} relates to a voice that has too high vocal weight (and usually t[[closure|closure]]) for and too high resonance. As a result we get a buzzy or 'nerdy' sound.
+
+Underfull is when a voice has either too low weight or too low t[[resonance|resonance]], resulting in a dark or hooty voice.
+
+Note: This is specifically TVL's use of these terms, and is separate from t[[ia|closure/IA]] t[[fullness|fullness]]. This is different pedagogy.`,
+    color:"#566",
     tooltip:` `,
 })
 
@@ -365,6 +368,16 @@ Breathiness is often a t[[compensation|compensation]].`,
         ["Normal"]:"E3_light.mp3",
     },
 })
+Register.register_node("fullness", "closure", {
+    title:"Fullness", desc:
+`When a voice has t[[lowiahollow0|low IA closure]] or a cover that causes it to sound "dull" or "hollow", it can be described as hollow or low in fullness. Fullness is when a voice has a balanced spectrum. A hollow voice will sound similar to a sinewave, with only the base frequency and very few harmonics. A full voice will be less sine-like.
+
+Extremely low t[[closedquotient|closed quotient]] (possibly t[[iacqblocking|due to low IA]]) likely results in this low fullness, but it is important to note that even extremely light voices will still sound full. Light weight does not cause a voice to sound hollow.
+
+Completely separate from and irrelevant to t[[underoverfull|over/underfull]] which is different pedagogy.`,
+    color:"#346",
+    tooltip:` `,
+})
 Register.register_node("closureloss", "closure", {
     title:"Loss Of Closure", desc:
 `A Loss of t[[closure|Closure]] is when the voice cuts out, and only air comes out. This happens if there is some amount of tension in the folds and not the right closure. The folds are in position but do not close, and have too much tension lengthwise (i.e. t[[pitch|pitch]]) to be vibrated and instead air just rushes past. This is natural, and isn't a problem, and <b>should not be forcibly avoided</b>. Forcing it will either trigger <b class="hlight">t[[hyperadduction|hyperadduction]]</b> (bad) or make the closure loss worse through more tension, so it is usually best to relax instead.
@@ -426,7 +439,7 @@ This usually shows up as around 8000 to 15,000hz harmonics, and this can be a so
 
 Register.register_node("iacqblocking", "ia", {
     title:"IA CQ Blocking Hypothesis", desc:
-`This statestt{{This is a hypothesis, and is not (yet) supported by rigorous testing, it's simply the most "reasonable explanation" given basic testing and knowledge of the vocal tract.}} that the t[[ia|IA]] muscles relaxing slightly might force t[[cq|CQ]] to drastically reduce. The concept is that the mass of the folds in the path of the airflow can't properly vibrate when only part of the body of the folds is at an appropriate tension and t[[closure|closure]]. An t[[lowiaairleak|air leak]] might result, or it may be that only the mucosa and not the whole body of the fold can vibrate.\n\nAnecdotally this seems to be what happens in practice. If a voice slightly reduces IA closure (which will sound t[[lowiahollow0|slightly less "full"]]), the effects of high CQ no longer happen, such as stress / strain at high pitches and t[[mechanismbreak|mechanism breaks]]. Since CQ is such a low level mechanical feature, it's unlikely that something else would be the true cause of this relationship by in effect overriding CQ.`,
+`This statestt{{This is a hypothesis, and is not (yet) supported by rigorous testing, it's simply the most "reasonable explanation" given basic testing and knowledge of the vocal tract.}} that the t[[ia|IA]] muscles relaxing slightly might force t[[closedquotient|CQ]] to drastically reduce. The concept is that the mass of the folds in the path of the airflow can't properly vibrate when only part of the body of the folds is at an appropriate tension and t[[closure|closure]]. An t[[lowiaairleak|air leak]] might result, or it may be that only the mucosa and not the whole body of the fold can vibrate.\n\nAnecdotally this seems to be what happens in practice. If a voice slightly reduces IA closure (which will sound t[[lowiahollow0|slightly less "full"]]), the effects of high CQ no longer happen, such as stress / strain at high pitches and t[[mechanismbreak|mechanism breaks]]. Since CQ is such a low level mechanical feature, it's unlikely that something else would be the true cause of this relationship by in effect overriding CQ.`,
     color:"#254",
     tooltip:` `,
 })
